@@ -1,0 +1,73 @@
+# Dataset Analysis
+
+## Overall Stats
+- Training Samples: 4087
+- Test Samples: 682
+
+## Categories (Train)
+category
+single                1238
+multi                  809
+emotion                809
+combination            790
+sequence               308
+object_interaction     133
+Name: count, dtype: int64
+
+## Categories (Test)
+category
+single                195
+multi                 144
+emotion               144
+combination           139
+sequence               39
+object_interaction     21
+Name: count, dtype: int64
+
+## Sources
+source
+HAU     3525
+HARn     562
+Name: count, dtype: int64
+
+## Answer Distribution (Train)
+answer
+B       880
+A       869
+C       855
+D       678
+CD       61
+ABD      52
+AB       51
+AD       50
+BCD      49
+ABC      49
+ACD      47
+BD       47
+AC       46
+BC       43
+ABDC     18
+DBCA     17
+CABD     16
+ABCD     15
+CBAD     15
+ADCB     14
+ADBC     14
+BDAC     14
+ACDB     14
+BADC     14
+BCAD     14
+BDCA     14
+DCAB     14
+DCBA     13
+BACD     13
+CADB     12
+ACBD     12
+CBDA     12
+CDBA     11
+BCDA     10
+DBAC     10
+CDAB      9
+DABC      8
+DACB      7
+Name: count, dtype: int64

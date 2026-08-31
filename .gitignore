@@ -1,0 +1,4 @@
+*.zip
+hf_data_manual/
+hf_data/
+venv/
