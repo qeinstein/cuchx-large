@@ -13,8 +13,18 @@ def create_subject_splits(csv_path="training_qa.csv", n_splits=5, output_dir="sp
     
     df = pd.read_csv(csv_path)
     
-    # Extract subject ID from path (e.g. HAU/user1/1-1-1 -> user1)
-    df['subject_id'] = df['path'].apply(lambda x: x.split('/')[1] if '/' in str(x) else 'unknown')
+    # Extract subject ID from path. 
+    # HAU format: HAU/user1/1-1-1 (subject is index 1)
+    # HARn format: HARn/action/user1/trial (subject is index 2)
+    def extract_subject(path):
+        parts = str(path).split('/')
+        if parts[0] == 'HAU' and len(parts) > 1:
+            return parts[1]
+        elif parts[0] == 'HARn' and len(parts) > 2:
+            return parts[2]
+        return 'unknown'
+        
+    df['subject_id'] = df['path'].apply(extract_subject)
     
     unique_subjects = df['subject_id'].unique()
     print(f"Found {len(unique_subjects)} unique subjects: {unique_subjects}")
