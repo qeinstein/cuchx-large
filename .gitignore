@@ -38,3 +38,4 @@ notebooks/
 # IDE
 .vscode/
 .idea/
+llava_local/

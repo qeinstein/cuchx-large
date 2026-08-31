@@ -10,7 +10,8 @@ from transformers import (
 )
 from tqdm import tqdm
 
-MODEL_ID = "llava-hf/llava-1.5-7b-hf"
+# We use the local model cache because the HuggingFace API hangs on macOS
+MODEL_ID = "./llava_local"
 
 
 def extract_frames(video_path, num_frames=4):
@@ -68,26 +69,26 @@ def format_prompt(row):
 
 def evaluate_vlm(csv_path="splits/fold_0_val.csv", data_dir="hf_data_manual/"):
     df = pd.read_csv(csv_path)
-    print(f"Loading {MODEL_ID} in 4-bit...")
+    print(f"Loading {MODEL_ID} in float16...")
 
-    quantization_config = BitsAndBytesConfig(
-        load_in_4bit=True, bnb_4bit_compute_dtype=torch.float16
-    )
     processor = AutoProcessor.from_pretrained(MODEL_ID)
     model = LlavaForConditionalGeneration.from_pretrained(
         MODEL_ID,
-        quantization_config=quantization_config,
-        device_map="auto",
+        torch_dtype=torch.float16,
         low_cpu_mem_usage=True,
-    )
-
+    ).to("mps")  # macOS hardware acceleration
+    
     predictions = []
     correct = 0
 
     for idx, row in tqdm(df.iterrows(), total=len(df)):
         # Construct path, assuming modalities are extracted inside data_dir
-        # For baseline, we just test depth if available
-        video_path = os.path.join(data_dir, row["path"] + "/depth/depth.mp4")
+        # Try Depth_Color (RGB) first, fallback to bare Depth
+        rgb_path = os.path.join(data_dir, row['path'] + "/Depth_Color/Depth_Color.mp4")
+        depth_path = os.path.join(data_dir, row['path'] + "/Depth/Depth.mp4")
+        
+        video_path = rgb_path if os.path.exists(rgb_path) else depth_path
+        
         frames = extract_frames(video_path, num_frames=4)
         prompt = format_prompt(row)
 
