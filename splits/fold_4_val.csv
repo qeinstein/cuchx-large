@@ -1,0 +1,674 @@
+qa_id,source,path,category,question,A,B,C,D,answer,subject_id
+training_0290,HAU,HAU/user8/1-1-1,single,Which action is performed in this video?,Reading,Wiping surface,Checking the time,Brushing teeth,D,user8
+training_0291,HAU,HAU/user8/1-1-2,single,Which action is performed in this video?,Wiping hands,Calling,Checking the time,Taking medicine,A,user8
+training_0292,HAU,HAU/user8/1-1-3,single,Which action is performed in this video?,Checking the time,Wiping hands,Peeling fruit,Playing games,B,user8
+training_0293,HAU,HAU/user8/1-2-1,single,Which action is performed in this video?,Taking medicine,Listening to the music with headphones,Squats,Folding clothes,B,user8
+training_0294,HAU,HAU/user8/1-2-2,single,Which action is performed in this video?,Taking a selfie,Drinking,Typing on a keyboard,Grabbing utensils,A,user8
+training_0295,HAU,HAU/user8/1-2-3,single,Which action is performed in this video?,Washing dishes,Drinking,Undressing,Calling,D,user8
+training_0296,HAU,HAU/user8/2-1-1,single,Which action is performed in this video?,Grabbing utensils,Washing face,Stirring,Folding clothes,D,user8
+training_0297,HAU,HAU/user8/2-1-2,single,Which action is performed in this video?,Reading,Sweeping,Listening to the music with headphones,Taking a selfie,C,user8
+training_0298,HAU,HAU/user8/2-1-3,single,Which action is performed in this video?,Combing hair,Washing dishes,Folding clothes,Massaging oneself,C,user8
+training_0299,HAU,HAU/user8/2-2-1,single,Which action is performed in this video?,Stretching,Walking,Using a phone,Peeling fruit,B,user8
+training_0300,HAU,HAU/user8/2-2-2,single,Which action is performed in this video?,Checking body temperature,Wiping surface,Drinking,Turning a page,B,user8
+training_0301,HAU,HAU/user8/2-2-3,single,Which action is performed in this video?,Writing,Walking,Jumping jacks,Lying down,B,user8
+training_0302,HAU,HAU/user8/3-1-1,single,Which action is performed in this video?,Sweeping,Writing,Peeling fruit,Lying down,A,user8
+training_0303,HAU,HAU/user8/3-1-2,single,Which action is performed in this video?,Checking body temperature,Peeling fruit,Washing dishes,Mopping,D,user8
+training_0304,HAU,HAU/user8/3-1-3,single,Which action is performed in this video?,Listening to the music with headphones,Peeling fruit,Sweeping,Drinking,C,user8
+training_0305,HAU,HAU/user8/3-2-1,single,Which action is performed in this video?,Washing face,Lying down,Washing dishes,Taking a selfie,C,user8
+training_0306,HAU,HAU/user8/3-2-2,single,Which action is performed in this video?,Washing face,Using a phone,Pouring,Taking a selfie,C,user8
+training_0307,HAU,HAU/user8/3-2-3,single,Which action is performed in this video?,Mopping,Using a phone,Washing dishes,Running,C,user8
+training_0308,HAU,HAU/user8/3-3-1,single,Which action is performed in this video?,Washing dishes,Walking,Calling,Playing games,B,user8
+training_0309,HAU,HAU/user8/3-3-2,single,Which action is performed in this video?,Playing games,Lying down,Listening to the music with headphones,Walking,D,user8
+training_0310,HAU,HAU/user8/3-3-3,single,Which action is performed in this video?,Squats,Walking,Getting dressed,Sitting down,B,user8
+training_0311,HAU,HAU/user8/4-1-1,single,Which action is performed in this video?,Checking body temperature,Pouring,Sitting down,Sweeping,C,user8
+training_0312,HAU,HAU/user8/4-1-2,single,Which action is performed in this video?,Getting dressed,Taking medicine,Mopping,Sitting down,D,user8
+training_0313,HAU,HAU/user8/4-1-3,single,Which action is performed in this video?,Listening to the music with headphones,Standing up,Squats,Checking body temperature,A,user8
+training_0314,HAU,HAU/user8/4-2-1,single,Which action is performed in this video?,Standing up,Stirring,Turning a page,Brushing teeth,B,user8
+training_0315,HAU,HAU/user8/4-2-2,single,Which action is performed in this video?,Jumping jacks,Walking,Lunges,Combing hair,B,user8
+training_0316,HAU,HAU/user8/4-2-3,single,Which action is performed in this video?,Combing hair,Playing games,Taking medicine,Walking,D,user8
+training_0317,HAU,HAU/user8/5-1-1,single,Which action is performed in this video?,Lying down,Listening to the music with headphones,Using a phone,Lunges,D,user8
+training_0318,HAU,HAU/user8/5-1-2,single,Which action is performed in this video?,Grabbing utensils,Running,Eating,Watching TV,B,user8
+training_0319,HAU,HAU/user8/5-1-3,single,Which action is performed in this video?,Checking the time,Washing face,Washing dishes,Grabbing utensils,A,user8
+training_0320,HAU,HAU/user8/6-1-1,single,Which action is performed in this video?,Checking body temperature,Folding clothes,Squats,Using a phone,C,user8
+training_0321,HAU,HAU/user8/6-1-2,single,Which action is performed in this video?,Getting dressed,Washing dishes,Pouring,Calling,A,user8
+training_0322,HAU,HAU/user8/6-1-3,single,Which action is performed in this video?,Wiping surface,Undressing,Drinking,Typing on a keyboard,B,user8
+training_0323,HAU,HAU/user8/6-2-1,single,Which action is performed in this video?,Running,Taking medicine,Standing up,Lying down,C,user8
+training_0324,HAU,HAU/user8/6-2-2,single,Which action is performed in this video?,Turning a page,Lunges,Watching TV,Mopping,A,user8
+training_0325,HAU,HAU/user8/6-2-3,single,Which action is performed in this video?,Wiping surface,Mopping,Stretching,Checking body temperature,C,user8
+training_0326,HAU,HAU/user8/7-1-1,single,Which action is performed in this video?,Wiping surface,Stirring,Undressing,Jumping jacks,C,user8
+training_0327,HAU,HAU/user8/7-1-2,single,Which action is performed in this video?,Eating,Wiping hands,Running,Taking a selfie,B,user8
+training_0328,HAU,HAU/user8/7-1-3,single,Which action is performed in this video?,Reading,Eating,Typing on a keyboard,Massaging oneself,D,user8
+training_0329,HAU,HAU/user8/7-2-1,single,Which action is performed in this video?,Watching TV,Wiping surface,Standing up,Peeling fruit,D,user8
+training_0330,HAU,HAU/user8/7-2-2,single,Which action is performed in this video?,Wiping surface,Watching TV,Checking the time,Stirring,D,user8
+training_0331,HAU,HAU/user8/7-2-3,single,Which action is performed in this video?,Peeling fruit,Sitting down,Washing dishes,Reading,A,user8
+training_0437,HAU,HAU/user17/1-1-1,single,Which action is performed in this video?,Combing hair,Eating,Folding clothes,Listening to the music with headphones,A,user17
+training_0438,HAU,HAU/user17/1-1-2,single,Which action is performed in this video?,Washing face,Playing games,Getting dressed,Washing dishes,C,user17
+training_0439,HAU,HAU/user17/1-1-3,single,Which action is performed in this video?,Washing face,Calling,Drinking,Getting dressed,D,user17
+training_0440,HAU,HAU/user17/1-2-1,single,Which action is performed in this video?,Mopping,Squats,Checking the time,Combing hair,C,user17
+training_0441,HAU,HAU/user17/1-2-2,single,Which action is performed in this video?,Brushing teeth,Checking the time,Lying down,Squats,B,user17
+training_0442,HAU,HAU/user17/1-2-3,single,Which action is performed in this video?,Wiping hands,Turning a page,Sitting down,Mopping,C,user17
+training_0443,HAU,HAU/user17/2-1-1,single,Which action is performed in this video?,Brushing teeth,Writing,Pouring,Sitting down,C,user17
+training_0444,HAU,HAU/user17/2-1-2,single,Which action is performed in this video?,Combing hair,Taking medicine,Pouring,Jumping jacks,C,user17
+training_0445,HAU,HAU/user17/2-1-3,single,Which action is performed in this video?,Using a phone,Typing on a keyboard,Drinking,Grabbing utensils,D,user17
+training_0446,HAU,HAU/user17/2-2-1,single,Which action is performed in this video?,Taking a selfie,Stirring,Wiping hands,Reading,B,user17
+training_0447,HAU,HAU/user17/2-2-2,single,Which action is performed in this video?,Stretching,Washing face,Listening to the music with headphones,Wiping surface,D,user17
+training_0448,HAU,HAU/user17/2-2-3,single,Which action is performed in this video?,Writing,Using a phone,Stirring,Taking medicine,C,user17
+training_0449,HAU,HAU/user17/3-1-1,single,Which action is performed in this video?,Washing dishes,Stretching,Jumping jacks,Taking medicine,B,user17
+training_0450,HAU,HAU/user17/3-1-2,single,Which action is performed in this video?,Turning a page,Running,Eating,Walking,B,user17
+training_0451,HAU,HAU/user17/3-1-3,single,Which action is performed in this video?,Combing hair,Sweeping,Grabbing utensils,Peeling fruit,B,user17
+training_0452,HAU,HAU/user17/3-2-1,single,Which action is performed in this video?,Sweeping,Combing hair,Standing up,Washing dishes,D,user17
+training_0453,HAU,HAU/user17/3-2-2,single,Which action is performed in this video?,Wiping hands,Reading,Walking,Lying down,C,user17
+training_0454,HAU,HAU/user17/3-2-3,single,Which action is performed in this video?,Lying down,Taking medicine,Undressing,Walking,D,user17
+training_0455,HAU,HAU/user17/3-3-1,single,Which action is performed in this video?,Combing hair,Wiping surface,Squats,Wiping hands,B,user17
+training_0456,HAU,HAU/user17/3-3-2,single,Which action is performed in this video?,Washing dishes,Running,Drinking,Walking,D,user17
+training_0457,HAU,HAU/user17/3-3-3,single,Which action is performed in this video?,Peeling fruit,Checking body temperature,Taking medicine,Walking,D,user17
+training_0458,HAU,HAU/user17/4-1-1,single,Which action is performed in this video?,Using a phone,Washing dishes,Peeling fruit,Taking medicine,D,user17
+training_0459,HAU,HAU/user17/4-1-2,single,Which action is performed in this video?,Sweeping,Calling,Typing on a keyboard,Folding clothes,C,user17
+training_0460,HAU,HAU/user17/4-1-3,single,Which action is performed in this video?,Playing games,Washing dishes,Checking body temperature,Peeling fruit,C,user17
+training_0461,HAU,HAU/user17/5-1-1,single,Which action is performed in this video?,Undressing,Walking,Reading,Lunges,A,user17
+training_0462,HAU,HAU/user17/5-1-2,single,Which action is performed in this video?,Taking medicine,Playing games,Typing on a keyboard,Undressing,D,user17
+training_0463,HAU,HAU/user17/5-1-3,single,Which action is performed in this video?,Brushing teeth,Combing hair,Watching TV,Calling,C,user17
+training_0464,HAU,HAU/user17/5-2-1,single,Which action is performed in this video?,Stirring,Calling,Using a phone,Checking the time,A,user17
+training_0465,HAU,HAU/user17/5-2-2,single,Which action is performed in this video?,Combing hair,Pouring,Sweeping,Running,B,user17
+training_0466,HAU,HAU/user17/5-2-3,single,Which action is performed in this video?,Stirring,Sitting down,Reading,Checking the time,A,user17
+training_0467,HAU,HAU/user17/5-3-1,single,Which action is performed in this video?,Using a phone,Wiping hands,Calling,Eating,D,user17
+training_0468,HAU,HAU/user17/5-3-2,single,Which action is performed in this video?,Standing up,Combing hair,Walking,Watching TV,C,user17
+training_0469,HAU,HAU/user17/5-3-3,single,Which action is performed in this video?,Grabbing utensils,Squats,Mopping,Jumping jacks,A,user17
+training_0470,HAU,HAU/user17/6-1-1,single,Which action is performed in this video?,Taking medicine,Folding clothes,Turning a page,Wiping hands,B,user17
+training_0471,HAU,HAU/user17/6-1-2,single,Which action is performed in this video?,Getting dressed,Typing on a keyboard,Peeling fruit,Running,A,user17
+training_0472,HAU,HAU/user17/6-1-3,single,Which action is performed in this video?,Running,Typing on a keyboard,Eating,Folding clothes,D,user17
+training_0473,HAU,HAU/user17/6-2-1,single,Which action is performed in this video?,Reading,Grabbing utensils,Getting dressed,Listening to the music with headphones,D,user17
+training_0474,HAU,HAU/user17/6-2-2,single,Which action is performed in this video?,Getting dressed,Folding clothes,Watching TV,Listening to the music with headphones,D,user17
+training_0475,HAU,HAU/user17/6-2-3,single,Which action is performed in this video?,Sweeping,Lying down,Running,Listening to the music with headphones,D,user17
+training_0476,HAU,HAU/user17/6-3-1,single,Which action is performed in this video?,Calling,Wiping surface,Wiping hands,Sitting down,D,user17
+training_0477,HAU,HAU/user17/6-3-2,single,Which action is performed in this video?,Walking,Standing up,Lying down,Using a phone,A,user17
+training_0478,HAU,HAU/user17/6-3-3,single,Which action is performed in this video?,Brushing teeth,Turning a page,Typing on a keyboard,Stirring,C,user17
+training_0479,HAU,HAU/user17/7-1-1,single,Which action is performed in this video?,Combing hair,Listening to the music with headphones,Pouring,Lunges,B,user17
+training_0480,HAU,HAU/user17/7-1-2,single,Which action is performed in this video?,Checking body temperature,Getting dressed,Undressing,Eating,A,user17
+training_0481,HAU,HAU/user17/7-1-3,single,Which action is performed in this video?,Washing face,Sitting down,Reading,Eating,B,user17
+training_0482,HAU,HAU/user17/7-2-1,single,Which action is performed in this video?,Checking the time,Walking,Taking a selfie,Peeling fruit,D,user17
+training_0483,HAU,HAU/user17/7-2-2,single,Which action is performed in this video?,Lying down,Eating,Brushing teeth,Combing hair,B,user17
+training_0484,HAU,HAU/user17/7-2-3,single,Which action is performed in this video?,Playing games,Calling,Undressing,Wiping hands,D,user17
+training_0623,HAU,HAU/user21/1-1-1,single,Which action is performed in this video?,Sweeping,Combing hair,Using a phone,Wiping hands,D,user21
+training_0624,HAU,HAU/user21/1-1-2,single,Which action is performed in this video?,Mopping,Eating,Checking the time,Walking,D,user21
+training_0625,HAU,HAU/user21/1-1-3,single,Which action is performed in this video?,Stirring,Wiping surface,Wiping hands,Peeling fruit,C,user21
+training_0626,HAU,HAU/user21/1-2-1,single,Which action is performed in this video?,Wiping surface,Using a phone,Combing hair,Peeling fruit,B,user21
+training_0627,HAU,HAU/user21/1-2-2,single,Which action is performed in this video?,Calling,Turning a page,Getting dressed,Listening to the music with headphones,D,user21
+training_0628,HAU,HAU/user21/1-2-3,single,Which action is performed in this video?,Running,Eating,Walking,Drinking,C,user21
+training_0629,HAU,HAU/user21/2-1-1,single,Which action is performed in this video?,Sweeping,Undressing,Reading,Watching TV,A,user21
+training_0630,HAU,HAU/user21/2-1-2,single,Which action is performed in this video?,Mopping,Checking body temperature,Calling,Massaging oneself,A,user21
+training_0631,HAU,HAU/user21/2-1-3,single,Which action is performed in this video?,Lying down,Reading,Using a phone,Grabbing utensils,D,user21
+training_0632,HAU,HAU/user21/2-2-1,single,Which action is performed in this video?,Combing hair,Turning a page,Drinking,Jumping jacks,B,user21
+training_0633,HAU,HAU/user21/2-2-2,single,Which action is performed in this video?,Running,Taking medicine,Turning a page,Brushing teeth,C,user21
+training_0634,HAU,HAU/user21/2-2-3,single,Which action is performed in this video?,Stretching,Standing up,Massaging oneself,Taking a selfie,B,user21
+training_0635,HAU,HAU/user21/3-1-1,single,Which action is performed in this video?,Checking the time,Using a phone,Grabbing utensils,Mopping,C,user21
+training_0636,HAU,HAU/user21/3-1-2,single,Which action is performed in this video?,Sitting down,Checking the time,Wiping hands,Grabbing utensils,D,user21
+training_0637,HAU,HAU/user21/3-1-3,single,Which action is performed in this video?,Calling,Wiping surface,Stretching,Grabbing utensils,D,user21
+training_0638,HAU,HAU/user21/3-2-1,single,Which action is performed in this video?,Jumping jacks,Grabbing utensils,Sitting down,Sweeping,A,user21
+training_0639,HAU,HAU/user21/3-2-2,single,Which action is performed in this video?,Combing hair,Jumping jacks,Grabbing utensils,Undressing,B,user21
+training_0640,HAU,HAU/user21/3-2-3,single,Which action is performed in this video?,Checking body temperature,Using a phone,Sitting down,Stirring,A,user21
+training_0641,HAU,HAU/user21/4-1-1,single,Which action is performed in this video?,Calling,Washing dishes,Massaging oneself,Stirring,A,user21
+training_0642,HAU,HAU/user21/4-1-2,single,Which action is performed in this video?,Calling,Stretching,Typing on a keyboard,Jumping jacks,A,user21
+training_0643,HAU,HAU/user21/4-1-3,single,Which action is performed in this video?,Calling,Wiping surface,Sitting down,Reading,A,user21
+training_0644,HAU,HAU/user21/4-2-1,single,Which action is performed in this video?,Getting dressed,Combing hair,Lunges,Undressing,B,user21
+training_0645,HAU,HAU/user21/4-2-2,single,Which action is performed in this video?,Brushing teeth,Stretching,Walking,Running,A,user21
+training_0646,HAU,HAU/user21/4-2-3,single,Which action is performed in this video?,Checking body temperature,Undressing,Grabbing utensils,Washing face,D,user21
+training_0647,HAU,HAU/user21/5-1-1,single,Which action is performed in this video?,Taking a selfie,Getting dressed,Wiping surface,Writing,A,user21
+training_0648,HAU,HAU/user21/5-1-2,single,Which action is performed in this video?,Walking,Massaging oneself,Checking body temperature,Lying down,A,user21
+training_0649,HAU,HAU/user21/5-1-3,single,Which action is performed in this video?,Peeling fruit,Using a phone,Playing games,Walking,D,user21
+training_0650,HAU,HAU/user21/5-2-1,single,Which action is performed in this video?,Taking medicine,Writing,Walking,Lying down,C,user21
+training_0651,HAU,HAU/user21/5-2-2,single,Which action is performed in this video?,Listening to the music with headphones,Calling,Washing dishes,Stretching,A,user21
+training_0652,HAU,HAU/user21/5-2-3,single,Which action is performed in this video?,Checking body temperature,Listening to the music with headphones,Standing up,Brushing teeth,B,user21
+training_0653,HAU,HAU/user21/6-1-1,single,Which action is performed in this video?,Getting dressed,Playing games,Sitting down,Combing hair,A,user21
+training_0654,HAU,HAU/user21/6-1-2,single,Which action is performed in this video?,Washing dishes,Checking body temperature,Running,Pouring,B,user21
+training_0655,HAU,HAU/user21/6-1-3,single,Which action is performed in this video?,Massaging oneself,Getting dressed,Washing dishes,Wiping surface,B,user21
+training_0656,HAU,HAU/user21/6-2-1,single,Which action is performed in this video?,Playing games,Checking the time,Undressing,Wiping hands,B,user21
+training_0657,HAU,HAU/user21/6-2-2,single,Which action is performed in this video?,Mopping,Checking body temperature,Watching TV,Checking the time,D,user21
+training_0658,HAU,HAU/user21/6-2-3,single,Which action is performed in this video?,Getting dressed,Walking,Taking medicine,Writing,B,user21
+training_0659,HAU,HAU/user21/7-1-1,single,Which action is performed in this video?,Sweeping,Eating,Wiping hands,Folding clothes,B,user21
+training_0660,HAU,HAU/user21/7-1-2,single,Which action is performed in this video?,Taking medicine,Wiping surface,Calling,Brushing teeth,A,user21
+training_0661,HAU,HAU/user21/7-1-3,single,Which action is performed in this video?,Jumping jacks,Taking medicine,Standing up,Walking,B,user21
+training_0662,HAU,HAU/user21/7-2-1,single,Which action is performed in this video?,Brushing teeth,Wiping hands,Wiping surface,Jumping jacks,B,user21
+training_0663,HAU,HAU/user21/7-2-2,single,Which action is performed in this video?,Standing up,Jumping jacks,Checking body temperature,Massaging oneself,D,user21
+training_0664,HAU,HAU/user21/7-2-3,single,Which action is performed in this video?,Checking the time,Typing on a keyboard,Wiping hands,Peeling fruit,C,user21
+training_1101,HAU,HAU/user8/1-1-1,multi,Which of the following actions appear in this video?,Jumping jacks,Wiping surface,Brushing teeth,Turning a page,C,user8
+training_1102,HAU,HAU/user8/1-1-2,multi,Which of the following actions appear in this video?,Brushing teeth,Drinking,Eating,Using a phone,A,user8
+training_1103,HAU,HAU/user8/1-1-3,multi,Which of the following actions appear in this video?,Sitting down,Brushing teeth,Standing up,Squats,B,user8
+training_1104,HAU,HAU/user8/1-2-1,multi,Which of the following actions appear in this video?,Wiping surface,Sitting down,Listening to the music with headphones,Calling,BCD,user8
+training_1105,HAU,HAU/user8/1-2-2,multi,Which of the following actions appear in this video?,Wiping surface,Calling,Walking,Squats,BC,user8
+training_1106,HAU,HAU/user8/1-2-3,multi,Which of the following actions appear in this video?,Calling,Taking a selfie,Wiping hands,Lunges,AB,user8
+training_1107,HAU,HAU/user8/2-1-1,multi,Which of the following actions appear in this video?,Grabbing utensils,Listening to the music with headphones,Massaging oneself,Sitting down,BD,user8
+training_1108,HAU,HAU/user8/2-1-2,multi,Which of the following actions appear in this video?,Sitting down,Calling,Taking a selfie,Checking the time,ABD,user8
+training_1109,HAU,HAU/user8/2-1-3,multi,Which of the following actions appear in this video?,Running,Calling,Sweeping,Sitting down,BD,user8
+training_1110,HAU,HAU/user8/2-2-1,multi,Which of the following actions appear in this video?,Listening to the music with headphones,Walking,Typing on a keyboard,Taking medicine,B,user8
+training_1111,HAU,HAU/user8/2-2-2,multi,Which of the following actions appear in this video?,Brushing teeth,Lunges,Stirring,Walking,D,user8
+training_1112,HAU,HAU/user8/2-2-3,multi,Which of the following actions appear in this video?,Wiping surface,Taking medicine,Using a phone,Walking,AD,user8
+training_1113,HAU,HAU/user8/3-1-1,multi,Which of the following actions appear in this video?,Massaging oneself,Taking a selfie,Drinking,Mopping,D,user8
+training_1114,HAU,HAU/user8/3-1-2,multi,Which of the following actions appear in this video?,Sweeping,Mopping,Lunges,Checking the time,AB,user8
+training_1115,HAU,HAU/user8/3-1-3,multi,Which of the following actions appear in this video?,Sweeping,Pouring,Massaging oneself,Washing face,A,user8
+training_1116,HAU,HAU/user8/3-2-1,multi,Which of the following actions appear in this video?,Stirring,Massaging oneself,Pouring,Writing,AC,user8
+training_1117,HAU,HAU/user8/3-2-2,multi,Which of the following actions appear in this video?,Pouring,Undressing,Stirring,Massaging oneself,AC,user8
+training_1118,HAU,HAU/user8/3-2-3,multi,Which of the following actions appear in this video?,Pouring,Folding clothes,Combing hair,Washing dishes,AD,user8
+training_1119,HAU,HAU/user8/3-3-1,multi,Which of the following actions appear in this video?,Stirring,Calling,Wiping surface,Walking,CD,user8
+training_1120,HAU,HAU/user8/3-3-2,multi,Which of the following actions appear in this video?,Walking,Wiping surface,Calling,Stirring,AB,user8
+training_1121,HAU,HAU/user8/3-3-3,multi,Which of the following actions appear in this video?,Mopping,Drinking,Wiping surface,Pouring,C,user8
+training_1122,HAU,HAU/user8/4-1-1,multi,Which of the following actions appear in this video?,Sitting down,Taking medicine,Listening to the music with headphones,Turning a page,ACD,user8
+training_1123,HAU,HAU/user8/4-1-2,multi,Which of the following actions appear in this video?,Turning a page,Jumping jacks,Massaging oneself,Reading,AD,user8
+training_1124,HAU,HAU/user8/4-1-3,multi,Which of the following actions appear in this video?,Jumping jacks,Taking medicine,Sitting down,Stretching,C,user8
+training_1125,HAU,HAU/user8/4-2-1,multi,Which of the following actions appear in this video?,Getting dressed,Checking the time,Pouring,Walking,CD,user8
+training_1126,HAU,HAU/user8/4-2-2,multi,Which of the following actions appear in this video?,Massaging oneself,Pouring,Peeling fruit,Stirring,BCD,user8
+training_1127,HAU,HAU/user8/4-2-3,multi,Which of the following actions appear in this video?,Sweeping,Writing,Using a phone,Peeling fruit,D,user8
+training_1128,HAU,HAU/user8/5-1-1,multi,Which of the following actions appear in this video?,Sweeping,Stretching,Listening to the music with headphones,Washing dishes,B,user8
+training_1129,HAU,HAU/user8/5-1-2,multi,Which of the following actions appear in this video?,Reading,Massaging oneself,Lunges,Stretching,CD,user8
+training_1130,HAU,HAU/user8/5-1-3,multi,Which of the following actions appear in this video?,Stretching,Standing up,Lunges,Washing face,ABC,user8
+training_1131,HAU,HAU/user8/6-1-1,multi,Which of the following actions appear in this video?,Getting dressed,Stretching,Undressing,Combing hair,ABC,user8
+training_1132,HAU,HAU/user8/6-1-2,multi,Which of the following actions appear in this video?,Stretching,Squats,Undressing,Playing games,ABC,user8
+training_1133,HAU,HAU/user8/6-1-3,multi,Which of the following actions appear in this video?,Getting dressed,Squats,Listening to the music with headphones,Jumping jacks,AB,user8
+training_1134,HAU,HAU/user8/6-2-1,multi,Which of the following actions appear in this video?,Checking the time,Massaging oneself,Jumping jacks,Undressing,AC,user8
+training_1135,HAU,HAU/user8/6-2-2,multi,Which of the following actions appear in this video?,Undressing,Jumping jacks,Turning a page,Getting dressed,BC,user8
+training_1136,HAU,HAU/user8/6-2-3,multi,Which of the following actions appear in this video?,Turning a page,Drinking,Massaging oneself,Using a phone,AB,user8
+training_1137,HAU,HAU/user8/7-1-1,multi,Which of the following actions appear in this video?,Combing hair,Undressing,Washing dishes,Washing face,ABD,user8
+training_1138,HAU,HAU/user8/7-1-2,multi,Which of the following actions appear in this video?,Getting dressed,Massaging oneself,Wiping hands,Folding clothes,ABC,user8
+training_1139,HAU,HAU/user8/7-1-3,multi,Which of the following actions appear in this video?,Eating,Taking medicine,Wiping hands,Squats,BC,user8
+training_1140,HAU,HAU/user8/7-2-1,multi,Which of the following actions appear in this video?,Standing up,Pouring,Jumping jacks,Taking medicine,BD,user8
+training_1141,HAU,HAU/user8/7-2-2,multi,Which of the following actions appear in this video?,Listening to the music with headphones,Stirring,Taking medicine,Pouring,BCD,user8
+training_1142,HAU,HAU/user8/7-2-3,multi,Which of the following actions appear in this video?,Peeling fruit,Pouring,Listening to the music with headphones,Eating,ABD,user8
+training_1248,HAU,HAU/user17/1-1-1,multi,Which of the following actions appear in this video?,Combing hair,Standing up,Lying down,Peeling fruit,A,user17
+training_1249,HAU,HAU/user17/1-1-2,multi,Which of the following actions appear in this video?,Combing hair,Walking,Listening to the music with headphones,Watching TV,A,user17
+training_1250,HAU,HAU/user17/1-1-3,multi,Which of the following actions appear in this video?,Squats,Brushing teeth,Combing hair,Getting dressed,BCD,user17
+training_1251,HAU,HAU/user17/1-2-1,multi,Which of the following actions appear in this video?,Pouring,Walking,Stretching,Turning a page,AB,user17
+training_1252,HAU,HAU/user17/1-2-2,multi,Which of the following actions appear in this video?,Turning a page,Taking a selfie,Checking the time,Washing face,BC,user17
+training_1253,HAU,HAU/user17/1-2-3,multi,Which of the following actions appear in this video?,Washing dishes,Watching TV,Combing hair,Taking a selfie,D,user17
+training_1254,HAU,HAU/user17/2-1-1,multi,Which of the following actions appear in this video?,Running,Reading,Stirring,Pouring,CD,user17
+training_1255,HAU,HAU/user17/2-1-2,multi,Which of the following actions appear in this video?,Pouring,Grabbing utensils,Standing up,Stirring,ABD,user17
+training_1256,HAU,HAU/user17/2-1-3,multi,Which of the following actions appear in this video?,Stirring,Pouring,Wiping hands,Grabbing utensils,ABD,user17
+training_1257,HAU,HAU/user17/2-2-1,multi,Which of the following actions appear in this video?,Washing dishes,Wiping surface,Stirring,Sitting down,BCD,user17
+training_1258,HAU,HAU/user17/2-2-2,multi,Which of the following actions appear in this video?,Getting dressed,Taking medicine,Folding clothes,Wiping surface,D,user17
+training_1259,HAU,HAU/user17/2-2-3,multi,Which of the following actions appear in this video?,Stirring,Running,Combing hair,Lying down,AD,user17
+training_1260,HAU,HAU/user17/3-1-1,multi,Which of the following actions appear in this video?,Using a phone,Combing hair,Sweeping,Peeling fruit,C,user17
+training_1261,HAU,HAU/user17/3-1-2,multi,Which of the following actions appear in this video?,Sweeping,Sitting down,Eating,Stretching,AD,user17
+training_1262,HAU,HAU/user17/3-1-3,multi,Which of the following actions appear in this video?,Jumping jacks,Sitting down,Sweeping,Watching TV,C,user17
+training_1263,HAU,HAU/user17/3-2-1,multi,Which of the following actions appear in this video?,Walking,Combing hair,Washing dishes,Grabbing utensils,ACD,user17
+training_1264,HAU,HAU/user17/3-2-2,multi,Which of the following actions appear in this video?,Taking a selfie,Walking,Getting dressed,Sitting down,B,user17
+training_1265,HAU,HAU/user17/3-2-3,multi,Which of the following actions appear in this video?,Getting dressed,Walking,Typing on a keyboard,Brushing teeth,B,user17
+training_1266,HAU,HAU/user17/3-3-1,multi,Which of the following actions appear in this video?,Wiping surface,Wiping hands,Standing up,Walking,AD,user17
+training_1267,HAU,HAU/user17/3-3-2,multi,Which of the following actions appear in this video?,Pouring,Washing dishes,Walking,Sweeping,C,user17
+training_1268,HAU,HAU/user17/3-3-3,multi,Which of the following actions appear in this video?,Washing face,Undressing,Jumping jacks,Wiping surface,D,user17
+training_1269,HAU,HAU/user17/4-1-1,multi,Which of the following actions appear in this video?,Reading,Checking body temperature,Jumping jacks,Walking,ABD,user17
+training_1270,HAU,HAU/user17/4-1-2,multi,Which of the following actions appear in this video?,Using a phone,Checking the time,Taking medicine,Wiping surface,BC,user17
+training_1271,HAU,HAU/user17/4-1-3,multi,Which of the following actions appear in this video?,Sweeping,Calling,Watching TV,Typing on a keyboard,D,user17
+training_1272,HAU,HAU/user17/5-1-1,multi,Which of the following actions appear in this video?,Jumping jacks,Getting dressed,Watching TV,Standing up,C,user17
+training_1273,HAU,HAU/user17/5-1-2,multi,Which of the following actions appear in this video?,Walking,Undressing,Watching TV,Wiping hands,BC,user17
+training_1274,HAU,HAU/user17/5-1-3,multi,Which of the following actions appear in this video?,Undressing,Watching TV,Playing games,Listening to the music with headphones,AB,user17
+training_1275,HAU,HAU/user17/5-2-1,multi,Which of the following actions appear in this video?,Pouring,Folding clothes,Stirring,Eating,ACD,user17
+training_1276,HAU,HAU/user17/5-2-2,multi,Which of the following actions appear in this video?,Pouring,Stretching,Brushing teeth,Walking,AD,user17
+training_1277,HAU,HAU/user17/5-2-3,multi,Which of the following actions appear in this video?,Pouring,Sitting down,Stirring,Walking,ACD,user17
+training_1278,HAU,HAU/user17/5-3-1,multi,Which of the following actions appear in this video?,Grabbing utensils,Sitting down,Using a phone,Watching TV,AB,user17
+training_1279,HAU,HAU/user17/5-3-2,multi,Which of the following actions appear in this video?,Listening to the music with headphones,Sitting down,Eating,Getting dressed,BC,user17
+training_1280,HAU,HAU/user17/5-3-3,multi,Which of the following actions appear in this video?,Checking the time,Grabbing utensils,Sitting down,Playing games,BC,user17
+training_1281,HAU,HAU/user17/6-1-1,multi,Which of the following actions appear in this video?,Undressing,Folding clothes,Washing dishes,Getting dressed,ABD,user17
+training_1282,HAU,HAU/user17/6-1-2,multi,Which of the following actions appear in this video?,Getting dressed,Washing dishes,Lying down,Folding clothes,AD,user17
+training_1283,HAU,HAU/user17/6-1-3,multi,Which of the following actions appear in this video?,Massaging oneself,Getting dressed,Taking a selfie,Checking body temperature,B,user17
+training_1284,HAU,HAU/user17/6-2-1,multi,Which of the following actions appear in this video?,Massaging oneself,Wiping surface,Listening to the music with headphones,Mopping,C,user17
+training_1285,HAU,HAU/user17/6-2-2,multi,Which of the following actions appear in this video?,Listening to the music with headphones,Watching TV,Lying down,Typing on a keyboard,A,user17
+training_1286,HAU,HAU/user17/6-2-3,multi,Which of the following actions appear in this video?,Folding clothes,Wiping hands,Massaging oneself,Listening to the music with headphones,D,user17
+training_1287,HAU,HAU/user17/6-3-1,multi,Which of the following actions appear in this video?,Walking,Sweeping,Folding clothes,Running,A,user17
+training_1288,HAU,HAU/user17/6-3-2,multi,Which of the following actions appear in this video?,Checking the time,Walking,Sitting down,Undressing,ABC,user17
+training_1289,HAU,HAU/user17/6-3-3,multi,Which of the following actions appear in this video?,Sitting down,Listening to the music with headphones,Walking,Typing on a keyboard,ACD,user17
+training_1290,HAU,HAU/user17/7-1-1,multi,Which of the following actions appear in this video?,Undressing,Combing hair,Taking a selfie,Checking body temperature,D,user17
+training_1291,HAU,HAU/user17/7-1-2,multi,Which of the following actions appear in this video?,Sitting down,Checking body temperature,Listening to the music with headphones,Drinking,ABC,user17
+training_1292,HAU,HAU/user17/7-1-3,multi,Which of the following actions appear in this video?,Listening to the music with headphones,Checking body temperature,Eating,Sitting down,ABD,user17
+training_1293,HAU,HAU/user17/7-2-1,multi,Which of the following actions appear in this video?,Peeling fruit,Playing games,Wiping hands,Reading,AC,user17
+training_1294,HAU,HAU/user17/7-2-2,multi,Which of the following actions appear in this video?,Listening to the music with headphones,Reading,Eating,Typing on a keyboard,C,user17
+training_1295,HAU,HAU/user17/7-2-3,multi,Which of the following actions appear in this video?,Checking body temperature,Playing games,Washing dishes,Peeling fruit,D,user17
+training_1434,HAU,HAU/user21/1-1-1,multi,Which of the following actions appear in this video?,Wiping surface,Watching TV,Walking,Reading,C,user21
+training_1435,HAU,HAU/user21/1-1-2,multi,Which of the following actions appear in this video?,Using a phone,Sweeping,Washing face,Brushing teeth,C,user21
+training_1436,HAU,HAU/user21/1-1-3,multi,Which of the following actions appear in this video?,Sweeping,Wiping hands,Washing face,Walking,BCD,user21
+training_1437,HAU,HAU/user21/1-2-1,multi,Which of the following actions appear in this video?,Walking,Using a phone,Stirring,Washing dishes,AB,user21
+training_1438,HAU,HAU/user21/1-2-2,multi,Which of the following actions appear in this video?,Walking,Sitting down,Lying down,Listening to the music with headphones,ABD,user21
+training_1439,HAU,HAU/user21/1-2-3,multi,Which of the following actions appear in this video?,Using a phone,Mopping,Brushing teeth,Listening to the music with headphones,AD,user21
+training_1440,HAU,HAU/user21/2-1-1,multi,Which of the following actions appear in this video?,Wiping surface,Getting dressed,Mopping,Sweeping,CD,user21
+training_1441,HAU,HAU/user21/2-1-2,multi,Which of the following actions appear in this video?,Stretching,Sweeping,Mopping,Grabbing utensils,BCD,user21
+training_1442,HAU,HAU/user21/2-1-3,multi,Which of the following actions appear in this video?,Mopping,Sweeping,Undressing,Grabbing utensils,ABD,user21
+training_1443,HAU,HAU/user21/2-2-1,multi,Which of the following actions appear in this video?,Playing games,Folding clothes,Standing up,Walking,CD,user21
+training_1444,HAU,HAU/user21/2-2-2,multi,Which of the following actions appear in this video?,Turning a page,Washing dishes,Grabbing utensils,Checking the time,AD,user21
+training_1445,HAU,HAU/user21/2-2-3,multi,Which of the following actions appear in this video?,Massaging oneself,Walking,Turning a page,Checking the time,BCD,user21
+training_1446,HAU,HAU/user21/3-1-1,multi,Which of the following actions appear in this video?,Peeling fruit,Listening to the music with headphones,Brushing teeth,Grabbing utensils,AD,user21
+training_1447,HAU,HAU/user21/3-1-2,multi,Which of the following actions appear in this video?,Getting dressed,Using a phone,Folding clothes,Grabbing utensils,D,user21
+training_1448,HAU,HAU/user21/3-1-3,multi,Which of the following actions appear in this video?,Peeling fruit,Undressing,Lunges,Grabbing utensils,AD,user21
+training_1449,HAU,HAU/user21/3-2-1,multi,Which of the following actions appear in this video?,Jumping jacks,Stretching,Checking body temperature,Eating,AC,user21
+training_1450,HAU,HAU/user21/3-2-2,multi,Which of the following actions appear in this video?,Lying down,Walking,Taking medicine,Pouring,B,user21
+training_1451,HAU,HAU/user21/3-2-3,multi,Which of the following actions appear in this video?,Squats,Combing hair,Writing,Stretching,A,user21
+training_1452,HAU,HAU/user21/4-1-1,multi,Which of the following actions appear in this video?,Brushing teeth,Stretching,Combing hair,Walking,D,user21
+training_1453,HAU,HAU/user21/4-1-2,multi,Which of the following actions appear in this video?,Walking,Taking a selfie,Getting dressed,Turning a page,A,user21
+training_1454,HAU,HAU/user21/4-1-3,multi,Which of the following actions appear in this video?,Standing up,Calling,Eating,Walking,ABD,user21
+training_1455,HAU,HAU/user21/4-2-1,multi,Which of the following actions appear in this video?,Using a phone,Taking a selfie,Washing face,Combing hair,CD,user21
+training_1456,HAU,HAU/user21/4-2-2,multi,Which of the following actions appear in this video?,Checking body temperature,Listening to the music with headphones,Getting dressed,Washing face,D,user21
+training_1457,HAU,HAU/user21/4-2-3,multi,Which of the following actions appear in this video?,Brushing teeth,Folding clothes,Writing,Lunges,A,user21
+training_1458,HAU,HAU/user21/5-1-1,multi,Which of the following actions appear in this video?,Grabbing utensils,Undressing,Walking,Wiping hands,C,user21
+training_1459,HAU,HAU/user21/5-1-2,multi,Which of the following actions appear in this video?,Squats,Taking medicine,Walking,Taking a selfie,CD,user21
+training_1460,HAU,HAU/user21/5-1-3,multi,Which of the following actions appear in this video?,Wiping surface,Taking a selfie,Squats,Stretching,B,user21
+training_1461,HAU,HAU/user21/5-2-1,multi,Which of the following actions appear in this video?,Mopping,Walking,Listening to the music with headphones,Using a phone,BCD,user21
+training_1462,HAU,HAU/user21/5-2-2,multi,Which of the following actions appear in this video?,Peeling fruit,Wiping surface,Sitting down,Watching TV,AC,user21
+training_1463,HAU,HAU/user21/5-2-3,multi,Which of the following actions appear in this video?,Walking,Listening to the music with headphones,Washing face,Mopping,AB,user21
+training_1464,HAU,HAU/user21/6-1-1,multi,Which of the following actions appear in this video?,Checking the time,Checking body temperature,Getting dressed,Eating,BC,user21
+training_1465,HAU,HAU/user21/6-1-2,multi,Which of the following actions appear in this video?,Getting dressed,Peeling fruit,Calling,Watching TV,A,user21
+training_1466,HAU,HAU/user21/6-1-3,multi,Which of the following actions appear in this video?,Using a phone,Checking body temperature,Playing games,Wiping surface,B,user21
+training_1467,HAU,HAU/user21/6-2-1,multi,Which of the following actions appear in this video?,Pouring,Brushing teeth,Drinking,Getting dressed,AC,user21
+training_1468,HAU,HAU/user21/6-2-2,multi,Which of the following actions appear in this video?,Brushing teeth,Reading,Pouring,Drinking,CD,user21
+training_1469,HAU,HAU/user21/6-2-3,multi,Which of the following actions appear in this video?,Checking the time,Pouring,Drinking,Washing dishes,ABC,user21
+training_1470,HAU,HAU/user21/7-1-1,multi,Which of the following actions appear in this video?,Drinking,Undressing,Eating,Grabbing utensils,ACD,user21
+training_1471,HAU,HAU/user21/7-1-2,multi,Which of the following actions appear in this video?,Walking,Grabbing utensils,Turning a page,Writing,B,user21
+training_1472,HAU,HAU/user21/7-1-3,multi,Which of the following actions appear in this video?,Getting dressed,Massaging oneself,Sweeping,Grabbing utensils,BD,user21
+training_1473,HAU,HAU/user21/7-2-1,multi,Which of the following actions appear in this video?,Massaging oneself,Folding clothes,Mopping,Wiping hands,AD,user21
+training_1474,HAU,HAU/user21/7-2-2,multi,Which of the following actions appear in this video?,Using a phone,Reading,Wiping hands,Massaging oneself,CD,user21
+training_1475,HAU,HAU/user21/7-2-3,multi,Which of the following actions appear in this video?,Standing up,Wiping hands,Drinking,Stretching,B,user21
+training_1906,HAU,HAU/user8/1-1-1,combination,Which combination of actions is performed in this video?,"Folding clothes, Brushing teeth","Lying down, Folding clothes","Wiping hands, Brushing teeth","Wiping hands, Lying down",C,user8
+training_1907,HAU,HAU/user8/1-1-2,combination,Which combination of actions is performed in this video?,"Eating, Brushing teeth","Eating, Turning a page","Wiping hands, Brushing teeth","Turning a page, Wiping hands",C,user8
+training_1908,HAU,HAU/user8/1-1-3,combination,Which combination of actions is performed in this video?,"Getting dressed, Massaging oneself","Massaging oneself, Brushing teeth","Getting dressed, Wiping hands","Brushing teeth, Wiping hands",D,user8
+training_1909,HAU,HAU/user8/1-2-1,combination,Which combination of actions is performed in this video?,"Listening to the music with headphones, Grabbing utensils","Calling, Listening to the music with headphones","Pouring, Calling","Grabbing utensils, Pouring",B,user8
+training_1910,HAU,HAU/user8/1-2-2,combination,Which combination of actions is performed in this video?,"Taking a selfie, Lunges, Walking, Sitting down","Pouring, Sitting down, Calling, Undressing","Pouring, Listening to the music with headphones, Undressing, Lunges","Calling, Walking, Taking a selfie, Listening to the music with headphones",D,user8
+training_1911,HAU,HAU/user8/1-2-3,combination,Which combination of actions is performed in this video?,"Listening to the music with headphones, Sweeping, Reading, Checking the time","Listening to the music with headphones, Taking a selfie, Walking, Reading","Sitting down, Getting dressed, Sweeping, Walking","Sitting down, Taking a selfie, Getting dressed, Checking the time",B,user8
+training_1912,HAU,HAU/user8/2-1-1,combination,Which combination of actions is performed in this video?,"Pouring, Taking medicine, Checking the time, Folding clothes, Washing dishes","Pouring, Undressing, Running, Sitting down, Taking medicine","Listening to the music with headphones, Undressing, Washing dishes, Calling, Running","Calling, Checking the time, Sitting down, Listening to the music with headphones, Folding clothes",D,user8
+training_1913,HAU,HAU/user8/2-1-2,combination,Which combination of actions is performed in this video?,"Folding clothes, Calling, Checking the time, Listening to the music with headphones","Listening to the music with headphones, Walking, Folding clothes, Running","Checking body temperature, Calling, Wiping surface, Running","Walking, Checking the time, Checking body temperature, Wiping surface",A,user8
+training_1914,HAU,HAU/user8/2-1-3,combination,Which combination of actions is performed in this video?,"Combing hair, Massaging oneself, Folding clothes, Calling","Combing hair, Drinking, Checking the time, Taking medicine","Massaging oneself, Taking medicine, Listening to the music with headphones, Drinking","Calling, Listening to the music with headphones, Folding clothes, Checking the time",D,user8
+training_1915,HAU,HAU/user8/2-2-1,combination,Which combination of actions is performed in this video?,"Sweeping, Wiping surface","Wiping surface, Walking","Taking medicine, Sweeping","Taking medicine, Walking",B,user8
+training_1916,HAU,HAU/user8/2-2-2,combination,Which combination of actions is performed in this video?,"Jumping jacks, Walking","Massaging oneself, Wiping surface","Massaging oneself, Jumping jacks","Walking, Wiping surface",D,user8
+training_1917,HAU,HAU/user8/2-2-3,combination,Which combination of actions is performed in this video?,"Walking, Washing face","Washing face, Lying down","Wiping surface, Walking","Lying down, Wiping surface",C,user8
+training_1918,HAU,HAU/user8/3-1-1,combination,Which combination of actions is performed in this video?,"Sweeping, Reading","Mopping, Sweeping","Reading, Writing","Mopping, Writing",B,user8
+training_1919,HAU,HAU/user8/3-1-2,combination,Which combination of actions is performed in this video?,"Mopping, Sitting down","Typing on a keyboard, Sweeping","Typing on a keyboard, Sitting down","Mopping, Sweeping",D,user8
+training_1920,HAU,HAU/user8/3-1-3,combination,Which combination of actions is performed in this video?,"Watching TV, Mopping","Watching TV, Stretching","Mopping, Sweeping","Sweeping, Stretching",C,user8
+training_1921,HAU,HAU/user8/3-2-1,combination,Which combination of actions is performed in this video?,"Washing dishes, Peeling fruit, Writing","Pouring, Washing dishes, Stirring","Writing, Pouring, Checking body temperature","Peeling fruit, Checking body temperature, Stirring",B,user8
+training_1922,HAU,HAU/user8/3-2-2,combination,Which combination of actions is performed in this video?,"Stirring, Peeling fruit, Stretching","Washing dishes, Stirring, Pouring","Pouring, Stretching, Checking the time","Peeling fruit, Checking the time, Washing dishes",B,user8
+training_1923,HAU,HAU/user8/3-2-3,combination,Which combination of actions is performed in this video?,"Reading, Standing up","Standing up, Washing dishes","Pouring, Washing dishes","Reading, Pouring",C,user8
+training_1924,HAU,HAU/user8/3-3-1,combination,Which combination of actions is performed in this video?,"Typing on a keyboard, Undressing","Walking, Wiping surface","Undressing, Wiping surface","Typing on a keyboard, Walking",B,user8
+training_1925,HAU,HAU/user8/3-3-2,combination,Which combination of actions is performed in this video?,"Walking, Massaging oneself","Walking, Wiping surface","Massaging oneself, Using a phone","Wiping surface, Using a phone",B,user8
+training_1926,HAU,HAU/user8/3-3-3,combination,Which combination of actions is performed in this video?,"Eating, Walking","Writing, Eating","Walking, Wiping surface","Writing, Wiping surface",C,user8
+training_1927,HAU,HAU/user8/4-1-1,combination,Which combination of actions is performed in this video?,"Typing on a keyboard, Sweeping, Sitting down","Writing, Sweeping, Drinking","Sitting down, Writing, Reading","Reading, Drinking, Typing on a keyboard",C,user8
+training_1928,HAU,HAU/user8/4-1-2,combination,Which combination of actions is performed in this video?,"Massaging oneself, Stirring","Listening to the music with headphones, Sitting down","Listening to the music with headphones, Stirring","Sitting down, Massaging oneself",B,user8
+training_1929,HAU,HAU/user8/4-1-3,combination,Which combination of actions is performed in this video?,"Turning a page, Reading, Sitting down","Eating, Turning a page, Typing on a keyboard","Typing on a keyboard, Reading, Wiping surface","Wiping surface, Eating, Sitting down",A,user8
+training_1930,HAU,HAU/user8/4-2-1,combination,Which combination of actions is performed in this video?,"Pouring, Reading, Peeling fruit","Walking, Mopping, Pouring","Mopping, Stirring, Reading","Peeling fruit, Stirring, Walking",D,user8
+training_1931,HAU,HAU/user8/4-2-2,combination,Which combination of actions is performed in this video?,"Typing on a keyboard, Peeling fruit, Stirring","Pouring, Stirring, Walking","Typing on a keyboard, Sweeping, Pouring","Walking, Peeling fruit, Sweeping",B,user8
+training_1932,HAU,HAU/user8/4-2-3,combination,Which combination of actions is performed in this video?,"Stirring, Pouring","Stirring, Washing face","Pouring, Reading","Reading, Washing face",A,user8
+training_1933,HAU,HAU/user8/5-1-1,combination,Which combination of actions is performed in this video?,"Standing up, Listening to the music with headphones, Stirring, Taking a selfie, Combing hair, Sitting down, Mopping","Lunges, Checking the time, Combing hair, Stirring, Sweeping, Stretching, Writing","Sitting down, Lunges, Typing on a keyboard, Standing up, Checking the time, Stretching, Running","Mopping, Listening to the music with headphones, Sweeping, Running, Taking a selfie, Writing, Typing on a keyboard",C,user8
+training_1934,HAU,HAU/user8/5-1-2,combination,Which combination of actions is performed in this video?,"Stretching, Checking the time, Standing up, Sitting down, Running, Lunges","Pouring, Lunges, Writing, Stretching, Typing on a keyboard, Calling","Writing, Brushing teeth, Pouring, Running, Stirring, Sitting down","Calling, Standing up, Stirring, Typing on a keyboard, Brushing teeth, Checking the time",A,user8
+training_1935,HAU,HAU/user8/5-1-3,combination,Which combination of actions is performed in this video?,"Standing up, Listening to the music with headphones","Standing up, Lunges","Wiping hands, Listening to the music with headphones","Lunges, Wiping hands",B,user8
+training_1936,HAU,HAU/user8/6-1-1,combination,Which combination of actions is performed in this video?,"Getting dressed, Using a phone","Using a phone, Lunges","Lunges, Undressing","Getting dressed, Undressing",D,user8
+training_1937,HAU,HAU/user8/6-1-2,combination,Which combination of actions is performed in this video?,"Stretching, Undressing","Stretching, Folding clothes","Folding clothes, Reading","Undressing, Reading",A,user8
+training_1938,HAU,HAU/user8/6-1-3,combination,Which combination of actions is performed in this video?,"Squats, Writing","Getting dressed, Squats","Wiping surface, Writing","Wiping surface, Getting dressed",B,user8
+training_1939,HAU,HAU/user8/6-2-1,combination,Which combination of actions is performed in this video?,"Sweeping, Folding clothes, Jumping jacks, Peeling fruit, Washing dishes, Walking","Standing up, Jumping jacks, Drinking, Stretching, Peeling fruit, Checking the time","Writing, Sweeping, Standing up, Checking the time, Folding clothes, Watching TV","Writing, Walking, Drinking, Washing dishes, Stretching, Watching TV",B,user8
+training_1940,HAU,HAU/user8/6-2-2,combination,Which combination of actions is performed in this video?,"Eating, Peeling fruit, Jumping jacks, Checking the time, Grabbing utensils, Sitting down, Pouring, Stirring, Typing on a keyboard","Standing up, Writing, Typing on a keyboard, Lying down, Pouring, Lunges, Stirring, Reading, Stretching","Jumping jacks, Standing up, Walking, Checking the time, Drinking, Turning a page, Writing, Stretching, Peeling fruit","Lunges, Lying down, Drinking, Walking, Grabbing utensils, Turning a page, Reading, Sitting down, Eating",C,user8
+training_1941,HAU,HAU/user8/6-2-3,combination,Which combination of actions is performed in this video?,"Drinking, Jumping jacks, Walking, Turning a page, Writing, Standing up, Checking the time, Stretching","Jumping jacks, Using a phone, Peeling fruit, Turning a page, Standing up, Stirring, Typing on a keyboard, Grabbing utensils","Playing games, Typing on a keyboard, Reading, Checking the time, Drinking, Grabbing utensils, Combing hair, Writing","Walking, Stirring, Playing games, Using a phone, Reading, Combing hair, Stretching, Peeling fruit",A,user8
+training_1942,HAU,HAU/user8/7-1-1,combination,Which combination of actions is performed in this video?,"Sitting down, Wiping hands, Brushing teeth, Massaging oneself, Taking medicine, Typing on a keyboard, Checking the time","Washing face, Sitting down, Massaging oneself, Checking body temperature, Writing, Undressing, Turning a page","Brushing teeth, Combing hair, Taking medicine, Washing face, Wiping hands, Getting dressed, Undressing","Getting dressed, Checking body temperature, Checking the time, Writing, Combing hair, Typing on a keyboard, Turning a page",C,user8
+training_1943,HAU,HAU/user8/7-1-2,combination,Which combination of actions is performed in this video?,"Writing, Washing face, Wiping hands, Checking body temperature, Taking a selfie, Folding clothes, Mopping, Checking the time, Walking","Watching TV, Turning a page, Brushing teeth, Folding clothes, Writing, Mopping, Eating, Massaging oneself, Getting dressed","Undressing, Massaging oneself, Brushing teeth, Wiping hands, Taking medicine, Getting dressed, Checking body temperature, Washing face, Combing hair","Watching TV, Taking a selfie, Walking, Taking medicine, Eating, Combing hair, Undressing, Turning a page, Checking the time",C,user8
+training_1944,HAU,HAU/user8/7-1-3,combination,Which combination of actions is performed in this video?,"Massaging oneself, Eating","Eating, Lunges","Massaging oneself, Washing face","Washing face, Lunges",C,user8
+training_1945,HAU,HAU/user8/7-2-1,combination,Which combination of actions is performed in this video?,"Peeling fruit, Stirring, Eating, Taking medicine, Pouring","Eating, Drinking, Washing face, Taking medicine, Combing hair","Grabbing utensils, Stirring, Washing face, Stretching, Drinking","Pouring, Stretching, Grabbing utensils, Peeling fruit, Combing hair",A,user8
+training_1946,HAU,HAU/user8/7-2-2,combination,Which combination of actions is performed in this video?,"Grabbing utensils, Drinking, Squats, Eating, Stirring","Stirring, Peeling fruit, Taking medicine, Eating, Pouring","Peeling fruit, Drinking, Standing up, Squats, Lying down","Standing up, Lying down, Pouring, Taking medicine, Grabbing utensils",B,user8
+training_1947,HAU,HAU/user8/7-2-3,combination,Which combination of actions is performed in this video?,"Calling, Getting dressed, Stirring, Watching TV, Sitting down","Stirring, Peeling fruit, Taking medicine, Pouring, Eating","Sitting down, Eating, Taking medicine, Combing hair, Watching TV","Getting dressed, Combing hair, Calling, Pouring, Peeling fruit",B,user8
+training_2052,HAU,HAU/user17/1-1-1,combination,Which combination of actions is performed in this video?,"Combing hair, Wiping hands, Brushing teeth, Getting dressed","Checking the time, Combing hair, Reading, Getting dressed","Lunges, Checking the time, Folding clothes, Brushing teeth","Folding clothes, Lunges, Reading, Wiping hands",A,user17
+training_2053,HAU,HAU/user17/1-1-2,combination,Which combination of actions is performed in this video?,"Combing hair, Brushing teeth, Wiping hands, Getting dressed","Standing up, Running, Checking body temperature, Brushing teeth","Playing games, Wiping hands, Running, Getting dressed","Playing games, Standing up, Checking body temperature, Combing hair",A,user17
+training_2054,HAU,HAU/user17/1-1-3,combination,Which combination of actions is performed in this video?,"Wiping hands, Getting dressed, Combing hair, Brushing teeth","Jumping jacks, Massaging oneself, Getting dressed, Combing hair","Peeling fruit, Massaging oneself, Wiping hands, Sitting down","Brushing teeth, Sitting down, Jumping jacks, Peeling fruit",A,user17
+training_2055,HAU,HAU/user17/1-2-1,combination,Which combination of actions is performed in this video?,"Sitting down, Pouring, Jumping jacks, Typing on a keyboard, Taking medicine, Playing games, Eating","Checking the time, Using a phone, Grabbing utensils, Walking, Taking a selfie, Pouring, Sitting down","Undressing, Jumping jacks, Taking a selfie, Typing on a keyboard, Turning a page, Grabbing utensils, Walking","Playing games, Taking medicine, Undressing, Using a phone, Eating, Turning a page, Checking the time",B,user17
+training_2056,HAU,HAU/user17/1-2-2,combination,Which combination of actions is performed in this video?,"Checking the time, Grabbing utensils, Pouring, Sitting down, Eating","Stirring, Eating, Wiping hands, Grabbing utensils, Combing hair","Wiping surface, Peeling fruit, Checking the time, Combing hair, Sitting down","Peeling fruit, Pouring, Wiping surface, Stirring, Wiping hands",A,user17
+training_2057,HAU,HAU/user17/1-2-3,combination,Which combination of actions is performed in this video?,"Eating, Walking, Grabbing utensils","Sitting down, Eating, Sweeping","Sitting down, Lunges, Grabbing utensils","Walking, Lunges, Sweeping",A,user17
+training_2058,HAU,HAU/user17/2-1-1,combination,Which combination of actions is performed in this video?,"Pouring, Stirring, Grabbing utensils","Watching TV, Stirring, Washing face","Stretching, Grabbing utensils, Washing face","Pouring, Watching TV, Stretching",A,user17
+training_2059,HAU,HAU/user17/2-1-2,combination,Which combination of actions is performed in this video?,"Stirring, Sitting down","Pouring, Stirring","Wiping surface, Sitting down","Pouring, Wiping surface",B,user17
+training_2060,HAU,HAU/user17/2-1-3,combination,Which combination of actions is performed in this video?,"Stirring, Grabbing utensils, Pouring","Grabbing utensils, Turning a page, Stretching","Reading, Turning a page, Stirring","Pouring, Stretching, Reading",A,user17
+training_2061,HAU,HAU/user17/2-2-1,combination,Which combination of actions is performed in this video?,"Peeling fruit, Checking body temperature, Jumping jacks, Drinking, Lying down, Washing dishes","Stirring, Eating, Grabbing utensils, Pouring, Checking body temperature, Peeling fruit","Washing dishes, Wiping surface, Pouring, Drinking, Grabbing utensils, Sitting down","Stirring, Jumping jacks, Wiping surface, Eating, Sitting down, Lying down",D,user17
+training_2062,HAU,HAU/user17/2-2-2,combination,Which combination of actions is performed in this video?,"Writing, Eating, Stretching","Eating, Wiping surface, Stirring","Stretching, Taking a selfie, Wiping surface","Writing, Taking a selfie, Stirring",B,user17
+training_2063,HAU,HAU/user17/2-2-3,combination,Which combination of actions is performed in this video?,"Getting dressed, Turning a page","Stirring, Turning a page","Getting dressed, Jumping jacks","Jumping jacks, Stirring",D,user17
+training_2064,HAU,HAU/user17/3-1-1,combination,Which combination of actions is performed in this video?,"Sweeping, Turning a page, Running, Listening to the music with headphones","Mopping, Sweeping, Stretching, Running","Listening to the music with headphones, Drinking, Stretching, Washing face","Washing face, Turning a page, Drinking, Mopping",B,user17
+training_2065,HAU,HAU/user17/3-1-2,combination,Which combination of actions is performed in this video?,"Grabbing utensils, Running","Washing face, Grabbing utensils","Washing face, Stretching","Stretching, Running",D,user17
+training_2066,HAU,HAU/user17/3-1-3,combination,Which combination of actions is performed in this video?,"Washing face, Brushing teeth, Stretching","Brushing teeth, Running, Using a phone","Stretching, Sweeping, Running","Washing face, Using a phone, Sweeping",C,user17
+training_2067,HAU,HAU/user17/3-2-1,combination,Which combination of actions is performed in this video?,"Sweeping, Mopping","Eating, Walking","Mopping, Walking","Eating, Sweeping",B,user17
+training_2068,HAU,HAU/user17/3-2-2,combination,Which combination of actions is performed in this video?,"Washing dishes, Walking","Walking, Mopping","Squats, Washing dishes","Squats, Mopping",A,user17
+training_2069,HAU,HAU/user17/3-2-3,combination,Which combination of actions is performed in this video?,"Typing on a keyboard, Eating, Using a phone","Combing hair, Washing dishes, Using a phone","Typing on a keyboard, Combing hair, Grabbing utensils","Eating, Grabbing utensils, Washing dishes",D,user17
+training_2070,HAU,HAU/user17/3-3-1,combination,Which combination of actions is performed in this video?,"Wiping surface, Walking","Wiping surface, Typing on a keyboard","Squats, Walking","Typing on a keyboard, Squats",A,user17
+training_2071,HAU,HAU/user17/3-3-2,combination,Which combination of actions is performed in this video?,"Washing dishes, Taking medicine","Wiping surface, Walking","Taking medicine, Wiping surface","Walking, Washing dishes",B,user17
+training_2072,HAU,HAU/user17/3-3-3,combination,Which combination of actions is performed in this video?,"Sitting down, Walking","Lying down, Wiping surface","Walking, Wiping surface","Lying down, Sitting down",C,user17
+training_2073,HAU,HAU/user17/4-1-1,combination,Which combination of actions is performed in this video?,"Reading, Sitting down, Checking the time, Walking","Massaging oneself, Walking, Calling, Sweeping","Typing on a keyboard, Sitting down, Calling, Reading","Sweeping, Massaging oneself, Typing on a keyboard, Checking the time",A,user17
+training_2074,HAU,HAU/user17/4-1-2,combination,Which combination of actions is performed in this video?,"Lying down, Washing face, Sitting down, Using a phone, Reading, Typing on a keyboard, Pouring, Checking the time, Playing games","Squats, Washing face, Writing, Lying down, Turning a page, Standing up, Walking, Watching TV, Pouring","Playing games, Stretching, Writing, Typing on a keyboard, Using a phone, Checking body temperature, Watching TV, Turning a page, Taking medicine","Checking body temperature, Walking, Stretching, Squats, Reading, Sitting down, Checking the time, Taking medicine, Standing up",D,user17
+training_2075,HAU,HAU/user17/4-1-3,combination,Which combination of actions is performed in this video?,"Reading, Checking body temperature, Standing up, Squats","Reading, Listening to the music with headphones, Wiping surface, Folding clothes","Standing up, Folding clothes, Turning a page, Squats","Checking body temperature, Wiping surface, Listening to the music with headphones, Turning a page",A,user17
+training_2076,HAU,HAU/user17/5-1-1,combination,Which combination of actions is performed in this video?,"Undressing, Watching TV","Lying down, Undressing","Folding clothes, Lying down","Folding clothes, Watching TV",A,user17
+training_2077,HAU,HAU/user17/5-1-2,combination,Which combination of actions is performed in this video?,"Wiping surface, Watching TV","Turning a page, Undressing","Undressing, Watching TV","Wiping surface, Turning a page",C,user17
+training_2078,HAU,HAU/user17/5-1-3,combination,Which combination of actions is performed in this video?,"Undressing, Watching TV","Drinking, Playing games","Playing games, Undressing","Watching TV, Drinking",A,user17
+training_2079,HAU,HAU/user17/5-2-1,combination,Which combination of actions is performed in this video?,"Combing hair, Playing games","Walking, Playing games","Walking, Pouring","Combing hair, Pouring",C,user17
+training_2080,HAU,HAU/user17/5-2-2,combination,Which combination of actions is performed in this video?,"Playing games, Pouring","Pouring, Walking","Playing games, Turning a page","Walking, Turning a page",B,user17
+training_2081,HAU,HAU/user17/5-2-3,combination,Which combination of actions is performed in this video?,"Eating, Stretching, Walking, Checking body temperature","Taking a selfie, Pouring, Mopping, Stretching","Taking a selfie, Stirring, Checking body temperature, Mopping","Walking, Eating, Stirring, Pouring",D,user17
+training_2082,HAU,HAU/user17/5-3-1,combination,Which combination of actions is performed in this video?,"Sitting down, Checking body temperature","Grabbing utensils, Sitting down","Grabbing utensils, Taking a selfie","Taking a selfie, Checking body temperature",B,user17
+training_2083,HAU,HAU/user17/5-3-2,combination,Which combination of actions is performed in this video?,"Stretching, Turning a page","Stretching, Grabbing utensils","Walking, Turning a page","Grabbing utensils, Walking",D,user17
+training_2084,HAU,HAU/user17/5-3-3,combination,Which combination of actions is performed in this video?,"Brushing teeth, Standing up","Eating, Sitting down","Standing up, Eating","Brushing teeth, Sitting down",B,user17
+training_2085,HAU,HAU/user17/6-1-1,combination,Which combination of actions is performed in this video?,"Eating, Undressing, Watching TV","Eating, Standing up, Walking","Watching TV, Standing up, Getting dressed","Undressing, Walking, Getting dressed",D,user17
+training_2086,HAU,HAU/user17/6-1-2,combination,Which combination of actions is performed in this video?,"Undressing, Running","Folding clothes, Typing on a keyboard","Folding clothes, Undressing","Running, Typing on a keyboard",C,user17
+training_2087,HAU,HAU/user17/6-1-3,combination,Which combination of actions is performed in this video?,"Running, Standing up","Getting dressed, Running","Getting dressed, Folding clothes","Standing up, Folding clothes",C,user17
+training_2088,HAU,HAU/user17/6-3-1,combination,Which combination of actions is performed in this video?,"Typing on a keyboard, Stirring, Writing","Walking, Writing, Wiping surface","Sitting down, Typing on a keyboard, Walking","Sitting down, Wiping surface, Stirring",C,user17
+training_2089,HAU,HAU/user17/6-3-2,combination,Which combination of actions is performed in this video?,"Walking, Checking the time, Typing on a keyboard, Sitting down","Writing, Typing on a keyboard, Sitting down, Massaging oneself","Writing, Checking the time, Squats, Running","Massaging oneself, Walking, Squats, Running",A,user17
+training_2090,HAU,HAU/user17/6-3-3,combination,Which combination of actions is performed in this video?,"Checking the time, Typing on a keyboard, Walking, Sitting down","Washing face, Listening to the music with headphones, Walking, Standing up","Checking the time, Listening to the music with headphones, Writing, Sitting down","Washing face, Typing on a keyboard, Standing up, Writing",A,user17
+training_2091,HAU,HAU/user17/7-1-1,combination,Which combination of actions is performed in this video?,"Turning a page, Checking body temperature","Listening to the music with headphones, Checking body temperature","Writing, Turning a page","Listening to the music with headphones, Writing",B,user17
+training_2092,HAU,HAU/user17/7-1-2,combination,Which combination of actions is performed in this video?,"Lying down, Taking a selfie, Checking body temperature","Listening to the music with headphones, Sitting down, Checking body temperature","Checking the time, Sitting down, Lying down","Listening to the music with headphones, Taking a selfie, Checking the time",B,user17
+training_2093,HAU,HAU/user17/7-1-3,combination,Which combination of actions is performed in this video?,"Standing up, Stirring","Listening to the music with headphones, Sitting down","Stirring, Listening to the music with headphones","Sitting down, Standing up",B,user17
+training_2094,HAU,HAU/user17/7-2-1,combination,Which combination of actions is performed in this video?,"Peeling fruit, Eating","Squats, Combing hair","Peeling fruit, Squats","Combing hair, Eating",A,user17
+training_2095,HAU,HAU/user17/7-2-2,combination,Which combination of actions is performed in this video?,"Peeling fruit, Turning a page, Lying down","Taking medicine, Eating, Lying down","Taking medicine, Wiping hands, Turning a page","Eating, Wiping hands, Peeling fruit",D,user17
+training_2096,HAU,HAU/user17/7-2-3,combination,Which combination of actions is performed in this video?,"Taking a selfie, Wiping hands, Stretching","Wiping hands, Eating, Peeling fruit","Eating, Getting dressed, Taking a selfie","Getting dressed, Stretching, Peeling fruit",B,user17
+training_2235,HAU,HAU/user21/1-1-1,combination,Which combination of actions is performed in this video?,"Stirring, Calling","Wiping hands, Calling","Stirring, Walking","Walking, Wiping hands",D,user21
+training_2236,HAU,HAU/user21/1-1-2,combination,Which combination of actions is performed in this video?,"Eating, Walking","Lying down, Eating","Walking, Wiping hands","Wiping hands, Lying down",C,user21
+training_2237,HAU,HAU/user21/1-1-3,combination,Which combination of actions is performed in this video?,"Washing face, Folding clothes","Walking, Washing face","Playing games, Folding clothes","Playing games, Walking",B,user21
+training_2238,HAU,HAU/user21/1-2-1,combination,Which combination of actions is performed in this video?,"Walking, Using a phone, Listening to the music with headphones","Running, Using a phone, Playing games","Playing games, Stretching, Walking","Running, Stretching, Listening to the music with headphones",A,user21
+training_2239,HAU,HAU/user21/1-2-2,combination,Which combination of actions is performed in this video?,"Listening to the music with headphones, Jumping jacks, Reading","Walking, Using a phone, Listening to the music with headphones","Getting dressed, Jumping jacks, Using a phone","Getting dressed, Reading, Walking",B,user21
+training_2240,HAU,HAU/user21/1-2-3,combination,Which combination of actions is performed in this video?,"Listening to the music with headphones, Checking the time, Eating","Walking, Checking the time, Getting dressed","Walking, Using a phone, Listening to the music with headphones","Using a phone, Eating, Getting dressed",C,user21
+training_2241,HAU,HAU/user21/2-1-1,combination,Which combination of actions is performed in this video?,"Walking, Stretching, Mopping","Stretching, Jumping jacks, Grabbing utensils","Walking, Sweeping, Jumping jacks","Grabbing utensils, Sweeping, Mopping",D,user21
+training_2242,HAU,HAU/user21/2-1-2,combination,Which combination of actions is performed in this video?,"Combing hair, Sweeping","Reading, Combing hair","Grabbing utensils, Sweeping","Reading, Grabbing utensils",C,user21
+training_2243,HAU,HAU/user21/2-1-3,combination,Which combination of actions is performed in this video?,"Sweeping, Squats","Mopping, Playing games","Squats, Playing games","Sweeping, Mopping",D,user21
+training_2244,HAU,HAU/user21/2-2-1,combination,Which combination of actions is performed in this video?,"Typing on a keyboard, Reading, Mopping","Typing on a keyboard, Walking, Turning a page","Reading, Checking the time, Walking","Checking the time, Mopping, Turning a page",C,user21
+training_2245,HAU,HAU/user21/2-2-2,combination,Which combination of actions is performed in this video?,"Reading, Checking body temperature, Standing up, Lunges, Washing dishes","Lunges, Checking body temperature, Watching TV, Undressing, Walking","Checking the time, Standing up, Turning a page, Walking, Reading","Watching TV, Washing dishes, Checking the time, Undressing, Turning a page",C,user21
+training_2246,HAU,HAU/user21/2-2-3,combination,Which combination of actions is performed in this video?,"Walking, Drinking, Turning a page","Wiping surface, Drinking, Standing up","Checking the time, Walking, Standing up","Checking the time, Turning a page, Wiping surface",C,user21
+training_2247,HAU,HAU/user21/3-1-1,combination,Which combination of actions is performed in this video?,"Grabbing utensils, Watching TV","Taking medicine, Watching TV","Peeling fruit, Grabbing utensils","Peeling fruit, Taking medicine",C,user21
+training_2248,HAU,HAU/user21/3-1-2,combination,Which combination of actions is performed in this video?,"Running, Wiping hands","Grabbing utensils, Wiping hands","Running, Peeling fruit","Grabbing utensils, Peeling fruit",D,user21
+training_2249,HAU,HAU/user21/3-1-3,combination,Which combination of actions is performed in this video?,"Folding clothes, Brushing teeth","Peeling fruit, Grabbing utensils","Brushing teeth, Peeling fruit","Grabbing utensils, Folding clothes",B,user21
+training_2250,HAU,HAU/user21/3-2-1,combination,Which combination of actions is performed in this video?,"Walking, Squats, Massaging oneself, Jumping jacks, Checking body temperature","Turning a page, Typing on a keyboard, Walking, Checking body temperature, Drinking","Massaging oneself, Squats, Getting dressed, Typing on a keyboard, Listening to the music with headphones","Getting dressed, Drinking, Turning a page, Jumping jacks, Listening to the music with headphones",A,user21
+training_2251,HAU,HAU/user21/3-2-2,combination,Which combination of actions is performed in this video?,"Massaging oneself, Eating, Peeling fruit","Peeling fruit, Listening to the music with headphones, Jumping jacks","Massaging oneself, Jumping jacks, Walking","Eating, Listening to the music with headphones, Walking",C,user21
+training_2252,HAU,HAU/user21/3-2-3,combination,Which combination of actions is performed in this video?,"Squats, Calling, Drinking, Walking","Jumping jacks, Checking body temperature, Squats, Massaging oneself","Drinking, Jumping jacks, Pouring, Massaging oneself","Pouring, Calling, Walking, Checking body temperature",B,user21
+training_2253,HAU,HAU/user21/4-1-1,combination,Which combination of actions is performed in this video?,"Massaging oneself, Listening to the music with headphones, Washing dishes, Standing up","Squats, Using a phone, Washing dishes, Walking","Listening to the music with headphones, Massaging oneself, Squats, Calling","Using a phone, Walking, Standing up, Calling",D,user21
+training_2254,HAU,HAU/user21/4-1-2,combination,Which combination of actions is performed in this video?,"Using a phone, Turning a page","Calling, Jumping jacks","Turning a page, Jumping jacks","Calling, Using a phone",D,user21
+training_2255,HAU,HAU/user21/4-1-3,combination,Which combination of actions is performed in this video?,"Massaging oneself, Using a phone","Using a phone, Calling","Massaging oneself, Combing hair","Calling, Combing hair",B,user21
+training_2256,HAU,HAU/user21/4-2-1,combination,Which combination of actions is performed in this video?,"Typing on a keyboard, Washing face, Stirring","Sitting down, Combing hair, Stirring","Brushing teeth, Combing hair, Washing face","Typing on a keyboard, Brushing teeth, Sitting down",C,user21
+training_2257,HAU,HAU/user21/4-2-2,combination,Which combination of actions is performed in this video?,"Undressing, Combing hair","Washing face, Brushing teeth","Undressing, Taking medicine","Taking medicine, Brushing teeth",B,user21
+training_2258,HAU,HAU/user21/4-2-3,combination,Which combination of actions is performed in this video?,"Taking a selfie, Turning a page, Washing face","Using a phone, Taking a selfie, Brushing teeth","Using a phone, Combing hair, Turning a page","Washing face, Brushing teeth, Combing hair",D,user21
+training_2259,HAU,HAU/user21/5-1-1,combination,Which combination of actions is performed in this video?,"Taking a selfie, Grabbing utensils","Grabbing utensils, Running","Walking, Taking a selfie","Running, Walking",C,user21
+training_2260,HAU,HAU/user21/5-1-2,combination,Which combination of actions is performed in this video?,"Mopping, Combing hair","Combing hair, Walking","Taking a selfie, Walking","Taking a selfie, Mopping",C,user21
+training_2261,HAU,HAU/user21/5-1-3,combination,Which combination of actions is performed in this video?,"Reading, Taking a selfie","Walking, Taking a selfie","Massaging oneself, Reading","Massaging oneself, Walking",B,user21
+training_2262,HAU,HAU/user21/5-2-1,combination,Which combination of actions is performed in this video?,"Washing face, Stretching","Washing face, Peeling fruit","Stretching, Using a phone","Peeling fruit, Using a phone",D,user21
+training_2263,HAU,HAU/user21/5-2-2,combination,Which combination of actions is performed in this video?,"Squats, Walking, Pouring, Washing dishes","Walking, Peeling fruit, Using a phone, Listening to the music with headphones","Getting dressed, Using a phone, Pouring, Squats","Getting dressed, Washing dishes, Listening to the music with headphones, Peeling fruit",B,user21
+training_2264,HAU,HAU/user21/5-2-3,combination,Which combination of actions is performed in this video?,"Walking, Using a phone","Typing on a keyboard, Watching TV","Typing on a keyboard, Walking","Watching TV, Using a phone",A,user21
+training_2265,HAU,HAU/user21/6-1-1,combination,Which combination of actions is performed in this video?,"Checking body temperature, Getting dressed","Checking body temperature, Calling","Getting dressed, Typing on a keyboard","Calling, Typing on a keyboard",A,user21
+training_2266,HAU,HAU/user21/6-1-2,combination,Which combination of actions is performed in this video?,"Using a phone, Standing up","Standing up, Getting dressed","Getting dressed, Checking body temperature","Checking body temperature, Using a phone",C,user21
+training_2267,HAU,HAU/user21/6-1-3,combination,Which combination of actions is performed in this video?,"Writing, Typing on a keyboard","Writing, Checking body temperature","Checking body temperature, Getting dressed","Typing on a keyboard, Getting dressed",C,user21
+training_2268,HAU,HAU/user21/6-2-1,combination,Which combination of actions is performed in this video?,"Standing up, Checking the time, Walking","Calling, Standing up, Drinking","Checking the time, Drinking, Pouring","Pouring, Walking, Calling",C,user21
+training_2269,HAU,HAU/user21/6-2-2,combination,Which combination of actions is performed in this video?,"Lunges, Checking body temperature, Drinking","Checking the time, Checking body temperature, Getting dressed","Getting dressed, Lunges, Walking","Checking the time, Drinking, Walking",D,user21
+training_2270,HAU,HAU/user21/6-2-3,combination,Which combination of actions is performed in this video?,"Drinking, Massaging oneself","Taking a selfie, Massaging oneself","Taking a selfie, Walking","Drinking, Walking",D,user21
+training_2271,HAU,HAU/user21/7-1-1,combination,Which combination of actions is performed in this video?,"Grabbing utensils, Eating, Drinking","Grabbing utensils, Undressing, Running","Drinking, Undressing, Taking medicine","Eating, Taking medicine, Running",A,user21
+training_2272,HAU,HAU/user21/7-1-2,combination,Which combination of actions is performed in this video?,"Getting dressed, Reading","Getting dressed, Massaging oneself","Grabbing utensils, Reading","Massaging oneself, Grabbing utensils",D,user21
+training_2273,HAU,HAU/user21/7-1-3,combination,Which combination of actions is performed in this video?,"Eating, Grabbing utensils, Taking medicine, Listening to the music with headphones","Stirring, Sitting down, Drinking, Listening to the music with headphones","Massaging oneself, Sitting down, Stirring, Grabbing utensils","Taking medicine, Eating, Drinking, Massaging oneself",D,user21
+training_2274,HAU,HAU/user21/7-2-1,combination,Which combination of actions is performed in this video?,"Wiping hands, Massaging oneself","Massaging oneself, Squats","Wiping hands, Sitting down","Sitting down, Squats",A,user21
+training_2275,HAU,HAU/user21/7-2-2,combination,Which combination of actions is performed in this video?,"Peeling fruit, Watching TV","Massaging oneself, Peeling fruit","Wiping hands, Watching TV","Massaging oneself, Wiping hands",D,user21
+training_2276,HAU,HAU/user21/7-2-3,combination,Which combination of actions is performed in this video?,"Playing games, Walking","Wiping hands, Massaging oneself","Massaging oneself, Playing games","Wiping hands, Walking",B,user21
+training_2522,HAU,HAU/user8/1-2-1,sequence,What is the correct temporal order of the following actions in this video?,Taking a selfie,Walking,Listening to the music with headphones,Calling,BCAD,user8
+training_2523,HAU,HAU/user8/1-2-2,sequence,What is the correct temporal order of the following actions in this video?,Reading,Taking a selfie,Calling,Sitting down,DABC,user8
+training_2524,HAU,HAU/user8/1-2-3,sequence,What is the correct temporal order of the following actions in this video?,Taking a selfie,Walking,Reading,Sitting down,BDCA,user8
+training_2525,HAU,HAU/user8/2-1-1,sequence,What is the correct temporal order of the following actions in this video?,Checking the time,Calling,Sitting down,Folding clothes,DCAB,user8
+training_2526,HAU,HAU/user8/2-1-2,sequence,What is the correct temporal order of the following actions in this video?,Calling,Listening to the music with headphones,Checking the time,Sitting down,DCBA,user8
+training_2527,HAU,HAU/user8/2-1-3,sequence,What is the correct temporal order of the following actions in this video?,Calling,Folding clothes,Sitting down,Checking the time,BCDA,user8
+training_2528,HAU,HAU/user8/4-1-1,sequence,What is the correct temporal order of the following actions in this video?,Listening to the music with headphones,Turning a page,Sitting down,Writing,CADB,user8
+training_2529,HAU,HAU/user8/4-1-2,sequence,What is the correct temporal order of the following actions in this video?,Writing,Listening to the music with headphones,Sitting down,Turning a page,CBAD,user8
+training_2530,HAU,HAU/user8/4-1-3,sequence,What is the correct temporal order of the following actions in this video?,Sitting down,Listening to the music with headphones,Turning a page,Writing,ABDC,user8
+training_2531,HAU,HAU/user8/5-1-1,sequence,What is the correct temporal order of the following actions in this video?,Lunges,Running,Typing on a keyboard,Stretching,BDCA,user8
+training_2532,HAU,HAU/user8/5-1-2,sequence,What is the correct temporal order of the following actions in this video?,Stretching,Sitting down,Checking the time,Lunges,ABCD,user8
+training_2533,HAU,HAU/user8/5-1-3,sequence,What is the correct temporal order of the following actions in this video?,Stretching,Typing on a keyboard,Checking the time,Sitting down,ADBC,user8
+training_2534,HAU,HAU/user8/6-1-1,sequence,What is the correct temporal order of the following actions in this video?,Squats,Undressing,Stretching,Getting dressed,BDCA,user8
+training_2535,HAU,HAU/user8/6-1-2,sequence,What is the correct temporal order of the following actions in this video?,Getting dressed,Stretching,Undressing,Squats,CABD,user8
+training_2536,HAU,HAU/user8/6-1-3,sequence,What is the correct temporal order of the following actions in this video?,Undressing,Stretching,Getting dressed,Squats,ACBD,user8
+training_2537,HAU,HAU/user8/6-2-1,sequence,What is the correct temporal order of the following actions in this video?,Walking,Standing up,Checking the time,Stretching,ACBD,user8
+training_2538,HAU,HAU/user8/6-2-2,sequence,What is the correct temporal order of the following actions in this video?,Checking the time,Stretching,Jumping jacks,Turning a page,ACDB,user8
+training_2539,HAU,HAU/user8/6-2-3,sequence,What is the correct temporal order of the following actions in this video?,Checking the time,Peeling fruit,Standing up,Jumping jacks,ADBC,user8
+training_2540,HAU,HAU/user8/7-1-1,sequence,What is the correct temporal order of the following actions in this video?,Checking body temperature,Brushing teeth,Undressing,Taking medicine,BCDA,user8
+training_2541,HAU,HAU/user8/7-1-2,sequence,What is the correct temporal order of the following actions in this video?,Brushing teeth,Massaging oneself,Washing face,Wiping hands,CADB,user8
+training_2542,HAU,HAU/user8/7-1-3,sequence,What is the correct temporal order of the following actions in this video?,Washing face,Taking medicine,Checking body temperature,Combing hair,ADBC,user8
+training_2582,HAU,HAU/user17/1-1-1,sequence,What is the correct temporal order of the following actions in this video?,Getting dressed,Brushing teeth,Combing hair,Wiping hands,BDCA,user17
+training_2583,HAU,HAU/user17/1-1-2,sequence,What is the correct temporal order of the following actions in this video?,Combing hair,Getting dressed,Wiping hands,Brushing teeth,DCAB,user17
+training_2584,HAU,HAU/user17/1-1-3,sequence,What is the correct temporal order of the following actions in this video?,Wiping hands,Brushing teeth,Getting dressed,Combing hair,BADC,user17
+training_2585,HAU,HAU/user17/1-2-1,sequence,What is the correct temporal order of the following actions in this video?,Eating,Using a phone,Checking the time,Taking a selfie,ACBD,user17
+training_2586,HAU,HAU/user17/1-2-2,sequence,What is the correct temporal order of the following actions in this video?,Taking a selfie,Checking the time,Using a phone,Pouring,DBCA,user17
+training_2587,HAU,HAU/user17/1-2-3,sequence,What is the correct temporal order of the following actions in this video?,Checking the time,Pouring,Taking a selfie,Using a phone,BADC,user17
+training_2588,HAU,HAU/user17/2-2-1,sequence,What is the correct temporal order of the following actions in this video?,Stirring,Lying down,Sitting down,Wiping surface,ABDC,user17
+training_2589,HAU,HAU/user17/2-2-2,sequence,What is the correct temporal order of the following actions in this video?,Lying down,Eating,Wiping surface,Jumping jacks,ADCB,user17
+training_2590,HAU,HAU/user17/2-2-3,sequence,What is the correct temporal order of the following actions in this video?,Wiping surface,Lying down,Jumping jacks,Stirring,DBCA,user17
+training_2591,HAU,HAU/user17/3-1-1,sequence,What is the correct temporal order of the following actions in this video?,Running,Stretching,Mopping,Sweeping,DCAB,user17
+training_2592,HAU,HAU/user17/3-1-2,sequence,What is the correct temporal order of the following actions in this video?,Sweeping,Stretching,Running,Mopping,ADCB,user17
+training_2593,HAU,HAU/user17/3-1-3,sequence,What is the correct temporal order of the following actions in this video?,Running,Stretching,Mopping,Sweeping,DCAB,user17
+training_2594,HAU,HAU/user17/4-1-1,sequence,What is the correct temporal order of the following actions in this video?,Squats,Sitting down,Taking medicine,Standing up,BADC,user17
+training_2595,HAU,HAU/user17/4-1-2,sequence,What is the correct temporal order of the following actions in this video?,Checking the time,Stretching,Squats,Taking medicine,ABCD,user17
+training_2596,HAU,HAU/user17/4-1-3,sequence,What is the correct temporal order of the following actions in this video?,Checking body temperature,Walking,Stretching,Checking the time,BDCA,user17
+training_2597,HAU,HAU/user17/6-1-1,sequence,What is the correct temporal order of the following actions in this video?,Undressing,Getting dressed,Walking,Folding clothes,CABD,user17
+training_2598,HAU,HAU/user17/6-1-2,sequence,What is the correct temporal order of the following actions in this video?,Folding clothes,Undressing,Walking,Getting dressed,CBDA,user17
+training_2599,HAU,HAU/user17/6-1-3,sequence,What is the correct temporal order of the following actions in this video?,Getting dressed,Undressing,Walking,Folding clothes,CBAD,user17
+training_2600,HAU,HAU/user17/6-3-1,sequence,What is the correct temporal order of the following actions in this video?,Sitting down,Checking the time,Walking,Typing on a keyboard,CADB,user17
+training_2601,HAU,HAU/user17/6-3-2,sequence,What is the correct temporal order of the following actions in this video?,Walking,Typing on a keyboard,Sitting down,Checking the time,ACBD,user17
+training_2602,HAU,HAU/user17/6-3-3,sequence,What is the correct temporal order of the following actions in this video?,Sitting down,Typing on a keyboard,Walking,Checking the time,CABD,user17
+training_2660,HAU,HAU/user21/2-2-1,sequence,What is the correct temporal order of the following actions in this video?,Walking,Standing up,Checking the time,Reading,ADCB,user21
+training_2661,HAU,HAU/user21/2-2-2,sequence,What is the correct temporal order of the following actions in this video?,Standing up,Reading,Walking,Checking the time,CBDA,user21
+training_2662,HAU,HAU/user21/2-2-3,sequence,What is the correct temporal order of the following actions in this video?,Standing up,Reading,Checking the time,Walking,DBCA,user21
+training_2663,HAU,HAU/user21/3-2-1,sequence,What is the correct temporal order of the following actions in this video?,Walking,Squats,Massaging oneself,Checking body temperature,ABDC,user21
+training_2664,HAU,HAU/user21/3-2-2,sequence,What is the correct temporal order of the following actions in this video?,Walking,Massaging oneself,Squats,Jumping jacks,ACDB,user21
+training_2665,HAU,HAU/user21/3-2-3,sequence,What is the correct temporal order of the following actions in this video?,Checking body temperature,Walking,Squats,Massaging oneself,BCAD,user21
+training_2666,HAU,HAU/user21/4-1-1,sequence,What is the correct temporal order of the following actions in this video?,Calling,Using a phone,Standing up,Walking,BACD,user21
+training_2667,HAU,HAU/user21/4-1-2,sequence,What is the correct temporal order of the following actions in this video?,Using a phone,Walking,Standing up,Calling,ADCB,user21
+training_2668,HAU,HAU/user21/4-1-3,sequence,What is the correct temporal order of the following actions in this video?,Standing up,Using a phone,Calling,Walking,BCAD,user21
+training_2669,HAU,HAU/user21/5-2-1,sequence,What is the correct temporal order of the following actions in this video?,Listening to the music with headphones,Peeling fruit,Using a phone,Walking,DCAB,user21
+training_2670,HAU,HAU/user21/5-2-2,sequence,What is the correct temporal order of the following actions in this video?,Walking,Peeling fruit,Listening to the music with headphones,Using a phone,ADCB,user21
+training_2671,HAU,HAU/user21/5-2-3,sequence,What is the correct temporal order of the following actions in this video?,Using a phone,Peeling fruit,Listening to the music with headphones,Walking,DACB,user21
+training_3013,HAU,HAU/user8/1-1-1,emotion,What emotion does the person in the video express?,Unhurriedly,Intently,Orderly,Absentmindedly,A,user8
+training_3014,HAU,HAU/user8/1-1-2,emotion,What emotion does the person in the video express?,Eagerly,Absentmindedly,Intently,Unhurriedly,C,user8
+training_3015,HAU,HAU/user8/1-1-3,emotion,What emotion does the person in the video express?,Absentmindedly,Quietly,Unhurriedly,Intently,A,user8
+training_3016,HAU,HAU/user8/1-2-1,emotion,What emotion does the person in the video express?,Briskly,Lazily,Contently,Soothingly,C,user8
+training_3017,HAU,HAU/user8/1-2-2,emotion,What emotion does the person in the video express?,Briskly,Contently,Lazily,Deliberately,A,user8
+training_3018,HAU,HAU/user8/1-2-3,emotion,What emotion does the person in the video express?,Contently,Earnestly,Briskly,Lazily,D,user8
+training_3019,HAU,HAU/user8/2-1-1,emotion,What emotion does the person in the video express?,Relaxedly,Attentively,Leisurely,Nervously,A,user8
+training_3020,HAU,HAU/user8/2-1-2,emotion,What emotion does the person in the video express?,Attentively,Nervously,Relaxedly,Briskly,A,user8
+training_3021,HAU,HAU/user8/2-1-3,emotion,What emotion does the person in the video express?,Lightly,Attentively,Nervously,Relaxedly,C,user8
+training_3022,HAU,HAU/user8/2-2-1,emotion,What emotion does the person in the video express?,Briskly,Meticulously,Nervously,Hastily,B,user8
+training_3023,HAU,HAU/user8/2-2-2,emotion,What emotion does the person in the video express?,Meticulously,Hastily,Confidently,Briskly,D,user8
+training_3024,HAU,HAU/user8/2-2-3,emotion,What emotion does the person in the video express?,Hastily,Thoroughly,Briskly,Meticulously,A,user8
+training_3025,HAU,HAU/user8/3-1-1,emotion,What emotion does the person in the video express?,Precisely,Deliberately,Quickly,Earnestly,B,user8
+training_3026,HAU,HAU/user8/3-1-2,emotion,What emotion does the person in the video express?,Precisely,Quickly,Softly,Deliberately,B,user8
+training_3027,HAU,HAU/user8/3-1-3,emotion,What emotion does the person in the video express?,Urgently,Deliberately,Quickly,Precisely,D,user8
+training_3028,HAU,HAU/user8/3-2-1,emotion,What emotion does the person in the video express?,Evenly,Deliberately,Rapidly,Leisurely,D,user8
+training_3029,HAU,HAU/user8/3-2-2,emotion,What emotion does the person in the video express?,Earnestly,Leisurely,Rapidly,Evenly,C,user8
+training_3030,HAU,HAU/user8/3-2-3,emotion,What emotion does the person in the video express?,Lazily,Evenly,Rapidly,Leisurely,B,user8
+training_3031,HAU,HAU/user8/3-3-1,emotion,What emotion does the person in the video express?,Thoroughly,Carefully,Gently,Quickly,C,user8
+training_3032,HAU,HAU/user8/3-3-2,emotion,What emotion does the person in the video express?,Gently,Quickly,Thoroughly,Urgently,B,user8
+training_3033,HAU,HAU/user8/3-3-3,emotion,What emotion does the person in the video express?,Unhurriedly,Quickly,Thoroughly,Gently,C,user8
+training_3034,HAU,HAU/user8/4-1-1,emotion,What emotion does the person in the video express?,Steadily,Rapidly,Quietly,Methodically,C,user8
+training_3035,HAU,HAU/user8/4-1-2,emotion,What emotion does the person in the video express?,Steadily,Rapidly,Hurriedly,Quietly,B,user8
+training_3036,HAU,HAU/user8/4-1-3,emotion,What emotion does the person in the video express?,Steadily,Precisely,Quietly,Rapidly,A,user8
+training_3037,HAU,HAU/user8/4-2-1,emotion,What emotion does the person in the video express?,Briskly,Cautiously,Orderly,Rapidly,B,user8
+training_3038,HAU,HAU/user8/4-2-2,emotion,What emotion does the person in the video express?,Eagerly,Cautiously,Orderly,Briskly,D,user8
+training_3039,HAU,HAU/user8/4-2-3,emotion,What emotion does the person in the video express?,Orderly,Meticulously,Cautiously,Briskly,A,user8
+training_3040,HAU,HAU/user8/5-1-1,emotion,What emotion does the person in the video express?,Gracefully,Anxiously,Peacefully,Swiftly,A,user8
+training_3041,HAU,HAU/user8/5-1-2,emotion,What emotion does the person in the video express?,Peacefully,Steadily,Anxiously,Gracefully,A,user8
+training_3042,HAU,HAU/user8/5-1-3,emotion,What emotion does the person in the video express?,Unhurriedly,Anxiously,Peacefully,Gracefully,B,user8
+training_3043,HAU,HAU/user8/6-1-1,emotion,What emotion does the person in the video express?,Calmly,Slowly,Rapidly,Thoroughly,B,user8
+training_3044,HAU,HAU/user8/6-1-2,emotion,What emotion does the person in the video express?,Rapidly,Eagerly,Calmly,Slowly,A,user8
+training_3045,HAU,HAU/user8/6-1-3,emotion,What emotion does the person in the video express?,Slowly,Calmly,Rapidly,Nervously,B,user8
+training_3046,HAU,HAU/user8/6-2-1,emotion,What emotion does the person in the video express?,Briskly,Naturally,Frantically,Gently,D,user8
+training_3047,HAU,HAU/user8/6-2-2,emotion,What emotion does the person in the video express?,Naturally,Gently,Nervously,Frantically,D,user8
+training_3048,HAU,HAU/user8/6-2-3,emotion,What emotion does the person in the video express?,Cautiously,Frantically,Naturally,Gently,C,user8
+training_3049,HAU,HAU/user8/7-1-1,emotion,What emotion does the person in the video express?,Slowly,Anxiously,Eagerly,Calmly,A,user8
+training_3050,HAU,HAU/user8/7-1-2,emotion,What emotion does the person in the video express?,Calmly,Orderly,Anxiously,Slowly,A,user8
+training_3051,HAU,HAU/user8/7-1-3,emotion,What emotion does the person in the video express?,Slowly,Neatly,Calmly,Anxiously,D,user8
+training_3052,HAU,HAU/user8/7-2-1,emotion,What emotion does the person in the video express?,Quickly,Slowly,Nervously,Hurriedly,B,user8
+training_3053,HAU,HAU/user8/7-2-2,emotion,What emotion does the person in the video express?,Slowly,Hurriedly,Anxiously,Quickly,D,user8
+training_3054,HAU,HAU/user8/7-2-3,emotion,What emotion does the person in the video express?,Confidently,Quickly,Slowly,Hurriedly,D,user8
+training_3160,HAU,HAU/user17/1-1-1,emotion,What emotion does the person in the video express?,Rapidly,Meticulously,Gracefully,Steadily,B,user17
+training_3161,HAU,HAU/user17/1-1-2,emotion,What emotion does the person in the video express?,Eagerly,Steadily,Meticulously,Rapidly,B,user17
+training_3162,HAU,HAU/user17/1-1-3,emotion,What emotion does the person in the video express?,Firmly,Meticulously,Rapidly,Steadily,C,user17
+training_3163,HAU,HAU/user17/1-2-1,emotion,What emotion does the person in the video express?,Gracefully,Calmly,Hurriedly,Quietly,A,user17
+training_3164,HAU,HAU/user17/1-2-2,emotion,What emotion does the person in the video express?,Hurriedly,Gracefully,Neatly,Calmly,A,user17
+training_3165,HAU,HAU/user17/1-2-3,emotion,What emotion does the person in the video express?,Calmly,Joyfully,Gracefully,Hurriedly,A,user17
+training_3166,HAU,HAU/user17/2-1-1,emotion,What emotion does the person in the video express?,Hastily,Smoothly,Leisurely,Calmly,C,user17
+training_3167,HAU,HAU/user17/2-1-2,emotion,What emotion does the person in the video express?,Leisurely,Hastily,Seriously,Calmly,D,user17
+training_3168,HAU,HAU/user17/2-1-3,emotion,What emotion does the person in the video express?,Deliberately,Hastily,Leisurely,Calmly,B,user17
+training_3169,HAU,HAU/user17/2-2-1,emotion,What emotion does the person in the video express?,Steadily,Rapidly,Slowly,Naturally,C,user17
+training_3170,HAU,HAU/user17/2-2-2,emotion,What emotion does the person in the video express?,Steadily,Rapidly,Slowly,Eagerly,A,user17
+training_3171,HAU,HAU/user17/2-2-3,emotion,What emotion does the person in the video express?,Slowly,Restlessly,Rapidly,Steadily,C,user17
+training_3172,HAU,HAU/user17/3-1-1,emotion,What emotion does the person in the video express?,Gently,Neatly,Smoothly,Quickly,A,user17
+training_3173,HAU,HAU/user17/3-1-2,emotion,What emotion does the person in the video express?,Smoothly,Gently,Impatiently,Quickly,A,user17
+training_3174,HAU,HAU/user17/3-1-3,emotion,What emotion does the person in the video express?,Smoothly,Gently,Quickly,Unhurriedly,C,user17
+training_3175,HAU,HAU/user17/3-2-1,emotion,What emotion does the person in the video express?,Softly,Slowly,Quickly,Steadily,B,user17
+training_3176,HAU,HAU/user17/3-2-2,emotion,What emotion does the person in the video express?,Quickly,Deliberately,Steadily,Slowly,C,user17
+training_3177,HAU,HAU/user17/3-2-3,emotion,What emotion does the person in the video express?,Steadily,Slowly,Methodically,Quickly,D,user17
+training_3178,HAU,HAU/user17/3-3-1,emotion,What emotion does the person in the video express?,Hasitly,Steadily,Gently,Hastily,C,user17
+training_3179,HAU,HAU/user17/3-3-2,emotion,What emotion does the person in the video express?,Steadily,Hasitly,Gently,Impatiently,A,user17
+training_3180,HAU,HAU/user17/3-3-3,emotion,What emotion does the person in the video express?,Hasitly,Gently,Steadily,Urgently,A,user17
+training_3181,HAU,HAU/user17/4-1-1,emotion,What emotion does the person in the video express?,Relaxedly,Steadily,Hurriedly,Leisurely,D,user17
+training_3182,HAU,HAU/user17/4-1-2,emotion,What emotion does the person in the video express?,Hurriedly,Steadily,Leisurely,Swiftly,B,user17
+training_3183,HAU,HAU/user17/4-1-3,emotion,What emotion does the person in the video express?,Hurriedly,Leisurely,Intently,Steadily,A,user17
+training_3184,HAU,HAU/user17/5-1-1,emotion,What emotion does the person in the video express?,Attentively,Slowly,Neatly,Impatiently,B,user17
+training_3185,HAU,HAU/user17/5-1-2,emotion,What emotion does the person in the video express?,Slowly,Impatiently,Absentmindedly,Attentively,D,user17
+training_3186,HAU,HAU/user17/5-1-3,emotion,What emotion does the person in the video express?,Slowly,Attentively,Impatiently,Briskly,C,user17
+training_3187,HAU,HAU/user17/5-2-1,emotion,What emotion does the person in the video express?,Smoothly,Casually,Evenly,Hurriedly,B,user17
+training_3188,HAU,HAU/user17/5-2-2,emotion,What emotion does the person in the video express?,Gently,Smoothly,Hurriedly,Casually,B,user17
+training_3189,HAU,HAU/user17/5-2-3,emotion,What emotion does the person in the video express?,Hurriedly,Casually,Smoothly,Tensely,A,user17
+training_3190,HAU,HAU/user17/5-3-1,emotion,What emotion does the person in the video express?,Neatly,Unhurriedly,Anxiously,Orderly,B,user17
+training_3191,HAU,HAU/user17/5-3-2,emotion,What emotion does the person in the video express?,Neatly,Unhurriedly,Anxiously,Relaxedly,A,user17
+training_3192,HAU,HAU/user17/5-3-3,emotion,What emotion does the person in the video express?,Anxiously,Unhurriedly,Neatly,Hurriedly,A,user17
+training_3193,HAU,HAU/user17/6-1-1,emotion,What emotion does the person in the video express?,Softly,Naturally,Hastily,Slowly,D,user17
+training_3194,HAU,HAU/user17/6-1-2,emotion,What emotion does the person in the video express?,Nervously,Slowly,Naturally,Hastily,C,user17
+training_3195,HAU,HAU/user17/6-1-3,emotion,What emotion does the person in the video express?,Slowly,Naturally,Steadily,Hastily,D,user17
+training_3196,HAU,HAU/user17/6-2-1,emotion,What emotion does the person in the video express?,Casually,Steadily,Leisurely,Tensly,C,user17
+training_3197,HAU,HAU/user17/6-2-2,emotion,What emotion does the person in the video express?,Tensly,Steadily,Leisurely,Methodically,B,user17
+training_3198,HAU,HAU/user17/6-2-3,emotion,What emotion does the person in the video express?,Steadily,Tensly,Precisely,Leisurely,B,user17
+training_3199,HAU,HAU/user17/6-3-1,emotion,What emotion does the person in the video express?,Quietly,Hurriedly,Smoothly,Hastily,A,user17
+training_3200,HAU,HAU/user17/6-3-2,emotion,What emotion does the person in the video express?,Hurriedly,Smoothly,Casually,Quietly,B,user17
+training_3201,HAU,HAU/user17/6-3-3,emotion,What emotion does the person in the video express?,Smoothly,Hurriedly,Quietly,Nervously,B,user17
+training_3202,HAU,HAU/user17/7-1-1,emotion,What emotion does the person in the video express?,Calmly,Methodically,Quickly,Gently,D,user17
+training_3203,HAU,HAU/user17/7-1-2,emotion,What emotion does the person in the video express?,Calmly,Quickly,Rapidly,Gently,A,user17
+training_3204,HAU,HAU/user17/7-1-3,emotion,What emotion does the person in the video express?,Calmly,Gently,Quickly,Deliberately,C,user17
+training_3205,HAU,HAU/user17/7-2-1,emotion,What emotion does the person in the video express?,Slowly,Hastily,Firmly,Neatly,A,user17
+training_3206,HAU,HAU/user17/7-2-2,emotion,What emotion does the person in the video express?,Neatly,Slowly,Hastily,Impatiently,A,user17
+training_3207,HAU,HAU/user17/7-2-3,emotion,What emotion does the person in the video express?,Hastily,Leisurely,Neatly,Slowly,A,user17
+training_3346,HAU,HAU/user21/1-1-1,emotion,What emotion does the person in the video express?,Urgently,Thoroughly,Hurriedly,Gently,D,user21
+training_3347,HAU,HAU/user21/1-1-2,emotion,What emotion does the person in the video express?,Thoroughly,Hurriedly,Gently,Meticulously,A,user21
+training_3348,HAU,HAU/user21/1-1-3,emotion,What emotion does the person in the video express?,Thoroughly,Gently,Cautiously,Hurriedly,D,user21
+training_3349,HAU,HAU/user21/1-2-1,emotion,What emotion does the person in the video express?,Steadily,Relaxedly,Joyfully,Hurriedly,B,user21
+training_3350,HAU,HAU/user21/1-2-2,emotion,What emotion does the person in the video express?,Steadily,Frantically,Relaxedly,Hurriedly,A,user21
+training_3351,HAU,HAU/user21/1-2-3,emotion,What emotion does the person in the video express?,Relaxedly,Gracefully,Steadily,Hurriedly,D,user21
+training_3352,HAU,HAU/user21/2-1-1,emotion,What emotion does the person in the video express?,Steadily,Slowly,Rapidly,Smoothly,B,user21
+training_3353,HAU,HAU/user21/2-1-2,emotion,What emotion does the person in the video express?,Impatiently,Steadily,Slowly,Rapidly,B,user21
+training_3354,HAU,HAU/user21/2-1-3,emotion,What emotion does the person in the video express?,Soothingly,Slowly,Rapidly,Steadily,C,user21
+training_3355,HAU,HAU/user21/2-2-1,emotion,What emotion does the person in the video express?,Slowly,Hastily,Deliberately,Naturally,A,user21
+training_3356,HAU,HAU/user21/2-2-2,emotion,What emotion does the person in the video express?,Slowly,Precisely,Naturally,Hastily,C,user21
+training_3357,HAU,HAU/user21/2-2-3,emotion,What emotion does the person in the video express?,Slowly,Hastily,Lazily,Naturally,B,user21
+training_3358,HAU,HAU/user21/3-1-1,emotion,What emotion does the person in the video express?,Slowly,Attentively,Smoothly,Quickly,A,user21
+training_3359,HAU,HAU/user21/3-1-2,emotion,What emotion does the person in the video express?,Orderly,Slowly,Quickly,Smoothly,D,user21
+training_3360,HAU,HAU/user21/3-1-3,emotion,What emotion does the person in the video express?,Hastily,Patiently,Naturally,Slowly,A,user21
+training_3361,HAU,HAU/user21/3-2-1,emotion,What emotion does the person in the video express?,Carefully,Calmly,Seriously,Hurriedly,A,user21
+training_3362,HAU,HAU/user21/3-2-2,emotion,What emotion does the person in the video express?,Nervously,Hurriedly,Carefully,Calmly,D,user21
+training_3363,HAU,HAU/user21/3-2-3,emotion,What emotion does the person in the video express?,Meticulously,Carefully,Calmly,Hurriedly,D,user21
+training_3364,HAU,HAU/user21/4-1-1,emotion,What emotion does the person in the video express?,Lazily,Anxiously,Calmly,Rapidly,A,user21
+training_3365,HAU,HAU/user21/4-1-2,emotion,What emotion does the person in the video express?,Neatly,Calmly,Lazily,Anxiously,B,user21
+training_3366,HAU,HAU/user21/4-1-3,emotion,What emotion does the person in the video express?,Anxiously,Confidently,Calmly,Lazily,A,user21
+training_3367,HAU,HAU/user21/4-2-1,emotion,What emotion does the person in the video express?,Quickly,Earnestly,Unhurriedly,Cautiously,C,user21
+training_3368,HAU,HAU/user21/4-2-2,emotion,What emotion does the person in the video express?,Earnestly,Restlessly,Unhurriedly,Quickly,A,user21
+training_3369,HAU,HAU/user21/4-2-3,emotion,What emotion does the person in the video express?,Unhurriedly,Quickly,Earnestly,Smoothly,B,user21
+training_3370,HAU,HAU/user21/5-1-1,emotion,What emotion does the person in the video express?,Steadily,Quickly,Confidently,Gracefully,D,user21
+training_3371,HAU,HAU/user21/5-1-2,emotion,What emotion does the person in the video express?,Gracefully,Steadily,Quickly,Frantically,B,user21
+training_3372,HAU,HAU/user21/5-1-3,emotion,What emotion does the person in the video express?,Thoroughly,Quickly,Steadily,Gracefully,B,user21
+training_3373,HAU,HAU/user21/5-2-1,emotion,What emotion does the person in the video express?,Confidently,Leisurely,Hurriedly,Anxiously,B,user21
+training_3374,HAU,HAU/user21/5-2-2,emotion,What emotion does the person in the video express?,Hurriedly,Leisurely,Confidently,Restlessly,C,user21
+training_3375,HAU,HAU/user21/5-2-3,emotion,What emotion does the person in the video express?,Unhurriedly,Leisurely,Hurriedly,Confidently,C,user21
+training_3376,HAU,HAU/user21/6-1-1,emotion,What emotion does the person in the video express?,Rapidly,Softly,Slowly,Steadily,C,user21
+training_3377,HAU,HAU/user21/6-1-2,emotion,What emotion does the person in the video express?,Slowly,Steadily,Briskly,Rapidly,B,user21
+training_3378,HAU,HAU/user21/6-1-3,emotion,What emotion does the person in the video express?,Steadily,Slowly,Rapidly,Naturally,C,user21
+training_3379,HAU,HAU/user21/6-2-1,emotion,What emotion does the person in the video express?,Tensely,Comfortably,Calmly,Peacefully,D,user21
+training_3380,HAU,HAU/user21/6-2-2,emotion,What emotion does the person in the video express?,Eagerly,Tensely,Peacefully,Calmly,D,user21
+training_3381,HAU,HAU/user21/6-2-3,emotion,What emotion does the person in the video express?,Calmly,Restlessly,Tensely,Peacefully,C,user21
+training_3382,HAU,HAU/user21/7-1-1,emotion,What emotion does the person in the video express?,Hastily,Leisurely,Nervously,Steadily,B,user21
+training_3383,HAU,HAU/user21/7-1-2,emotion,What emotion does the person in the video express?,Frantically,Leisurely,Steadily,Hastily,D,user21
+training_3384,HAU,HAU/user21/7-1-3,emotion,What emotion does the person in the video express?,Steadily,Gracefully,Hastily,Leisurely,A,user21
+training_3385,HAU,HAU/user21/7-2-1,emotion,What emotion does the person in the video express?,Slowly,Hurriedly,Soothingly,Softly,A,user21
+training_3386,HAU,HAU/user21/7-2-2,emotion,What emotion does the person in the video express?,Hurriedly,Slowly,Softly,Steadily,A,user21
+training_3387,HAU,HAU/user21/7-2-3,emotion,What emotion does the person in the video express?,Softly,Slowly,Cautiously,Hurriedly,A,user21
+training_3535,HARn,HARn/0_Wash_face/user16/1-1-2,single,What is the person doing?,doing lunges,washing their face,doing squats,,B,0_Wash_face
+training_3536,HARn,HARn/0_Wash_face/user18/7-1-3,single,What is the person doing?,doing squats,throwing away rubbish,washing their face,,C,0_Wash_face
+training_3537,HARn,HARn/0_Wash_face/user20/4-2-1,single,What is the person doing?,combing their hair,eating food,washing their face,,C,0_Wash_face
+training_3538,HARn,HARn/0_Wash_face/user20/4-2-2,single,What is the person doing?,washing their face,doing squats,doing lunges,,A,0_Wash_face
+training_3539,HARn,HARn/0_Wash_face/user20/4-2-3,single,What is the person doing?,washing their face,doing lunges,combing their hair,,A,0_Wash_face
+training_3540,HARn,HARn/0_Wash_face/user21/4-2-3,single,What is the person doing?,washing their face,eating food,throwing away rubbish,,A,0_Wash_face
+training_3541,HARn,HARn/0_Wash_face/user22/1-1-2,single,What is the person doing?,eating food,washing their face,doing lunges,,B,0_Wash_face
+training_3542,HARn,HARn/0_Wash_face/user22/2-2-1,single,What is the person doing?,eating food,combing their hair,washing their face,,C,0_Wash_face
+training_3543,HARn,HARn/0_Wash_face/user5/1-1-3,single,What is the person doing?,washing their face,throwing away rubbish,eating food,,A,0_Wash_face
+training_3544,HARn,HARn/0_Wash_face/user8/1-1-3,single,What is the person doing?,doing lunges,washing their face,throwing away rubbish,,B,0_Wash_face
+training_3555,HARn,HARn/11_Peel_fruits/user18/6-2-3,single,What is the person doing?,combing their hair,peeling fruit,brushing their teeth,,B,11_Peel_fruits
+training_3556,HARn,HARn/11_Peel_fruits/user18/7-2-3,single,What is the person doing?,standing on one leg,peeling fruit,taking medicine,,B,11_Peel_fruits
+training_3557,HARn,HARn/11_Peel_fruits/user2/7-2-1,single,What is the person doing?,peeling fruit,standing up,drinking water,,A,11_Peel_fruits
+training_3558,HARn,HARn/11_Peel_fruits/user3/3-1-1,single,What is the person doing?,peeling fruit,standing up,doing squats,,A,11_Peel_fruits
+training_3559,HARn,HARn/11_Peel_fruits/user3/4-1-2,single,What is the person doing?,lying down,using a smartphone,peeling fruit,,C,11_Peel_fruits
+training_3560,HARn,HARn/11_Peel_fruits/user4/7-1-2,single,What is the person doing?,doing squats,peeling fruit,doing jumping jacks,,B,11_Peel_fruits
+training_3561,HARn,HARn/11_Peel_fruits/user5/2-1-2,single,What is the person doing?,brushing their teeth,peeling fruit,folding clothes,,B,11_Peel_fruits
+training_3562,HARn,HARn/11_Peel_fruits/user6/1-2-1,single,What is the person doing?,wiping a bowl,peeling fruit,reading documents,,B,11_Peel_fruits
+training_3563,HARn,HARn/11_Peel_fruits/user6/5-2-1,single,What is the person doing?,mopping the floor,walking,peeling fruit,,C,11_Peel_fruits
+training_3564,HARn,HARn/11_Peel_fruits/user6/5-2-3,single,What is the person doing?,peeling fruit,lying down,using a smartphone,,A,11_Peel_fruits
+training_3575,HARn,HARn/13_Mop_the_floor/user16/3-1-3,single,What is the person doing?,mopping the floor,folding clothes,doing stretching exercises,,A,13_Mop_the_floor
+training_3576,HARn,HARn/13_Mop_the_floor/user17/3-1-1,single,What is the person doing?,brushing their teeth,mopping the floor,jogging in place,,B,13_Mop_the_floor
+training_3577,HARn,HARn/13_Mop_the_floor/user18/3-1-1,single,What is the person doing?,folding clothes,mopping the floor,wiping surfaces,,B,13_Mop_the_floor
+training_3578,HARn,HARn/13_Mop_the_floor/user19/3-3-2,single,What is the person doing?,reading documents,mopping the floor,writing,,B,13_Mop_the_floor
+training_3579,HARn,HARn/13_Mop_the_floor/user20/2-1-1,single,What is the person doing?,mopping the floor,washing their face,wiping their hands,,A,13_Mop_the_floor
+training_3580,HARn,HARn/13_Mop_the_floor/user20/2-1-2,single,What is the person doing?,eating food,jogging in place,mopping the floor,,C,13_Mop_the_floor
+training_3581,HARn,HARn/13_Mop_the_floor/user20/3-2-1,single,What is the person doing?,mopping the floor,sitting down,lying down,,A,13_Mop_the_floor
+training_3582,HARn,HARn/13_Mop_the_floor/user7/3-1-1,single,What is the person doing?,mopping the floor,reading documents,peeling with a knife,,A,13_Mop_the_floor
+training_3583,HARn,HARn/13_Mop_the_floor/user8/3-1-1,single,What is the person doing?,putting on headphones,brushing their teeth,mopping the floor,,C,13_Mop_the_floor
+training_3584,HARn,HARn/13_Mop_the_floor/user9/3-3-2,single,What is the person doing?,massaging themselves,mopping the floor,taking off their clothes,,B,13_Mop_the_floor
+training_3635,HARn,HARn/19_Make_a_phone_call/user16/4-1-3,single,What is the person doing?,making a phone call,lying down,throwing away rubbish,,A,19_Make_a_phone_call
+training_3636,HARn,HARn/19_Make_a_phone_call/user18/1-2-2,single,What is the person doing?,making a phone call,peeling fruit,wiping surfaces,,A,19_Make_a_phone_call
+training_3637,HARn,HARn/19_Make_a_phone_call/user21/4-1-2,single,What is the person doing?,making a phone call,combing their hair,drinking water,,A,19_Make_a_phone_call
+training_3638,HARn,HARn/19_Make_a_phone_call/user22/4-1-3,single,What is the person doing?,drinking water,making a phone call,writing,,B,19_Make_a_phone_call
+training_3639,HARn,HARn/19_Make_a_phone_call/user23/4-2-3,single,What is the person doing?,stirring a drink,standing up,making a phone call,,C,19_Make_a_phone_call
+training_3640,HARn,HARn/19_Make_a_phone_call/user3/3-2-2,single,What is the person doing?,doing squats,doing lunges,making a phone call,,C,19_Make_a_phone_call
+training_3641,HARn,HARn/19_Make_a_phone_call/user5/4-1-1,single,What is the person doing?,making a phone call,mopping the floor,walking,,A,19_Make_a_phone_call
+training_3642,HARn,HARn/19_Make_a_phone_call/user8/1-2-1,single,What is the person doing?,taking medicine,making a phone call,eating food,,B,19_Make_a_phone_call
+training_3729,HARn,HARn/28_Jog_in_place/user2/6-1-1,single,What is the person doing?,jogging in place,wiping their hands,peeling fruit,,A,28_Jog_in_place
+training_3730,HARn,HARn/28_Jog_in_place/user2/6-1-2,single,What is the person doing?,reading documents,jogging in place,doing jumping jacks,,B,28_Jog_in_place
+training_3731,HARn,HARn/28_Jog_in_place/user22/7-2-1,single,What is the person doing?,throwing away rubbish,combing their hair,jogging in place,,C,28_Jog_in_place
+training_3732,HARn,HARn/28_Jog_in_place/user22/7-2-3,single,What is the person doing?,typing on the keyboard,jogging in place,using tableware,,B,28_Jog_in_place
+training_3733,HARn,HARn/28_Jog_in_place/user24/3-2-1,single,What is the person doing?,doing jumping jacks,opening the cabinet,jogging in place,,C,28_Jog_in_place
+training_3734,HARn,HARn/28_Jog_in_place/user3/2-1-2,single,What is the person doing?,writing,using a smartphone,jogging in place,,C,28_Jog_in_place
+training_3735,HARn,HARn/28_Jog_in_place/user4/3-2-1,single,What is the person doing?,using a smartphone,taking off their clothes,jogging in place,,C,28_Jog_in_place
+training_3736,HARn,HARn/28_Jog_in_place/user6/4-1-1,single,What is the person doing?,eating food,using a remote,jogging in place,,C,28_Jog_in_place
+training_3737,HARn,HARn/28_Jog_in_place/user6/4-1-3,single,What is the person doing?,jogging in place,using a remote,turning pages,,A,28_Jog_in_place
+training_3738,HARn,HARn/28_Jog_in_place/user8/5-1-1,single,What is the person doing?,putting on headphones,jogging in place,throwing away rubbish,,B,28_Jog_in_place
+training_3769,HARn,HARn/31_Do_stretching_exercises/user18/6-1-1,single,What is the person doing?,doing stretching exercises,pouring a drink,turning pages,,A,31_Do_stretching_exercises
+training_3770,HARn,HARn/31_Do_stretching_exercises/user2/1-2-1,single,What is the person doing?,taking off their clothes,pouring a drink,doing stretching exercises,,C,31_Do_stretching_exercises
+training_3771,HARn,HARn/31_Do_stretching_exercises/user22/7-3-2,single,What is the person doing?,turning pages,taking off their clothes,doing stretching exercises,,C,31_Do_stretching_exercises
+training_3772,HARn,HARn/31_Do_stretching_exercises/user23/7-3-3,single,What is the person doing?,pouring a drink,turning pages,doing stretching exercises,,C,31_Do_stretching_exercises
+training_3773,HARn,HARn/31_Do_stretching_exercises/user24/3-2-2,single,What is the person doing?,doing stretching exercises,pouring a drink,taking off their clothes,,A,31_Do_stretching_exercises
+training_3774,HARn,HARn/31_Do_stretching_exercises/user24/3-2-3,single,What is the person doing?,doing stretching exercises,taking off their clothes,turning pages,,A,31_Do_stretching_exercises
+training_3775,HARn,HARn/31_Do_stretching_exercises/user3/7-1-1,single,What is the person doing?,pouring a drink,turning pages,doing stretching exercises,,C,31_Do_stretching_exercises
+training_3776,HARn,HARn/31_Do_stretching_exercises/user3/7-1-2,single,What is the person doing?,turning pages,doing stretching exercises,pouring a drink,,B,31_Do_stretching_exercises
+training_3777,HARn,HARn/31_Do_stretching_exercises/user9/1-1-2,single,What is the person doing?,doing stretching exercises,taking off their clothes,pouring a drink,,A,31_Do_stretching_exercises
+training_3778,HARn,HARn/31_Do_stretching_exercises/user9/4-2-2,single,What is the person doing?,doing stretching exercises,pouring a drink,taking off their clothes,,A,31_Do_stretching_exercises
+training_3857,HARn,HARn/3_Take_off_clothes/user22/6-1-2,single,What is the person doing?,taking off their clothes,peeling with a knife,turning pages,,A,3_Take_off_clothes
+training_3858,HARn,HARn/3_Take_off_clothes/user22/7-2-1,single,What is the person doing?,taking off their clothes,typing on the keyboard,putting on headphones,,A,3_Take_off_clothes
+training_3859,HARn,HARn/3_Take_off_clothes/user22/7-2-2,single,What is the person doing?,brushing their teeth,using tableware,taking off their clothes,,C,3_Take_off_clothes
+training_3860,HARn,HARn/3_Take_off_clothes/user23/4-3-3,single,What is the person doing?,combing their hair,taking a selfie,taking off their clothes,,C,3_Take_off_clothes
+training_3861,HARn,HARn/3_Take_off_clothes/user4/5-2-3,single,What is the person doing?,using a smartphone,peeling with a knife,taking off their clothes,,C,3_Take_off_clothes
+training_3862,HARn,HARn/3_Take_off_clothes/user8/6-1-2,single,What is the person doing?,taking off their clothes,washing their face,drinking water,,A,3_Take_off_clothes
+training_3863,HARn,HARn/3_Take_off_clothes/user8/7-1-2,single,What is the person doing?,brushing their teeth,taking off their clothes,peeling fruit,,B,3_Take_off_clothes
+training_3864,HARn,HARn/3_Take_off_clothes/user8/7-1-3,single,What is the person doing?,taking off their clothes,using a smartphone,typing on the keyboard,,A,3_Take_off_clothes
+training_3865,HARn,HARn/3_Take_off_clothes/user9/3-1-2,single,What is the person doing?,taking off their clothes,typing on the keyboard,doing jumping jacks,,A,3_Take_off_clothes
+training_3866,HARn,HARn/3_Take_off_clothes/user9/3-1-3,single,What is the person doing?,taking off their clothes,wiping their hands,throwing away rubbish,,A,3_Take_off_clothes
+training_3946,HARn,HARn/8_Take_and_use_tableware/user1/4-1-1,single,What is the person doing?,typing on the keyboard,using tableware,taking a selfie,,B,8_Take_and_use_tableware
+training_3947,HARn,HARn/8_Take_and_use_tableware/user16/6-2-3,single,What is the person doing?,jogging in place,reading documents,using tableware,,C,8_Take_and_use_tableware
+training_3948,HARn,HARn/8_Take_and_use_tableware/user2/1-2-1,single,What is the person doing?,doing jumping jacks,using tableware,taking off their clothes,,B,8_Take_and_use_tableware
+training_3949,HARn,HARn/8_Take_and_use_tableware/user2/2-1-3,single,What is the person doing?,using tableware,pouring a drink,using a smartphone,,A,8_Take_and_use_tableware
+training_3950,HARn,HARn/8_Take_and_use_tableware/user20/2-1-2,single,What is the person doing?,walking,using tableware,folding clothes,,B,8_Take_and_use_tableware
+training_3951,HARn,HARn/8_Take_and_use_tableware/user6/6-2-3,single,What is the person doing?,using tableware,writing,opening the cabinet,,A,8_Take_and_use_tableware
+training_3952,HARn,HARn/8_Take_and_use_tableware/user6/7-2-2,single,What is the person doing?,reading documents,using tableware,jogging in place,,B,8_Take_and_use_tableware
+training_3953,HARn,HARn/8_Take_and_use_tableware/user7/5-3-2,single,What is the person doing?,using tableware,taking their body temperature,brushing their teeth,,A,8_Take_and_use_tableware
+training_3954,HARn,HARn/9_Pour_drinks/user16/1-2-1,single,What is the person doing?,reading documents,doing squats,pouring a drink,,C,9_Pour_drinks
+training_3955,HARn,HARn/9_Pour_drinks/user19/7-2-1,single,What is the person doing?,doing stretching exercises,reading documents,pouring a drink,,C,9_Pour_drinks
+training_3956,HARn,HARn/9_Pour_drinks/user19/7-2-3,single,What is the person doing?,pouring a drink,reading documents,throwing away rubbish,,A,9_Pour_drinks
+training_3957,HARn,HARn/9_Pour_drinks/user2/6-1-1,single,What is the person doing?,pouring a drink,doing squats,reading documents,,A,9_Pour_drinks
+training_3958,HARn,HARn/9_Pour_drinks/user20/7-1-3,single,What is the person doing?,pouring a drink,reading documents,opening the cabinet,,A,9_Pour_drinks
+training_3959,HARn,HARn/9_Pour_drinks/user21/6-2-3,single,What is the person doing?,reading documents,doing squats,pouring a drink,,C,9_Pour_drinks
+training_3960,HARn,HARn/9_Pour_drinks/user22/4-3-2,single,What is the person doing?,opening the cabinet,pouring a drink,reading documents,,B,9_Pour_drinks
+training_3961,HARn,HARn/9_Pour_drinks/user5/1-2-2,single,What is the person doing?,pouring a drink,reading documents,doing squats,,A,9_Pour_drinks
+training_3962,HARn,HARn/9_Pour_drinks/user6/7-2-3,single,What is the person doing?,throwing away rubbish,doing squats,pouring a drink,,C,9_Pour_drinks
+training_3963,HARn,HARn/9_Pour_drinks/user7/1-2-1,single,What is the person doing?,doing stretching exercises,reading documents,pouring a drink,,C,9_Pour_drinks
+training_3994,HARn,HARn/19_Make_a_phone_call/user16/4-1-3,object_interaction,Which object is the person interacting with?,a phone,a keyboard,a calculator,a tablet,A,19_Make_a_phone_call
+training_3995,HARn,HARn/19_Make_a_phone_call/user2/4-1-3,object_interaction,Which object is the person interacting with?,a remote,a phone,a calculator,a tablet,B,19_Make_a_phone_call
+training_3996,HARn,HARn/19_Make_a_phone_call/user3/3-2-2,object_interaction,Which object is the person interacting with?,a tablet,a keyboard,a wallet,a phone,D,19_Make_a_phone_call
+training_3997,HARn,HARn/19_Make_a_phone_call/user3/3-2-3,object_interaction,Which object is the person interacting with?,a remote,a phone,a keyboard,a wallet,B,19_Make_a_phone_call
+training_3998,HARn,HARn/19_Make_a_phone_call/user8/1-2-1,object_interaction,Which object is the person interacting with?,a phone,a calculator,a tablet,a keyboard,A,19_Make_a_phone_call
+training_3999,HARn,HARn/19_Make_a_phone_call/user8/1-2-3,object_interaction,Which object is the person interacting with?,a calculator,a tablet,a phone,a keyboard,C,19_Make_a_phone_call
+training_4000,HARn,HARn/19_Make_a_phone_call/user8/2-1-1,object_interaction,Which object is the person interacting with?,a wallet,a remote,a calculator,a phone,D,19_Make_a_phone_call
+training_4001,HARn,HARn/19_Make_a_phone_call/user8/2-1-3,object_interaction,Which object is the person interacting with?,a phone,a wallet,a keyboard,a remote,A,19_Make_a_phone_call
