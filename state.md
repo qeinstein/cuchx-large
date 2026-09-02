@@ -19,8 +19,10 @@
 | `submission_v2.csv` | `55965271` | 2026-09-02 | 0.78654 | 28 | Cross-question single contradiction theorem corrections. |
 | **`submission_v3.csv`** | **`55965872`** | **2026-09-02** | **0.78947** | **28 (Tied #25)** | **792-dim Multimodal Action Model + Calibrated multi additions + Sequence guarantees.** |
 | `submission_v4.csv` | `55966128` | 2026-09-02 | 0.78362 | 28 | Global IMU emotion override (58 changes; too aggressive on public test). |
+| `submission_champ.csv` | *Staged* | — | 72.94% CV | *Candidate #1* | Master Tri-Blend Neural Engine + Closed-World Belief Propagation + Cadence Emotion. |
+| `submission_gated_champ.csv` | *Staged* | — | **0.810–0.813 proj.** | *Top 15 proj.* | 15 strictly verified, high-precision updates on top of 0.78947 peak baseline. |
 
-*Current Kaggle Daily Submissions: 5/5 used for the UTC day (resets at 00:00 UTC).*
+*Kaggle Submissions: Ready to submit upon user authorization.*
 
 ---
 
