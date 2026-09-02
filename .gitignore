@@ -30,6 +30,7 @@ venv/
 # Data
 *.zip
 *.csv
+*.npz
 hf_data/
 hf_data_manual/
 splits/
