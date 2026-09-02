@@ -14,6 +14,8 @@ import math
 from pathlib import Path
 import numpy as np
 import pandas as pd
+import torch
+import torch.nn as nn
 from sklearn.ensemble import ExtraTreesClassifier, RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_selection import SelectKBest, f_classif
@@ -22,11 +24,33 @@ from sklearn.preprocessing import StandardScaler
 ROOT = Path(__file__).parent
 
 
+class MultimodalMLP(nn.Module):
+    def __init__(self, in_dim, num_classes):
+        super().__init__()
+        self.net = nn.Sequential(
+            nn.Linear(in_dim, 512),
+            nn.BatchNorm1d(512),
+            nn.GELU(),
+            nn.Dropout(0.4),
+            nn.Linear(512, 256),
+            nn.BatchNorm1d(256),
+            nn.GELU(),
+            nn.Dropout(0.3),
+            nn.Linear(256, num_classes)
+        )
+
+    def forward(self, x):
+        return self.net(x)
+
+
 class ChampionshipSolver:
 
     def __init__(self):
+        self.device = "mps" if torch.backends.mps.is_available() else "cpu"
         self.scaler_m = StandardScaler()
         self.clf_action = None
+        self.lr_actions = {}
+        self.mlp_action = None
         self.vocab = []
         self.act_to_idx = {}
         self.word_z_dist = defaultdict(lambda: {1: 0.33, 2: 0.33, 3: 0.34})
@@ -87,10 +111,35 @@ class ChampionshipSolver:
         Y_hau = np.array([clip_labels[p] for p in hau_clips])
 
         X_hau_s = self.scaler_m.fit_transform(np.nan_to_num(X_hau))
+        # 1a. ExtraTrees Classifier
         self.clf_action = ExtraTreesClassifier(
             n_estimators=300, random_state=42, n_jobs=-1, class_weight="balanced"
         )
         self.clf_action.fit(X_hau_s, Y_hau)
+
+        # 1b. Logistic Regression per class
+        self.lr_actions = {}
+        for c in range(Y_hau.shape[1]):
+            if Y_hau[:, c].sum() > 2:
+                lr = LogisticRegression(C=0.1, max_iter=500, class_weight="balanced")
+                lr.fit(X_hau_s, Y_hau[:, c])
+                self.lr_actions[c] = lr
+
+        # 1c. Multimodal MLP
+        self.mlp_action = MultimodalMLP(X_hau_s.shape[1], Y_hau.shape[1]).to(self.device)
+        criterion = nn.BCEWithLogitsLoss()
+        optimizer = torch.optim.AdamW(self.mlp_action.parameters(), lr=1e-3, weight_decay=1e-4)
+
+        X_tr_t = torch.tensor(X_hau_s, dtype=torch.float32).to(self.device)
+        Y_tr_t = torch.tensor(Y_hau, dtype=torch.float32).to(self.device)
+
+        for _ in range(40):
+            self.mlp_action.train()
+            optimizer.zero_grad()
+            loss = criterion(self.mlp_action(X_tr_t), Y_tr_t)
+            loss.backward()
+            optimizer.step()
+        self.mlp_action.eval()
 
         # 2. Build Emotion Specialist Ensemble & Cadence Speed Model
         emo_df = train_df[train_df.category == "emotion"].copy()
@@ -185,10 +234,20 @@ class ChampionshipSolver:
     def predict_clip_bundle(self, test_df, X_features, test_paths):
         path_to_idx = {p: i for i, p in enumerate(test_paths)}
         X_scaled = self.scaler_m.transform(np.nan_to_num(X_features))
-        probs_list = self.clf_action.predict_proba(X_scaled)
-        action_probs = np.array(
-            [p[:, 1] if p.shape[1] > 1 else np.zeros(len(p)) for p in probs_list]
+        p_et_list = self.clf_action.predict_proba(X_scaled)
+        p_et = np.array(
+            [p[:, 1] if p.shape[1] > 1 else np.zeros(len(p)) for p in p_et_list]
         ).T
+
+        p_lr = np.zeros_like(p_et)
+        for c, lr in self.lr_actions.items():
+            p_lr[:, c] = lr.predict_proba(X_scaled)[:, 1]
+
+        with torch.no_grad():
+            X_te_t = torch.tensor(X_scaled, dtype=torch.float32).to(self.device)
+            p_mlp = torch.sigmoid(self.mlp_action(X_te_t)).cpu().numpy()
+
+        action_probs = 0.45 * p_mlp + 0.30 * p_lr + 0.25 * p_et
 
         X_emo_s = self.scaler_emo.transform(np.nan_to_num(X_features[:, :120]))
         X_emo_sel = self.sel_emo.transform(X_emo_s)
@@ -314,7 +373,7 @@ class ChampionshipSolver:
                 chosen = set()
                 for i, l in enumerate("ABCD"):
                     act = str(m_row[l]).strip().lower()
-                    if act in winning_combo_acts or act in seq_acts or m_scores[i] >= 0.25:
+                    if act in winning_combo_acts or act in seq_acts or m_scores[i] >= 0.48:
                         chosen.add(l)
                 if not chosen:
                     chosen.add(["A", "B", "C", "D"][int(np.argmax(m_scores))])
