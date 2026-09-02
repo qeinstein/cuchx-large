@@ -142,6 +142,7 @@ class ChampionshipSolver:
         self.mlp_action.eval()
 
         # 2. Build Emotion Specialist Ensemble & Cadence Speed Model
+        self.emo_slice = list(range(120)) + list(range(1176, 1720))
         emo_df = train_df[train_df.category == "emotion"].copy()
         raw_z_counts = defaultdict(lambda: {1: 0, 2: 0, 3: 0})
         X_emo_raw = []
@@ -154,7 +155,7 @@ class ChampionshipSolver:
             self.unigram_freq[ans_word] += 1
             p = r["path"]
             if p in path_to_idx:
-                X_emo_raw.append(X_train[path_to_idx[p]][:120])
+                X_emo_raw.append(X_train[path_to_idx[p]][self.emo_slice])
                 y_emo_raw.append(ans_word)
             parts = p.split("/")[-1].split("-")
             if len(parts) == 3 and p in path_to_idx:
@@ -176,7 +177,7 @@ class ChampionshipSolver:
 
         self.scaler_emo = StandardScaler()
         X_emo_s = self.scaler_emo.fit_transform(np.nan_to_num(np.array(X_emo_raw)))
-        self.sel_emo = SelectKBest(f_classif, k=60)
+        self.sel_emo = SelectKBest(f_classif, k=100)
         X_emo_sel = self.sel_emo.fit_transform(X_emo_s, y_emo_raw)
 
         self.rf_emo = RandomForestClassifier(n_estimators=500, random_state=42, n_jobs=-1, class_weight="balanced")
@@ -185,7 +186,8 @@ class ChampionshipSolver:
         self.lr_emo = LogisticRegression(C=0.1, max_iter=1000, class_weight="balanced")
         self.lr_emo.fit(X_emo_s, y_emo_raw)
 
-        X_sp_s = self.scaler_emo.transform(np.nan_to_num(np.array(X_speed)))
+        self.scaler_speed = StandardScaler()
+        X_sp_s = self.scaler_speed.fit_transform(np.nan_to_num(np.array(X_speed)))
         self.clf_speed = RandomForestClassifier(n_estimators=300, random_state=42, n_jobs=-1)
         self.clf_speed.fit(X_sp_s, np.array(y_speed))
 
@@ -219,7 +221,7 @@ class ChampionshipSolver:
             n_estimators=400, random_state=42, n_jobs=-1, class_weight="balanced"
         )
         self.clf_harn_o.fit(X_ho_s, y_ho)
-        # 4. Sequence Pairwise Transition Model
+        # 4. Sequence Pairwise Transition Model & Radar Doppler Map
         seq_train = train_df[train_df.category == "sequence"]
         for _, r in seq_train.iterrows():
             ans = str(r["answer"]).strip().upper()
@@ -228,6 +230,16 @@ class ChampionshipSolver:
                 for i, left in enumerate(ordered):
                     for right in ordered[i + 1 :]:
                         self.before[(left, right)] += 1
+
+        radar_act_v = defaultdict(list)
+        if X_train.shape[1] >= 1720:
+            for _, r in train_df[train_df.category == "single"].iterrows():
+                if r.path in path_to_idx:
+                    act = str(r[r.answer]).strip().lower()
+                    v_mean = X_train[path_to_idx[r.path]][1688]
+                    if v_mean > 0:
+                        radar_act_v[act].append(v_mean)
+        self.mean_radar_v = {act: float(np.mean(radar_act_v[act])) for act in radar_act_v}
 
         return self
 
@@ -249,11 +261,14 @@ class ChampionshipSolver:
 
         action_probs = 0.45 * p_mlp + 0.30 * p_lr + 0.25 * p_et
 
-        X_emo_s = self.scaler_emo.transform(np.nan_to_num(X_features[:, :120]))
+        X_emo_feat = X_features[:, self.emo_slice]
+        X_emo_s = self.scaler_emo.transform(np.nan_to_num(X_emo_feat))
         X_emo_sel = self.sel_emo.transform(X_emo_s)
         rf_emo_probs = self.rf_emo.predict_proba(X_emo_sel)
         lr_emo_probs = self.lr_emo.predict_proba(X_emo_s)
-        speed_probs = self.clf_speed.predict_proba(X_emo_s)  # (N, 3) for Z=1, 2, 3
+
+        X_sp_s = self.scaler_speed.transform(np.nan_to_num(X_features[:, :120]))
+        speed_probs = self.clf_speed.predict_proba(X_sp_s)  # (N, 3) for Z=1, 2, 3
 
         rf_emo_classes = list(self.rf_emo.classes_)
         lr_emo_classes = list(self.lr_emo.classes_)
