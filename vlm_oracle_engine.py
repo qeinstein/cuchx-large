@@ -97,6 +97,14 @@ def query_qwen_vl(qa_id: str, category: str, question: str, options: dict, b64_f
             "Task: Identify ALL actions from the choices that actually appear in these frames.\n"
             "Reply strictly with only the uppercase letters of the correct actions with no spaces (e.g. AB or CD or BCD), nothing else."
         )
+    elif category == "combination":
+        prompt_text = (
+            f"These {len(b64_frames)} sequential depth camera frames show a person performing activities.\n"
+            f"Question: {question}\n"
+            f"{opt_text}\n\n"
+            "Task: Determine which combination of actions is performed in these frames.\n"
+            "Reply strictly with only the single uppercase letter of the correct option (A, B, C, or D), nothing else."
+        )
     else:
         prompt_text = (
             f"These {len(b64_frames)} sequential depth camera frames show a person performing activities.\n"
@@ -128,7 +136,7 @@ def query_qwen_vl(qa_id: str, category: str, question: str, options: dict, b64_f
             clean_ans = "".join([c for c in ans.upper() if c in "ABCD"])
             if category == "sequence" and len(clean_ans) == 4 and len(set(clean_ans)) == 4:
                 return clean_ans
-            elif category in ("emotion", "single") and len(clean_ans) >= 1:
+            elif category in ("emotion", "single", "combination", "object_interaction") and len(clean_ans) >= 1:
                 return clean_ans[0]
             elif category == "multi" and len(clean_ans) >= 1:
                 # Deduplicate while preserving order
@@ -154,10 +162,9 @@ def main():
         except Exception:
             cache = {}
 
-    # Target high-impact categories: sequence, emotion, and multi
-    target_cats = {"sequence", "emotion", "multi"}
-    target_df = test_df[test_df.category.isin(target_cats)].copy()
-    print(f"Found {len(target_df)} target questions across {len(target_df.path.unique())} clips.")
+    # Target ALL categories across the entire test set (single, multi, combination, sequence, emotion, object_interaction)
+    target_df = test_df.copy()
+    print(f"Total test questions: {len(target_df)} across {len(target_df.path.unique())} clips.")
 
     # Filter out already cached
     pending = [r for _, r in target_df.iterrows() if r.qa_id not in cache]
