@@ -19,6 +19,13 @@ H2S = VOC['HARN2SELF']
 S2A = {v: k for k, v in H2S.items()}
 H2H = VOC['HARN2HAU']
 
+# Measured biconditional on all 562 HARn QA clips: a clip has skeleton/IMU data in the
+# LMT package IFF its action is NOT one of these four (50/50 both directions, no exceptions).
+# The four classes were simply never recorded with the wearable sensors, so modality
+# availability alone identifies them - and that is visible at test time.
+NO_SENSOR_ACTIONS = {'40_Stand_on_one_leg_(balance)', '41_Peel_fruits_with_a_knife',
+                     '42_Throw_away_(rubbish)', '43_Open_the_cabinet_(to_get_things)'}
+
 FCOLS = None
 
 

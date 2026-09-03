@@ -222,6 +222,14 @@ def solve(vis, ctx, split, diag=None):
         hl = _C['hlog'].get(f'{split}|{r.true_path}')
         hcls = _C['hcls']
 
+        # modality-availability biconditional: no skeleton <=> action is one of the four
+        # classes that were never recorded with wearables (measured 50/50 both directions)
+        clip_has_sensor = (r.true_path in mi
+                           and np.isfinite(mrow.loc[r.true_path, 'f0']))
+        allowed = (set(D.ACTIONS) | set(acls)) - H.NO_SENSOR_ACTIONS if clip_has_sensor \
+            else set(H.NO_SENSOR_ACTIONS)
+        diag['harn_sensor' if clip_has_sensor else 'harn_no_sensor'] += 1
+
         has_clf = hl is not None and hcls is not None
         has_agg = pc is not None
         has_pool = bool(pl)
@@ -238,14 +246,17 @@ def solve(vis, ctx, split, diag=None):
                 s += LAM_POOL * (1.0 if V[a] in pl else -1.0)
             return s
         oo = opts(r)
-        if not (has_clf or has_agg or has_pool):
+        if not (has_clf or has_agg or has_pool) and clip_has_sensor:
             diag['fallback'] += 1
             diag['harn_no_evidence'] += 1
             diag['fallback_qids'].append((r.qa_id, 'harn_no_evidence'))
             pred[r.qa_id] = None
             continue
         if r.category == 'single':
-            sv = [score(S2A[o]) if o in S2A else -1e6 for o in oo]
+            sv = [score(S2A[o]) if (o in S2A and S2A[o] in allowed) else -1e6 for o in oo]
+            if max(sv) <= -1e5:      # filter left nothing -> fall back to unfiltered
+                sv = [score(S2A[o]) if o in S2A else -1e6 for o in oo]
+                diag['harn_filter_empty'] += 1
             if len(set(np.round(sv, 9))) == 1:
                 diag['fallback'] += 1
                 diag['harn_flat_scores'] += 1
@@ -254,8 +265,15 @@ def solve(vis, ctx, split, diag=None):
                 continue
             pred[r.qa_id] = 'ABCD'[int(np.argmax(sv))]
         else:
-            a = max(set(D.ACTIONS) | set(acls), key=score)
-            cnt = [(pri[a][oo[i]], glob[oo[i]]) for i in range(4)]
+            cand_a = allowed or (set(D.ACTIONS) | set(acls))
+            if clip_has_sensor:
+                # evidence is available, so commit to the best allowed action
+                a = max(cand_a, key=score)
+                cnt = [(pri[a][oo[i]], glob[oo[i]]) for i in range(4)]
+            else:
+                # no wearable evidence exists; the biconditional narrows the action to four,
+                # so marginalise the object prior over exactly those (measured 10/10)
+                cnt = [(sum(pri[a][oo[i]] for a in cand_a), glob[oo[i]]) for i in range(4)]
             if len(set(cnt)) == 1:
                 diag['fallback'] += 1
                 diag['object_flat_prior'] += 1
