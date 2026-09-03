@@ -253,6 +253,13 @@ PHYS = ['sk_v_mean', 'sk_v_p90', 'sk_vmax_mean', 'sk_a_mean', 'sk_jerk_mean', 's
         'sk_vankle_mean', 'sk_hip_path', 'sk_cad_hz', 'sk_cad_pow', 'sk_spec_cent',
         'sk_active_frac', 'sk_v_iqr', 'sk_T', 'imu_acc_std', 'imu_dacc_mean', 'imu_acc_energy',
         'imu_gyr_mean', 'imu_gyr_energy', 'rad_v_p90']
+# feature-space velocity of the frozen DINOv2 depth embedding: an appearance-grounded
+# motion magnitude, implicitly normalised by what the person is doing
+DINO_PHYS = ['dino_v_mean', 'dino_v_std', 'dino_v_p90', 'dino_v_p50', 'dino_acc_mean',
+             'dino_cos_mean', 'dino_cos_min', 'dino_v_iqr', 'dino_active', 'dino_path',
+             'dino_straight', 'dino_cad_hz', 'dino_cad_pow', 'dino_spec_cent']
+if os.environ.get('CHAMP_EMO_DINO', '1') == '1':
+    PHYS = PHYS + DINO_PHYS
 
 
 def block_features(blk, mfeat, k):

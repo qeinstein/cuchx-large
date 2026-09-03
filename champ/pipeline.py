@@ -20,6 +20,11 @@ W_HCLF = float(os.environ.get('CHAMP_W_HCLF', 1.0))
 # the dense-model-at-interval term measurably hurts once the sequence classifier and the
 # recovered pool are both in play (HARn single 0.893 -> 0.821 when it is switched on)
 W_DENSE_INTERVAL = float(os.environ.get('CHAMP_W_DENSE_IV', 0.0))
+# frozen DINOv2 depth features as a second, partially independent action-identity signal.
+# Standalone it is weaker than skeleton+IMU (35.4% vs 52.7% top-1) but it corrects 222 of
+# the 1370 skeleton errors, and a late-fusion weight of 0.3 was the held-out optimum:
+#   action top-1 0.5266 -> 0.5501 ; HARn single 409/429 -> 417/429 ; object 119 -> 121
+W_HDINO = float(os.environ.get('CHAMP_W_HDINO', 0.3))
 ACT = ['single', 'multi', 'combination', 'sequence']
 
 # ------------------------------------------------------------------ shared caches
@@ -59,6 +64,13 @@ def caches(meta):
         _C['hlog'] = {k: z[k] for k in z.files if '|' in k}
     else:
         _C['hcls'], _C['hlog'] = None, {}
+    dp = os.path.join(ROOT, 'champ', 'harn_dino.npz')
+    if os.path.exists(dp):
+        z = np.load(dp, allow_pickle=True)
+        _C['dcls'] = [str(x) for x in z['classes']]
+        _C['dlog'] = {k: z[k] for k in z.files if '|' in k}
+    else:
+        _C['dcls'], _C['dlog'] = None, {}
     _C['stat'] = {}
     for k in _C['lg'].files:
         sp, p = k.split('|', 1)
@@ -165,7 +177,7 @@ def solve(vis, ctx, split, diag=None):
         # weights from the held-out emotion sweep: w_phys 0.5 / w_pos 1.0 / w_pair 1.0
         # gave 740/809 vs 731/809 for the unary-only checkpoint
         pe, _ = solve_emotion(vis, blocks, ctx['mm'],
-                              w_phys=float(os.environ.get('CHAMP_W_PHYS', 0.5)),
+                              w_phys=float(os.environ.get('CHAMP_W_PHYS', 1.0)),
                               w_pos=1.0,
                               w_pair=float(os.environ.get('CHAMP_W_PAIR', 1.0)),
                               pool_of=_emo_pool_ctx)
@@ -221,6 +233,8 @@ def solve(vis, ctx, split, diag=None):
         pc = PC.get(r.true_path)
         hl = _C['hlog'].get(f'{split}|{r.true_path}')
         hcls = _C['hcls']
+        dl = _C['dlog'].get(f'{split}|{r.true_path}')
+        dcls = _C['dcls']
 
         # modality-availability biconditional: no skeleton <=> action is one of the four
         # classes that were never recorded with wearables (measured 50/50 both directions)
@@ -231,7 +245,9 @@ def solve(vis, ctx, split, diag=None):
         diag['harn_sensor' if clip_has_sensor else 'harn_no_sensor'] += 1
 
         has_clf = hl is not None and hcls is not None
+        has_dino = dl is not None and dcls is not None
         has_agg = pc is not None
+        diag['harn_dino_ok' if has_dino else 'harn_dino_missing'] += 1
         has_pool = bool(pl)
         diag['harn_clf_ok' if has_clf else 'harn_clf_missing'] += 1
         diag['harn_pool_ok' if has_pool else 'harn_pool_missing'] += 1
@@ -240,13 +256,17 @@ def solve(vis, ctx, split, diag=None):
             s = W_DENSE_INTERVAL * (dsc[D.A2I[a]] if a in D.A2I else -2.0)
             if has_clf and a in hcls:
                 s += W_HCLF * hl[hcls.index(a)]
+                if has_dino and a in dcls:
+                    s += W_HDINO * dl[dcls.index(a)]
+            elif has_dino and a in dcls:
+                s += W_HDINO * dl[dcls.index(a)]
             elif has_agg and a in acls:
                 s += 1.5 * np.log(max(pc[acls.index(a)], 1e-6))
             if has_pool and a in V:
                 s += LAM_POOL * (1.0 if V[a] in pl else -1.0)
             return s
         oo = opts(r)
-        if not (has_clf or has_agg or has_pool) and clip_has_sensor:
+        if not (has_clf or has_dino or has_agg or has_pool) and clip_has_sensor:
             diag['fallback'] += 1
             diag['harn_no_evidence'] += 1
             diag['fallback_qids'].append((r.qa_id, 'harn_no_evidence'))
@@ -265,7 +285,7 @@ def solve(vis, ctx, split, diag=None):
                 continue
             pred[r.qa_id] = 'ABCD'[int(np.argmax(sv))]
         else:
-            cand_a = allowed or (set(D.ACTIONS) | set(acls))
+            cand_a = allowed or (set(D.ACTIONS) | set(acls) | set(dcls or []))
             if clip_has_sensor:
                 # evidence is available, so commit to the best allowed action
                 a = max(cand_a, key=score)

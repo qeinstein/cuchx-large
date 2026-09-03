@@ -34,14 +34,19 @@ _LOC = None
 _PC = {}
 
 
-def loc_map(split, p):
-    """Per-action activation map from the candidate-conditioned localizer (loc.py)."""
-    global _LOC
-    if _LOC is None:
-        f = os.path.join(ROOT, 'champ', 'loc_maps.npz')
-        _LOC = np.load(f) if os.path.exists(f) else {}
+_LOCS = {}
+LOC_SOURCES = [s for s in os.environ.get(
+    'CHAMP_LOC_SRC', 'loc_maps,loc_fused_maps').split(',') if s]
+
+
+def loc_map(split, p, name='loc_maps'):
+    """Per-action activation map from a candidate-conditioned localizer."""
+    if name not in _LOCS:
+        f = os.path.join(ROOT, 'champ', f'{name}.npz')
+        _LOCS[name] = np.load(f) if os.path.exists(f) else {}
+    Z = _LOCS[name]
     k = f'{split}|{p}'
-    return _LOC[k] if k in _LOC else None
+    return Z[k] if (hasattr(Z, 'files') and k in Z.files) else None
 
 
 def logits(split, p):
@@ -71,16 +76,18 @@ def clip_profiles(split, p, smooth=5):
     Q = P / mass                               # temporal distribution per action
     t = np.arange(T) / max(1, T - 1)
     cum = np.cumsum(Q, axis=1)
-    S = loc_map(split, p)
-    if S is not None and S.shape[1] == T:
+    locs = {}
+    for nm in LOC_SOURCES:
+        S = loc_map(split, p, nm)
+        if S is None or S.shape[1] != T:
+            continue
         Ql = S / (S.sum(1, keepdims=True) + 1e-9)
-        loc = dict(Q=Ql, cum=np.cumsum(Ql, axis=1),
-                   centroid=(Ql * t).sum(1), mx=S.max(1),
-                   onset=np.array([np.argmax(S[c] >= 0.5 * max(S[c].max(), 1e-6))
-                                   / max(1, T - 1) for c in range(S.shape[0])]))
-    else:
-        loc = None
-    prof = dict(T=T, Q=Q, cum=cum, t=t, loc=loc,
+        locs[nm] = dict(Q=Ql, cum=np.cumsum(Ql, axis=1),
+                        centroid=(Ql * t).sum(1), mx=S.max(1),
+                        onset=np.array([np.argmax(S[c] >= 0.5 * max(S[c].max(), 1e-6))
+                                        / max(1, T - 1) for c in range(S.shape[0])]))
+    loc = locs.get(LOC_SOURCES[0]) if LOC_SOURCES else None
+    prof = dict(T=T, Q=Q, cum=cum, t=t, loc=loc, locs=locs,
                 centroid=(Q * t).sum(1),
                 peak=P.argmax(1) / max(1, T - 1),
                 mx=P.max(1), mean=P.mean(1),
@@ -120,7 +127,25 @@ def pair_feats(prof, ci, cj, dpri, apri):
         dur_i=dpri.get(ci, np.nan), dur_j=dpri.get(cj, np.nan),
         cls_i=ci, cls_j=cj,
     )
-    lo = prof.get('loc')
+    for nm in LOC_SOURCES:
+        lo = prof.get('locs', {}).get(nm)
+        pre = 'L' if nm == LOC_SOURCES[0] else nm.replace('loc_', '').replace('_maps', '')
+        if lo is None:
+            for kk in ('p_before', 'p_before_n', 'd_centroid', 'd_onset', 'cent_i',
+                       'cent_j', 'onset_i', 'onset_j', 'mx_i', 'mx_j', 'overlap'):
+                f[f'{pre}_{kk}'] = np.nan
+            continue
+        li, lj = lo['Q'][ci], lo['Q'][cj]
+        lb = float((li * np.concatenate([[0.0], lo['cum'][cj][:-1]])).sum())
+        la = float((lj * np.concatenate([[0.0], lo['cum'][ci][:-1]])).sum())
+        f.update({f'{pre}_p_before': lb, f'{pre}_p_before_n': lb / (lb + la + 1e-9),
+                  f'{pre}_d_centroid': lo['centroid'][ci] - lo['centroid'][cj],
+                  f'{pre}_d_onset': lo['onset'][ci] - lo['onset'][cj],
+                  f'{pre}_cent_i': lo['centroid'][ci], f'{pre}_cent_j': lo['centroid'][cj],
+                  f'{pre}_onset_i': lo['onset'][ci], f'{pre}_onset_j': lo['onset'][cj],
+                  f'{pre}_mx_i': lo['mx'][ci], f'{pre}_mx_j': lo['mx'][cj],
+                  f'{pre}_overlap': float(np.minimum(li, lj).sum())})
+    lo = None
     if lo is not None:
         li, lj = lo['Q'][ci], lo['Q'][cj]
         lb = float((li * np.concatenate([[0.0], lo['cum'][cj][:-1]])).sum())
@@ -212,6 +237,8 @@ def build_training_pairs(tr, meta, segs, users, split='oof'):
 
 
 def fit_pair_model(Xd, y):
+    # an all-NaN column (a localizer source with no maps) breaks the histogram binner
+    Xd = Xd.loc[:, Xd.notna().any()]
     from sklearn.ensemble import HistGradientBoostingClassifier
     clf = HistGradientBoostingClassifier(
         max_iter=500, learning_rate=0.06, max_depth=6, l2_regularization=1.0,
