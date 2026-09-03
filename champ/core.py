@@ -339,8 +339,16 @@ def fit_manner(tr, meta):
                 classes=list(clf.classes_))
 
 
-def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0):
-    """Assign manners to the clips of each block.  Returns {qa_id: letter}."""
+def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=None):
+    """Assign manners to the clips of each block.  Returns {qa_id: letter}.
+
+    Unary evidence: slot prior x physical-group classifier x manner prior (as before).
+    Pairwise evidence (mm['pm'], optional): for every clip pair, how their physical-feature
+    DIFFERENCE favours one orientation of two candidate manners over the swap.  79% of the
+    residual errors were pure within-session swaps, which a unary-only objective cannot see.
+    The assignment is chosen by enumerating permutations rather than by Hungarian matching,
+    since the pairwise term makes the objective non-additive over cells.
+    """
     eq = vis[vis.category == 'emotion'].set_index('idx')
     mfeat = mm['mfeat']
     pathof = dict(zip(vis.idx, vis.true_path))
@@ -377,11 +385,31 @@ def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0):
                       + w_pos * np.log(max(mm['ppm'](m, i, k), 1e-9))
                       + np.log(max(mm['pmg'].get(m, 1e-4), 1e-6)))
                 C[i, j] = -lp
+        own = [set(opts(r)) for r in rows]
+        # pairwise log-odds over (clip pair) x (ordered candidate pair)
+        plo = {}
+        pm = mm.get('pm')
+        if pm is not None and w_pair and k >= 2:
+            import emopair as EP
+            ctx = EP.pool_context((pool_of or {}).get(tuple(blk)))
+            plo = EP.pair_logodds(pm, bf, k, cand, mm, ctx, own)
+
+        def pair_score(lab):
+            """lab[i] = manner assigned to clip i."""
+            if not plo:
+                return 0.0
+            s = 0.0
+            for i, j in itertools.combinations(range(k), 2):
+                a, b = cand.index(lab[i]), cand.index(lab[j])
+                v = plo.get((i, j, a, b))
+                if v is not None:
+                    s += v
+            return s
+
         if slots > k:
             bf3 = block_features([pathof[b] for b in blk], mfeat, slots)
             X3 = pd.DataFrame(bf3).reindex(columns=mm['cols'])
             P3 = mm['clf'].predict_proba(X3.to_numpy(float))
-            own = [set(opts(r)) for r in rows]
             best = None
             for perm in itertools.permutations(range(slots)):
                 # perm[s] = index into cand occupying protocol slot s
@@ -400,11 +428,26 @@ def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0):
                         pg = P3[i, cls.index(g)] if g in cls else 1e-6
                         tot += w_phys * (np.log(max(pg, 1e-9))
                                          - np.log(max(mm['gprior'][g], 1e-9)))
+                    tot += w_pair * pair_score(lab)
                     if best is None or tot > best[0]:
                         best = (tot, lab)
             if best is not None:
                 ri = list(range(k))
                 ci = [cand.index(best[1][i]) for i in range(k)]
+            else:
+                ri, ci = linear_sum_assignment(C)
+        elif plo and k <= 4 and len(cand) <= 5:
+            # unary cost is -C; add the pairwise term and enumerate injective assignments
+            best = None
+            for sel in itertools.permutations(range(len(cand)), k):
+                lab = [cand[s] for s in sel]
+                if any(lab[i] not in own[i] for i in range(k)):
+                    continue
+                tot = -sum(C[i, sel[i]] for i in range(k)) + w_pair * pair_score(lab)
+                if best is None or tot > best[0]:
+                    best = (tot, list(sel))
+            if best is not None:
+                ri, ci = list(range(k)), best[1]
             else:
                 ri, ci = linear_sum_assignment(C)
         else:

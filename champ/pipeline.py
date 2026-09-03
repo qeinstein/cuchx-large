@@ -118,7 +118,11 @@ def fit_all(tr, meta, hold_users, split_train='oof'):
     PL.fit_cooc(trn)
     sc = statcache_view(split_train)
     clfp, colsp = PL.fit_pool_model(trn, meta, training_blocks(tr, trn_users, tpool), sc)
-    ctx = dict(gm=fit_group_model(trn), mm=fit_manner(trn, meta),
+    mm = fit_manner(trn, meta)
+    if os.environ.get('CHAMP_EMO_PAIR', '1') == '1':
+        import emopair as EP
+        mm['pm'] = EP.fit(trn, meta, mm, pool_of=tpool)
+    ctx = dict(gm=fit_group_model(trn), mm=mm,
                scorer=PL.make_scorer(clfp, colsp),
                obj=H.fit_object_prior(tr, hold_users))
     ctx['aclf'], ctx['acols'] = H.fit_action_clf(meta, hold_users)
@@ -147,18 +151,29 @@ def solve(vis, ctx, split, diag=None):
         diag['feat_ok' if (row is not None and np.isfinite(row.get('sk_v_mean', np.nan)))
               else 'feat_missing'] += 1
         diag['logits_ok' if f'{split}|{p_}' in _C['lg'] else 'logits_missing'] += 1
+    # --- session pools first: the manner model conditions on the action pool
+    pool_of, _blk_pred = {}, []
+    for blk in blocks:
+        pp0, bd0 = PL.solve_block(vis, blk, sc, ctx['scorer'], split)
+        _blk_pred.append((pp0, bd0))
+        if bd0:
+            for b in blk:
+                pool_of[b] = set(bd0['pool'])
+    _emo_pool_ctx = {tuple(blk): pool_of.get(blk[0], set()) for blk in blocks}
     # --- emotion
     if len(hau):
-        pe, _ = solve_emotion(vis, blocks, ctx['mm'])
+        # weights from the held-out emotion sweep: w_phys 0.5 / w_pos 1.0 / w_pair 1.0
+        # gave 740/809 vs 731/809 for the unary-only checkpoint
+        pe, _ = solve_emotion(vis, blocks, ctx['mm'],
+                              w_phys=float(os.environ.get('CHAMP_W_PHYS', 0.5)),
+                              w_pos=1.0,
+                              w_pair=float(os.environ.get('CHAMP_W_PAIR', 1.0)),
+                              pool_of=_emo_pool_ctx)
         pred.update(pe)
-    # --- pool -> single / multi / combination
-    pool_of = {}
-    for blk in blocks:
-        pp, bd = PL.solve_block(vis, blk, sc, ctx['scorer'], split)
+    # --- pool -> single / multi / combination (reuse the solve above)
+    for pp, bd in _blk_pred:
         pred.update(pp)
         if bd:
-            for b in blk:
-                pool_of[b] = set(bd['pool'])
             diag['pool_sat' if bd['nsol'] else 'pool_unsat'] += 1
     # --- sequence, from the dense temporal model restricted to the four options
     for r in hau[hau.category == 'sequence'].itertuples():

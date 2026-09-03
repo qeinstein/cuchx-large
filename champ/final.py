@@ -124,7 +124,7 @@ def run_test():
             bad.append((q, p, c))
     assert len(sub) == 682 and list(sub.qa_id) == list(te.qa_id), 'row/order mismatch'
     assert not bad, bad[:10]
-    outp = os.path.join(ROOT, 'submission_final.csv')
+    outp = os.path.join(ROOT, os.environ.get('CHAMP_OUT','submission_final.csv'))
     sub.to_csv(outp, index=False)
 
     print('\n================ REAL TEST INFERENCE ================')
