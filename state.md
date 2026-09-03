@@ -19,8 +19,30 @@
 | `submission_v2.csv` | `55965271` | 2026-09-02 | 0.78654 | 28 | Cross-question single contradiction theorem corrections. |
 | **`submission_v3.csv`** | **`55965872`** | **2026-09-02** | **0.78947** | **28 (Tied #25)** | **792-dim Multimodal Action Model + Calibrated multi additions + Sequence guarantees.** |
 | `submission_v4.csv` | `55966128` | 2026-09-02 | 0.78362 | 28 | Global IMU emotion override (58 changes; too aggressive on public test). |
-| `submission_champ.csv` | *Staged* | — | 72.94% CV | *Candidate #1* | Master Tri-Blend Neural Engine + Closed-World Belief Propagation + Cadence Emotion. |
-| `submission_gated_champ.csv` | *Staged* | — | **0.810–0.813 proj.** | *Top 15 proj.* | 15 strictly verified, high-precision updates on top of 0.78947 peak baseline. |
+| `submission_v5.csv` | — | 2026-09-02 | 74.50% OOF | Staged Baseline | Unified Engine (3,045/4,087 correct). |
+| `submission_v6.csv` | Verified | 2026-09-03 | 75.36% OOF | Championship v6 | +35 Net Wins over v5 (3,080/4,087 correct). CatBoost-RF-LR Cadence Emotion (+17) + k=120 Object Specialist (+3) + Single-to-Multi Inclusion (+15). |
+| `submission_v7.csv` | — | 2026-09-03 | 75.41% OOF | Staged Baseline | Frame-Supervised TCN + Monotonic Dynamic Programming (3,082/4,087 correct). |
+| **`submission_v8.csv`** | **Ready** | **2026-09-03** | **75.68% OOF** | **Championship v8** | **Unified Champion: +11 Net Wins over v7 (3,093/4,087 correct, 64 wins vs 53 losses, 1.21x ratio). Restores high-accuracy 3-tier cadence-matched speed model on Emotion (52.29% vs 50.93%) while keeping peak v7 decoders on Single (86.83%), Multi (77.50%), Combination (88.99%), Sequence (48.05%), and Object (87.97%).** |
+
+---
+
+## Championship v8 Architecture & Validation Ledger
+1. **Championship v8 5-Fold Subject-Disjoint Benchmark (4,087 samples):**
+   - **Overall OOF Accuracy:** **3,093 / 4,087 (75.68%)** vs v7 **3,082 / 4,087 (75.41%)** (+11 questions, +0.27%).
+   - **Win/Loss Profile:** 64 new wins vs 53 new losses (**1.21x win/loss ratio**).
+   - **Multi-Fold Replicated:** Beats v7 in 4 out of 5 folds (Fold 1: +2, Fold 2: +1, Fold 3: +9, Fold 4: +7).
+   - **Category Profile:**
+     - Single: **1,075 / 1,238 (86.83%)** (peak across all models)
+     - Combination: **703 / 790 (88.99%)** (peak across all models)
+     - Multi: **627 / 809 (77.50%)** (peak across all models)
+     - Object: **117 / 133 (87.97%)** (peak across all models)
+     - Sequence: **148 / 308 (48.05%)** (peak across all models)
+     - Emotion: **423 / 809 (52.29%)** (+11 over v7's 412 / 809 = 50.93%)
+2. **Submission v8 Verification:**
+   - Saved to `submission_v8.csv`.
+   - Exactly 682 rows, columns `qa_id` and `prediction`.
+   - Exactly 42 test row updates compared to v7, entirely targeting the 144 test Emotion questions where the 3-tier cadence-matching speed model outperforms the overfitted CatBoost ensemble.
+   - Zero nulls, valid letter formats.
 
 *Kaggle Submissions: Ready to submit upon user authorization.*
 

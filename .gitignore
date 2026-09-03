@@ -40,3 +40,10 @@ notebooks/
 .vscode/
 .idea/
 llava_local/
+
+# large derived caches (regenerate with champ/build_*.py)
+champ/*.npz
+champ/meta.csv
+champ/feats.csv
+champ/log_*.txt
+champ/*.npy
