@@ -14,6 +14,9 @@ from scipy.optimize import linear_sum_assignment
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# per-question decision margins, filled by the solvers for post-hoc auditing
+MARGIN = {}
+
 # ----------------------------------------------------------------------------- manner groups
 FAST = {'Quickly', 'quickly', 'Rapidly', 'Hastily', 'Hasitly', 'Hurriedly', 'Swiftly',
         'Briskly', 'Urgently', 'Frantically', 'Impatiently', 'Eagerly', 'Forcefully'}
@@ -459,6 +462,25 @@ def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=No
                 ri, ci = linear_sum_assignment(C)
         else:
             ri, ci = linear_sum_assignment(C)
+        # margin: for each clip, the objective loss incurred by forcing a different manner
+        try:
+            sel = list(ci)
+            base = -sum(C[i, sel[i]] for i in range(k)) + w_pair * pair_score(
+                [cand[s_] for s_ in sel])
+            for i in range(k):
+                alt = None
+                for s2 in range(len(cand)):
+                    if s2 == sel[i] or cand[s2] not in own[i]:
+                        continue
+                    trial = list(sel); trial[i] = s2
+                    if len(set(trial)) != k:
+                        continue
+                    v = -sum(C[t, trial[t]] for t in range(k)) + w_pair * pair_score(
+                        [cand[s_] for s_ in trial])
+                    alt = v if alt is None else max(alt, v)
+                MARGIN[rows[i].qa_id] = float(base - alt) if alt is not None else float('inf')
+        except Exception:
+            pass
         for i, j in zip(ri, ci):
             r = rows[i]
             m = cand[j]

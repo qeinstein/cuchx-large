@@ -283,6 +283,9 @@ def solve(vis, ctx, split, diag=None):
                 diag['fallback_qids'].append((r.qa_id, 'harn_flat_score_vector'))
                 pred[r.qa_id] = None
                 continue
+            o_ = sorted(sv, reverse=True)
+            from core import MARGIN
+            MARGIN[r.qa_id] = float(o_[0] - o_[1])
             pred[r.qa_id] = 'ABCD'[int(np.argmax(sv))]
         else:
             cand_a = allowed or (set(D.ACTIONS) | set(acls) | set(dcls or []))
@@ -300,6 +303,9 @@ def solve(vis, ctx, split, diag=None):
                 diag['fallback_qids'].append((r.qa_id, 'object_flat_prior'))
                 pred[r.qa_id] = None
                 continue
+            o_ = sorted([c[0] for c in cnt], reverse=True)
+            from core import MARGIN
+            MARGIN[r.qa_id] = float(o_[0] - o_[1])
             pred[r.qa_id] = 'ABCD'[max(range(4), key=lambda i: cnt[i])]
     # every question must have been visited
     missing = [q for q in vis.qa_id if q not in pred]
