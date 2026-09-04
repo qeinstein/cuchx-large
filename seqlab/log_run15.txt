@@ -1,0 +1,8 @@
+PAIR regime, evidence from the 2 kept clips only:
+  n=600  champion 338 (0.5633)  S 408 (0.6800)  delta +0.1167
+  flips 203  W->R 97  R->W 27  W->W 79  precision 0.782  net/100 34.5
+    fold 0: champ   64/ 126 S   83 net  +19 flips  45 W->R  22 R->W   3 prec 0.88
+    fold 1: champ   52/ 108 S   63 net  +11 flips  49 W->R  19 R->W   8 prec 0.70
+    fold 2: champ  102/ 162 S  111 net   +9 flips  41 W->R  17 R->W   8 prec 0.68
+    fold 3: champ   48/ 102 S   68 net  +20 flips  48 W->R  26 R->W   6 prec 0.81
+    fold 4: champ   72/ 102 S   83 net  +11 flips  20 W->R  13 R->W   2 prec 0.87

@@ -1,0 +1,32 @@
+scope=all; descriptors train=3098; classes=44; question rows=562; test descriptors=13
+held-out users per v8 fold: {0: 4, 1: 4, 2: 4, 3: 3, 4: 3}
+fold 0: fit=2370, eval_questions=128
+fold 1: fit=2433, eval_questions=110
+fold 2: fit=2375, eval_questions=154
+fold 3: fit=2632, eval_questions=82
+fold 4: fit=2582, eval_questions=88
+
+                  slice   n  video_correct  video_accuracy  v8_correct  v8_accuracy  disagreements  w_to_r  r_to_w  neutral_disagreements  flip_precision  net  net_per_100_flips
+all HARn single+object 562            447        0.795374       446.0     0.793594          146.0    65.0    64.0                   17.0        0.503876  1.0           0.684932
+ test-style actionable 447            355        0.794183       343.0     0.767338          120.0    59.0    47.0                   14.0        0.556604 12.0          10.000000
+    object_interaction 133            117        0.879699       117.0     0.879699           17.0     8.0     8.0                    1.0        0.500000  0.0           0.000000
+                single 429            330        0.769231       329.0     0.766900          129.0    57.0    56.0                   16.0        0.504425  1.0           0.775194
+                fold_0 128            100        0.781250        98.0     0.765625           38.0    16.0    14.0                    8.0        0.533333  2.0           5.263158
+                fold_1 110             88        0.800000        83.0     0.754545           29.0    15.0    10.0                    4.0        0.600000  5.0          17.241379
+                fold_2 154            120        0.779221       122.0     0.792208           38.0    16.0    18.0                    4.0        0.470588 -2.0          -5.263158
+                fold_3  82             73        0.890244        72.0     0.878049           15.0     8.0     7.0                    0.0        0.533333  1.0           6.666667
+                fold_4  88             66        0.750000        71.0     0.806818           26.0    10.0    15.0                    1.0        0.400000 -5.0         -19.230769
+           action_top1 562            156        0.277580         NaN          NaN            NaN     NaN     NaN                    NaN             NaN  NaN                NaN
+
+Fixed gates:
+                                   slice   n  video_correct  video_accuracy  v8_correct  v8_accuracy  disagreements  w_to_r  r_to_w  neutral_disagreements  flip_precision  net  net_per_100_flips  gate             selection  proposed_overrides
+                  all; confidence>=0.00 562            447        0.795374         446     0.793594            146      65      64                     17        0.503876    1           0.684932   0.0                   all                 146
+test-style actionable; confidence>=0.00 447            355        0.794183         343     0.767338            120      59      47                     14        0.556604   12          10.000000   0.0 test-style actionable                 120
+                  all; confidence>=0.70 562            458        0.814947         446     0.793594            108      55      43                     10        0.561224   12          11.111111   0.7                   all                 108
+test-style actionable; confidence>=0.70 447            364        0.814318         343     0.767338             92      53      32                      7        0.623529   21          22.826087   0.7 test-style actionable                  92
+                  all; confidence>=0.80 562            460        0.818505         446     0.793594             98      51      37                     10        0.579545   14          14.285714   0.8                   all                  98
+test-style actionable; confidence>=0.80 447            364        0.814318         343     0.767338             84      49      28                      7        0.636364   21          25.000000   0.8 test-style actionable                  84
+                  all; confidence>=0.90 562            461        0.820285         446     0.793594             85      46      31                      8        0.597403   15          17.647059   0.9                   all                  85
+test-style actionable; confidence>=0.90 447            363        0.812081         343     0.767338             74      44      24                      6        0.647059   20          27.027027   0.9 test-style actionable                  74
+
+wrote /Users/toheeb.ogunade/Workspace/cuchx-large/experiments/no_lmt_harn_20260904/REPORT_all.md

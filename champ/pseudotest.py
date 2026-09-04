@@ -48,6 +48,25 @@ def thin_to_pairs(tr, users, frac, seed=0):
     return tr[~tr.path.isin(drop)]
 
 
+def thin_to_orphans(tr, users, frac, seed=0):
+    """Drop two trials from `frac` of the held-out users' sessions, leaving a one-clip block.
+
+    The real test set demonstrably contains such orphans: after repair it is 31 three-clip
+    blocks, 23 two-clip blocks and 5 one-clip blocks.  Since infer_blocks has kmin=2 it can
+    never emit a one-clip block, so an orphan is always glued onto a real session -- which is
+    exactly the failure this injection reproduces so that the repair can be validated.
+    """
+    rng = np.random.default_rng(seed)
+    sub = tr[tr.user.isin(users)]
+    drop = []
+    for (u, a, b), g in sub[sub.source == 'HAU'].groupby(['user', 'aa', 'bb']):
+        paths = sorted(g.path.unique())
+        if len(paths) >= 3 and rng.random() < frac:
+            keep = paths[rng.integers(len(paths))]
+            drop += [p for p in paths if p != keep]
+    return tr[~tr.path.isin(drop)]
+
+
 def run(w_phys=1.0, w_pos=1.0, verbose=True, nfold=5, pair_frac=0.0):
     tr, te, meta = load_all()
     users = sorted(tr.user.dropna().unique())

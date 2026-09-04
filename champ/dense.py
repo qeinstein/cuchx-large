@@ -39,6 +39,39 @@ def frame_feats(K):
     return np.nan_to_num(X, nan=0.0, posinf=0.0, neginf=0.0).astype(np.float32)
 
 
+# Optional extra per-frame stream: frozen DINOv2 ViT-S/14 features on Depth, projected to a
+# few PCA components.  DINOv2 depth failed as a STANDALONE localizer but was measured to be
+# complementary to skeleton+IMU for action identity (HARn top-1 0.527 -> 0.550 in late fusion),
+# and the dense model is where per-frame complementarity can actually be used.
+# 0 = champion feature set.
+DINO_K = int(os.environ.get('CHAMP_DENSE_DINO', 0))
+_DN = None
+_DPCA = None
+
+
+def dino_feats(qa_path, T):
+    """T x DINO_K PCA projection of the per-frame DINOv2 features, or zeros."""
+    global _DN, _DPCA
+    if not DINO_K:
+        return np.zeros((T, 0), np.float32)
+    if _DN is None:
+        _DN = np.load(os.path.join(ROOT, 'champ', 'dino_frames.npz'))
+    if _DPCA is None:
+        from sklearn.decomposition import PCA
+        keys = [k for k in _DN.files][:250]
+        S = np.concatenate([np.asarray(_DN[k], np.float32)[::5] for k in keys])
+        _DPCA = PCA(n_components=DINO_K, random_state=0).fit(S)
+    if qa_path not in _DN:
+        return np.zeros((T, DINO_K), np.float32)
+    A = np.asarray(_DN[qa_path], np.float32)
+    if len(A) != T:
+        idx = np.clip(np.arange(T) * len(A) // max(1, T), 0, len(A) - 1) if len(A) else None
+        A = A[idx] if idx is not None else np.zeros((T, A.shape[1]), np.float32)
+    P = _DPCA.transform(A).astype(np.float32)
+    V = np.zeros_like(P); V[1:] = np.diff(P, axis=0)
+    return np.concatenate([P, V], 1)
+
+
 # ------------------------------------------------------------------ dataset
 _IMU = None
 
@@ -85,7 +118,8 @@ def build_dense(meta):
         if k not in Z:
             continue
         K = Z[k]; Fr = Z[r.unit_dir + '|F']
-        X = np.concatenate([frame_feats(K), imu_feats(r.unit_dir, len(K))], 1)
+        X = np.concatenate([frame_feats(K), imu_feats(r.unit_dir, len(K)),
+                            dino_feats(r.qa_path, len(K))], 1)
         y = np.full(len(Fr), BG, np.int64)
         sv = segs.get((r.user, r.trial), [])
         for a, f0, f1 in sv:
@@ -108,7 +142,8 @@ def infer_items(meta, kinds=('test',)):
             continue
         K = Z[k]
         out.append(dict(unit=r.unit_dir, qa_path=r.qa_path,
-                        X=np.concatenate([frame_feats(K), imu_feats(r.unit_dir, len(K))], 1),
+                        X=np.concatenate([frame_feats(K), imu_feats(r.unit_dir, len(K)),
+                                          dino_feats(r.qa_path, len(K))], 1),
                         F=Z[r.unit_dir + '|F']))
     return out
 

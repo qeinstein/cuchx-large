@@ -1,0 +1,31 @@
+qa_id,mech,action,champion,new,why
+test_0331,S,applied,ADBC,DBCA,"margin 1.66 | block (np.int64(71), np.int64(72), np.int64(73)) | champ_block_self_consistent=False | order: Grabbing utensils < Eating < Walking < Sweeping < Mopping"
+test_0643,S,applied,DBAC,DBCA,"margin 2.32 | block (np.int64(83), np.int64(84), np.int64(85)) | champ_block_self_consistent=False | order: Typing on a keyboard < Checking the time < Drinking < Using a phone < Turning a page"
+test_0334,S,applied,BCAD,BCDA,"margin 5.26 | block (np.int64(83), np.int64(84), np.int64(85)) | champ_block_self_consistent=False | order: Typing on a keyboard < Checking the time < Drinking < Using a phone < Turning a page"
+test_0644,S,applied,BACD,BCAD,"margin 1.11 | block (np.int64(86), np.int64(87), np.int64(88)) | champ_block_self_consistent=False | order: Walking < Washing face < Brushing teeth < Combing hair"
+test_0336,S,applied,BDCA,BADC,"margin 1.11 | block (np.int64(86), np.int64(87), np.int64(88)) | champ_block_self_consistent=False | order: Walking < Washing face < Brushing teeth < Combing hair"
+test_0338,S,applied,ACDB,ACBD,"margin 10.39 | block (np.int64(98), np.int64(99), np.int64(100)) | champ_block_self_consistent=False | order: Walking < Pouring < Stirring < Listening to the music with headphones < Standing up < Mopping"
+test_0341,S,applied,DBCA,DCBA,"margin 11.75 | block (np.int64(116), np.int64(117), np.int64(118)) | champ_block_self_consistent=False | order: Walking < Reading < Checking the time < Turning a page < Standing up"
+test_0346,S,applied,DBAC,DBCA,"margin 1.05 | block (np.int64(134), np.int64(135), np.int64(136)) | champ_block_self_consistent=False | order: Walking < Using a phone < Listening to the music with headphones < Peeling fruit"
+test_0347,S,applied,BACD,BADC,"margin 1.05 | block (np.int64(134), np.int64(135), np.int64(136)) | champ_block_self_consistent=False | order: Walking < Using a phone < Listening to the music with headphones < Peeling fruit"
+test_0348,S,applied,BADC,BACD,"margin 6.17 | block (np.int64(187), np.int64(188)) | champ_block_self_consistent=False | order: Wiping hands < Combing hair < Getting dressed < Walking"
+test_0350,S,applied,DBCA,DCBA,"margin 11.47 | block (np.int64(193), np.int64(194)) | champ_block_self_consistent=False | order: Standing up < Walking < Sitting down < Typing on a keyboard"
+test_0351,S,applied,ADBC,DABC,"margin 11.47 | block (np.int64(193), np.int64(194)) | champ_block_self_consistent=False | order: Standing up < Walking < Sitting down < Typing on a keyboard"
+test_0352,S,applied,ADBC,ABDC,"margin 2.14 | block (np.int64(197), np.int64(198)) | champ_block_self_consistent=True | order: Mopping < Typing on a keyboard < Checking the time < Reading < Standing up"
+test_0353,S,applied,DABC,DBAC,"margin 2.14 | block (np.int64(197), np.int64(198)) | champ_block_self_consistent=True | order: Mopping < Typing on a keyboard < Checking the time < Reading < Standing up"
+test_0354,S,applied,ACBD,ABDC,"margin 0.48 | block (np.int64(201), np.int64(202)) | champ_block_self_consistent=False | order: Listening to the music with headphones < Taking a selfie < Drinking < Checking the time < Watching TV"
+test_0355,S,applied,CDAB,CADB,"margin 0.48 | block (np.int64(201), np.int64(202)) | champ_block_self_consistent=False | order: Listening to the music with headphones < Taking a selfie < Drinking < Checking the time < Watching TV"
+test_0359,S,applied,DABC,DBAC,"margin 0.99 | block (np.int64(207), np.int64(208)) | champ_block_self_consistent=True | order: Sitting down < Drinking < Wiping hands < Taking medicine < Massaging oneself < Stretching"
+test_0480,W:X,applied,A,C,"no object option fits single='eating food'; objects ['a napkin', 'a clothes', 'a cloth', 'a sponge'] pin the action to 'wiping a bowl' (per-action prior count 10)"
+test_0525,W:X,applied,B,C,joint re-solve with single test_0480 -> 'wiping a bowl'; per-action prior count 10
+test_0528,W:W1,applied,A,D,"single test_0488='turning pages' -> 22_Turn_pages; per-action object prior {'a newspaper': 0, 'a magazine': 0, 'a notebook': 0, 'a documents': 10}; champion option has prior 0"
+test_0530,W:W2,applied,A,B,"champion chose 'a towel', which is never the correct object in 133 training questions; global prior {'a towel': 0, 'a phone': 18, 'a speaker': 0, 'a headphones': 7}"
+test_0533,W:W1,applied,C,A,"single test_0494='using a remote' -> 25_Watch_TV; per-action object prior {'a remote': 10, 'a calculator': 0, 'a phone': 0, 'a wallet': 0}; champion option has prior 0"
+test_0534,W:W1,applied,A,B,"single test_0495='using a remote' -> 25_Watch_TV; per-action object prior {'a keyboard': 0, 'a remote': 10, 'a calculator': 0, 'a wallet': 0}; champion option has prior 0"
+test_0137,T,applied,ACD,AC,clip 103: block repair changed this session (ACD -> AC)
+test_0289,T,applied,B,A,clip 168: block repair changed this session (B -> A)
+test_0385,T,applied,D,B,clip 103: block repair changed this session (D -> B)
+test_0397,T,applied,D,C,clip 121: block repair changed this session (D -> C)
+test_0431,T,applied,D,A,clip 169: block repair changed this session (D -> A)
+test_0452,T,applied,A,C,clip 190: block repair changed this session (A -> C)
+test_0523,T,applied,B,A,clip 11: block repair changed this session (B -> A)

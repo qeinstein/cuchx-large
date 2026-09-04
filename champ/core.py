@@ -349,7 +349,8 @@ def fit_manner(tr, meta):
                 classes=list(clf.classes_))
 
 
-def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=None):
+def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=None,
+                  slotp=None, w_slot=0.0):
     """Assign manners to the clips of each block.  Returns {qa_id: letter}.
 
     Unary evidence: slot prior x physical-group classifier x manner prior (as before).
@@ -402,7 +403,8 @@ def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=No
         if pm is not None and w_pair and k >= 2:
             import emopair as EP
             ctx = EP.pool_context((pool_of or {}).get(tuple(blk)))
-            plo = EP.pair_logodds(pm, bf, k, cand, mm, ctx, own)
+            plo = EP.pair_logodds(pm, bf, k, cand, mm, ctx, own,
+                                  [pathof[b] for b in blk])
 
         def pair_score(lab):
             """lab[i] = manner assigned to clip i."""
@@ -421,6 +423,11 @@ def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=No
             X3 = pd.DataFrame(bf3).reindex(columns=mm['cols'])
             P3 = mm['clf'].predict_proba(X3.to_numpy(float))
             best = None
+            # learned prior over WHICH protocol slots this short block contains; default-off
+            slp = None
+            if w_slot:
+                import slotprior as SPR
+                slp = SPR.predict(slotp, bf3, k, slots, [pathof[b] for b in blk])
             for perm in itertools.permutations(range(slots)):
                 # perm[s] = index into cand occupying protocol slot s
                 for present in itertools.combinations(range(slots), k):
@@ -439,6 +446,8 @@ def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=No
                         tot += w_phys * (np.log(max(pg, 1e-9))
                                          - np.log(max(mm['gprior'][g], 1e-9)))
                     tot += w_pair * pair_score(lab)
+                    if slp is not None:
+                        tot += w_slot * slp.get(tuple(present), np.log(1e-6))
                     if best is None or tot > best[0]:
                         best = (tot, lab)
             if best is not None:

@@ -1,0 +1,17 @@
+{
+  "baseline": "champ/audit_champ.csv (immutable submitted-champion OOF snapshot)",
+  "descriptor": "raw body-centred skeleton temporal profiles + DINO depth-embedding delta trajectories",
+  "experiment": "EXP-EMO-RELRAW-001",
+  "no_modalities": [
+    "IMU",
+    "radar",
+    "DTW"
+  ],
+  "ordinary_candidate_pairs": 698,
+  "ordinary_orientation_accuracy": 0.9377652050919377,
+  "ordinary_prior_only_orientation_accuracy": 0.8642149929278642,
+  "pair_thinned_candidate_pairs": 540,
+  "pair_thinned_orientation_accuracy": 0.9302752293577982,
+  "pair_thinned_prior_only_orientation_accuracy": 0.8568807339449541,
+  "test_scored_pairs": 206
+}

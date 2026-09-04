@@ -25,6 +25,10 @@ W_DENSE_INTERVAL = float(os.environ.get('CHAMP_W_DENSE_IV', 0.0))
 # the 1370 skeleton errors, and a late-fusion weight of 0.3 was the held-out optimum:
 #   action top-1 0.5266 -> 0.5501 ; HARn single 409/429 -> 417/429 ; object 119 -> 121
 W_HDINO = float(os.environ.get('CHAMP_W_HDINO', 0.3))
+# learned prior over which protocol slots a two-clip block contains; 0.0 = champion behaviour
+W_SLOT = float(os.environ.get('CHAMP_W_SLOT', 0.0))
+# split inferred blocks that cannot be one session (see champ/repair.py); 0 = champion
+W_REPAIR = float(os.environ.get('CHAMP_REPAIR', 0.0))
 ACT = ['single', 'multi', 'combination', 'sequence']
 
 # ------------------------------------------------------------------ shared caches
@@ -139,6 +143,12 @@ def fit_all(tr, meta, hold_users, split_train='oof'):
                obj=H.fit_object_prior(tr, hold_users))
     ctx['aclf'], ctx['acols'] = H.fit_action_clf(meta, hold_users)
     ctx['acls'] = list(ctx['aclf'].classes_)
+    if W_SLOT:
+        import slotprior as SPR
+        ctx['slotp'] = SPR.fit(tr, meta, hold_users)
+    if W_REPAIR:
+        import repair as RP
+        ctx['gmod'] = RP.fit_gap_model(trn, meta)
     return ctx
 
 
@@ -156,6 +166,14 @@ def solve(vis, ctx, split, diag=None):
     pred = {}
     hau = vis[vis.source == 'HAU']
     blocks = infer_blocks(vis, ctx['gm']) if len(hau) else []
+    if W_REPAIR and blocks:
+        import repair as RP
+        t0_of = {}
+        for r in hau.drop_duplicates('idx').itertuples():
+            if r.true_path in _C['mi']:
+                t0_of[r.idx] = _C['meta_idx'].loc[r.true_path, 't0']
+        blocks, rlog = RP.repair(blocks, vis, ctx['gm'], ctx['gmod'], t0_of)
+        diag['blocks_repaired'] = len(rlog)
     sc = statcache_view(split)
     # --- cache coverage audit
     for p_ in vis.true_path.unique():
@@ -180,7 +198,8 @@ def solve(vis, ctx, split, diag=None):
                               w_phys=float(os.environ.get('CHAMP_W_PHYS', 1.0)),
                               w_pos=1.0,
                               w_pair=float(os.environ.get('CHAMP_W_PAIR', 1.0)),
-                              pool_of=_emo_pool_ctx)
+                              pool_of=_emo_pool_ctx,
+                              slotp=ctx.get('slotp'), w_slot=W_SLOT)
         pred.update(pe)
     # --- pool -> single / multi / combination (reuse the solve above)
     for pp, bd in _blk_pred:

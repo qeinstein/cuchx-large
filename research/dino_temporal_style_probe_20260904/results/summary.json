@@ -1,0 +1,88 @@
+{
+  "counts": {
+    "candidate_pairs": 2476,
+    "oracle_rows": 2504,
+    "ordinary_candidate_pairs": 1396,
+    "pair_thinned_candidate_pairs": 1080
+  },
+  "descriptor": {
+    "cache_sequences": 809,
+    "descriptor_dim": 123,
+    "native_order_duration_preserved": true,
+    "projection": "fixed Gaussian random projection seed=20260904, dim=8",
+    "source": "champ/dino_frames.npz",
+    "uses_imu_radar_skeleton_dtw": false,
+    "uses_static_frame_embedding": false
+  },
+  "experiment": "EXP-EMO-DINO-TRAJ-001",
+  "promotion_rule": "No candidate is promotable unless its direct flip audit is high precision and positive in every relevant fold; orientation accuracy alone is not sufficient.",
+  "validation": {
+    "audit_sha256": "a731dcb5430ad383249b7c64376a2d12f26bf6e65a5a6f589ff1cb430cc7ffff",
+    "audit_snapshot": "champ/audit_champ.csv",
+    "ordinary_emotion_rows": 809,
+    "pair_stats_by_fold": {
+      "0": {
+        "features": 256,
+        "hypotheses": 1092,
+        "same_group_skipped": 74,
+        "valid_pairs": 546
+      },
+      "1": {
+        "features": 256,
+        "hypotheses": 1112,
+        "same_group_skipped": 75,
+        "valid_pairs": 556
+      },
+      "2": {
+        "features": 256,
+        "hypotheses": 1126,
+        "same_group_skipped": 69,
+        "valid_pairs": 563
+      },
+      "3": {
+        "features": 256,
+        "hypotheses": 1180,
+        "same_group_skipped": 80,
+        "valid_pairs": 590
+      },
+      "4": {
+        "features": 256,
+        "hypotheses": 1154,
+        "same_group_skipped": 78,
+        "valid_pairs": 577
+      }
+    },
+    "pair_thinned_emotion_rows": 718,
+    "pair_thinned_fraction": 0.38,
+    "subject_disjoint_folds": {
+      "0": [
+        "user4",
+        "user17",
+        "user22",
+        "user6"
+      ],
+      "1": [
+        "user21",
+        "user1",
+        "user24",
+        "user16"
+      ],
+      "2": [
+        "user7",
+        "user8",
+        "user20",
+        "user18"
+      ],
+      "3": [
+        "user9",
+        "user5",
+        "user3"
+      ],
+      "4": [
+        "user2",
+        "user23",
+        "user19"
+      ]
+    }
+  }
+}

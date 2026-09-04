@@ -1,0 +1,88 @@
+/Users/toheeb.ogunade/Workspace/cuchx-large/champ/core.py:273: RuntimeWarning: Mean of empty slice
+  mu = np.nanmean(M, 0); sd = np.nanstd(M, 0) + 1e-9
+/Users/toheeb.ogunade/Workspace/cuchx-large/venv/lib/python3.14/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/Users/toheeb.ogunade/Workspace/cuchx-large/champ/core.py:273: RuntimeWarning: Mean of empty slice
+  mu = np.nanmean(M, 0); sd = np.nanstd(M, 0) + 1e-9
+/Users/toheeb.ogunade/Workspace/cuchx-large/venv/lib/python3.14/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/Users/toheeb.ogunade/Workspace/cuchx-large/champ/core.py:273: RuntimeWarning: Mean of empty slice
+  mu = np.nanmean(M, 0); sd = np.nanstd(M, 0) + 1e-9
+/Users/toheeb.ogunade/Workspace/cuchx-large/venv/lib/python3.14/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/Users/toheeb.ogunade/Workspace/cuchx-large/champ/core.py:273: RuntimeWarning: Mean of empty slice
+  mu = np.nanmean(M, 0); sd = np.nanstd(M, 0) + 1e-9
+/Users/toheeb.ogunade/Workspace/cuchx-large/venv/lib/python3.14/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/Users/toheeb.ogunade/Workspace/cuchx-large/champ/core.py:273: RuntimeWarning: Mean of empty slice
+  mu = np.nanmean(M, 0); sd = np.nanstd(M, 0) + 1e-9
+/Users/toheeb.ogunade/Workspace/cuchx-large/venv/lib/python3.14/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/Users/toheeb.ogunade/Workspace/cuchx-large/champ/core.py:273: RuntimeWarning: Mean of empty slice
+  mu = np.nanmean(M, 0); sd = np.nanstd(M, 0) + 1e-9
+/Users/toheeb.ogunade/Workspace/cuchx-large/venv/lib/python3.14/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/Users/toheeb.ogunade/Workspace/cuchx-large/champ/core.py:273: RuntimeWarning: Mean of empty slice
+  mu = np.nanmean(M, 0); sd = np.nanstd(M, 0) + 1e-9
+/Users/toheeb.ogunade/Workspace/cuchx-large/venv/lib/python3.14/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/Users/toheeb.ogunade/Workspace/cuchx-large/champ/core.py:273: RuntimeWarning: Mean of empty slice
+  mu = np.nanmean(M, 0); sd = np.nanstd(M, 0) + 1e-9
+/Users/toheeb.ogunade/Workspace/cuchx-large/venv/lib/python3.14/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/Users/toheeb.ogunade/Workspace/cuchx-large/champ/core.py:273: RuntimeWarning: Mean of empty slice
+  mu = np.nanmean(M, 0); sd = np.nanstd(M, 0) + 1e-9
+/Users/toheeb.ogunade/Workspace/cuchx-large/venv/lib/python3.14/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/Users/toheeb.ogunade/Workspace/cuchx-large/champ/core.py:273: RuntimeWarning: Mean of empty slice
+  mu = np.nanmean(M, 0); sd = np.nanstd(M, 0) + 1e-9
+/Users/toheeb.ogunade/Workspace/cuchx-large/venv/lib/python3.14/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/Users/toheeb.ogunade/Workspace/cuchx-large/champ/core.py:273: RuntimeWarning: Mean of empty slice
+  mu = np.nanmean(M, 0); sd = np.nanstd(M, 0) + 1e-9
+/Users/toheeb.ogunade/Workspace/cuchx-large/venv/lib/python3.14/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/Users/toheeb.ogunade/Workspace/cuchx-large/champ/core.py:273: RuntimeWarning: Mean of empty slice
+  mu = np.nanmean(M, 0); sd = np.nanstd(M, 0) + 1e-9
+/Users/toheeb.ogunade/Workspace/cuchx-large/venv/lib/python3.14/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/Users/toheeb.ogunade/Workspace/cuchx-large/champ/core.py:273: RuntimeWarning: Mean of empty slice
+  mu = np.nanmean(M, 0); sd = np.nanstd(M, 0) + 1e-9
+/Users/toheeb.ogunade/Workspace/cuchx-large/venv/lib/python3.14/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/Users/toheeb.ogunade/Workspace/cuchx-large/champ/core.py:273: RuntimeWarning: Mean of empty slice
+  mu = np.nanmean(M, 0); sd = np.nanstd(M, 0) + 1e-9
+/Users/toheeb.ogunade/Workspace/cuchx-large/venv/lib/python3.14/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/Users/toheeb.ogunade/Workspace/cuchx-large/champ/core.py:273: RuntimeWarning: Mean of empty slice
+  mu = np.nanmean(M, 0); sd = np.nanstd(M, 0) + 1e-9
+/Users/toheeb.ogunade/Workspace/cuchx-large/venv/lib/python3.14/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/Users/toheeb.ogunade/Workspace/cuchx-large/champ/core.py:273: RuntimeWarning: Mean of empty slice
+  mu = np.nanmean(M, 0); sd = np.nanstd(M, 0) + 1e-9
+/Users/toheeb.ogunade/Workspace/cuchx-large/venv/lib/python3.14/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+pair rows 1604 (802 pairs)  champion cols 150  traj cols 246
+fraction of pairs with usable trajectory descriptor: 1.000
+
+=== pairwise manner-orientation accuracy, subject-disjoint ===
+  champion pairwise features [BASELINE]        orientation acc 0.9738  (781/802)  nfeat=150
+      fold 0: 177/179 = 0.9888
+      fold 1: 166/177 = 0.9379
+      fold 2: 171/174 = 0.9828
+      fold 3: 135/138 = 0.9783
+      fold 4: 132/134 = 0.9851
+  DINO trajectory descriptor ONLY              orientation acc 0.0000  (0/802)  nfeat=246
+      fold 0: 0/179 = 0.0000
+      fold 1: 0/177 = 0.0000
+      fold 2: 0/174 = 0.0000
+      fold 3: 0/138 = 0.0000
+      fold 4: 0/134 = 0.0000
+  champion + trajectory  [COMBINED]            orientation acc 0.9738  (781/802)  nfeat=396
+      fold 0: 177/179 = 0.9888
+      fold 1: 166/177 = 0.9379
+      fold 2: 171/174 = 0.9828
+      fold 3: 135/138 = 0.9783
+      fold 4: 132/134 = 0.9851
+
+wrote /Users/toheeb.ogunade/Workspace/cuchx-large/research/dino_temporal_style_probe_20260904/results_joint/orientation_accuracy_summary.csv

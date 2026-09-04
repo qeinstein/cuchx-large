@@ -24,6 +24,71 @@ from core import PHYS, block_features, mgroup, gt_letters, opts, GROUPS
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Optional: DTW warping-path features between the two clips.  Two trials of one session are the
+# same script performed twice, so the optimal warping path between them is a content-free
+# measurement of relative tempo, including where one trial pauses and the other does not.
+# Held-out pairwise manner-orientation accuracy 0.9738 -> 0.9825 in an isolated A/B.
+# 0 = champion behaviour.
+W_DTW = float(os.environ.get('CHAMP_EMO_DTW', 0.0))
+DTW_COLS = ['dtw_logratio', 'dtw_hv', 'dtw_dev_mean', 'dtw_dev_absmean', 'dtw_slope_med',
+            'dtw_run_hv', 'dtw_res_mean', 'dtw_cost', 'dtw_slope_std', 'dtw_horiz', 'dtw_vert']
+_DTW = None
+
+
+def dtw_of(pa, pb):
+    """Directed DTW features for the ordered clip pair (pa, pb); {} when unavailable."""
+    global _DTW
+    if not W_DTW:
+        return {}
+    if _DTW is None:
+        f = os.path.join(ROOT, 'champ', 'dtw_pairs_bypath.csv')
+        _DTW = {}
+        if os.path.exists(f):
+            d = pd.read_csv(f)
+            cols = [c for c in DTW_COLS if c in d.columns]
+            for r in d.itertuples():
+                _DTW[(r.pa, r.pb)] = {c: getattr(r, c) for c in cols}
+    return _DTW.get((pa, pb), {})
+
+# Optional: frozen DINOv2-Depth frame-delta TRAJECTORY descriptor (research/
+# dino_temporal_style_probe_20260904/probe_dino_trajectory.py).  Unlike the static dino_v_*
+# summary stats already in PHYS, this differences L2-normalised frame embeddings first, so it
+# removes static scene/subject appearance and keeps native-rate velocity/acceleration/rhythm/
+# phase shape.
+#
+# MEASURED AND KILLED (2026-09-04, probe_joint_integration.py).  A standalone override policy
+# trained on it was already strongly net-negative against the champion's actual disagreements
+# (results/flip_audit_by_threshold.csv, worst -127, best still -8).  Added as extra columns to
+# THIS classifier and fit jointly with the existing evidence -- the correct way to test whether
+# it helps the joint objective, per the DTW precedent above -- held-out pairwise manner-
+# orientation is 0.9738 with or without it, bit-identical in every one of the 5 folds: the
+# classifier assigns it zero weight.  (An earlier run of that probe reported +1.4pp from a
+# label-leakage bug -- the feature was sign-flipped in lockstep with the swap label being
+# predicted -- and that number is retracted; see the probe's corrected RESULTS.)
+# Kept here, default-off, only so the negative result is reproducible.  0 = champion behaviour.
+W_TRAJ = float(os.environ.get('CHAMP_EMO_TRAJ', 0.0))
+_TRAJ = None
+
+
+def traj_of(pa, pb):
+    """Signed difference/ratio of the trajectory descriptor for (pa, pb); {} when unavailable."""
+    global _TRAJ
+    if not W_TRAJ:
+        return {}
+    if _TRAJ is None:
+        f = os.path.join(ROOT, 'champ', 'dino_traj_desc.npz')
+        _TRAJ = np.load(f) if os.path.exists(f) else {}
+    if pa not in _TRAJ or pb not in _TRAJ:
+        return {}
+    da, db = np.asarray(_TRAJ[pa], float), np.asarray(_TRAJ[pb], float)
+    diff = da - db
+    ratio = diff / (np.abs(da) + np.abs(db) + 1e-6)
+    out = {}
+    for n in range(len(diff)):
+        out[f'traj_d_{n}'] = float(diff[n])
+        out[f'traj_r_{n}'] = float(ratio[n])
+    return out
+
 # gross-motion vs fine-manipulation split of the 40-action vocabulary, used only to
 # characterise a session so the speed evidence can be read in the right context
 LOCOMOTION = {'Walking', 'Running', 'Squats', 'Lunges', 'Jumping jacks', 'Stretching',
@@ -38,9 +103,15 @@ def pool_context(pool):
                 pool_loco=sum(1 for a in pool if a in LOCOMOTION) / len(pool))
 
 
-def pair_row(bf_i, bf_j, i, j, k, ma, mb, mm, ctx):
+def pair_row(bf_i, bf_j, i, j, k, ma, mb, mm, ctx, paths=None):
     """Feature row for the hypothesis 'clip i -> manner ma, clip j -> manner mb'."""
     f = {}
+    if W_DTW and paths is not None and len(paths) == 2:
+        for c, v in dtw_of(paths[0], paths[1]).items():
+            f[c] = v
+    if W_TRAJ and paths is not None and len(paths) == 2:
+        for c, v in traj_of(paths[0], paths[1]).items():
+            f[c] = v
     for c in PHYS:
         ai, aj = bf_i.get(f'a_{c}', np.nan), bf_j.get(f'a_{c}', np.nan)
         f[f'd_{c}'] = ai - aj
@@ -79,10 +150,11 @@ def fit(tr, meta, mm, pool_of=None):
         for i, j in itertools.combinations(range(k), 2):
             if labs[i] == labs[j]:
                 continue
+            pp = [blk[i], blk[j]]
             # correct orientation
-            X.append(pair_row(bf[i], bf[j], i, j, k, labs[i], labs[j], mm, ctx)); y.append(1)
+            X.append(pair_row(bf[i], bf[j], i, j, k, labs[i], labs[j], mm, ctx, pp)); y.append(1)
             # swapped orientation
-            X.append(pair_row(bf[i], bf[j], i, j, k, labs[j], labs[i], mm, ctx)); y.append(0)
+            X.append(pair_row(bf[i], bf[j], i, j, k, labs[j], labs[i], mm, ctx, pp)); y.append(0)
     Xd = pd.DataFrame(X)
     # a column that is entirely NaN (e.g. pool context when no pool is supplied) breaks
     # the histogram binner, so drop those before fitting and remember the surviving set
@@ -98,14 +170,15 @@ def fit(tr, meta, mm, pool_of=None):
     return dict(clf=clf, cols=cols)
 
 
-def pair_logodds(pm, bf, k, cand, mm, ctx, clip_opts):
+def pair_logodds(pm, bf, k, cand, mm, ctx, clip_opts, paths=None):
     """log-odds table: lo[(i, j, a, b)] for 'clip i -> cand[a], clip j -> cand[b]'."""
     rows, key = [], []
     for i, j in itertools.combinations(range(k), 2):
         for a, b in itertools.permutations(range(len(cand)), 2):
             if cand[a] not in clip_opts[i] or cand[b] not in clip_opts[j]:
                 continue
-            rows.append(pair_row(bf[i], bf[j], i, j, k, cand[a], cand[b], mm, ctx))
+            pp = [paths[i], paths[j]] if paths is not None else None
+            rows.append(pair_row(bf[i], bf[j], i, j, k, cand[a], cand[b], mm, ctx, pp))
             key.append((i, j, a, b))
     if not rows:
         return {}

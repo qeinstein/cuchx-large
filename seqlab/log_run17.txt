@@ -1,0 +1,14 @@
+train HARn clips uniquely nested: 2905
+QA-referenced HARn single questions: 429
+observations: 0 over 0 parent clips (child action correct 0/0 = 0.000)
+observations per sequence block: Counter({0: 103})
+
+=== MECHANISM S + Y (nested-child order observations) ===
+  w_y=0    225/305  per-fold {0: 47, 1: 34, 2: 62, 3: 36, 4: 46}
+  w_y=1    225/305  per-fold {0: 47, 1: 34, 2: 62, 3: 36, 4: 46}
+  w_y=2    225/305  per-fold {0: 47, 1: 34, 2: 62, 3: 36, 4: 46}
+  w_y=4    225/305  per-fold {0: 47, 1: 34, 2: 62, 3: 36, 4: 46}
+  w_y=8    225/305  per-fold {0: 47, 1: 34, 2: 62, 3: 36, 4: 46}
+          vs S alone: flips 0 W->R 0 R->W 0
+  w_y=16   225/305  per-fold {0: 47, 1: 34, 2: 62, 3: 36, 4: 46}
+  w_y=32   225/305  per-fold {0: 47, 1: 34, 2: 62, 3: 36, 4: 46}
