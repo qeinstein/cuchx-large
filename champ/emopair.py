@@ -137,24 +137,32 @@ def fit(tr, meta, mm, pool_of=None):
     mfeat = mm['mfeat']
     e = tr[tr.category == 'emotion']
     X, y = [], []
+    augment_subblocks = os.environ.get('CHAMP_EMO_PAIR_SUBBLOCKS', '0') == '1'
     for (u, a, b), g in e.groupby(['user', 'aa', 'bb']):
         g = g.sort_values('cc')
         rows = [r for _, r in g.iterrows()]
-        k = len(rows)
-        if k < 2:
+        if len(rows) < 2:
             continue
-        blk = [r.path for r in rows]
-        bf = block_features(blk, mfeat, k)
-        labs = [str(r[gt_letters(r)[0]]).strip() for r in rows]
-        ctx = pool_context((pool_of or {}).get((u, a, b)))
-        for i, j in itertools.combinations(range(k), 2):
-            if labs[i] == labs[j]:
-                continue
-            pp = [blk[i], blk[j]]
-            # correct orientation
-            X.append(pair_row(bf[i], bf[j], i, j, k, labs[i], labs[j], mm, ctx, pp)); y.append(1)
-            # swapped orientation
-            X.append(pair_row(bf[i], bf[j], i, j, k, labs[j], labs[i], mm, ctx, pp)); y.append(0)
+        variants = [rows]
+        if augment_subblocks and len(rows) >= 3:
+            # The real test has 21 two-clip blocks whose option intersection still exposes
+            # three protocol manners.  Train the pair head on the same visible k=2 regime,
+            # while retaining the full-session observations for k=3+ inference.
+            variants += [list(v) for v in itertools.combinations(rows, 2)]
+        for rows_v in variants:
+            k = len(rows_v)
+            blk = [r.path for r in rows_v]
+            bf = block_features(blk, mfeat, k)
+            labs = [str(r[gt_letters(r)[0]]).strip() for r in rows_v]
+            ctx = pool_context((pool_of or {}).get((u, a, b)))
+            for i, j in itertools.combinations(range(k), 2):
+                if labs[i] == labs[j]:
+                    continue
+                pp = [blk[i], blk[j]]
+                # correct orientation
+                X.append(pair_row(bf[i], bf[j], i, j, k, labs[i], labs[j], mm, ctx, pp)); y.append(1)
+                # swapped orientation
+                X.append(pair_row(bf[i], bf[j], i, j, k, labs[j], labs[i], mm, ctx, pp)); y.append(0)
     Xd = pd.DataFrame(X)
     # a column that is entirely NaN (e.g. pool context when no pool is supplied) breaks
     # the histogram binner, so drop those before fitting and remember the surviving set

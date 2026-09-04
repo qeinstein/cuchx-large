@@ -312,11 +312,11 @@ def fit_manner(tr, meta):
                 gr = mgroup(lab)
                 X.append(bf[i]); y.append(gr)
                 cnt_mp[(lab, i, k)] += 1; cnt_m[(lab, k)] += 1
-            cnt_gp[(gr, i, k)] += 1; cnt_g[(gr, k)] += 1
-            rb = 0 if k == 1 else int(round(2 * i / (k - 1)))   # 0=first, 1=middle, 2=last
-            cnt_mr[(lab, rb)] += 1; cnt_mr_tot[lab] += 1
-            cnt_gr[(gr, rb)] += 1; cnt_gr_tot[gr] += 1
-            lab_by_grp[(gr, lab)] += 1
+                cnt_gp[(gr, i, k)] += 1; cnt_g[(gr, k)] += 1
+                rb = 0 if k == 1 else int(round(2 * i / (k - 1)))   # 0=first, 1=middle, 2=last
+                cnt_mr[(lab, rb)] += 1; cnt_mr_tot[lab] += 1
+                cnt_gr[(gr, rb)] += 1; cnt_gr_tot[gr] += 1
+                lab_by_grp[(gr, lab)] += 1
     Xd = pd.DataFrame(X)
     cols = list(Xd.columns)
     from sklearn.ensemble import HistGradientBoostingClassifier
@@ -344,13 +344,41 @@ def fit_manner(tr, meta):
         gtot[gr] += c
     pmg = {lab: (c + 0.5) / (gtot[gr] + 0.5 * 60) for (gr, lab), c in lab_by_grp.items()}
     ntot = sum(gtot.values())
+    # Optional frozen spatiotemporal-video head.  This is deliberately opt-in: the
+    # championship path remains byte-for-byte unchanged unless the research flag is set.
+    # The cache is derived from HAU Depth_Color videos and contains no answer data.
+    r3d_clf = r3d_scaler = r3d_feat = None
+    if float(os.environ.get('CHAMP_EMO_R3D', '0.0')):
+        rp = os.path.join(ROOT, 'research', 'r3d_depthcolor_features.npz')
+        if os.path.exists(rp):
+            from sklearn.linear_model import LogisticRegression
+            from sklearn.preprocessing import StandardScaler
+            rz = np.load(rp)
+            r3d_feat = {k: np.asarray(rz[k], float) for k in rz.files}
+            rx, ry = [], []
+            for _, r in e.iterrows():
+                z = r3d_feat.get(r.path)
+                if z is None:
+                    continue
+                rx.append(z); ry.append(mgroup(str(r[gt_letters(r)[0]]).strip()))
+            if len(rx) >= 30 and len(set(ry)) >= 3:
+                r3d_scaler = StandardScaler().fit(np.asarray(rx, float))
+                r3d_clf = LogisticRegression(
+                    C=float(os.environ.get('CHAMP_EMO_R3D_C', '0.1')),
+                    max_iter=2000, random_state=0).fit(
+                        r3d_scaler.transform(np.asarray(rx, float)), ry)
+            else:
+                r3d_feat = None
+        else:
+            r3d_feat = None
     return dict(clf=clf, cols=cols, pmg=pmg, mfeat=mfeat, ppm=p_pos_given_manner,
                 gprior={g: (gtot[g] + 1) / (ntot + 5) for g in GROUPS},
-                classes=list(clf.classes_))
+                classes=list(clf.classes_), r3d_clf=r3d_clf, r3d_scaler=r3d_scaler,
+                r3d_feat=r3d_feat)
 
 
 def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=None,
-                  slotp=None, w_slot=0.0):
+                  slotp=None, w_slot=0.0, raw_pair_score=None, w_raw_pair=0.0):
     """Assign manners to the clips of each block.  Returns {qa_id: letter}.
 
     Unary evidence: slot prior x physical-group classifier x manner prior (as before).
@@ -363,6 +391,9 @@ def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=No
     eq = vis[vis.category == 'emotion'].set_index('idx')
     mfeat = mm['mfeat']
     pathof = dict(zip(vis.idx, vis.true_path))
+    w_r3d = float(os.environ.get('CHAMP_EMO_R3D', '0.0'))
+    r3d_clf, r3d_scaler, r3d_feat = (mm.get('r3d_clf'), mm.get('r3d_scaler'),
+                                     mm.get('r3d_feat'))
     out = {}
     diag = []
     for blk in blocks:
@@ -383,9 +414,18 @@ def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=No
         Xd = pd.DataFrame(bf).reindex(columns=mm['cols'])
         P = mm['clf'].predict_proba(Xd.to_numpy(float))
         cls = mm['classes']
+        RP = None
+        if w_r3d and r3d_clf is not None and r3d_scaler is not None and r3d_feat is not None:
+            rz = [r3d_feat.get(pathof[b]) for b in blk]
+            if all(z is not None for z in rz):
+                RP = r3d_clf.predict_proba(
+                    r3d_scaler.transform(np.asarray(rz, float)))
+        rcls = list(r3d_clf.classes_) if r3d_clf is not None else []
         C = np.full((k, len(cand)), 60.0)
         for i in range(k):
             pg_phys = {g: P[i, cls.index(g)] if g in cls else 1e-6 for g in GROUPS}
+            pg_r3d = ({g: RP[i, rcls.index(g)] if g in rcls else 1e-6 for g in GROUPS}
+                      if RP is not None else None)
             own = set(opts(rows[i]))
             for j, m in enumerate(cand):
                 if m not in own:
@@ -395,6 +435,9 @@ def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=No
                                 - np.log(max(mm['gprior'][g], 1e-9)))
                       + w_pos * np.log(max(mm['ppm'](m, i, k), 1e-9))
                       + np.log(max(mm['pmg'].get(m, 1e-4), 1e-6)))
+                if pg_r3d is not None:
+                    lp += w_r3d * (np.log(max(pg_r3d[g], 1e-9))
+                                   - np.log(max(mm['gprior'][g], 1e-9)))
                 C[i, j] = -lp
         own = [set(opts(r)) for r in rows]
         # pairwise log-odds over (clip pair) x (ordered candidate pair)
@@ -418,10 +461,34 @@ def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=No
                     s += v
             return s
 
+        def raw_score(lab):
+            """Optional label-free temporal pair score for a complete assignment.
+
+            The callback returns a calibrated-or-not log score for the ordered
+            hypothesis (clip i -> lab[i], clip j -> lab[j]).  It is deliberately
+            separate from ``emopair`` so research heads cannot alter the default
+            championship path unless explicitly supplied by a caller.
+            """
+            if raw_pair_score is None or not w_raw_pair or k < 2:
+                return 0.0
+            s = 0.0
+            paths = [pathof[b] for b in blk]
+            for i, j in itertools.combinations(range(k), 2):
+                v = raw_pair_score(paths[i], paths[j], lab[i], lab[j], i, j, k)
+                if v is not None and np.isfinite(v):
+                    s += float(v)
+            return s
+
         if slots > k:
             bf3 = block_features([pathof[b] for b in blk], mfeat, slots)
             X3 = pd.DataFrame(bf3).reindex(columns=mm['cols'])
             P3 = mm['clf'].predict_proba(X3.to_numpy(float))
+            RP3 = None
+            if w_r3d and r3d_clf is not None and r3d_scaler is not None and r3d_feat is not None:
+                rz = [r3d_feat.get(pathof[b]) for b in blk]
+                if all(z is not None for z in rz):
+                    RP3 = r3d_clf.predict_proba(
+                        r3d_scaler.transform(np.asarray(rz, float)))
             best = None
             # learned prior over WHICH protocol slots this short block contains; default-off
             slp = None
@@ -448,7 +515,11 @@ def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=No
                         pg = P3[i, cls.index(g)] if g in cls else 1e-6
                         tot += w_phys * (np.log(max(pg, 1e-9))
                                          - np.log(max(mm['gprior'][g], 1e-9)))
-                    tot += w_pair * pair_score(lab)
+                        if RP3 is not None:
+                            pgr = RP3[i, rcls.index(g)] if g in rcls else 1e-6
+                            tot += w_r3d * (np.log(max(pgr, 1e-9))
+                                             - np.log(max(mm['gprior'][g], 1e-9)))
+                    tot += w_pair * pair_score(lab) + w_raw_pair * raw_score(lab)
                     if slp is not None:
                         tot += w_slot * slp.get(tuple(present), np.log(1e-6))
                     if best is None or tot > best[0]:
@@ -458,14 +529,15 @@ def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=No
                 ci = [cand.index(best[1][i]) for i in range(k)]
             else:
                 ri, ci = linear_sum_assignment(C)
-        elif plo and k <= 4 and len(cand) <= 5:
+        elif (plo or (raw_pair_score is not None and w_raw_pair)) and k <= 4 and len(cand) <= 5:
             # unary cost is -C; add the pairwise term and enumerate injective assignments
             best = None
             for sel in itertools.permutations(range(len(cand)), k):
                 lab = [cand[s] for s in sel]
                 if any(lab[i] not in own[i] for i in range(k)):
                     continue
-                tot = -sum(C[i, sel[i]] for i in range(k)) + w_pair * pair_score(lab)
+                tot = (-sum(C[i, sel[i]] for i in range(k))
+                       + w_pair * pair_score(lab) + w_raw_pair * raw_score(lab))
                 if best is None or tot > best[0]:
                     best = (tot, list(sel))
             if best is not None:
@@ -477,8 +549,9 @@ def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=No
         # margin: for each clip, the objective loss incurred by forcing a different manner
         try:
             sel = list(ci)
-            base = -sum(C[i, sel[i]] for i in range(k)) + w_pair * pair_score(
-                [cand[s_] for s_ in sel])
+            base = (-sum(C[i, sel[i]] for i in range(k))
+                    + w_pair * pair_score([cand[s_] for s_ in sel])
+                    + w_raw_pair * raw_score([cand[s_] for s_ in sel]))
             for i in range(k):
                 alt = None
                 for s2 in range(len(cand)):
@@ -487,8 +560,9 @@ def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=No
                     trial = list(sel); trial[i] = s2
                     if len(set(trial)) != k:
                         continue
-                    v = -sum(C[t, trial[t]] for t in range(k)) + w_pair * pair_score(
-                        [cand[s_] for s_ in trial])
+                    v = (-sum(C[t, trial[t]] for t in range(k))
+                         + w_pair * pair_score([cand[s_] for s_ in trial])
+                         + w_raw_pair * raw_score([cand[s_] for s_ in trial]))
                     alt = v if alt is None else max(alt, v)
                 MARGIN[rows[i].qa_id] = float(base - alt) if alt is not None else float('inf')
         except Exception:
