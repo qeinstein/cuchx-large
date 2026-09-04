@@ -1,221 +1,305 @@
-# CUHK-X Large Model Track: Championship Architecture & Technical Report
+# CUHK-X Large Model Track — Technical Report
 
-An advanced, multimodal neural framework for privacy-preserving human activity recognition, scene understanding, and multi-step reasoning across non-RGB modalities (Depth, Thermal, Infrared, 3D Skeleton, and 5-sensor 6-axis IMU).
+Privacy-preserving VQA and activity reasoning over non-RGB modalities (Depth, Thermal, IR,
+IMU, 3D Skeleton, mmWave). 682 test questions; the public leaderboard scores 342 of them.
 
-Developed for the **CUHK-X Competition: Large Model Track** (organized by the AIoT Lab at The Chinese University of Hong Kong in conjunction with UbiComp / ISWC / MobiSys 2026).
-
----
-
-## 1. Executive Summary & Leaderboard Progression
-
-| Benchmark Stage | Kaggle Ref ID | Public Score / CV | Leaderboard Rank | Key Methodology & Innovations |
-| :--- | :---: | :---: | :---: | :--- |
-| **Initial Majority Baseline** | `55919039` | 0.17251 | ~140 | Naive majority class guessing |
-| **Handoff Baseline Checkpoint** | `55962725` | 0.77777 | 54 | Baseline structural clip graph decoder |
-| **Submission v1** | `55965217` | 0.78654 | 28 | Sequence-multi exact consistency theorem + HARn specialists |
-| **Submission v2** | `55965271` | 0.78654 | 28 | Cross-question single contradiction corrections |
-| **Submission v3 (Our Current Peak)** | `55965872` | **0.78947** | **28 (Tied #25)** | 792-dim Multimodal Action Model + Sequence Guarantees |
-| **Submission v4** | `55966128` | 0.78362 | 28 | Global IMU emotion override (over-rotated on public test) |
-| **Grandmaster Audited Submission** | Staged | **0.81286+** | Top 12–15 Bound | 15 Mathematically Proven & Physically Audited Precision Fixes |
-| **Championship Grandmaster VLM v1** | `submission_championship_v1.csv` | **0.93567 – 0.96783** | #1 – #5 Contender Bound | 1,720d Multi-Spectral + Qwen-2.5-VL-72B Partial Oracle |
-| **Championship 0.97+ Bayesian Consensus** | **`submission_championship_97.csv`** | **Projected `0.97076 – 0.97660`** | **RANK 1 WORLDWIDE (332+/342)** | **Joint Multi-Modal Consensus + Sequence Presence Proofs + Qwen-72B (All 682 Qs)** |
+> **Documentation rule for this repo.** Every number below is either a Kaggle-returned public
+> score or a subject-disjoint held-out measurement, and says which. Projections, targets and
+> "expected" scores do not go in this file. An earlier revision of this README advertised a
+> projected `0.97076–0.97660` artifact as "#1 worldwide"; that claim was false and is
+> documented as such in [§6](#6-falsified-directions-negative-results). Read that section
+> before proposing anything.
 
 ---
 
-## 2. Core Scientific Discoveries & Mathematical Proofs
+## 1. Measured leaderboard progression
 
-### Proof 1: Closed-World Candidate Action Pool (100.00% Coverage)
-- **Theorem:** In every video clip $C_i$, all ground-truth actions performed in the video are strictly drawn from the pool of multiple-choice options mentioned in that specific clip's questions.
-- **Empirical Validation:** Verified across **809 / 809 clips (100.00%)** in the training dataset without exception.
-- **Mathematical Impact:** Collapses the global action search space from 40 classes to a local candidate pool of **only ~11 candidate actions per clip**. Any action outside this candidate pool has $P(a \in C_i) \equiv 0$.
+| # | Artifact | Public | Correct | Rank | What actually produced the gain |
+| :- | :--- | :--- | :--- | :--- | :--- |
+| 1 | `submission_majority.csv` | 0.17251 | 59/342 | ~140 | majority class |
+| 2 | `submission_077777.csv` | 0.77777 | 266/342 | 54 | structural prior decoder |
+| 3 | `submission_v1/v2.csv` | 0.78654 | 269/342 | 28 | cross-question consistency rules |
+| 4 | `submission_v3.csv` | 0.78947 | 270/342 | 28 | 792-dim multimodal action model |
+| 5 | `submission_v4.csv` | 0.78362 | 268/342 | 28 | global IMU emotion override — **regression**, reverted |
+| 6 | `submission_v9.csv` | 0.85087 | 291/342 | — | **structural session-block decoder** (`champ/`) |
+| 7 | `submission_090643_regen.csv` | 0.90643 | 310/342 | — | pool/manner joint solving, emopair |
+| 8 | `submission_092105_SUBMITTED.csv` | 0.92105 | 315/342 | 6/166 | 10 selective DINOv2 corrections (mech H, E) |
+| 9 | **`submission_093859_SUBMITTED.csv`** | **0.93859** | **321/342** | **5** | **mechanisms S + T + W/X** (30 changed rows) |
 
-### Proof 2: The Joint Action Belief Propagation Solver
-In the CUHK-X dataset, `Single`, `Multi`, and `Combination` questions are not independent problems—they are **three mathematical projections of the exact same underlying action set $A(C_i)$**:
-1. **Sequence Presence Guarantee:** Any action appearing in a `sequence` question is 100.00% guaranteed to have been performed in that video ($P(a) = 1.0$).
-2. **Combination Joint Log-Likelihood:** The winning combination choice maximizes:
-   $$\text{LL}(C_k) = \sum_{a \in C_k} \log (P(a) + \epsilon) + \sum_{b \in \text{Pool} \setminus C_k} \log (1 - P(b) + \epsilon) - 10 \cdot \sum_{sa \in \text{Seq}} \mathbb{I}(sa \notin C_k)$$
-3. **Belief Propagation Update:** Every action in the winning combination $C^*$ has its posterior boosted to $P(a) \ge 0.95$.
-4. **Single & Multi Decisions:**
-   $$\hat{S} = \text{argmax}_{l \in \{A, B, C, D\}} P(S_l \in C_i)$$
-   $$\hat{M} = \{ l \in \{A, B, C, D\} \mid M_l \in C^* \lor M_l \in \text{Seq} \lor P(M_l) \ge 0.48 \}$$
+**Current champion: `submission_093859_SUBMITTED.csv`** — byte-identical preserved copy of
+`submission_corrlayer_S_W_T.csv`, Kaggle submission id 56007625. Every experiment is
+evaluated against *this exact file*. Do not regenerate a baseline and compare against that.
 
-**Empirical 5-Fold Cross-Subject CV Results:**
-- **Single Action:** Jumped from $70.5\%$ to **`85.22%`** (peaking at **`92.27%`**).
-- **Combination:** Reached **`86.62%`** (peaking at **`88.14%`**).
-- **Multi Action:** Jumped from $30.9\%$ to **`74.13%`** (peaking at **`75.69%`**).
-- **HARn Object Interaction:** Reached **`84.07%`**.
-
-### Proof 3: Reverse-Engineering the Experimental Cadence Protocol for Emotion
-By analyzing the source dataset construction (*Jiang et al., arXiv:2512.07136*), we reverse-engineered the trial recording protocol:
-- Every video trial index $Z \in \{1, 2, 3\}$ corresponds to a strict physical cadence instruction given to the human subjects:
-  - **$Z = 1$ (Slow / Relaxed):** *Slowly* (97%), *Gently* (100%), *Leisurely* (91%), *Unhurriedly* (100%), *Casually* (100%), *Relaxedly* (100%).
-  - **$Z = 2$ (Normal / Methodical):** *Steadily* (78%), *Calmly* (78%), *Neatly* (100%), *Intently* (90%), *Seriously* (88%), *Attentively* (72%).
-  - **$Z = 3$ (Fast / Urgent):** *Hastily* (91%), *Anxiously* (94%), *Hurriedly* (87%), *Restlessly* (100%), *Quickly* (67%), *Nervously* (69%).
-- **Physical Verification & IMU Jerk Monotonicity ($F = 72.66, p = 9.68 \times 10^{-30}$):**
-  - Right Arm Angular Jerk: $Z=1$ (62.07) $\longrightarrow$ $Z=2$ (77.84) $\longrightarrow$ $Z=3$ (101.52).
-  - Right Arm Linear Jerk: $Z=1$ (0.2138) $\longrightarrow$ $Z=2$ (0.2856) $\longrightarrow$ $Z=3$ (0.4532) (doubles monotonically).
-- **Thermal Radiation Exertion Matching:** Fusing 512-dim Thermal video representations with IMU kinematics pushed Emotion accuracy on unseen subjects to **`52.44%`** across all 5 folds (peaking at **`58.05%`** on Fold 2).
-
-### Proof 4: mmWave Doppler Radar Velocity Monotonicity
-- By mining `Radar.csv` across all clips, we extracted a 32-dimensional Doppler representation capturing the radial velocity of moving limbs:
-  - Mean Doppler Velocity: $Z=1$ (0.0427 m/s) $\longrightarrow$ $Z=2$ (0.0513 m/s) $\longrightarrow$ $Z=3$ (0.0625 m/s) (+46% increase).
-  - Temporal Doppler Quarter Matching jumped exact sequence permutation accuracy to **`67.65%`** (16x higher than random guessing).
-
-### Proof 5: Frontier Vision-Language Oracle (Qwen-2.5-VL-72B)
-- **Visual Grounding:** Leveraging the frontier 72-billion parameter `qwen/qwen2.5-vl-72b-instruct` model to inspect 6 sequential Depth keyframes per clip:
-  - **Sequence Chronological Ordering:** Visually tracking micro-action start/end boundaries across keyframes resolved ambiguous 4-letter permutations across all 39 test sequence questions.
-  - **Closed-World Multi Invariance:** 100.0% of the 144 Multi predictions from Qwen-2.5-VL-72B fall strictly within the mathematically proven clip candidate action pool with zero hallucinations.
-  - **Emotion / Adverbial Manner:** Visually evaluating physical posture, pace, and interaction rhythm conditioned on IMU jerk speed bounds eliminates the 34-error bottleneck on Emotion questions.
+Leaderboard context at the time of writing: #1 332/342, #2 331/342, #3 324/342, #4 322/342,
+us #5 321/342.
 
 ---
 
-## 3. Multi-Spectral Representation Architecture (1,720 Dimensions)
+## 2. Validation protocol — read this first
 
-All non-RGB sensing modalities provided by the organizers are mapped into a unified feature cache in `multimodal_features_all.npz`:
+The single most expensive mistake available in this project is validating on the wrong
+protocol. Three regimes have been established, in increasing fidelity to the real test:
+
+| Protocol | Command | Result at the 0.92105 champion | Reproduces public? |
+| :--- | :--- | :--- | :--- |
+| Plain 5-fold pseudo-test | `champ/final.py validate` | 3809/4087 = **0.9320** | **No** — predicted 0.9396, we scored 0.92105 |
+| **Pair-thinned** (38% of held-out sessions cut to two trials) | `champ/eval_pairstress.py` | 3397/3689 = **0.9208** | **Yes** — actual 0.92105 |
+| Orphan-injected | `champ/eval_orphan.py` | 3263/3559 = 0.9168 | for block-repair work |
+
+The real test is 34 three-trial blocks + 21 two-trial blocks, so a third of it is a regime the
+plain protocol never samples. **Validate with `pair_frac=0.38`; quote both numbers.**
+
+Pseudo-test construction (`core.make_pseudo`): held-out users' rows are re-shaped into a
+test-like problem — answers hidden, user/trial ids stripped, clips renumbered, block order
+randomised, blocks re-inferred from test-visible signals only. `champ/pipeline.solve` is
+**one code path** for pseudo-test folds and the real Kaggle test set.
+
+### Decision-level auditing is mandatory
+
+Aggregate accuracy gains in this project have repeatedly failed to transfer. The bar a
+mechanism must clear is **flip precision against the exact champion**, not standalone
+accuracy:
 
 ```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                      Unified Multi-Spectral Feature Space (1720 dims)                  │
-├───────────────┬────────────────────┬────────────────────┬───────────────────┬──────────┤
-│ 280d Sensor   │ 384d DINOv2 ViT    │ 512d ResNet Visual │ 512d ResNet Thermal│ 32d Radar│
-│ (120 IMU +    │ (Meta ViT-S/14     │ (Depth Video       │ (Thermal Video    │ (mmWave  │
-│  160 Skeleton)│  Self-Supervised)  │  Temporal Average) │  Temporal Average)│  Doppler)│
-└───────────────┴────────────────────┴────────────────────┴───────────────────┴──────────┘
+disagreements with champion, W->R, R->W, flip precision, net, net/100 flips,
+per-fold consistency, confidence strata, and the resulting test-override count
 ```
 
-1. **Sensor Stream (280 dims):**
-   - 120-dim IMU: Mean, std, max, jerk, dominant FFT frequencies across 5 sensors (Left Arm, Right Arm, Chest, Left Leg, Right Leg).
-   - 160-dim Skeleton: 3D joint distances, velocities, and body height trajectories from 10-Hz 17-joint keypoints.
-2. **Meta DINOv2 ViT-S/14 Stream (384 dims):**
-   - Dense $14 \times 14$ self-supervised patch tokens extracted on Apple Silicon MPS at **121 fps** (1,541 clips in 108.6s). Eliminates RGB color bias on depth frames.
-3. **ResNet-18 Temporal Stream (512 dims):**
-   - Sparse 8-frame temporal average visual representations from Depth video.
-4. **ResNet-18 Thermal Stream (512 dims):**
-   - 8-frame representations capturing skin surface heat radiation and physical exertion.
-5. **mmWave Doppler Radar Stream (32 dims):**
-   - Radial Doppler velocity statistics, 3D point cloud dispersion, and 4-quarter temporal motion trajectories.
+Empirically this predicts public transfer well: mech H/E were measured at 0.778/0.800 OOF
+flip precision and moved 310→315; S/T/W/X were measured at 0.853/0.821/1.000 and moved
+315→321. Use `champ/audit_flips.py`.
+
+### Per-category held-out accuracy (pair-thinned, at the 0.92105 champion)
+
+| category | n | acc | acc @ 3-clip block | acc @ 2-clip block |
+| :--- | :-- | :-- | :-- | :-- |
+| HAU single | 718 | 0.9972 | 0.9962 | 1.0000 |
+| combination | 699 | 0.9957 | 0.9980 | 0.9898 |
+| multi | 718 | 0.9596 | 0.9636 | 0.9490 |
+| HARn single | 429 | 0.9580 | — | — |
+| object_interaction | 133 | 0.8947 | — | — |
+| **emotion** | 718 | **0.8510** | 0.8966 | **0.7296** |
+| **sequence** | 274 | **0.5657** | 0.5813 | 0.5211 |
+
+Emotion and sequence are the whole remaining problem.
 
 ---
 
-## 4. The Tri-Blend Neural Architecture
+## 3. The structural discoveries the score rests on
+
+These are question-generator and acquisition-protocol facts, verified on training data and
+applied mechanically. They are what took the score from 0.79 to 0.94.
+
+**3.1 Session-triple structure.** `HAU/user<N>/<a>-<b>-<c>` — the trial index `c` encodes the
+manner protocol: c=1 slow, c=2 neutral/careful, c=3 fast/hurried. Verified: trial-index order
+equals recording-clock order for 260/268 sessions (0.9701).
+
+**3.2 The option sets leak the session.** 786/809 emotion questions have exactly two
+distractors equal to the *sibling trials'* manner labels, so a session's three clips share one
+3-manner set and the answers are a bijection onto it. Triple-constrained assignment using `c`
+alone reaches 82.94% emotion (leave-one-user-out) against 52.29% for a 1938-feature model.
+
+**3.3 Closed-world action pool.** `answer = options ∩ SessionActionPool` holds for 2715/2716
+HAU action questions; distractors come from the session's complement. Ablation: option-
+repetition counts alone give HAU single 99.63% and combination 99.49%.
+
+**3.4 Blocks are recoverable without labels.** `core.infer_blocks` is a DP over the clip-index
+sequence using only emotion-option intersections, action-option repetition and a size prior.
+On the real test it recovers 34 triples + 21 pairs.
+
+**3.5 HARn gives frame-level supervision.** HARn shares `(user,trial)` keys with HAU and its
+skeleton filenames carry global frame indices, yielding exact frame-level 40-class action
+localisation labels for 790 sessions (779/779 containment checks pass).
+
+**3.6 One latent action order per session.** All 104 training session triples are pairwise
+order-conflict-free over 1848 observed pairs: every sequence question in a session is the
+restriction of ONE latent total order to its four options. Block self-inconsistency is
+therefore a **label-free error detector** — champion sequence accuracy is 0.809 in
+self-consistent blocks and 0.387 in inconsistent ones.
+
+**3.7 Modality-availability biconditional.** No skeleton ⇔ the action is one of four classes
+never recorded with wearables (measured 50/50 both directions). Used to filter HARn candidates.
+
+---
+
+## 4. Architecture (`champ/`)
 
 ```
-                                  ┌────────────────────────┐
-                                  │  1,720d Multi-Spectral │
-                                  │  Representation Cache  │
-                                  └───────────┬────────────┘
-                                              │
-                    ┌─────────────────────────┼─────────────────────────┐
-                    ▼                         ▼                         ▼
-         ┌─────────────────────┐   ┌─────────────────────┐   ┌─────────────────────┐
-         │   Multimodal MLP    │   │ Logistic Regression │   │  ExtraTrees Forest  │
-         │  (GELU, Dropout)    │   │ (L2 Convex Opt)     │   │ (Non-Linear Splits) │
-         └──────────┬──────────┘   └──────────┬──────────┘   └──────────┬──────────┘
-                    │ (45%)                   │ (30%)                   │ (25%)
-                    └─────────────────────────┼─────────────────────────┘
-                                              ▼
-                                 ┌─────────────────────────┐
-                                 │  Tri-Blend Probability  │
-                                 │  Posterior Distribution │
-                                 └────────────┬────────────┘
-                                              │
-                                              ▼
-                                 ┌─────────────────────────┐
-                                 │  Joint Belief Graph     │
-                                 │  Constraint Decoder     │
-                                 └─────────────────────────┘
+core.py        pseudo-test construction, block inference, manner (emotion) solver
+pipeline.py    ONE solve() entry point for every category, pseudo-test and real test alike
+pool.py        session action-pool recovery -> single / multi / combination
+dense.py       frame-level temporal action model (HARn-supervised)
+emopair.py     pairwise manner discriminator (within-session swaps)
+repair.py      splits inferred blocks that cannot be one session
+slotprior.py   prior over which protocol slots a two-clip block contains
+harn_clf.py    HARn action classifier;  harn_dino.py  frozen DINOv2 second opinion
+seqpair.py     pairwise action-order model from nested HARn segment onsets
 ```
 
-- **Deep Multimodal MLP (PyTorch on MPS):** 2-layer dense network with Batch Normalization, GELU activations, and heavy Dropout ($p=0.4, 0.3$) trained with AdamW and BCE with logits.
-- **Convex L2-Regularized Logistic Regression:** Prevents overfitting to subject-specific quirks in the training set.
-- **ExtraTrees Classifier:** Captures discrete orthogonal boundary interactions.
-- **Posterior Fusion:**
-  $$P_{\text{blend}}(a \mid \text{clip}) = 0.45 \cdot P_{\text{MLP}}(a) + 0.30 \cdot P_{\text{LR}}(a) + 0.25 \cdot P_{\text{ET}}(a)$$
+Design rule enforced throughout `core.py`: a function running at inference time may read only
+the QA frame *without* the answer column, clip ordering, and caches derived purely from raw
+modality files. Anything learned from labels must come from a `fit_*` call given training
+subjects only.
+
+Solving order matters: session pools are recovered first because the manner model conditions
+on the action pool; never optimise a category in isolation.
 
 ---
 
-## 5. Comprehensive 5-Fold Cross-Subject Validation Results
+## 5. Validated correction mechanisms
 
-Evaluated across all **4,087 validation questions** on strictly held-out, unseen human subjects (`splits/fold_0_val.csv` through `splits/fold_4_val.csv`):
+Layered over the champion by `build_correction_layer.py`, which refuses to overwrite a row
+already carrying a validated override and writes an audit line per change.
 
-| Question Category | Questions in Validation | Initial Baseline | Previous Version | **Championship Tri-Blend (Current)** | Absolute Gain |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **Combination** | 790 | 79.1% | 84.81% | **`87.27%`** | $+8.17\%$ |
-| **Single Action** | 1,245 | 70.5% | 84.11% | **`85.62%`** | $+15.12\%$ |
-| **Object Interaction** | 108 | 50.0% | 84.07% | **`84.07%`** | $+34.07\%$ |
-| **Multi Action** | 809 | 30.9% | 70.91% | **`74.88%`** | **$+43.98\%$** |
-| **Emotion** | 809 | 31.8% | 40.33% | **`52.44%`** | **$+20.58\%$** |
-| **Sequence** | 308 | 27.7% | 38.73% | **`70.13%`** | **$+42.43\%$** |
-| **OVERALL COMPOSITE** | **4,087** | **64.2%** | **69.57%** | **`73.65%` (Peaking at `78.54%` on Fold 3)** | **$+9.45\%$ Overall** |
+| mech | what it does | OOF flip precision | OOF net | in champion |
+| :-- | :--- | :-- | :-- | :-- |
+| H | DINOv2/skeleton late-fusion HARn corrections | 0.778 | +10 | yes (0.92105) |
+| E | selective emotion corrections | 0.800 | +2 | yes (0.92105) |
+| **S** | joint sequence total-order decoding per block | **0.853** | +53 | yes (0.93859) |
+| S (pair regime) | same mechanism, two-clip blocks | 0.782 | +70 | yes |
+| **T** | block conformance repair | **0.821** | +36 | yes (0.93859) |
+| **W/X** | object question reads its action off the same clip's single answer | **1.000** | +7 | yes (0.93859) |
 
----
-
-## 6. The Championship Grandmaster 0.97+ Submission Artifact (`submission_championship_97.csv`)
-
-- **Artifact File:** [`submission_championship_97.csv`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/submission_championship_97.csv)
-- **Target Benchmark:** Kaggle Leaderboard Rank 1 (`0.96783` - *Bull & Ivarick*).
-- **Projected Public Score:** **`0.97076 – 0.97660`** (Direct **RANK 1 WORLDWIDE BOUND**, 332+ / 342 correct).
-- **Core Architecture: Multi-Stage Bayesian Consensus Solver:**
-  1. **Sequence Presence Guarantee for Single Actions (100% Mathematical Proof):** Exactly 28 Single questions in the test set contain options that match an action in that clip's Sequence question. Because sequence actions are 100% physically present, these 28 questions are mathematically proven with 0.00% error rate.
-  2. **100% Full-Dataset Qwen-2.5-VL-72B Visual Grounding:** Audited all 682 test questions (100% coverage) across all 6 categories on 6 sequential depth keyframes.
-  3. **Winning Combination Constraint Decoder:** Decodes Combination via 3-way consensus between VLM perception, single action overlap, and sequence overlap (139 clips).
-  4. **Closed-World Multi Invariance:** Decodes Multi directly from the confirmed actions in the winning combination, eliminating partial-set mismatch.
-  5. **Physical IMU Right Arm Jerk ($F=72.66, p=10^{-30}$) Cadence Bounds:** Enforces physical speed monotonicity ($Z \in \{1, 2, 3\}$), with 12 physical cadence overrides preventing contradictory emotional adverbs.
-- **Audited Precision Updates (342 updates over baseline `v3`):**
-  - **`multi`:** 110 updates (derived from winning combination consensus).
-  - **`emotion`:** 105 updates (visually assessed and physically speed-bounded).
-  - **`single`:** 87 updates (28 proven by sequence presence theorem, 59 visually confirmed).
-  - **`combination`:** 40 updates (multi-modal consensus).
-  - **`sequence`:** 34 updates (frame-by-frame visual chronological tracking).
-  - **`object_interaction`:** 12 updates (visual object detection).
+S took OOF sequence from 172/305 to 225/305, positive in all five folds. T addresses the
+orphan regime: questions in a block that is not exactly one true session score 0.6117 against
+0.9240 in correct blocks. Four real-test blocks are non-conforming —
+`[101,102,103]`, `[119,120,121]`, `[168,169,170]`, `[189,190]` — covering 44 test questions;
+`CHAMP_CONFORM_FIRST=1` splits all four into 31 triples + 23 pairs + 5 orphans.
 
 ---
 
-## 7. Repository File Map & Pipelines
+## 6. Falsified directions (negative results)
 
-- [`vlm_oracle_engine.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/vlm_oracle_engine.py): Frontier visual oracle leveraging `qwen/qwen2.5-vl-72b-instruct` to audit all 682 questions across the entire dataset.
-- [`build_championship_97.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/build_championship_97.py): Multi-stage Bayesian Consensus generator producing `submission_championship_97.csv`.
-- [`submission_championship_97.csv`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/submission_championship_97.csv): **The #1 Worldwide Submission Artifact** (Projected score **`0.97076 – 0.97660`**; 332+ / 342 correct).
-- [`build_championship_v1.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/build_championship_v1.py): Prior ensemble generator producing `submission_championship_v1.csv` (Projected score `0.93567 – 0.96783`).
-- [`championship_solver.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/championship_solver.py): Multi-spectral solver implementing the Tri-Blend Neural Engine, Joint Belief Propagation, and Cadence Speed priors.
-- [`extract_temporal_kinematics.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/extract_temporal_kinematics.py): 28-dim 4-quarter frame-level skeleton kinematics extractor.
-- [`extract_radar_cache.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/extract_radar_cache.py): 32-dim mmWave Doppler Radar feature extractor.
-- [`extract_dinov2_features.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/extract_dinov2_features.py): High-throughput Meta DINOv2 self-supervised patch extractor (121 fps on Apple Silicon MPS).
-- [`extract_thermal_features.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/extract_thermal_features.py): PyTorch MPS Thermal video extractor.
-- [`extract_video_features.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/extract_video_features.py): PyTorch MPS Depth video extractor.
-- [`extract_sensor_cache.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/extract_sensor_cache.py) & [`sensor_features.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/sensor_features.py): 280-dim kinematics, FFT spectral bands, and 3D joint trajectory extractor.
-- [`unify_all_features.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/unify_all_features.py): Consolidates all modalities into `multimodal_features_all.npz` (1,720 dimensions).
-- [`validation.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/validation.py): Generates strictly leak-free subject-disjoint cross-validation folds.
+**This section exists to stop work being repeated.** Everything here was measured, not
+guessed.
+
+### 6.1 The `championship_*` / `grandmaster` artifacts are falsified
+
+`submission_championship_97.csv`, `submission_championship_v1.csv`,
+`submission_grandmaster.csv`, `submission_gated_champ.csv` and their builders
+(`build_championship_97.py`, `build_championship_v1.py`, …) date from the pre-structural era
+and were **never scored**. The README claim of a projected `0.97076–0.97660` "#1 worldwide"
+artifact was unfounded. Measured facts:
+
+* `submission_championship_97.csv` is `submission_v3.csv` (real score **0.78947**) with ~half
+  its rows overwritten from `vlm_predictions_cache.json`.
+* That VLM cache has been scored against labels — `eval_60_clips_results.csv`, 176 labelled
+  held-out questions: **overall 0.676**, versus 0.761 for the sensor baseline it was meant to
+  correct. It is worst exactly where the artifact trusts it most: **emotion 0.412,
+  sequence 0.385**.
+* It agrees with the 0.93859 champion on only 355/682 rows (emotion 0.257, sequence 0.077).
+  Since it can only gain on a disagreement where the champion is wrong, and the champion is
+  wrong on 21 public rows, its **hard upper bound is 178 + 21 = 199/342 = 0.582**.
+
+The `0.97076` figure was the #1 team's score at the time, written down as a projection.
+
+### 6.2 Manner/emotion representation: eight probes, no decision-level transfer
+
+Emotion is 144 of 682 test questions and caps the leaderboard, so it has absorbed the most
+search. The repeated failure shape is: **real aggregate or oracle-level signal, no transfer to
+the champion's actual disagreements.**
+
+| probe | outcome |
+| :--- | :--- |
+| radar micro-Doppler + IMU spectral | nil |
+| skeleton DTW | +0.9pp, not promoted |
+| raw skeleton+DINO relative pairs | oracle +7pt, flip precision 0.23–0.27, net −11 to −36 |
+| DINOv2-Depth trajectory override | flip precision 0.0–0.33, net −8 to −127 |
+| DINOv2-Depth / DTW in the joint objective | bit-identical to null or slightly negative |
+| phase-conditioned relative manner (PCRME) | **+3.3pp** manner-group accuracy, 4/5 folds — but 11 genuine champion overrides at precision **0.400**, net −2 |
+| per-action specialist search (40 actions) | 0/40 clear 0.80 precision; median ~0.04 |
+| frozen MotionBERT (NTU60-xsub DSTformer) | global pooling negative; per-joint ~noise; LDA degenerate |
+
+Physical signal screen (η² within-session): movement amplitude 0.028, pause fraction
+0.009–0.024, spectral smoothness 0.002–0.007 — the axes a CARE/NERV/NEUT ontology would need
+carry essentially no group-separating signal. Only intensity/duration/energy separates groups
+(η² 0.4–0.7), and it is **already** in `core.PHYS`.
+
+**Diagnosis:** the clips whose assignment new evidence *can* flip are, by construction, the
+ones where the champion's existing evidence is near-indifferent — the intrinsically hardest
+cases, not a random sample. The bottleneck is correlation-with-hard-cases, not representational
+capacity. Do not re-attempt hand-engineered or learned features on skeleton/IMU/DINO for manner
+without a new hypothesis for why they would correlate with the champion's *specific* hard cases.
+
+Details: `FINDINGS_session3_manner_representation.md`,
+`FINDINGS_session4_phase_conditioned_manner.md`, `phaselab/RESULTS.md`.
+
+### 6.3 Also exhausted
+
+Generic historical-model disagreement; pool inconsistency mining; v6/v7/v8 disagreement scans;
+generic sequence localizers; set-conditioned emotion ordering; naïve slot priors; generic
+modality-missing metadata rules; simple action-specific tiny classifiers.
+
+### 6.4 Three bug classes that produced false positives here
+
+Check these before believing any result:
+
+1. **Label leakage.** A relative/pairwise probe's feature-only ablation collapsing to exactly
+   `0.0000` (not ~0.5) means a feature is sign-flipped in lockstep with the label.
+2. **Baseline unfairness.** Comparing a new session-relative feature against a session-*blind*
+   baseline overstates the gain. Always diff against `core.block_features()`'s real output.
+3. **Unit mismatch.** An exact `0.0000` or `1.0000` on a real multi-class problem is a
+   comparison-key bug (letter vs text), not a result.
 
 ---
 
-## 8. Execution Guide
+## 7. Repository map
 
-### 1. Feature Extraction & Cache Building
+**Live pipeline** — `champ/` (see §4). Rebuild caches with `champ/build_*.py`.
+
+**Research labs**, each with its own `RESULTS.md`/`README.md`:
+
+| dir | subject | status |
+| :-- | :--- | :--- |
+| `seqlab/` | joint sequence order decoding | **shipped (mech S)** |
+| `objlab/` | object↔single cross-question consistency | **shipped (mech W/X)** |
+| `slotlab/` | two-clip protocol-slot latent | active |
+| `phaselab/` | phase-conditioned manner, MotionBERT | falsified |
+| `emolab/`, `setlab/` | manner representations, set-conditioned ordering | falsified |
+
+**Findings documents** (the real research record):
+`FINDINGS_structural_breakthrough.md` · `FINDINGS_session2_residual_surface.md` ·
+`FINDINGS_session3_manner_representation.md` · `FINDINGS_session4_phase_conditioned_manner.md`
+
+**Superseded** (kept for provenance, do not build on): `build_submission*.py`,
+`championship_*.py`, `unified_championship_engine.py`, `generate_v[678].py`,
+`build_championship*.py`, `neural_symbolic_solver.py`, `vlm_oracle_engine.py`,
+`qwen_vlm_pipeline.py`, and every `submission_*.csv` not named in §1.
+
+---
+
+## 8. Reproduction
+
 ```bash
-# Extract individual modal representations
-./venv/bin/python extract_sensor_cache.py
-./venv/bin/python extract_radar_cache.py
-./venv/bin/python extract_temporal_kinematics.py
-./venv/bin/python extract_dinov2_features.py
-./venv/bin/python extract_video_features.py
-./venv/bin/python extract_thermal_features.py
+# 0. caches (skip if champ/*.npz and champ/{meta,feats}.csv exist)
+venv/bin/python champ/build_meta.py && venv/bin/python champ/build_feats.py
+venv/bin/python champ/build_seq.py  && venv/bin/python champ/build_imu_seq.py
+venv/bin/python champ/run_dense.py  && venv/bin/python champ/build_dino_frames.py
 
-# Consolidate into 1720-dimensional unified array
-./venv/bin/python unify_all_features.py
+# 1. the protocol that reproduces the public score
+venv/bin/python champ/eval_pairstress.py pairstress 0.38
+
+# 2. plain 5-fold + full coverage/fallback report
+venv/bin/python champ/final.py validate
+
+# 3. real-test inference for a mechanism config, with a diff against the champion
+CHAMP_REPAIR=1 CHAMP_CONFORM_FIRST=1 venv/bin/python champ/make_candidate.py my_candidate
+
+# 4. layer validated overrides onto the champion, with a per-row audit trail
+venv/bin/python build_correction_layer.py S W T
+
+# 5. decision-level flip audit of a candidate against the champion
+venv/bin/python champ/audit_flips.py
 ```
 
-### 2. Run Frontier VLM Visual Oracle (Qwen-2.5-VL-72B) across all 682 Questions
-```bash
-./venv/bin/python vlm_oracle_engine.py
-```
+Mechanism flags (all default to champion behaviour): `CHAMP_REPAIR`, `CHAMP_CONFORM_FIRST`,
+`CHAMP_W_SLOT`, `CHAMP_W_PHYS`, `CHAMP_W_PAIR`, `CHAMP_EMO_DINO`, `CHAMP_EMO_PAIR`,
+`CHAMP_LOGITS`.
 
-### 3. Generate Master 0.97+ Championship Submission Artifact
-```bash
-./venv/bin/python build_championship_97.py
-```
+### Rules of engagement
 
-### 4. Submit to Kaggle (Upon User Authorization)
-```bash
-kaggle competitions submit -c cuhk-x-competition-large-model-track -f submission_championship_97.csv -m "Championship 0.97+ Bayesian Consensus: Sequence Proofs + 1720d Multi-Spectral + Qwen-72B Oracle + Closed-World Invariance"
-```
+* Never modify or overwrite `submission_093859_SUBMITTED.csv` or `submission_092105_SUBMITTED.csv`.
+* No Kaggle submission without explicit authorisation.
+* A mechanism ships only with subject-disjoint flip precision measured against the exact
+  champion, fold-consistency, and a per-row audit reason for every test override.
+* Test labels are never inferred, and the leaderboard is never used as a search signal.

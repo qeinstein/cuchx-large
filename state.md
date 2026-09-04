@@ -1,90 +1,131 @@
-# CUHK-X Large Model Track: Project State & Research Ledger
+# Research ledger
 
-## Competition Overview
-- **Competition:** CUHK-X Competition Large Model Track (UbiComp 2026 / MobiSys 2026, Shanghai)
-- **Goal:** Privacy-preserving visual question answering and human activity reasoning across non-RGB modalities (Depth, Thermal, Infrared, IMU, 3D Skeleton, mmWave).
-- **Target:** Autonomous progression toward #1 on the leaderboard.
-- **Top Leaderboard Benchmark:** 0.96783 (*Bull & Ivarick*, 331/342 correct).
-- **Our Peak Leaderboard Score:** **0.78947** (*Fluxx / toheebogunade*, Rank **28 / 164 teams**, tied with Ranks 25–27).
+Chronological record of what was tried and what it measured. `README.md` holds the current
+architecture and the falsified-directions list; this file is the session-by-session trail.
 
----
+Same documentation rule: **measured numbers only, labelled by protocol.** No projections.
 
-## Submission & Score Progression
-
-| Submission | Ref ID | Submission Date | Public Score | Rank | Key Methodology & Innovations |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| `submission_majority.csv` | `55919039` | 2026-08-31 | 0.17251 | ~140 | Naive majority class baseline. |
-| `submission_077777.csv` | `55962725` | 2026-09-02 | 0.77777 | 54 | Reproducible structural prior decoder handoff baseline. |
-| `submission_v1.csv` | `55965217` | 2026-09-02 | 0.78654 | 28 | Sequence-multi exact consistency theorem + HARn calibrated specialists (+0.00877 gain). |
-| `submission_v2.csv` | `55965271` | 2026-09-02 | 0.78654 | 28 | Cross-question single contradiction theorem corrections. |
-| **`submission_v3.csv`** | **`55965872`** | **2026-09-02** | **0.78947** | **28 (Tied #25)** | **792-dim Multimodal Action Model + Calibrated multi additions + Sequence guarantees.** |
-| `submission_v4.csv` | `55966128` | 2026-09-02 | 0.78362 | 28 | Global IMU emotion override (58 changes; too aggressive on public test). |
-| `submission_v5.csv` | — | 2026-09-02 | 74.50% OOF | Staged Baseline | Unified Engine (3,045/4,087 correct). |
-| `submission_v6.csv` | Verified | 2026-09-03 | 75.36% OOF | Championship v6 | +35 Net Wins over v5 (3,080/4,087 correct). CatBoost-RF-LR Cadence Emotion (+17) + k=120 Object Specialist (+3) + Single-to-Multi Inclusion (+15). |
-| `submission_v7.csv` | — | 2026-09-03 | 75.41% OOF | Staged Baseline | Frame-Supervised TCN + Monotonic Dynamic Programming (3,082/4,087 correct). |
-| **`submission_v8.csv`** | **Ready** | **2026-09-03** | **75.68% OOF** | **Championship v8** | **Unified Champion: +11 Net Wins over v7 (3,093/4,087 correct, 64 wins vs 53 losses, 1.21x ratio). Restores high-accuracy 3-tier cadence-matched speed model on Emotion (52.29% vs 50.93%) while keeping peak v7 decoders on Single (86.83%), Multi (77.50%), Combination (88.99%), Sequence (48.05%), and Object (87.97%).** |
+**Current champion:** `submission_093859_SUBMITTED.csv` — public **0.93859 = 321/342, rank 5**
+(Kaggle submission id 56007625). Byte-identical copy of `submission_corrlayer_S_W_T.csv`.
+Every experiment is evaluated against this exact file.
 
 ---
 
-## Championship v8 Architecture & Validation Ledger
-1. **Championship v8 5-Fold Subject-Disjoint Benchmark (4,087 samples):**
-   - **Overall OOF Accuracy:** **3,093 / 4,087 (75.68%)** vs v7 **3,082 / 4,087 (75.41%)** (+11 questions, +0.27%).
-   - **Win/Loss Profile:** 64 new wins vs 53 new losses (**1.21x win/loss ratio**).
-   - **Multi-Fold Replicated:** Beats v7 in 4 out of 5 folds (Fold 1: +2, Fold 2: +1, Fold 3: +9, Fold 4: +7).
-   - **Category Profile:**
-     - Single: **1,075 / 1,238 (86.83%)** (peak across all models)
-     - Combination: **703 / 790 (88.99%)** (peak across all models)
-     - Multi: **627 / 809 (77.50%)** (peak across all models)
-     - Object: **117 / 133 (87.97%)** (peak across all models)
-     - Sequence: **148 / 308 (48.05%)** (peak across all models)
-     - Emotion: **423 / 809 (52.29%)** (+11 over v7's 412 / 809 = 50.93%)
-2. **Submission v8 Verification:**
-   - Saved to `submission_v8.csv`.
-   - Exactly 682 rows, columns `qa_id` and `prediction`.
-   - Exactly 42 test row updates compared to v7, entirely targeting the 144 test Emotion questions where the 3-tier cadence-matching speed model outperforms the overfitted CatBoost ensemble.
-   - Zero nulls, valid letter formats.
+## Session 1 (2026-08-31 → 09-02) — perceptual era
 
-*Kaggle Submissions: Ready to submit upon user authorization.*
+Multimodal feature caches and per-category specialists. Public 0.17251 → **0.78947**.
 
----
+Built: `sensor_features_all.npz` (280-dim IMU+skeleton), `visual_features_all.npz`,
+`thermal_features_all.npz`, `dinov2_features_all.npz` (384-dim ViT-S/14),
+`radar_features_all.npz`, consolidated to a 1720-dim array.
 
-## Core Technical Discoveries & Mathematical Theorems
+Held-out CV at the end of this era: **75.68%** OOF (v8), emotion **52.29%**.
 
-1. **Exact Sequence Presence Guarantee (100.00% Proof):**
-   - Proved across 100% of training clips ($440/440$ options) that whenever a clip has a `sequence` question, the 4 action options in the sequence question are guaranteed to have been performed in that video.
-   - For every test clip with a `sequence` question, any action in `multi` matching the sequence options is mathematically forced into the prediction.
+Two lessons that survived:
+* `submission_v4.csv` — a global IMU emotion override, 58 changed rows — **regressed**
+  0.78947 → 0.78362. First evidence that aggregate-looking improvements can be net negative.
+* Every "championship"/"grandmaster" artifact from this era was a projection, never scored.
+  See README §6.1 for the measured refutation (hard upper bound 0.582).
 
-2. **Cross-Question Consistency Theorem:**
-   - Proved that single-action multiple-choice options cannot contradict confirmed actions performed in the video.
-   - Corrected 4 explicit parent contradictions:
-     - `test_0030` (`LM_test_0109`): Parent B (drinking) contradicted by confirmed walking -> corrected to A (`walking`).
-     - `test_0050` (`LM_test_0139`): Parent A (reading) contradicted by confirmed body temp -> corrected to B (`checking body temperature`).
-     - `test_0079` (`LM_test_0176`): Parent C (walking) contradicted by confirmed eating -> corrected to A (`eating`).
-     - `test_0090` (`LM_test_0187`): Parent B (turning page) contradicted by confirmed squats -> corrected to A (`squats`).
+## Session 2 (2026-09-03) — structural breakthrough
 
-3. **Multimodal Feature Cache Architecture:**
-   - [`sensor_features_all.npz`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/sensor_features_all.npz): 280-dim vectors (120 IMU kinematics + FFT spectrum, 160 Skeleton 3D joint trajectories) for all 1,333 train and 208 test clips (22.9s extraction).
-   - [`visual_features_all.npz`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/visual_features_all.npz): 512-dim ResNet-18 temporal features (69.3s on MPS).
-   - [`thermal_features_all.npz`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/thermal_features_all.npz): 512-dim ResNet-18 Thermal features across 809 train and 144 test clips (26.6s on MPS).
-   - [`dinov2_features_all.npz`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/dinov2_features_all.npz): 384-dim Meta DINOv2 self-supervised Vision Transformer patch tokens across all 1,333 train and 208 test clips (108.6s, 121 fps on MPS).
+The insight that reframed the project: **this is a question-generator problem, not only a
+perception problem.** Solve per inferred session block, never per question.
 
-4. **Calibrated Action & Specialist Accuracies (5-Fold Cross-Subject CV):**
-   - **HARn Single Action:** 78.6% CV accuracy with Skeleton kinematics (vs 43.1% text baseline).
-   - **HARn Object Interaction:** 84.21% CV accuracy fusing DINOv2 ViT tokens and 3D joint distances (reaching 96.3% on Fold 1).
-   - **HAU Action Recognition:** 67.31% single-action accuracy across 40 unseen subject classes.
-   - **HAU Multi-Action Prediction:** Jumped from 32% to 55.25% exact subset accuracy when combining multi-label calibrated probabilities with sequence constraints.
-   - **HAU Emotion Specialist:** 45.95% CV accuracy with RF-k60 + Logistic Regression ensemble (vs 31.86% text baseline).
+Discoveries: session-triple manner protocol, option-set session leakage, closed-world action
+pool, HARn frame-level supervision, one latent action order per session (README §3).
 
----
+Public **0.78947 → 0.85087 → 0.90643 → 0.92105** (rank 6/166). Plain 5-fold OOF 0.9320.
 
-## Repository File Map
+Also established this session:
+* **Pair-thinned validation** — the plain protocol predicted 0.9396 while we scored 0.92105;
+  `pair_frac=0.38` gives 0.9208 against an actual 0.92105. Everything is validated this way now.
+* **Orphan regime** — `infer_blocks` has `kmin=2` so it cannot emit a one-clip block; four
+  real-test blocks are non-conforming, covering 44 questions.
+* Residual surface mapped in `FINDINGS_session2_residual_surface.md`.
 
-- [`build_submission.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/build_submission.py): Generates `submission_v3.csv` (Current Peak: 0.78947).
-- [`extract_sensor_cache.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/extract_sensor_cache.py): Parallel sensor feature extraction runner.
-- [`sensor_features.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/sensor_features.py): Kinematics, FFT spectral bands, and 3D joint trajectory extractor.
-- [`extract_video_features.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/extract_video_features.py): MPS ResNet-18 temporal visual feature extractor.
-- [`extract_thermal_features.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/extract_thermal_features.py): MPS ResNet-18 Thermal feature extractor.
-- [`extract_dinov2_features.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/extract_dinov2_features.py): MPS DINOv2 self-supervised ViT-S/14 feature extractor.
-- [`build_submission_v4.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/build_submission_v4.py): 5-fold cross-validation pipeline with emotion ensemble.
-- [`validation.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/validation.py): Generates subject-disjoint cross-validation splits.
-- [`clip_graph_decoder.py`](file:///Users/toheeb.ogunade/Workspace/cuchx-large/clip_graph_decoder.py): Baseline structural clip graph decoder.
+## Session 3 (2026-09-04) — manner representation search
+
+Systematic hunt for a manner representation to lift the ~0.60 manner-group classifier.
+**Five independent kills**, all audited at the decision level (README §6.2).
+
+Key negative: the physical axes a CARE/NERV/NEUT ontology needs — amplitude, pause fraction,
+spectral smoothness — carry η² ≈ 0.002–0.028 within-session. Only intensity/duration/energy
+separates groups, and it is already in `core.PHYS`.
+
+Retracted in-session: a `+1.4pp` result from `probe_joint_integration.py` was label leakage
+(feature sign-flipped in lockstep with the target). See README §6.4.
+
+`FINDINGS_session3_manner_representation.md`.
+
+## Session 4 (2026-09-04) — S/T/W/X shipped; PCRME falsified
+
+Shipped the correction layer that produced the current champion:
+**S** (joint sequence order decoding, flip precision 0.853), **T** (block conformance repair,
+0.821), **W/X** (object↔single consistency, 1.000). Public **0.92105 → 0.93859**, rank 5.
+Both correction layers transferred very close to their subject-disjoint decision-level
+estimates — evidence that OOF flip precision predicts public transfer.
+
+Tested phase-conditioned relative manner recognition (PCRME): compare corresponding
+HARn-anchored action *phases* across sibling trials rather than whole clips. 983 aligned
+session/action tuples, 272/272 sessions, provably unambiguous alignment.
+
+Result: **the first feature source in two sessions to beat the champion's own representation**
+(+3.3pp manner-group accuracy, 4/5 folds) — and still net **−2** at the decision level
+(11 genuine overrides, precision 0.400). Per-action specialist search: 0/40 clear 0.80.
+A frozen NTU60-finetuned MotionBERT probe was also negative.
+
+Two bugs caught and fixed in-session (baseline unfairness; letter-vs-text unit mismatch).
+
+`FINDINGS_session4_phase_conditioned_manner.md`, `phaselab/RESULTS.md`.
+
+## Session 5 (2026-09-04, current) — two-clip protocol-slot latent
+
+Target: 332+/342. Current 321/342, so **+11** required; qualification (+3) is not the goal.
+
+Error budget against the current champion, from pair-thinned held-out accuracy scaled to the
+342 public rows (~21 errors remaining):
+
+| pool | held-out acc | est. public errors |
+| :--- | :-- | :-- |
+| emotion, 2-clip blocks | 0.7296 | ~6 |
+| emotion, 3-clip blocks | 0.8966 | ~5 |
+| sequence (post-S) | ~0.74 | ~5 |
+| multi | 0.9596 | ~3 |
+| single / object / combination | — | ~2 |
+
+Opened with the densest pool — emotion in two-clip blocks — because unlike the eight killed
+manner probes its failure is **structural, not perceptual**: the candidate manner set is right
+(|I|=3 for 20 of 21 test pairs), but *which two of the three protocol slots are present* is an
+extra latent that `solve_emotion` maximises over with a flat prior, which measurably
+over-predicts the SLOW group by 5.6pp.
+
+Reconnaissance (`slotlab/`), all label-free and test-visible:
+
+* **Trial index is chronological**: 260/268 training sessions (0.9701).
+* **Inferred blocks are internally chronological but globally shuffled** — of 89 within-block
+  consecutive index pairs only 1 goes backwards in time, against 21 of 54 across block
+  boundaries. So neighbouring-block gaps are dominated by user/day changes (jumps of ~1 to
+  15 days) and **cannot** identify which trial was withheld. That route is dead.
+* **The within-block clock does discriminate.** Training: adjacent-trial gaps median 99.0s
+  (p5–p95 63–317), one-trial-skipped gaps median 203.2s (p5–p95 130–557); best balanced
+  single-threshold separation 0.834. Test triples confirm the scale in-domain (adjacent
+  median 88.4s, 0/66 negative).
+* **Applying that likelihood to the 21 real-test pairs: 19/21 favour "adjacent trials" over
+  "middle trial withheld."** Under a uniform withholding policy ~7 of 21 would be
+  middle-withheld. So the flat prior is badly misspecified, and it is exactly the
+  misspecification that inflates SLOW (two of the three slot hypotheses put clip 0 in slot 1).
+* **One anomaly:** block `[166,167]` has an internal gap of **−100.0s** — the clips are in
+  reverse chronological order, so the position prior is applied backwards for that block
+  (2 emotion questions).
+* Duration ratio separates adjacent from skipped (1.21/1.29 vs 1.55) but does **not**
+  separate "first withheld" from "last withheld"; the physical evidence has to do that.
+
+`slotlab/recon_slots.py`, `slotlab/recon_timeline.py`, `slotlab/log_recon.txt`,
+`slotlab/log_timeline.txt`, `slotlab/test_pair_blocks.csv`, `slotlab/test_pair_clock.csv`.
+
+Next: a correctly-specified generative slot-set prior through the existing `CHAMP_W_SLOT`
+hook (production path, not a surrogate), validated pair-thinned with flip precision against
+the exact champion. `slotprior.py`'s existing GBM put ~1100 features on ~800 samples and
+returned only +5 OOF (emotion 2-clip 0.7296 → 0.7551); the clock likelihood above is far
+sharper than anything that model could isolate.

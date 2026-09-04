@@ -1,0 +1,22 @@
+blk,i0,i1,nf0,nf1,gap,nI,cand,groups,ngroup,nf_desc
+"[np.int64(164), np.int64(165)]",164,165,103.0,110.0,69.80000000074506,3,Anxiously|Comfortably|Quietly,NERV|SLOW|SLOW,2,0
+"[np.int64(166), np.int64(167)]",166,167,117.0,98.0,-100.0,3,Calmly|Leisurely|Urgently,SLOW|SLOW|FAST,2,1
+"[np.int64(171), np.int64(172)]",171,172,145.0,78.0,103.69999999925494,3,Anxiously|Leisurely|Steadily,NERV|SLOW|NEUT,3,1
+"[np.int64(173), np.int64(174)]",173,174,80.0,134.0,58.900000002235174,3,Hurriedly|Steadily|Thoroughly,FAST|NEUT|CARE,3,0
+"[np.int64(175), np.int64(176)]",175,176,69.0,112.0,130.0,3,Briskly|Peacefully|Steadily,FAST|SLOW|NEUT,3,0
+"[np.int64(177), np.int64(178)]",177,178,97.0,137.0,109.20000000298023,3,Intently|Leisurely|Rapidly,CARE|SLOW|FAST,3,0
+"[np.int64(179), np.int64(180)]",179,180,137.0,77.0,85.20000000298023,3,Gently|Steadily|Swiftly,SLOW|NEUT|FAST,3,1
+"[np.int64(181), np.int64(182)]",181,182,84.0,103.0,73.89999999850988,3,Comfortably|Hurriedly|Patiently,SLOW|FAST|SLOW,2,0
+"[np.int64(183), np.int64(184)]",183,184,251.0,88.0,102.10000000149012,3,Nervously|Smoothly|Softly,NERV|NEUT|SLOW,3,1
+"[np.int64(185), np.int64(186)]",185,186,148.0,103.0,70.5,3,Gracefully|Quickly|Seriously,NEUT|FAST|CARE,3,1
+"[np.int64(187), np.int64(188)]",187,188,287.0,181.0,172.10000000149012,3,Calmly|Hastily|Leisurely,SLOW|FAST|SLOW,2,1
+"[np.int64(189), np.int64(190)]",189,190,196.0,120.0,90.90000000223517,0,,,0,1
+"[np.int64(191), np.int64(192)]",191,192,297.0,206.0,119.29999999701977,3,Gently|Hastily|Neatly,SLOW|FAST|CARE,3,1
+"[np.int64(193), np.int64(194)]",193,194,101.0,55.0,256.19999999925494,3,Quickly|Slowly|Steadily,FAST|SLOW|NEUT,3,1
+"[np.int64(195), np.int64(196)]",195,196,117.0,84.0,71.10000000149012,3,Hurriedly|Leisurely|Steadily,FAST|SLOW|NEUT,3,1
+"[np.int64(197), np.int64(198)]",197,198,359.0,247.0,103.30000000074506,3,Casually|Hurriedly|Meticulously,NEUT|FAST|CARE,3,1
+"[np.int64(199), np.int64(200)]",199,200,319.0,208.0,105.5,3,Casually|Quickly|Seriously,NEUT|FAST|CARE,3,1
+"[np.int64(201), np.int64(202)]",201,202,241.0,169.0,86.89999999850988,3,Anxiously|Gently|Steadily,NERV|SLOW|NEUT,3,1
+"[np.int64(203), np.int64(204)]",203,204,94.0,54.0,90.5,3,Evenly|Quickly|Slowly,NEUT|FAST|SLOW,3,1
+"[np.int64(205), np.int64(206)]",205,206,187.0,126.0,72.10000000149012,3,Hurriedly|Leisurely|Orderly,FAST|SLOW|CARE,3,1
+"[np.int64(207), np.int64(208)]",207,208,244.0,194.0,102.20000000298023,3,Anxiously|Calmly|Slowly,NERV|SLOW|SLOW,2,1

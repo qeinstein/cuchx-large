@@ -1,0 +1,12 @@
+{
+  "train_nf_order": 0.8551282051282051,
+  "test_nf_order": 0.8282828282828283,
+  "gap_thr": 131.78518593084516,
+  "gap_bal_acc": 0.8340297244406834,
+  "train_adj_median": 99.0,
+  "train_skip_median": 203.19999999925494,
+  "test_adj_median": 88.20000000111759,
+  "n_pairs": 21,
+  "n_pairs_I3": 20,
+  "n_pairs_3groups": 15
+}

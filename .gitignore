@@ -48,3 +48,11 @@ champ/feats.csv
 champ/log_*.txt
 champ/*.npy
 phaselab/motionbert_weights/
+
+# fitted model / result caches (regenerate by re-running the owning lab script)
+*.pkl
+catboost_info/
+
+# other competitors' public kernels, kept locally as reference only
+kernel_*/
+kaggle_kernels/
