@@ -1,1 +1,5 @@
 === pb2_0p5 : bias on 2-clip blocks = 0.5 ===
+  pb2_0p5 exit=0 TOTAL 3407/3697 = 0.9216
+=== pb2_1p0 : bias on 2-clip blocks = 1.0 ===
+  pb2_1p0 exit=0 TOTAL 3406/3697 = 0.9213
+=== pb2_2p0 : bias on 2-clip blocks = 2.0 ===

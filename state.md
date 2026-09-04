@@ -172,11 +172,26 @@ The durable results are the ceilings:
   whose clips run backwards in time (gap −100.0s), so the position prior is applied backwards
   there. `make_pseudo` builds blocks chronologically, so this can never be validated OOF.
 
-**Where the residual now stands.** 3-clip emotion (~5 public errors) is closed by eight
-probes plus the label-structure ceiling; 2-clip emotion (~6) is closed at a measured +2.6
-ceiling with ~0.6 reachable; sequence (~5) is coverage-limited to +0.2, with 47 of 80 residual
-errors a single pairwise inversion from truth. **The one pool still unbounded is multi in pair
-blocks (0.9158 vs 0.9733 in triples, ~3 public errors)** — the best-value next target.
+**Error budget, verified against the real test counts: 19.8 expected public errors vs 21
+actual.** Composition: emotion 2-clip 6.8, sequence 4.9, emotion 3-clip 3.6, multi 3.2,
+HARn single 1.1, rest 0.7.
+
+**All four pools are now bounded:**
+
+* **emotion, 3-clip (3.6)** — closed by eight representation probes plus the label-structure
+  ceiling (per-word 0.8314 < champion 0.8966).
+* **emotion, 2-clip (6.8)** — closed at a measured +2.6 ceiling, ~0.6 reachable at 0.619
+  precision.
+* **sequence (4.9)** — 48 of 77 residual errors are a single pairwise inversion, but the
+  inversions are **diffuse**: 119 inversions over 67 distinct pairs, 24 pairs needed to cover
+  half, max frequency 3. Not learnable per-pair; per-session evidence noise. Mechanism Y is
+  coverage-limited to +0.2.
+* **multi (3.2)** — under-prediction confirmed (19 pure-miss vs 10 pure-extra; pair blocks
+  miss 14 vs extra 6) but a global pool-inclusion bias is **monotonically worse**
+  (0 → 3410, 0.5 → 3407, 1.0 → 3406), because `pool._enum_component` already enumerates only
+  constraint-satisfying pools, so a bias picks a different satisfying pool rather than adding
+  the missing action, and more inclusive pools break the uniqueness `single`/`combination`
+  need. Needs per-action targeting. **The most open of the four and the best next target.**
 
 Reaching 332/342 would require clearing essentially all of the above. Across three sessions
 the evidence says that is not available from these modalities and this generator structure;

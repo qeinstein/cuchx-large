@@ -122,6 +122,59 @@ order for 260/268 training sessions), but it **cannot be validated OOF at all**,
 anomaly never appears in validation. Flagged as a ~1-row structural candidate with an argument
 but no measurement behind it. Not included in any candidate.
 
+## The error budget, verified
+
+Expected public errors from held-out accuracies applied to the real test's category counts:
+**19.8 against 21 actual**, so the accuracies are well calibrated and the budget can be
+trusted for prioritisation.
+
+| pool | public errors |
+| :--- | :-- |
+| emotion — 2-clip blocks | 6.8 |
+| **sequence** | **4.9** |
+| emotion — 3-clip blocks | 3.6 |
+| multi (pair 1.9 + triple 1.2) | 3.2 |
+| HARn single | 1.1 |
+| combination / HAU single / object | 0.7 |
+
+## Sequence: the residual is diffuse, not systematic
+
+48 of 77 residual errors are a **single pairwise inversion** from truth, so the latent order is
+nearly right. But the inversions do not concentrate on identifiable action pairs:
+
+* 119 inverted (earlier, later) pairs over **67 distinct pairs**
+* **24** distinct pairs are needed to cover half of them; maximum frequency is **3**
+* only 5 of 62 unordered pairs invert in both directions — so the direction is mostly
+  consistent per pair, but each pair appears 2-3 times, far too sparse to learn from
+
+A per-pair correction is therefore not learnable, and a global precedence prior was already
+falsified in session 2. The sequence residual is per-session evidence noise. The only lever is
+more order evidence, which is mechanism Y, and that is coverage-limited to +0.2 public.
+
+## Multi: under-prediction is real but not a threshold
+
+A `multi` option is admitted only if **every** action in it is in the recovered pool, so an
+under-recovered pool silently drops options. The asymmetry is real and measured — of 32
+held-out multi errors, **19 are pure under-prediction against 10 pure over-prediction** (23
+missing letters vs 14 extra), concentrated in two-clip blocks (miss 14 vs extra 6; 0.9158
+against 0.9733 in triples), exactly what a fixed inclusion threshold does when one clip's
+worth of option-repetition evidence is missing.
+
+Adding a per-block-size bias to the pool-membership log-odds (`CHAMP_POOL_BIAS`) nonetheless
+makes things **monotonically worse**:
+
+| bias on 2-clip blocks | multi | 2-clip multi | HAU single | OOF total |
+| :-- | :-- | :-- | :-- | :-- |
+| 0.0 (champion) | 687 | 0.9158 | 717 | 3410 |
+| 0.5 | 685 | 0.9000 | 716 | 3407 |
+| 1.0 | 685 | 0.9053 | 716 | 3406 |
+
+The reason is structural: `pool._enum_component` already enumerates only pools that *satisfy*
+the option constraints, so a bias does not add the one missing action — it selects a different
+satisfying pool, and more inclusive pools break the uniqueness that `single` and `combination`
+depend on (HAU single 717 → 716). Fixing this would need per-action targeting, not a global
+threshold, against a ceiling of +3.2 public.
+
 ## What this means for the residual
 
 Combining this session with sessions 3 and 4, the emotion residual is no longer an open
@@ -136,9 +189,11 @@ question with unknown headroom:
 * **sequence (≈5 public errors)** — mechanism Y is coverage-limited (17/39 questions) and
   honestly worth +0.2 public. 47 of the 80 residual errors are a *single pairwise inversion*
   from truth, which localises the problem but does not supply new evidence to fix it.
-* **multi (≈3 public errors)** — untouched this session. Pair-block multi is 0.9158 against
-  0.9733 in triples, so this is the one remaining pool whose 2-clip degradation has *not* been
-  explained or bounded. It is the best-value next target.
+* **multi (≈3.2 public errors)** — the under-prediction is diagnosed (19 pure-miss vs 10
+  pure-extra, concentrated in pair blocks) but a global inclusion threshold is falsified. Needs
+  per-action targeting inside the constraint enumeration, against a +3.2 ceiling. The most
+  open of the four, and the best-value next target.
+* **HARn single (≈1.1) and the rest (≈0.7)** — too small to carry the target.
 
 Reaching 332/342 requires +11 and would mean clearing essentially all of the above. The
 evidence assembled across three sessions says that is not available from these modalities and

@@ -5,30 +5,30 @@ config: pair_frac=0.38 policy=ends W_SLOT=0.0 SLOT_MODEL=gbm ADJ_ONLY=0 REPAIR=0
   fold 3 done (3 users, 44 blocks, sizes {3: np.int64(27), 2: np.int64(17)})
   fold 4 done (3 users, 50 blocks, sizes {3: np.int64(33), 2: np.int64(16), 4: np.int64(1)})
 
-===== pb2_0p5 (pair_frac=0.38) =====
+===== pb2_1p0 (pair_frac=0.38) =====
                              n   ok     acc
 source category                            
 HARn   object_interaction  133  118  0.8872
-       single              429  411  0.9580
+       single              429  410  0.9557
 HAU    combination         701  696  0.9929
        emotion             719  620  0.8623
        multi               719  685  0.9527
        sequence            277  161  0.5812
        single              719  716  0.9958
 
-TOTAL 3407/3697 = 0.9216
+TOTAL 3406/3697 = 0.9213
 
 --- by inferred block size ---
                    n     acc
 bsz category                
 2.0 combination  187  0.9947
     emotion      190  0.7053
-    multi        190  0.9000
+    multi        190  0.9053
     sequence      65  0.5692
     single       190  0.9947
 3.0 combination  510  0.9961
     emotion      525  0.9219
-    multi        525  0.9752
+    multi        525  0.9733
     sequence     210  0.5857
     single       525  1.0000
 4.0 combination    4  0.5000
@@ -43,6 +43,6 @@ bsz          2.0  3.0     2.0     3.0
 category                             
 combination  187  510  0.9947  0.9961
 emotion      190  525  0.7053  0.9219
-multi        190  525  0.9000  0.9752
+multi        190  525  0.9053  0.9733
 sequence      65  210  0.5692  0.5857
 single       190  525  0.9947  1.0000
