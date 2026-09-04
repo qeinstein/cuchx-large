@@ -1,0 +1,32 @@
+loaded backbone: missing=0 unexpected=0
+=== numeric audit of the skeleton -> MotionBERT-input transform ===
+
+  row 0: Squats (user1|1|1, cc=1), raw frames=50
+    raw skeleton x range [-0.634, 0.174]  y range [-0.234, 0.323]  z range [0.000, 1.360]
+    MB input shape (50, 17, 3)  xy range [-1.000, 1.000]  conf range [1.000, 1.000]
+    representation shape (50, 17, 512)  mean=-0.0148  std=0.3166  finite=True
+
+  row 1: Squats (user1|1|1, cc=2), raw frames=54
+    raw skeleton x range [-0.763, 0.196]  y range [-0.310, 0.242]  z range [0.000, 1.321]
+    MB input shape (54, 17, 3)  xy range [-1.000, 1.000]  conf range [1.000, 1.000]
+    representation shape (54, 17, 512)  mean=-0.0154  std=0.3102  finite=True
+
+  row 2: Squats (user1|1|1, cc=3), raw frames=26
+    raw skeleton x range [-0.734, 0.288]  y range [-0.315, 0.303]  z range [0.000, 1.308]
+    MB input shape (26, 17, 3)  xy range [-1.000, 1.000]  conf range [1.000, 1.000]
+    representation shape (26, 17, 512)  mean=-0.0155  std=0.3085  finite=True
+
+  row 3: Combing hair (user1|1|1, cc=1), raw frames=56
+    raw skeleton x range [-0.544, 0.887]  y range [-0.189, 0.207]  z range [0.000, 1.507]
+    MB input shape (56, 17, 3)  xy range [-1.000, 1.000]  conf range [1.000, 1.000]
+    representation shape (56, 17, 512)  mean=-0.0156  std=0.3063  finite=True
+
+audited 4 segments; all in-bounds and finite: proceeding to bulk extraction.
+  500/2880 rows scanned, 500 embedded
+  1000/2880 rows scanned, 998 embedded
+  1500/2880 rows scanned, 1493 embedded
+  2000/2880 rows scanned, 1992 embedded
+  2500/2880 rows scanned, 2491 embedded
+
+embedded 2869 of 2880 aligned phase rows
+wrote /Users/toheeb.ogunade/Workspace/cuchx-large/phaselab/motionbert_embeddings.npz  global=(2869, 512)  joint=(2869, 17, 512)

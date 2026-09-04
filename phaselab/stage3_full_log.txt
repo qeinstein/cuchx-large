@@ -1,0 +1,40 @@
+MotionBERT embeddings: (2869, 512) for 2869 aligned-phase rows
+clips with MotionBERT phase coverage: 776 of 809
+triple-block clips: 762   pair-block clips: 14
+
+=== Stage 3: MotionBERT vs fair champion baseline vs handcrafted phase-relative ===
+  A0. champion block_features() [fair baseline]            0.5713  folds [0.584, 0.508, 0.56, 0.56, 0.645]
+  A. MotionBERT absolute (no conditioning)                 0.3754  folds [0.41, 0.395, 0.381, 0.343, 0.347]
+  B. MotionBERT action-conditioned/session-relative        0.4549  folds [0.451, 0.452, 0.464, 0.448, 0.46]
+  D. champion block_features() + MotionBERT-relative [COMBINED] 0.5670  folds [0.561, 0.576, 0.571, 0.53, 0.597]
+
+[reference] Stage 2 handcrafted: fair baseline 0.5713  combined 0.6043
+
+=== mandatory shuffle-label controls ===
+  B, SHUFFLED seed=1                                       0.2852  folds [0.231, 0.22, 0.268, 0.336, 0.371]
+  B, SHUFFLED seed=2                                       0.2886  folds [0.295, 0.305, 0.292, 0.261, 0.29]
+  D, SHUFFLED seed=1                                       0.3018  folds [0.214, 0.288, 0.298, 0.306, 0.403]
+
+=== triple vs pair regime ===
+  k=3 (n=762):
+      champion baseline                                    0.5855  folds [0.609, 0.556, 0.571, 0.575, 0.617]
+      MotionBERT-relative                                  0.4534  folds [0.45, 0.444, 0.458, 0.448, 0.467]
+      combined                                             0.5583  folds [0.556, 0.561, 0.536, 0.53, 0.608]
+
+wrote /Users/toheeb.ogunade/Workspace/cuchx-large/phaselab/stage3_summary.json
+clips: 776  joint-flat dim: 8704
+=== per-joint (body-part-local) pooling: PCA-reduced, fold-internal fit ===
+  champion baseline (reference)                            0.5713  folds [0.584, 0.508, 0.56, 0.56, 0.645]
+  joint-local-relative alone, PCA=20                       0.3872  folds [0.41, 0.35, 0.387, 0.425, 0.363]
+  joint-local-relative alone, PCA=50                       0.3958  folds [0.405, 0.407, 0.387, 0.418, 0.363]
+  joint-local-relative alone, PCA=100                      0.4148  folds [0.41, 0.424, 0.381, 0.448, 0.411]
+  champion + joint-local-relative [COMBINED], PCA=20       0.5812  folds [0.578, 0.576, 0.571, 0.567, 0.613]
+  champion + joint-local-relative [COMBINED], PCA=50       0.5651  folds [0.561, 0.542, 0.565, 0.552, 0.605]
+  champion + joint-local-relative [COMBINED], PCA=100      0.5705  folds [0.578, 0.537, 0.571, 0.537, 0.629]
+clips: 776
+=== Stage 4: supervised (LDA) adaptation head on frozen MotionBERT features ===
+  champion baseline (reference)                            0.5713
+  global-relative, LDA-projected, LDA's OWN accuracy       0.2650  folds [0.289, 0.249, 0.292, 0.254, 0.242]
+  joint-local-relative, LDA-projected, LDA's OWN accuracy  0.2931  folds [0.301, 0.305, 0.298, 0.328, 0.234]
+  champion + LDA(global-relative) [COMBINED]               0.2694  folds [0.312, 0.232, 0.268, 0.261, 0.274]
+  champion + LDA(joint-local-relative) [COMBINED]          0.2785  folds [0.301, 0.299, 0.244, 0.299, 0.25]

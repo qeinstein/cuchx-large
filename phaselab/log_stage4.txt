@@ -1,0 +1,7 @@
+clips: 776
+=== Stage 4: supervised (LDA) adaptation head on frozen MotionBERT features ===
+  champion baseline (reference)                            0.5713
+  global-relative, LDA-projected, LDA's OWN accuracy       0.2650  folds [0.289, 0.249, 0.292, 0.254, 0.242]
+  joint-local-relative, LDA-projected, LDA's OWN accuracy  0.2931  folds [0.301, 0.305, 0.298, 0.328, 0.234]
+  champion + LDA(global-relative) [COMBINED]               0.2694  folds [0.312, 0.232, 0.268, 0.261, 0.274]
+  champion + LDA(joint-local-relative) [COMBINED]          0.2785  folds [0.301, 0.299, 0.244, 0.299, 0.25]

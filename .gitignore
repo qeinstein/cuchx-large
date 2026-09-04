@@ -47,3 +47,4 @@ champ/meta.csv
 champ/feats.csv
 champ/log_*.txt
 champ/*.npy
+phaselab/motionbert_weights/

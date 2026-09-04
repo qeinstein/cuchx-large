@@ -1,0 +1,14 @@
+{
+  "champ_baseline": 0.5713352395113248,
+  "mb_absolute": 0.3753790013712955,
+  "mb_relative": 0.4549137561646937,
+  "combined": 0.567003667860958,
+  "n_clips": 776,
+  "handcrafted_reference": {
+    "fair_baseline_acc": 0.5713352395113248,
+    "combined_acc": 0.6043138331671615,
+    "phase_relative_alone_acc": 0.5695682978818275,
+    "delta": 0.03297859365583666,
+    "n_clips": 776
+  }
+}

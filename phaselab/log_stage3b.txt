@@ -1,0 +1,9 @@
+clips: 776  joint-flat dim: 8704
+=== per-joint (body-part-local) pooling: PCA-reduced, fold-internal fit ===
+  champion baseline (reference)                            0.5713  folds [0.584, 0.508, 0.56, 0.56, 0.645]
+  joint-local-relative alone, PCA=20                       0.3872  folds [0.41, 0.35, 0.387, 0.425, 0.363]
+  joint-local-relative alone, PCA=50                       0.3958  folds [0.405, 0.407, 0.387, 0.418, 0.363]
+  joint-local-relative alone, PCA=100                      0.4148  folds [0.41, 0.424, 0.381, 0.448, 0.411]
+  champion + joint-local-relative [COMBINED], PCA=20       0.5812  folds [0.578, 0.576, 0.571, 0.567, 0.613]
+  champion + joint-local-relative [COMBINED], PCA=50       0.5651  folds [0.561, 0.542, 0.565, 0.552, 0.605]
+  champion + joint-local-relative [COMBINED], PCA=100      0.5705  folds [0.578, 0.537, 0.571, 0.537, 0.629]
