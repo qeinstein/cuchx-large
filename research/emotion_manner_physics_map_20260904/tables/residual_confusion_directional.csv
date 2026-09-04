@@ -1,0 +1,70 @@
+true_label,pred_label,n,is_diagonal,true_label_n,share_of_true_label,example_qa_ids,true_group,pred_group
+Carefully,Meticulously,2,False,21,0.09523809523809523,"training_2830, training_3130",CARE,CARE
+Contently,Lazily,2,False,3,0.6666666666666666,"training_3016, training_3211",SLOW,SLOW
+Lazily,Contently,2,False,6,0.3333333333333333,"training_3018, training_3213",SLOW,SLOW
+Meticulously,Carefully,2,False,16,0.125,"training_2831, training_3131",CARE,CARE
+Rapidly,Steadily,2,False,24,0.08333333333333333,"training_2967, training_3162",FAST,NEUT
+Steadily,Rapidly,2,False,60,0.03333333333333333,"training_2966, training_3161",NEUT,FAST
+Anxiously,Calmly,1,False,31,0.03225806451612903,training_2825,NERV,SLOW
+Anxiously,Leisurely,1,False,31,0.03225806451612903,training_3407,NERV,SLOW
+Attentively,Leisurely,1,False,18,0.05555555555555555,training_3292,CARE,SLOW
+Calmly,Anxiously,1,False,59,0.01694915254237288,training_2826,SLOW,NERV
+Calmly,Carefully,1,False,59,0.01694915254237288,training_3490,SLOW,CARE
+Calmly,Gracefully,1,False,59,0.01694915254237288,training_3165,SLOW,NEUT
+Calmly,Leisurely,1,False,59,0.01694915254237288,training_2857,SLOW,SLOW
+Calmly,Slowly,1,False,59,0.01694915254237288,training_3050,SLOW,SLOW
+Carefully,Calmly,1,False,21,0.047619047619047616,training_3491,CARE,SLOW
+Carefully,Gently,1,False,21,0.047619047619047616,training_3388,CARE,SLOW
+Carefully,Hurriedly,1,False,21,0.047619047619047616,training_3414,CARE,FAST
+Carefully,Peacefully,1,False,21,0.047619047619047616,training_3158,CARE,SLOW
+Carefully,Rapidly,1,False,21,0.047619047619047616,training_3342,CARE,FAST
+Confidently,Hurriedly,1,False,1,1.0,training_3374,NEUT,FAST
+Diligently,Rapidly,1,False,1,1.0,training_2846,CARE,FAST
+Earnestly,Quickly,1,False,1,1.0,training_3368,CARE,FAST
+Evenly,Slowly,1,False,11,0.09090909090909091,training_2749,NEUT,SLOW
+Evenly,Tensely,1,False,11,0.09090909090909091,training_3477,NEUT,NERV
+Forcefully,Steadily,1,False,2,0.5,training_3108,FAST,NEUT
+Frantically,Smoothly,1,False,11,0.09090909090909091,training_3328,FAST,NEUT
+Gently,Evenly,1,False,35,0.02857142857142857,training_2789,SLOW,NEUT
+Gracefully,Calmly,1,False,14,0.07142857142857142,training_3163,NEUT,SLOW
+Hurriedly,Confidently,1,False,52,0.019230769230769232,training_3375,FAST,NEUT
+Hurriedly,Leisurely,1,False,52,0.019230769230769232,training_3445,FAST,SLOW
+Hurriedly,Slowly,1,False,52,0.019230769230769232,training_3413,FAST,SLOW
+Hurriedly,Swiftly,1,False,52,0.019230769230769232,training_2886,FAST,FAST
+Hurriedly,quickly,1,False,52,0.019230769230769232,training_2796,FAST,FAST
+Intently,Slowly,1,False,10,0.1,training_2881,CARE,SLOW
+Joyfully,Quietly,1,False,1,1.0,training_3520,NEUT,SLOW
+Leisurely,Anxiously,1,False,53,0.018867924528301886,training_3409,SLOW,NERV
+Leisurely,Attentively,1,False,53,0.018867924528301886,training_3294,SLOW,CARE
+Leisurely,Calmly,1,False,53,0.018867924528301886,training_2858,SLOW,SLOW
+Leisurely,Gently,1,False,53,0.018867924528301886,training_3443,SLOW,SLOW
+Leisurely,Steadily,1,False,53,0.018867924528301886,training_2861,SLOW,NEUT
+Lightly,Steadily,1,False,2,0.5,training_3331,SLOW,NEUT
+Nervously,Steadily,1,False,13,0.07692307692307693,training_3344,NERV,NEUT
+Patiently,Slowly,1,False,11,0.09090909090909091,training_3509,SLOW,SLOW
+Peacefully,Carefully,1,False,9,0.1111111111111111,training_3157,SLOW,CARE
+Peacefully,Intently,1,False,9,0.1111111111111111,training_3474,SLOW,CARE
+Precisely,Slowly,1,False,3,0.3333333333333333,training_2728,CARE,SLOW
+Quickly,Earnestly,1,False,53,0.018867924528301886,training_3369,FAST,CARE
+Quietly,Smoothly,1,False,9,0.1111111111111111,training_3004,SLOW,NEUT
+Quietly,Tensely,1,False,9,0.1111111111111111,training_3521,SLOW,NERV
+Rapidly,Diligently,1,False,24,0.041666666666666664,training_2847,FAST,CARE
+Seriously,Slowly,1,False,8,0.125,training_2772,CARE,SLOW
+Slowly,Calmly,1,False,70,0.014285714285714285,training_3049,SLOW,SLOW
+Slowly,Carefully,1,False,70,0.014285714285714285,training_3415,SLOW,CARE
+Slowly,Evenly,1,False,70,0.014285714285714285,training_2748,SLOW,NEUT
+Slowly,Intently,1,False,70,0.014285714285714285,training_2882,SLOW,CARE
+Slowly,Patiently,1,False,70,0.014285714285714285,training_3508,SLOW,SLOW
+Slowly,Quietly,1,False,70,0.014285714285714285,training_2727,SLOW,SLOW
+Smoothly,Frantically,1,False,18,0.05555555555555555,training_3329,NEUT,FAST
+Smoothly,Hurriedly,1,False,18,0.05555555555555555,training_3444,NEUT,FAST
+Smoothly,Orderly,1,False,18,0.05555555555555555,training_3359,NEUT,CARE
+Steadily,Forcefully,1,False,60,0.016666666666666666,training_3107,NEUT,FAST
+Steadily,Leisurely,1,False,60,0.016666666666666666,training_2860,NEUT,SLOW
+Steadily,Lightly,1,False,60,0.016666666666666666,training_3333,NEUT,SLOW
+Steadily,Nervously,1,False,60,0.016666666666666666,training_3345,NEUT,NERV
+Swiftly,Hurriedly,1,False,3,0.3333333333333333,training_2885,FAST,FAST
+Tensely,Evenly,1,False,6,0.16666666666666666,training_3476,NERV,NEUT
+Tensely,Joyfully,1,False,6,0.16666666666666666,training_3522,NERV,NEUT
+Urgently,Peacefully,1,False,15,0.06666666666666667,training_3473,FAST,SLOW
+quickly,Hurriedly,1,False,1,1.0,training_2795,FAST,FAST

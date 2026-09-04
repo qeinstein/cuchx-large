@@ -1,0 +1,196 @@
+action_pool,emotion_rows,sessions,errors,accuracy,n_actions,any_locomotion
+Eating | Peeling fruit | Walking,15,5,4,0.7333333333333333,3,True
+Brushing teeth | Combing hair | Getting dressed | Wiping hands,6,2,4,0.3333333333333333,4,False
+Calling | Listening to the music with headphones | Reading | Sitting down | Taking a selfie | Walking,6,2,4,0.3333333333333333,6,True
+Grabbing utensils | Peeling fruit,6,2,4,0.3333333333333333,2,False
+Drinking | Eating | Peeling fruit | Pouring | Sitting down | Stirring,3,1,3,0.0,6,True
+Playing games | Sitting down | Walking | Watching TV,3,1,3,0.0,4,True
+Walking | Wiping surface,20,7,2,0.9,2,True
+Taking a selfie | Walking,9,3,2,0.7777777777777778,2,True
+Brushing teeth | Checking body temperature | Combing hair | Getting dressed | Massaging oneself | Taking medicine | Undressing | Washing face | Wiping hands,6,2,2,0.6666666666666666,9,False
+Checking the time | Eating | Grabbing utensils | Pouring | Sitting down | Taking a selfie | Using a phone | Walking,6,2,2,0.6666666666666666,8,True
+Checking the time | Reading | Sitting down | Turning a page | Walking,6,2,2,0.6666666666666666,5,True
+Drinking | Eating | Mopping | Pouring | Stirring | Sweeping | Walking | Wiping surface,6,2,2,0.6666666666666666,8,True
+Eating | Stirring,6,2,2,0.6666666666666666,2,False
+Reading | Sitting down | Standing up | Sweeping | Turning a page | Walking,6,2,2,0.6666666666666666,6,True
+Brushing teeth | Combing hair | Washing face,3,1,2,0.3333333333333333,3,False
+Calling | Reading | Turning a page | Typing on a keyboard,3,1,2,0.3333333333333333,4,False
+Checking the time | Getting dressed | Sitting down | Typing on a keyboard | Undressing | Walking,3,1,2,0.3333333333333333,6,True
+Checking the time | Grabbing utensils | Pouring | Stirring | Typing on a keyboard,3,1,2,0.3333333333333333,5,False
+Checking the time | Mopping | Reading | Sitting down | Standing up | Sweeping | Walking,3,1,2,0.3333333333333333,7,True
+Checking the time | Reading | Sitting down | Turning a page | Typing on a keyboard | Writing,3,1,2,0.3333333333333333,6,True
+Drinking | Eating | Peeling fruit | Pouring | Walking,3,1,2,0.3333333333333333,5,True
+Drinking | Peeling fruit | Walking,3,1,2,0.3333333333333333,3,True
+Eating | Grabbing utensils | Listening to the music with headphones | Reading | Sitting down | Turning a page | Walking,3,1,2,0.3333333333333333,7,True
+Eating | Grabbing utensils | Peeling fruit | Walking | Washing dishes,3,1,2,0.3333333333333333,5,True
+Jumping jacks | Squats,3,1,2,0.3333333333333333,2,True
+Listening to the music with headphones | Peeling fruit | Sitting down | Using a phone | Walking,3,1,2,0.3333333333333333,5,True
+Mopping | Sweeping | Walking,3,1,2,0.3333333333333333,3,True
+Running | Standing up | Stretching,3,1,2,0.3333333333333333,3,True
+Taking a selfie,3,1,2,0.3333333333333333,1,False
+Drinking | Lunges | Playing games | Pouring | Standing up | Stirring | Walking,2,1,2,0.0,7,True
+Brushing teeth | Washing face | Wiping hands,5,2,1,0.8,3,False
+Checking the time | Sitting down | Typing on a keyboard | Walking,5,2,1,0.8,4,True
+Drinking | Eating | Grabbing utensils | Massaging oneself | Pouring | Stirring | Taking medicine,3,1,1,0.6666666666666666,7,False
+Jumping jacks | Listening to the music with headphones | Pouring | Running | Sitting down | Stirring | Stretching | Using a phone | Walking,2,1,1,0.5,9,True
+Reading | Sitting down | Turning a page | Walking,2,1,1,0.5,4,True
+Grabbing utensils | Pouring | Stirring,18,6,0,1.0,3,False
+Drinking | Pouring | Stirring | Walking,9,3,0,1.0,4,True
+Mopping | Sweeping,9,3,0,1.0,2,True
+Brushing teeth | Combing hair | Getting dressed | Stretching | Wiping hands,6,2,0,1.0,5,True
+Brushing teeth | Walking | Washing face,6,2,0,1.0,3,True
+Calling | Checking the time | Folding clothes | Listening to the music with headphones | Sitting down,6,2,0,1.0,5,True
+Calling | Checking the time | Listening to the music with headphones | Reading | Running | Sitting down | Standing up | Turning a page | Typing on a keyboard | Writing,6,2,0,1.0,10,True
+Checking body temperature | Checking the time | Drinking | Eating | Grabbing utensils | Sweeping | Taking medicine | Using a phone | Wiping surface,6,2,0,1.0,9,True
+Checking body temperature | Checking the time | Reading | Sitting down | Squats | Standing up | Stretching | Taking medicine | Typing on a keyboard | Walking,6,2,0,1.0,10,True
+Checking body temperature | Listening to the music with headphones | Sitting down,6,2,0,1.0,3,True
+Checking body temperature | Lying down | Playing games | Taking a selfie | Taking medicine,6,2,0,1.0,5,True
+Checking body temperature | Massaging oneself | Taking medicine,6,2,0,1.0,3,False
+Checking body temperature | Taking medicine,6,2,0,1.0,2,False
+Checking the time | Drinking | Grabbing utensils | Lying down | Playing games | Sitting down | Walking,6,2,0,1.0,7,True
+Checking the time | Drinking | Jumping jacks | Peeling fruit | Standing up | Stretching | Turning a page | Walking | Writing,6,2,0,1.0,9,True
+Checking the time | Lunges | Running | Sitting down | Standing up | Stretching | Typing on a keyboard,6,2,0,1.0,7,True
+Checking the time | Massaging oneself | Playing games | Sitting down | Squats | Walking,6,2,0,1.0,6,True
+Checking the time | Reading | Typing on a keyboard,6,2,0,1.0,3,False
+Combing hair | Wiping hands,6,2,0,1.0,2,False
+Drinking | Peeling fruit | Washing dishes,6,2,0,1.0,3,False
+Eating | Grabbing utensils | Peeling fruit | Pouring | Stirring | Walking,6,2,0,1.0,6,True
+Eating | Grabbing utensils | Pouring | Stirring,6,2,0,1.0,4,False
+Eating | Grabbing utensils | Sitting down | Walking,6,2,0,1.0,4,True
+Eating | Grabbing utensils | Walking | Washing dishes,6,2,0,1.0,4,True
+Eating | Jumping jacks | Lying down | Sitting down | Stirring | Wiping surface,6,2,0,1.0,6,True
+Eating | Peeling fruit | Pouring | Stirring | Taking medicine,6,2,0,1.0,5,False
+Eating | Peeling fruit | Wiping hands,6,2,0,1.0,3,False
+Folding clothes | Getting dressed | Undressing | Walking,6,2,0,1.0,4,True
+Getting dressed | Squats | Stretching | Undressing,6,2,0,1.0,4,True
+Grabbing utensils | Peeling fruit | Walking,6,2,0,1.0,3,True
+Jumping jacks | Squats | Walking,6,2,0,1.0,3,True
+Listening to the music with headphones,6,2,0,1.0,1,False
+Listening to the music with headphones | Lying down | Mopping | Squats | Sweeping | Walking,6,2,0,1.0,6,True
+Listening to the music with headphones | Playing games | Standing up,6,2,0,1.0,3,True
+Listening to the music with headphones | Sitting down | Typing on a keyboard | Walking,6,2,0,1.0,4,True
+Massaging oneself | Sitting down,6,2,0,1.0,2,True
+Massaging oneself | Wiping hands,6,2,0,1.0,2,False
+Mopping | Running | Stretching | Sweeping,6,2,0,1.0,4,True
+Mopping | Squats | Standing up | Sweeping | Walking,6,2,0,1.0,5,True
+Peeling fruit | Pouring | Stirring | Walking,6,2,0,1.0,4,True
+Peeling fruit | Walking,6,2,0,1.0,2,True
+Peeling fruit | Wiping hands,6,2,0,1.0,2,False
+Playing games | Undressing,6,2,0,1.0,2,False
+Pouring | Stirring | Washing dishes,6,2,0,1.0,3,False
+Sitting down | Taking medicine,6,2,0,1.0,2,True
+Sitting down | Typing on a keyboard | Walking,6,2,0,1.0,3,True
+Squats | Stretching | Walking,6,2,0,1.0,3,True
+Undressing | Watching TV,6,2,0,1.0,2,False
+Brushing teeth | Checking body temperature | Combing hair | Massaging oneself | Taking medicine | Washing face,3,1,0,1.0,6,False
+Brushing teeth | Combing hair | Getting dressed | Walking | Washing face,3,1,0,1.0,5,True
+Brushing teeth | Combing hair | Walking | Washing face,3,1,0,1.0,4,True
+Brushing teeth | Walking | Washing face | Wiping hands,3,1,0,1.0,4,True
+Brushing teeth | Walking | Wiping hands,3,1,0,1.0,3,True
+Brushing teeth | Wiping hands,3,1,0,1.0,2,False
+Calling | Checking the time | Typing on a keyboard,3,1,0,1.0,3,False
+Calling | Drinking | Eating | Grabbing utensils | Peeling fruit | Reading | Stirring | Turning a page | Typing on a keyboard,3,1,0,1.0,9,False
+Calling | Listening to the music with headphones | Massaging oneself | Peeling fruit | Pouring | Using a phone,3,1,0,1.0,6,False
+Calling | Listening to the music with headphones | Sitting down | Typing on a keyboard | Walking | Writing,3,1,0,1.0,6,True
+Calling | Reading | Turning a page | Typing on a keyboard | Writing,3,1,0,1.0,5,False
+Calling | Running | Standing up | Stretching | Typing on a keyboard | Walking,3,1,0,1.0,6,True
+Calling | Standing up | Using a phone | Walking,3,1,0,1.0,4,True
+Calling | Standing up | Using a phone | Walking | Writing,3,1,0,1.0,5,True
+Calling | Taking a selfie | Walking,3,1,0,1.0,3,True
+Checking body temperature | Drinking | Eating | Grabbing utensils | Massaging oneself | Sitting down | Squats | Stretching | Walking | Wiping hands,3,1,0,1.0,10,True
+Checking body temperature | Getting dressed,3,1,0,1.0,2,False
+Checking body temperature | Jumping jacks | Massaging oneself | Squats | Walking,3,1,0,1.0,5,True
+Checking body temperature | Massaging oneself,3,1,0,1.0,2,False
+Checking body temperature | Massaging oneself | Taking medicine | Walking,3,1,0,1.0,4,True
+Checking the time | Combing hair,3,1,0,1.0,2,False
+Checking the time | Drinking | Grabbing utensils | Listening to the music with headphones | Taking a selfie | Watching TV,3,1,0,1.0,6,False
+Checking the time | Drinking | Pouring | Walking,3,1,0,1.0,4,True
+Checking the time | Drinking | Reading | Turning a page | Typing on a keyboard | Using a phone,3,1,0,1.0,6,False
+Checking the time | Getting dressed,3,1,0,1.0,2,False
+Checking the time | Getting dressed | Undressing,3,1,0,1.0,3,False
+Checking the time | Listening to the music with headphones | Reading | Sitting down | Turning a page | Typing on a keyboard | Walking,3,1,0,1.0,7,True
+Checking the time | Lunges | Mopping | Reading | Sitting down | Squats | Standing up | Typing on a keyboard | Walking,3,1,0,1.0,9,True
+Checking the time | Reading | Sitting down | Typing on a keyboard | Writing,3,1,0,1.0,5,True
+Checking the time | Reading | Standing up | Turning a page | Walking,3,1,0,1.0,5,True
+Checking the time | Sitting down | Turning a page | Typing on a keyboard | Walking,3,1,0,1.0,5,True
+Combing hair | Drinking | Listening to the music with headphones | Walking,3,1,0,1.0,4,True
+Combing hair | Getting dressed | Jumping jacks | Squats | Walking | Wiping hands,3,1,0,1.0,6,True
+Combing hair | Listening to the music with headphones | Reading | Sitting down | Typing on a keyboard | Walking,3,1,0,1.0,6,True
+Combing hair | Massaging oneself | Walking,3,1,0,1.0,3,True
+Combing hair | Sitting down | Standing up | Taking medicine | Walking,3,1,0,1.0,5,True
+Combing hair | Washing face,3,1,0,1.0,2,False
+Drinking | Eating | Grabbing utensils,3,1,0,1.0,3,False
+Drinking | Eating | Grabbing utensils | Jumping jacks | Massaging oneself | Sitting down | Squats | Standing up | Stretching | Walking | Wiping hands,3,1,0,1.0,11,True
+Drinking | Eating | Grabbing utensils | Massaging oneself | Pouring | Standing up | Stirring | Stretching | Taking medicine | Walking,3,1,0,1.0,10,True
+Drinking | Eating | Grabbing utensils | Massaging oneself | Taking medicine,3,1,0,1.0,5,False
+Drinking | Eating | Grabbing utensils | Mopping | Pouring | Sweeping | Walking,3,1,0,1.0,7,True
+Drinking | Eating | Grabbing utensils | Peeling fruit | Pouring | Stirring,3,1,0,1.0,6,False
+Drinking | Eating | Grabbing utensils | Peeling fruit | Pouring | Stirring | Washing dishes | Wiping surface,3,1,0,1.0,8,False
+Drinking | Eating | Grabbing utensils | Peeling fruit | Reading | Turning a page,3,1,0,1.0,6,False
+Drinking | Eating | Grabbing utensils | Peeling fruit | Standing up,3,1,0,1.0,5,True
+Drinking | Eating | Grabbing utensils | Pouring | Walking,3,1,0,1.0,5,True
+Drinking | Eating | Grabbing utensils | Stretching | Walking,3,1,0,1.0,5,True
+Drinking | Eating | Grabbing utensils | Walking,3,1,0,1.0,4,True
+Drinking | Eating | Peeling fruit,3,1,0,1.0,3,False
+Drinking | Eating | Peeling fruit | Pouring | Stirring,3,1,0,1.0,5,False
+Drinking | Eating | Peeling fruit | Pouring | Stirring | Walking,3,1,0,1.0,6,True
+Drinking | Eating | Peeling fruit | Walking,3,1,0,1.0,4,True
+Drinking | Grabbing utensils | Pouring | Stirring,3,1,0,1.0,4,False
+Drinking | Grabbing utensils | Pouring | Walking | Washing dishes | Wiping surface,3,1,0,1.0,6,True
+Drinking | Mopping | Pouring | Walking,3,1,0,1.0,4,True
+Drinking | Walking | Washing dishes,3,1,0,1.0,3,True
+Eating | Massaging oneself | Sitting down | Standing up | Walking,3,1,0,1.0,5,True
+Eating | Peeling fruit,3,1,0,1.0,2,False
+Eating | Pouring | Stirring | Walking,3,1,0,1.0,4,True
+Eating | Pouring | Stirring | Washing dishes,3,1,0,1.0,4,False
+Eating | Stirring | Walking,3,1,0,1.0,3,True
+Folding clothes,3,1,0,1.0,1,False
+Folding clothes | Getting dressed | Undressing,3,1,0,1.0,3,False
+Folding clothes | Playing games | Sitting down | Using a phone,3,1,0,1.0,4,True
+Folding clothes | Stretching | Walking,3,1,0,1.0,3,True
+Getting dressed | Running | Standing up | Undressing,3,1,0,1.0,4,True
+Getting dressed | Undressing,3,1,0,1.0,2,False
+Grabbing utensils | Mopping | Sweeping,3,1,0,1.0,3,True
+Jumping jacks | Lunges | Lying down,3,1,0,1.0,3,True
+Jumping jacks | Lunges | Lying down | Walking,3,1,0,1.0,4,True
+Jumping jacks | Running | Squats,3,1,0,1.0,3,True
+Jumping jacks | Running | Standing up | Stretching | Taking a selfie | Using a phone,3,1,0,1.0,6,True
+Listening to the music with headphones | Massaging oneself | Sitting down | Standing up | Stretching | Using a phone | Walking | Wiping hands,3,1,0,1.0,8,True
+Listening to the music with headphones | Mopping | Pouring | Standing up | Stirring | Walking,3,1,0,1.0,6,True
+Listening to the music with headphones | Playing games,3,1,0,1.0,2,False
+Listening to the music with headphones | Reading | Sitting down | Turning a page | Walking | Writing,3,1,0,1.0,6,True
+Listening to the music with headphones | Reading | Sitting down | Turning a page | Writing,3,1,0,1.0,5,True
+Listening to the music with headphones | Sitting down | Standing up | Using a phone | Walking,3,1,0,1.0,5,True
+Listening to the music with headphones | Sitting down | Using a phone,3,1,0,1.0,3,True
+Listening to the music with headphones | Sitting down | Using a phone | Walking,3,1,0,1.0,4,True
+Listening to the music with headphones | Using a phone,3,1,0,1.0,2,False
+Lunges | Lying down | Standing up | Walking,3,1,0,1.0,4,True
+Lunges | Squats,3,1,0,1.0,2,True
+Lunges | Squats | Stretching | Walking,3,1,0,1.0,4,True
+Lying down | Running | Squats | Standing up | Stretching | Walking,3,1,0,1.0,6,True
+Lying down | Stretching | Walking,3,1,0,1.0,3,True
+Lying down | Watching TV,3,1,0,1.0,2,True
+Massaging oneself | Playing games,3,1,0,1.0,2,False
+Massaging oneself | Sitting down | Stretching | Taking medicine | Wiping hands,3,1,0,1.0,5,True
+Massaging oneself | Standing up | Taking medicine | Writing,3,1,0,1.0,4,True
+Mopping | Sweeping | Wiping surface,3,1,0,1.0,3,True
+Mopping | Walking | Wiping surface,3,1,0,1.0,3,True
+Peeling fruit | Sitting down | Using a phone | Walking,3,1,0,1.0,4,True
+Peeling fruit | Taking medicine | Walking,3,1,0,1.0,3,True
+Peeling fruit | Washing dishes,3,1,0,1.0,2,False
+Pouring | Stirring | Walking,3,1,0,1.0,3,True
+Reading | Sitting down | Turning a page | Typing on a keyboard | Walking | Writing,3,1,0,1.0,6,True
+Reading | Turning a page | Walking,3,1,0,1.0,3,True
+Reading | Writing,3,1,0,1.0,2,False
+Running | Sitting down | Sweeping | Taking a selfie | Walking,3,1,0,1.0,5,True
+Sitting down | Standing up | Stretching | Using a phone | Walking,3,1,0,1.0,5,True
+Sitting down | Standing up | Typing on a keyboard | Walking,3,1,0,1.0,4,True
+Sitting down | Standing up | Walking | Writing,3,1,0,1.0,4,True
+Sitting down | Walking | Wiping surface,3,1,0,1.0,3,True
+Squats,3,1,0,1.0,1,True
+Squats | Standing up,3,1,0,1.0,2,True
+Standing up | Stretching,3,1,0,1.0,2,True
+Walking | Washing face | Wiping hands,3,1,0,1.0,3,True
+Washing face | Wiping hands,3,1,0,1.0,2,False
+Wiping surface,3,1,0,1.0,1,False
+Eating | Peeling fruit | Walking | Writing,2,1,0,1.0,4,True

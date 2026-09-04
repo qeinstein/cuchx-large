@@ -1,0 +1,4 @@
+label_a,label_b,symmetric_oof_errors,matched_sessions,usable_paired_observations,largest_within_session_rank_contrasts
+Carefully,Meticulously,4,3,3,sk_cad_pow: +1.00 rank (n=2); sk_spec_cent: -0.75 rank (n=2); raw_low_motion_frac: -0.75 rank (n=2); dino_cad_pow: +0.67 rank (n=3)
+Contently,Lazily,4,2,2,raw_low_motion_frac: +1.00 rank (n=2); sk_v_mean: +0.75 rank (n=2); sk_v_p90: +0.75 rank (n=2); sk_jerk_mean: +0.75 rank (n=2)
+Rapidly,Steadily,4,10,10,sk_cad_pow: +0.70 rank (n=10); duration_s: -0.55 rank (n=10); raw_duration_s: -0.55 rank (n=10); dino_path: -0.50 rank (n=10)

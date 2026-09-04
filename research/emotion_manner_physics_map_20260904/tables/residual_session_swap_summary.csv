@@ -1,0 +1,40 @@
+user,aa,bb,block_size,errors,permutation_only,exact_two_cycle_count,qa_ids
+user1,1,2,3,2,False,0,"training_2727, training_2728"
+user1,6,1,3,2,True,1,"training_2748, training_2749"
+user2,3,2,2,1,False,0,training_2772
+user2,6,1,2,1,False,0,training_2789
+user2,7,2,3,2,True,1,"training_2795, training_2796"
+user3,5,2,3,2,True,1,"training_2825, training_2826"
+user3,6,2,3,2,True,1,"training_2830, training_2831"
+user4,2,2,3,2,True,1,"training_2846, training_2847"
+user4,5,1,3,2,True,1,"training_2857, training_2858"
+user4,5,2,3,2,True,1,"training_2860, training_2861"
+user5,3,1,3,2,True,1,"training_2881, training_2882"
+user5,3,2,3,2,True,1,"training_2885, training_2886"
+user7,1,1,3,2,True,1,"training_2966, training_2967"
+user7,6,3,2,1,False,0,training_3004
+user8,1,2,3,2,True,1,"training_3016, training_3018"
+user8,7,1,3,2,True,1,"training_3049, training_3050"
+user9,7,2,3,2,True,1,"training_3107, training_3108"
+user16,3,3,3,2,True,1,"training_3130, training_3131"
+user16,7,3,3,2,True,1,"training_3157, training_3158"
+user17,1,1,3,2,True,1,"training_3161, training_3162"
+user17,1,2,3,2,True,1,"training_3163, training_3165"
+user18,1,2,3,2,True,1,"training_3211, training_3213"
+user19,6,1,3,2,True,1,"training_3292, training_3294"
+user20,5,1,3,2,True,1,"training_3328, training_3329"
+user20,6,1,3,2,True,1,"training_3331, training_3333"
+user20,7,1,3,1,False,0,training_3342
+user20,7,2,3,2,True,1,"training_3344, training_3345"
+user21,3,1,3,1,False,0,training_3359
+user21,4,2,3,2,True,1,"training_3368, training_3369"
+user21,5,2,3,2,True,1,"training_3374, training_3375"
+user22,1,1,2,1,False,0,training_3388
+user22,4,1,3,2,True,1,"training_3407, training_3409"
+user22,4,3,3,3,True,0,"training_3413, training_3414, training_3415"
+user23,2,1,3,3,False,0,"training_3443, training_3444, training_3445"
+user23,5,3,2,2,False,0,"training_3473, training_3474"
+user23,6,1,3,2,True,1,"training_3476, training_3477"
+user24,1,1,3,2,True,1,"training_3490, training_3491"
+user24,4,2,3,2,True,1,"training_3508, training_3509"
+user24,5,3,3,3,True,0,"training_3520, training_3521, training_3522"
