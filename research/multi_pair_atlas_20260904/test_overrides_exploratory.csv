@@ -1,0 +1,3 @@
+qa_id,block_id,action,champion_answer,best_x_answer,selected_minus_best_x_score,pool_probability,dense_skel_imu_probability_max,dense_dino_probability_max,best_pool_containing_action_rank,best_x_added_actions,best_x_removed_actions,rule,reason
+test_0206,testb050,Stirring,D,CD,2.9546351187905486,0.1858329280311873,0.9993370515959604,0.99833801814488,3.0,Stirring,,exploratory_fixed_one_add_gap5_dino10_pool10,pair block; one-action add; gap<=5; pool prob>=0.10; cached DINO prob>=0.10
+test_0212,testb053,Running,AC,ABC,1.792438754897347,0.2898280356477905,0.0774770687733377,0.1663602848670312,2.0,Running,,exploratory_fixed_one_add_gap5_dino10_pool10,pair block; one-action add; gap<=5; pool prob>=0.10; cached DINO prob>=0.10

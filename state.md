@@ -196,3 +196,28 @@ HARn single 1.1, rest 0.7.
 Reaching 332/342 would require clearing essentially all of the above. Across three sessions
 the evidence says that is not available from these modalities and this generator structure;
 the honest reachable range from identified mechanisms is +1 to +2.
+
+### Multi action-level atlas (2026-09-04)
+
+Built `research/multi_pair_atlas_20260904/` against the byte-frozen champion
+`submission_093859_SUBMITTED.csv` (SHA-256
+`9a45bfbf57c516f05a274d901f0765cba6b4c534341d1b4c761991e33a0e9cd3`). The five-fold,
+subject-disjoint pair-thinned `ends` atlas covers 719 Multi questions and 14,686 candidate
+action rows. It records every satisfying full-block candidate pool, candidate rank/score,
+pool membership, action-level evidence, modality availability, and sibling/child support.
+The independently retained production pool matched the live solver on all 275 OOF blocks.
+
+The champion has 21 false-negative actions versus 14 spurious actions; pair blocks account
+for 14 false negatives versus 6 extras. Sixteen of the 21 misses have a satisfying best
+pool containing the omitted action; 5 are structurally unavailable under the current hard
+constraints. For pair candidates with a satisfying best-X pool, only 14/391 are genuine
+inclusions, so global inclusion bias is not a safe repair. Sibling predicted support is
+zero for every remaining eligible omission because the pool constraints already force
+selected actions; it cannot distinguish these residuals.
+
+The fixed gate discovered after atlas inspection fires 3/3 on full OOF and identifies two
+test-side exploratory rows (`test_0206` Stirring and `test_0212` Running). Strict nested
+subject-disjoint selection collapses to 3/6 action precision and zero net question gain;
+the nested logistic variant is 2/9 with net -5. No override was promoted and no Kaggle
+submission was made. Full atlas, candidate pools, selector metrics, and test inspection
+are retained in `research/multi_pair_atlas_20260904/RESULTS.md`.
