@@ -1,0 +1,1 @@
+config: pair_frac=0.38 policy=ends W_SLOT=0.0 SLOT_MODEL=gbm ADJ_ONLY=0 REPAIR=0.0

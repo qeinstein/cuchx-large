@@ -1,0 +1,68 @@
+earlier,later,n,reverse
+Mopping,Sitting down,3,0
+Taking a selfie,Checking the time,3,1
+Using a phone,Calling,3,0
+Writing,Walking,3,0
+Taking medicine,Massaging oneself,3,3
+Writing,Turning a page,3,0
+Writing,Checking the time,3,0
+Walking,Lying down,3,0
+Drinking,Using a phone,3,0
+Reading,Checking the time,3,0
+Washing dishes,Wiping surface,3,0
+Massaging oneself,Taking medicine,3,3
+Standing up,Taking medicine,3,0
+Mopping,Checking the time,2,0
+Mopping,Typing on a keyboard,2,0
+Taking a selfie,Watching TV,2,0
+Taking a selfie,Listening to the music with headphones,2,0
+Taking a selfie,Grabbing utensils,2,0
+Calling,Turning a page,2,0
+Peeling fruit,Massaging oneself,2,0
+Peeling fruit,Using a phone,2,0
+Peeling fruit,Calling,2,0
+Taking medicine,Walking,2,0
+Taking medicine,Combing hair,2,0
+Sitting down,Combing hair,2,0
+Writing,Listening to the music with headphones,2,0
+Writing,Calling,2,0
+Checking body temperature,Taking medicine,2,2
+Checking the time,Using a phone,2,0
+Grabbing utensils,Using a phone,2,0
+Stretching,Typing on a keyboard,2,0
+Stretching,Sitting down,2,0
+Checking the time,Jumping jacks,2,0
+Standing up,Squats,2,1
+Taking medicine,Checking body temperature,2,2
+Grabbing utensils,Wiping surface,2,0
+Sitting down,Jumping jacks,2,0
+Sitting down,Eating,2,0
+Calling,Typing on a keyboard,2,0
+Standing up,Sitting down,1,0
+Standing up,Checking the time,1,0
+Massaging oneself,Wiping hands,1,0
+Calling,Listening to the music with headphones,1,0
+Calling,Reading,1,0
+Taking a selfie,Standing up,1,0
+Listening to the music with headphones,Massaging oneself,1,0
+Writing,Standing up,1,0
+Lying down,Grabbing utensils,1,0
+Checking the time,Sweeping,1,0
+Checking the time,Grabbing utensils,1,0
+Checking the time,Taking a selfie,1,3
+Checking the time,Listening to the music with headphones,1,0
+Lying down,Playing games,1,0
+Lying down,Taking a selfie,1,0
+Standing up,Walking,1,0
+Sweeping,Walking,1,0
+Taking medicine,Checking the time,1,0
+Squats,Standing up,1,2
+Writing,Reading,1,1
+Combing hair,Undressing,1,0
+Turning a page,Using a phone,1,0
+Turning a page,Drinking,1,0
+Sitting down,Wiping hands,1,0
+Walking,Drinking,1,0
+Lunges,Drinking,1,0
+Playing games,Drinking,1,0
+Reading,Writing,1,1

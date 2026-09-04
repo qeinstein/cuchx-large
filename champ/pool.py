@@ -210,11 +210,27 @@ def enumerate_pools(qs, uni, forced, cap=1 << 21):
     return None, free
 
 
+# Per-block-size bias on the pool-membership log-odds, e.g. CHAMP_POOL_BIAS='{"2": 1.0}'.
+# Empty (the default) is exact champion behaviour.
+#
+# Rationale: a `multi` option is admitted only if EVERY action in it is in the recovered pool,
+# so a pool that is too SMALL silently drops options.  Measured on the held-out OOF at the
+# champion: of 32 multi errors, 19 are pure under-prediction against 10 pure over-prediction
+# (23 missing letters vs 14 extra) -- and the asymmetry is concentrated in two-clip blocks
+# (miss 14 vs extra 6, accuracy 0.9158 against 0.9733 in three-clip blocks).  That is what a
+# fixed inclusion threshold does when one clip's worth of option-repetition evidence is
+# missing, so the threshold wants to depend on the block size.
+POOL_BIAS = json.loads(os.environ.get('CHAMP_POOL_BIAS', '{}'))
+
+
 def solve_block(vis, blk, statcache, scorer, split):
     uni, rows, qs, forced = candidate_evidence(vis, blk, split, statcache)
     if not qs:
         return {}, None
     lo = scorer(rows, uni)                     # action -> log-odds of pool membership
+    _b = POOL_BIAS.get(str(len(blk)), 0.0)
+    if _b:
+        lo = {a: v + _b for a, v in lo.items()}
     free, comps, _ = _components(qs, uni, forced)
     best = set(forced)
     allsat = True
