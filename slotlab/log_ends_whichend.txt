@@ -1,0 +1,48 @@
+config: pair_frac=0.38 policy=ends W_SLOT=1.0 SLOT_MODEL=clock ADJ_ONLY=1 REPAIR=0.0
+  fold 0 done (4 users, 62 blocks, sizes {3: np.int64(38), 2: np.int64(24)})
+  fold 1 done (4 users, 57 blocks, sizes {3: np.int64(37), 2: np.int64(20)})
+  fold 2 done (4 users, 58 blocks, sizes {3: np.int64(40), 2: np.int64(18)})
+  fold 3 done (3 users, 44 blocks, sizes {3: np.int64(27), 2: np.int64(17)})
+  fold 4 done (3 users, 50 blocks, sizes {3: np.int64(33), 2: np.int64(16), 4: np.int64(1)})
+
+===== ends_whichend (pair_frac=0.38) =====
+                             n   ok     acc
+source category                            
+HARn   object_interaction  133  118  0.8872
+       single              429  411  0.9580
+HAU    combination         701  696  0.9929
+       emotion             719  625  0.8693
+       multi               719  688  0.9569
+       sequence            277  161  0.5812
+       single              719  717  0.9972
+
+TOTAL 3416/3697 = 0.9240
+
+--- by inferred block size ---
+                   n     acc
+bsz category                
+2.0 combination  187  0.9947
+    emotion      190  0.7316
+    multi        190  0.9158
+    sequence      65  0.5692
+    single       190  1.0000
+3.0 combination  510  0.9961
+    emotion      525  0.9219
+    multi        525  0.9752
+    sequence     210  0.5857
+    single       525  1.0000
+4.0 combination    4  0.5000
+    emotion        4  0.5000
+    multi          4  0.5000
+    sequence       2  0.5000
+    single         4  0.5000
+
+--- category accuracy, bsz=2 vs bsz=3 ---
+            size         mean        
+bsz          2.0  3.0     2.0     3.0
+category                             
+combination  187  510  0.9947  0.9961
+emotion      190  525  0.7316  0.9219
+multi        190  525  0.9158  0.9752
+sequence      65  210  0.5692  0.5857
+single       190  525  1.0000  1.0000

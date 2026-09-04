@@ -124,8 +124,60 @@ Reconnaissance (`slotlab/`), all label-free and test-visible:
 `slotlab/recon_slots.py`, `slotlab/recon_timeline.py`, `slotlab/log_recon.txt`,
 `slotlab/log_timeline.txt`, `slotlab/test_pair_blocks.csv`, `slotlab/test_pair_clock.csv`.
 
-Next: a correctly-specified generative slot-set prior through the existing `CHAMP_W_SLOT`
-hook (production path, not a surrogate), validated pair-thinned with flip precision against
-the exact champion. `slotprior.py`'s existing GBM put ~1100 features on ~800 samples and
-returned only +5 OOF (emotion 2-clip 0.7296 → 0.7551); the clock likelihood above is far
-sharper than anything that model could isolate.
+**Outcome: the pool is bounded, and nothing ships.** Full detail in
+`FINDINGS_session5_slot_latent.md`.
+
+Production arms (pair-thinned, matched `policy='ends'`; 3-clip emotion identical at 0.9219 in
+every arm, so the mechanism is correctly isolated):
+
+| arm | 2-clip emotion (n=190) | OOF total |
+| :--- | :-- | :-- |
+| baseline flat prior | 0.7053 | 3410 |
+| soft clock prior | 0.7053 | 3409 (−1) |
+| adjacency-only constraint | 0.7316 | 3415 (+5) |
+| **oracle slot set** | **0.8526** | 3438 (**+28**) |
+
+Decision-level audit against the exact champion:
+
+| candidate | flips | W→R | R→W | precision | net |
+| :--- | :-- | :-- | :-- | :-- | :-- |
+| slot adjacency constraint | 24 | 13 | 8 | **0.619** | +5 |
+| + content-normalised which-end | 27 | 15 | 9 | 0.625 | +6 |
+| sequence mech Y, nested weights | 19 | 9 | 6 | **0.600** | +3 |
+| *(oracle, reference)* | 45 | 33 | 5 | 0.868 | +28 |
+
+Both shippable candidates sit at ~0.60 precision against the 0.80 that made S/T/W/X transfer,
+and are worth **+0.6 and +0.2** public questions. Combined expected gain is under one question
+against a spread of roughly ±1.5, so the 321/342 artifact was left alone.
+
+The durable results are the ceilings:
+
+* **A perfect slot oracle is worth only +28 OOF ≈ +2.6 public** — the ceiling on this latent.
+* **Only 5 of that +28 comes from adjacency; 23 needs which END was withheld, and the solver
+  already resolves that at ≈0.858.** Anything new must beat 0.858, not 0.5. The clock is
+  structurally blind to it (0.5077) and so is the duration ratio.
+* A content-normalised which-end model (regress out E[level | recovered action pool], since a
+  session's trials share one script) scored **0.6404** subject-disjoint — a genuine
+  representation result, 5/5 folds above chance, clean label-shuffle control — and moved
+  production by exactly **0.0000**. Seventh probe with this failure shape.
+* `(0,2)` was acting as a **hedge** banking half credit, which is why removing a provably
+  never-true hypothesis still only reaches 0.619 precision.
+* **No label structure is left in 3-clip blocks**: per-word slot priors reach 0.8314 and the
+  coarse 5-group map 0.7132, both below the champion's 0.8966.
+* `seqlab/run17.py`'s `0 observations` was stale state, not a real negative — it harvests 385
+  observations at 0.951 child-action accuracy, covering 52/104 training sessions and 17/39 test
+  sequence questions. But nested weight selection gives +3 at 0.600, not the +6 the
+  contaminated grid reported (`seqlab/run18.py`).
+* One unvalidatable anomaly recorded but not shipped: block `[166,167]` is the only test block
+  whose clips run backwards in time (gap −100.0s), so the position prior is applied backwards
+  there. `make_pseudo` builds blocks chronologically, so this can never be validated OOF.
+
+**Where the residual now stands.** 3-clip emotion (~5 public errors) is closed by eight
+probes plus the label-structure ceiling; 2-clip emotion (~6) is closed at a measured +2.6
+ceiling with ~0.6 reachable; sequence (~5) is coverage-limited to +0.2, with 47 of 80 residual
+errors a single pairwise inversion from truth. **The one pool still unbounded is multi in pair
+blocks (0.9158 vs 0.9733 in triples, ~3 public errors)** — the best-value next target.
+
+Reaching 332/342 would require clearing essentially all of the above. Across three sessions
+the evidence says that is not available from these modalities and this generator structure;
+the honest reachable range from identified mechanisms is +1 to +2.
