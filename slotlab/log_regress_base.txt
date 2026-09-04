@@ -1,0 +1,43 @@
+config: pair_frac=0.38 policy=uniform W_SLOT=0.0 SLOT_MODEL=gbm ADJ_ONLY=0 REPAIR=0.0
+  fold 0 done (4 users, 62 blocks, sizes {3: np.int64(35), 2: np.int64(27)})
+  fold 1 done (4 users, 57 blocks, sizes {3: np.int64(36), 2: np.int64(21)})
+  fold 2 done (4 users, 58 blocks, sizes {3: np.int64(40), 2: np.int64(18)})
+  fold 3 done (3 users, 44 blocks, sizes {3: np.int64(28), 2: np.int64(16)})
+  fold 4 done (3 users, 51 blocks, sizes {3: np.int64(35), 2: np.int64(16)})
+
+===== regress_base (pair_frac=0.38) =====
+                             n   ok     acc
+source category                            
+HARn   object_interaction  133  119  0.8947
+       single              429  411  0.9580
+HAU    combination         699  696  0.9957
+       emotion             718  611  0.8510
+       multi               718  688  0.9582
+       sequence            274  155  0.5657
+       single              718  715  0.9958
+
+TOTAL 3395/3689 = 0.9203
+
+--- by inferred block size ---
+                   n     acc
+bsz category                
+2.0 combination  196  0.9898
+    emotion      196  0.7296
+    multi        196  0.9439
+    sequence      71  0.5211
+    single       196  0.9949
+3.0 combination  503  0.9980
+    emotion      522  0.8966
+    multi        522  0.9636
+    sequence     203  0.5813
+    single       522  0.9962
+
+--- category accuracy, bsz=2 vs bsz=3 ---
+            size         mean        
+bsz          2.0  3.0     2.0     3.0
+category                             
+combination  196  503  0.9898  0.9980
+emotion      196  522  0.7296  0.8966
+multi        196  522  0.9439  0.9636
+sequence      71  203  0.5211  0.5813
+single       196  522  0.9949  0.9962

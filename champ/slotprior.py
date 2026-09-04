@@ -24,6 +24,13 @@ from sklearn.ensemble import HistGradientBoostingClassifier
 
 NCLS = [(0, 1), (0, 2), (1, 2)]
 
+# Which slot-set model backs the CHAMP_W_SLOT hook.
+#   'gbm'   the HistGradientBoosting map over all of block_features + clock columns (below).
+#           Measured: emotion at inferred block size 2 0.7296 -> 0.7551, OOF total +5.
+#   'clock' champ/clockslot.py, an explicit generative gap / duration-ratio likelihood.
+# Either way CHAMP_W_SLOT=0 leaves solve_emotion on the champion path untouched.
+MODEL = os.environ.get('CHAMP_SLOT_MODEL', 'gbm')
+
 
 def _row(bf, k, aux=None, paths=None):
     """Feature row from the two clips' block_features, as solve_emotion computes them,
@@ -52,6 +59,20 @@ def make_aux(meta):
 
 
 def fit(tr, meta, hold_users=()):
+    if MODEL == 'clock':
+        import clockslot as CS
+        return CS.fit(tr, meta, hold_users)
+    return fit_gbm(tr, meta, hold_users)
+
+
+def predict(sp, bf, k, slots, paths=None, pool=None):
+    if MODEL == 'clock':
+        import clockslot as CS
+        return CS.predict(sp, bf, k, slots, paths, pool)
+    return predict_gbm(sp, bf, k, slots, paths)
+
+
+def fit_gbm(tr, meta, hold_users=()):
     mfeat = {r.qa_path: {c: getattr(r, c) for c in PHYS if hasattr(r, c)}
              for r in meta.itertuples()}
     aux = make_aux(meta)
@@ -74,7 +95,7 @@ def fit(tr, meta, hold_users=()):
     return dict(clf=clf, cols=list(Xd.columns), classes=list(clf.classes_), aux=aux)
 
 
-def predict(sp, bf, k, slots, paths=None):
+def predict_gbm(sp, bf, k, slots, paths=None):
     """-> {present_tuple: log P}.  Only defined for the k=2, slots=3 case."""
     if sp is None or k != 2 or slots != 3:
         return None

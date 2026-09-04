@@ -1,0 +1,9 @@
+=== ends_base : CHAMP_W_SLOT=0 ===
+  ends_base exit=0 TOTAL 3410/3697 = 0.9224
+=== ends_oracle : CHAMP_W_SLOT=1 CHAMP_SLOT_MODEL=clock CHAMP_SLOT_ORACLE=1 ===
+  ends_oracle exit=0 TOTAL 3438/3697 = 0.9299
+=== ends_adjonly : CHAMP_W_SLOT=1 CHAMP_SLOT_MODEL=clock CHAMP_SLOT_ADJ_ONLY=1 ===
+  ends_adjonly exit=0 TOTAL 3415/3697 = 0.9237
+=== ends_clock : CHAMP_W_SLOT=1 CHAMP_SLOT_MODEL=clock ===
+  ends_clock exit=0 TOTAL 3409/3697 = 0.9221
+=== ends_gbm : CHAMP_W_SLOT=1 CHAMP_SLOT_MODEL=gbm ===

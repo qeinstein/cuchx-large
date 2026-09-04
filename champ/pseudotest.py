@@ -35,16 +35,38 @@ def block_quality(vis, blocks, aux):
     return exact, tot
 
 
-def thin_to_pairs(tr, users, frac, seed=0):
+def thin_to_pairs(tr, users, frac, seed=0, policy=None):
     """Drop one trial from `frac` of the held-out users' sessions, so the pseudo-test block
-    sizes match the real test set (which contains 21 two-trial sessions of 55)."""
+    sizes match the real test set (which contains 21 two-trial sessions of 55).
+
+    `policy` selects WHICH trial is withheld, which is a second protocol parameter that
+    matters as much as `frac` and was previously left at 'uniform' by default:
+
+      'uniform'  any of the three trials, equiprobably -> the surviving pair is
+                 (0,1)/(0,2)/(1,2) each a third of the time.
+      'ends'     only the first or the last trial, so the surviving pair is always ADJACENT.
+
+    'ends' is the regime the real test is in.  Estimated by maximum likelihood from the 21
+    real-test pair-block recording gaps against the training-fitted adjacent/skipped
+    log-normal densities (slotlab/estimate_policy.py): pi = P(adjacent) = 1.000, parametric
+    bootstrap 95% CI [0.601, 1.000], and a likelihood-ratio test rejects the pi = 2/3 implied
+    by a flat prior at p = 0.0039.  The same estimator returns exactly 1.000 on the 34
+    complete test triples, where pi = 1 is known, so it is not biased high by construction.
+    """
+    if policy is None:
+        policy = os.environ.get('CHAMP_THIN_POLICY', 'uniform')
     rng = np.random.default_rng(seed)
     sub = tr[tr.user.isin(users)]
     drop = []
     for (u, a, b), g in sub[sub.source == 'HAU'].groupby(['user', 'aa', 'bb']):
         paths = sorted(g.path.unique())
         if len(paths) >= 3 and rng.random() < frac:
-            drop.append(paths[rng.integers(len(paths))])
+            if policy == 'ends':
+                drop.append(paths[0] if rng.random() < 0.5 else paths[-1])
+            elif policy == 'uniform':
+                drop.append(paths[rng.integers(len(paths))])
+            else:
+                raise ValueError(f'unknown thinning policy {policy!r}')
     return tr[~tr.path.isin(drop)]
 
 

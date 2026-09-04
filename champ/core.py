@@ -427,7 +427,10 @@ def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=No
             slp = None
             if w_slot:
                 import slotprior as SPR
-                slp = SPR.predict(slotp, bf3, k, slots, [pathof[b] for b in blk])
+                # the recovered session action pool is the content normaliser the which-end
+                # term needs; it is already in scope for the emopair context above
+                slp = SPR.predict(slotp, bf3, k, slots, [pathof[b] for b in blk],
+                                  pool=(pool_of or {}).get(tuple(blk)))
             for perm in itertools.permutations(range(slots)):
                 # perm[s] = index into cand occupying protocol slot s
                 for present in itertools.combinations(range(slots), k):

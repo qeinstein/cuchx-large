@@ -15,14 +15,19 @@ from pseudotest import folds, thin_to_pairs
 import pipeline as P
 
 
-def main(tag='pairstress', pair_frac=0.38, nfold=5):
+def main(tag='pairstress', pair_frac=0.38, nfold=5, policy=None):
     tr, te, meta = load_all()
     P.caches(meta)
     users = sorted(tr.user.dropna().unique())
     rows = []
+    print(f'config: pair_frac={pair_frac} policy={policy or "uniform"} '
+          f'W_SLOT={P.W_SLOT} SLOT_MODEL={os.environ.get("CHAMP_SLOT_MODEL","gbm")} '
+          f'ADJ_ONLY={os.environ.get("CHAMP_SLOT_ADJ_ONLY","0")} '
+          f'REPAIR={P.W_REPAIR}', flush=True)
     for fi, hold in enumerate(folds(users, nfold)):
         ctx = P.fit_all(tr, meta, hold)
-        tr_eval = thin_to_pairs(tr, hold, pair_frac, seed=fi) if pair_frac else tr
+        tr_eval = thin_to_pairs(tr, hold, pair_frac, seed=fi, policy=policy) \
+            if pair_frac else tr
         vis, key, aux = make_pseudo(tr_eval, meta, hold, seed=100 + fi)
         pred, blocks, pool_of, diag = P.solve(vis, ctx, 'oof')
         bsz = {}
@@ -52,4 +57,5 @@ def main(tag='pairstress', pair_frac=0.38, nfold=5):
 
 if __name__ == '__main__':
     main(tag=sys.argv[1] if len(sys.argv) > 1 else 'pairstress',
-         pair_frac=float(sys.argv[2]) if len(sys.argv) > 2 else 0.38)
+         pair_frac=float(sys.argv[2]) if len(sys.argv) > 2 else 0.38,
+         policy=sys.argv[3] if len(sys.argv) > 3 else None)

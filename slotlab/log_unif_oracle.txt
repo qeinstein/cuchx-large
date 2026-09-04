@@ -1,0 +1,2 @@
+config: pair_frac=0.38 policy=uniform W_SLOT=1.0 SLOT_MODEL=clock ADJ_ONLY=0 REPAIR=0.0
+  fold 0 done (4 users, 62 blocks, sizes {3: np.int64(35), 2: np.int64(27)})
