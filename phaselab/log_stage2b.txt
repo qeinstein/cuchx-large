@@ -1,0 +1,15 @@
+champion block_features(): 102 columns (absolute+z+rank), 809 clips
+clips with both representations: 776 of 809
+
+=== FAIR comparison: champion's actual block_features() vs + phase-relative ===
+  champion block_features() [FAIR baseline]                0.5713  folds [0.584, 0.508, 0.56, 0.56, 0.645]
+  champion block_features() + phase-relative [COMBINED]    0.6043  folds [0.613, 0.599, 0.583, 0.59, 0.637]
+  phase-relative alone                                     0.5696  folds [0.601, 0.542, 0.571, 0.552, 0.581]
+
+=== mandatory shuffle-label controls (must collapse toward chance ~0.20-0.30) ===
+  combined, SHUFFLED seed=1                                0.3059  folds [0.243, 0.35, 0.28, 0.358, 0.298]
+  combined, SHUFFLED seed=2                                0.2838  folds [0.266, 0.26, 0.351, 0.179, 0.363]
+  phase-relative alone, SHUFFLED seed=1                    0.3139  folds [0.289, 0.299, 0.339, 0.343, 0.298]
+
+Delta (combined - fair baseline): +0.0330
+Verdict written to stage2b_summary.json

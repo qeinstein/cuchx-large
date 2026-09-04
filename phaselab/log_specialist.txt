@@ -1,0 +1,83 @@
+  [1/40] Brushing teeth (n_sessions=16)
+  [2/40] Calling (n_sessions=15)
+  [3/40] Checking body temperature (n_sessions=19)
+  [4/40] Checking the time (n_sessions=31)
+  [5/40] Combing hair (n_sessions=19)
+  [6/40] Drinking (n_sessions=40)
+  [7/40] Eating (n_sessions=52)
+  [8/40] Folding clothes (n_sessions=7)
+  [9/40] Getting dressed (n_sessions=18)
+  [10/40] Grabbing utensils (n_sessions=32)
+  [11/40] Jumping jacks (n_sessions=15)
+  [12/40] Listening to the music with headphones (n_sessions=25)
+  [13/40] Lunges (n_sessions=9)
+  [14/40] Lying down (n_sessions=11)
+  [15/40] Massaging oneself (n_sessions=21)
+  [16/40] Mopping (n_sessions=19)
+  [17/40] Peeling fruit (n_sessions=35)
+  [18/40] Playing games (n_sessions=14)
+  [19/40] Pouring (n_sessions=43)
+  [20/40] Reading (n_sessions=24)
+  [21/40] Running (n_sessions=13)
+  [22/40] Sitting down (n_sessions=49)
+  [23/40] Squats (n_sessions=26)
+  [24/40] Standing up (n_sessions=29)
+  [25/40] Stirring (n_sessions=39)
+  [26/40] Stretching (n_sessions=29)
+  [27/40] Sweeping (n_sessions=20)
+  [28/40] Taking a selfie (n_sessions=14)
+  [29/40] Taking medicine (n_sessions=23)
+  [30/40] Turning a page (n_sessions=20)
+  [31/40] Typing on a keyboard (n_sessions=29)
+  [32/40] Undressing (n_sessions=14)
+  [33/40] Using a phone (n_sessions=16)
+  [34/40] Walking (n_sessions=112)
+  [35/40] Washing dishes (n_sessions=11)
+  [36/40] Washing face (n_sessions=15)
+  [37/40] Watching TV (n_sessions=4)
+  [38/40] Wiping hands (n_sessions=23)
+  [39/40] Wiping surface (n_sessions=18)
+  [40/40] Writing (n_sessions=14)
+                                action  n_sessions  n_valid  spec_group_acc  n_disagreements  w_to_r  r_to_w  flip_precision  net  n_folds_with_disagreement
+                              Sweeping          20       59        0.593220               29       5      23        0.178571  -18                          5
+                          Sitting down          49      143        0.510490               71       8      60        0.117647  -52                          5
+                       Taking a selfie          14       41        0.365854               26       2      22        0.083333  -20                          5
+                                Squats          26       77        0.532468               39       3      35        0.078947  -32                          5
+                         Jumping jacks          15       44        0.340909               30       2      28        0.066667  -26                          5
+                              Stirring          39      114        0.456140               64       4      57        0.065574  -53                          5
+                        Turning a page          20       59        0.423729               33       2      29        0.064516  -27                          4
+                               Mopping          19       55        0.418182               34       2      30        0.062500  -28                          5
+                               Reading          24       71        0.281690               53       3      47        0.060000  -44                          5
+                               Pouring          43      128        0.539062               58       3      52        0.054545  -49                          5
+                                Eating          52      151        0.582781               60       3      54        0.052632  -51                          5
+                  Typing on a keyboard          29       84        0.285714               62       3      54        0.052632  -51                          5
+                         Playing games          14       40        0.475000               21       1      19        0.050000  -18                          3
+                               Walking         112      327        0.538226              151       7     134        0.049645 -127                          5
+                            Undressing          14       41        0.487805               22       1      21        0.045455  -20                          4
+                               Calling          15       43        0.488372               22       1      21        0.045455  -20                          5
+                         Peeling fruit          35      104        0.538462               49       2      43        0.044444  -41                          5
+                               Running          13       37        0.351351               25       1      24        0.040000  -23                          5
+                          Combing hair          19       54        0.444444               28       1      25        0.038462  -24                          5
+                       Getting dressed          18       54        0.425926               31       1      26        0.037037  -25                          5
+                          Wiping hands          23       68        0.470588               35       1      32        0.030303  -31                          5
+                         Using a phone          16       47        0.170213               38       1      37        0.026316  -36                          4
+                            Stretching          29       85        0.458824               47       1      44        0.022222  -43                          5
+                              Drinking          40      119        0.571429               51       1      47        0.020833  -46                          5
+                     Grabbing utensils          32       93        0.430108               52       1      50        0.019608  -49                          5
+                     Checking the time          31       93        0.301075               63       1      58        0.016949  -57                          5
+                        Washing dishes          11       33        0.181818               27       0      27        0.000000  -27                          4
+                          Washing face          15       44        0.386364               26       0      24        0.000000  -24                          5
+                        Wiping surface          18       52        0.384615               32       0      30        0.000000  -30                          5
+                        Brushing teeth          16       47        0.212766               36       0      30        0.000000  -30                          4
+                       Taking medicine          23       68        0.426471               38       0      38        0.000000  -38                          5
+                           Standing up          29       83        0.542169               38       0      38        0.000000  -38                          5
+                     Massaging oneself          21       62        0.435484               34       0      34        0.000000  -34                          5
+                            Lying down          11       33        0.424242               19       0      19        0.000000  -19                          5
+                                Lunges           9       26        0.192308               21       0      19        0.000000  -19                          5
+Listening to the music with headphones          25       73        0.356164               46       0      45        0.000000  -45                          5
+             Checking body temperature          19       55        0.436364               31       0      31        0.000000  -31                          5
+                               Writing          14       38        0.394737               23       0      23        0.000000  -23                          5
+
+wrote /Users/toheeb.ogunade/Workspace/cuchx-large/phaselab/action_specialist_results.csv
+
+actions clearing >=0.80 precision, >=8 disagreements, >=3 folds: 0

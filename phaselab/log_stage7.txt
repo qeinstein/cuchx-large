@@ -1,0 +1,24 @@
+n rows: 809
+unary-only baseline (position+phys, no pairwise/pool): 0.9122
+unary-only extended (+ phase-relative):                0.9159
+[reference] full champion pipeline (audit_champ.csv):  0.9073
+
+=== decision-level: EXTENDED vs actual CHAMPION prediction ===
+flips 54  W->R 29  R->W 22  W->W 3  precision 0.569  net +7  net/100 13.0
+
+per fold:
+  fold 0: n=181 flips= 11 W->R=  4 R->W=  6 prec=0.400 net= -2
+  fold 1: n=180 flips= 21 W->R= 12 R->W=  8 prec=0.600 net= +4
+  fold 2: n=174 flips=  8 W->R=  7 R->W=  0 prec=1.000 net= +7
+  fold 3: n=138 flips=  8 W->R=  2 R->W=  6 prec=0.250 net= -4
+  fold 4: n=136 flips=  6 W->R=  4 R->W=  2 prec=0.667 net= +2
+
+by phase coverage:
+  has_phase=False: n= 33 flips=  6 W->R=  5 R->W=  0 prec=1.000
+  has_phase=True: n=776 flips= 48 W->R= 24 R->W= 22 prec=0.522
+
+by block size k:
+  k=2: n= 14 flips=  2 W->R=  2 R->W=  0 prec=1.000
+  k=3: n=795 flips= 52 W->R= 27 R->W= 22 prec=0.551
+
+wrote /Users/toheeb.ogunade/Workspace/cuchx-large/phaselab/stage7_decision_audit.csv
