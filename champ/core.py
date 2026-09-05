@@ -483,6 +483,22 @@ def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=No
             bf3 = block_features([pathof[b] for b in blk], mfeat, slots)
             X3 = pd.DataFrame(bf3).reindex(columns=mm['cols'])
             P3 = mm['clf'].predict_proba(X3.to_numpy(float))
+            # In a thinned block, visible clip order is not necessarily protocol-slot
+            # order: (1,2) makes visible row 0 the middle trial. The historical branch
+            # scored every row with its visible index (0,1), silently misusing the
+            # position features of the physical group head. Keep that behavior by
+            # default; the virtual-slot arm recomputes only the position fields for
+            # each candidate slot and is evaluated separately.
+            P3slot = None
+            if os.environ.get('CHAMP_EMO_VIRTUAL_SLOTS', '0') == '1':
+                P3slot = np.empty((k, slots, len(cls)), float)
+                for ii in range(k):
+                    for ss in range(slots):
+                        fr = dict(bf3[ii])
+                        fr['pos'] = ss
+                        fr['posfrac'] = ss / max(1, slots - 1)
+                        xx = pd.DataFrame([fr]).reindex(columns=mm['cols'])
+                        P3slot[ii, ss] = mm['clf'].predict_proba(xx.to_numpy(float))[0]
             RP3 = None
             if w_r3d and r3d_clf is not None and r3d_scaler is not None and r3d_feat is not None:
                 rz = [r3d_feat.get(pathof[b]) for b in blk]
@@ -512,7 +528,8 @@ def solve_emotion(vis, blocks, mm, w_phys=1.0, w_pos=1.0, w_pair=1.0, pool_of=No
                     for i, s in enumerate(present):
                         m = cand[perm[s]]
                         g = mgroup(m)
-                        pg = P3[i, cls.index(g)] if g in cls else 1e-6
+                        pg = ((P3slot[i, s, cls.index(g)] if P3slot is not None
+                               else P3[i, cls.index(g)]) if g in cls else 1e-6)
                         tot += w_phys * (np.log(max(pg, 1e-9))
                                          - np.log(max(mm['gprior'][g], 1e-9)))
                         if RP3 is not None:

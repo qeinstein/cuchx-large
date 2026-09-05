@@ -287,7 +287,14 @@ def fit_pool_model(tr, meta, blocks_by_user, statcache, augment_subblocks=True):
         if augment_subblocks and len(blk) >= 3:
             for k in (2, len(blk) - 1) if len(blk) > 3 else (2,):
                 for sub in itertools.combinations(blk, k):
-                    variants.append((list(sub), _clip_truth(vis, list(sub))))
+                    # A thinned block hides one recording, but the latent action pool is
+                    # still the full session pool. The old target used only answers asked
+                    # on retained clips, creating false negatives for actions whose only
+                    # positive supervision was on the withheld sibling. Keep the historical
+                    # behavior as the default and make the corrected target explicit.
+                    target = (truth if os.environ.get('CHAMP_POOL_FULL_SUBBLOCKS', '0') == '1'
+                              else _clip_truth(vis, list(sub)))
+                    variants.append((list(sub), target))
         for bl, tt in variants:
             uni, rows, qs, forced = candidate_evidence(vis, bl, 'oof', statcache)
             for a in uni:
