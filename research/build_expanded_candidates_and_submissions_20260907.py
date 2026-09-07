@@ -1,7 +1,7 @@
-"""Build Expanded Candidate Pool and Reset Submissions for CUHK-X Large Model Track.
+"""Build Expanded 15-Candidate Pool and Reset Submissions for CUHK-X Large Model Track (Session 14).
 
 Generates:
-1. Complete 11-candidate metadata registry (Tier S, Tier A, Tier B).
+1. Complete 15-candidate metadata registry (Tier S, Tier A, Tier B).
 2. Reset submission candidates combining optimal group testing.
 3. Checksum verification against 330 champion base.
 """
@@ -28,8 +28,42 @@ def main():
     base_df = pd.read_csv(BASE_CHAMPION_PATH)
     te_df = pd.read_csv(os.path.join(ROOT, "test_qa.csv")).set_index("qa_id")
 
-    # 11 Validated Candidates
+    # 15 Validated Candidates (Session 14 Re-ranked)
     CANDIDATES = [
+        # Tier S (Extremely High Confidence / Proof-backed)
+        {
+            "qa_id": "test_0488",
+            "category": "single",
+            "from": "A",
+            "to": "C",
+            "meaning_from": "doing jumping jacks",
+            "meaning_to": "turning pages",
+            "tier": "Tier S",
+            "evidence": "Same-clip test_0528 (object interaction) proves object is 'a documents'. 1.6s duration physically falsifies jumping jacks. VLM C. Champion margin 0.00 fallback.",
+            "split": "public_or_private",
+        },
+        {
+            "qa_id": "test_0146",
+            "category": "multi",
+            "from": "BCD",
+            "to": "BC",
+            "meaning_from": "Turning a page, Walking, Sitting down",
+            "meaning_to": "Turning a page, Walking",
+            "tier": "Tier S",
+            "evidence": "Block 17: Sitting down is 100% absent from Block 17 across all clips. Sibling combination test_0257 and sequence test_0340 prove action set.",
+            "split": "public_or_private",
+        },
+        {
+            "qa_id": "test_0165",
+            "category": "multi",
+            "from": "CD",
+            "to": "D",
+            "meaning_from": "Checking body temperature, Drinking",
+            "meaning_to": "Drinking",
+            "tier": "Tier S",
+            "evidence": "Block 26: Checking body temperature is 100% absent from Block 26 across all clips. Sibling combination test_0276 proves action set.",
+            "split": "public_or_private",
+        },
         {
             "qa_id": "test_0458",
             "category": "emotion",
@@ -63,6 +97,8 @@ def main():
             "evidence": "Block 41: user16 2-3 triad [Patiently, Calmly, Hurriedly]. Candidate A algebra proves d_0444 = 0 on public. Deterministic +1 private win.",
             "split": "private_proven",
         },
+
+        # Tier A (Strong Multi-Modal Consensus)
         {
             "qa_id": "test_0461",
             "category": "emotion",
@@ -72,28 +108,6 @@ def main():
             "meaning_to": "Seriously",
             "tier": "Tier A",
             "evidence": "Block 50: user1 4-1 triad [Casually, Seriously, Quickly]. Retained pair P((0,1))=84.3%. Joint solver favors Seriously over Casually.",
-            "split": "public_or_private",
-        },
-        {
-            "qa_id": "test_0469",
-            "category": "emotion",
-            "from": "A",
-            "to": "D",
-            "meaning_from": "Slowly",
-            "meaning_to": "Comfortably",
-            "tier": "Tier A",
-            "evidence": "Block 54: Kinematic and skeleton speed calibration favoring Comfortably.",
-            "split": "public_or_private",
-        },
-        {
-            "qa_id": "test_0137",
-            "category": "multi",
-            "from": "AC",
-            "to": "ACD",
-            "meaning_from": "Pouring, Eating",
-            "meaning_to": "Pouring, Eating, Stirring",
-            "tier": "Tier A",
-            "evidence": "Block 12: Sole multi omission across all 144 multi questions. Sibling combination questions test_0247 and test_0621 confirm Stirring in session. VLM predicted D.",
             "split": "public_or_private",
         },
         {
@@ -108,14 +122,25 @@ def main():
             "split": "public_or_private",
         },
         {
-            "qa_id": "test_0488",
+            "qa_id": "test_0519",
             "category": "single",
             "from": "A",
             "to": "C",
-            "meaning_from": "doing jumping jacks",
-            "meaning_to": "turning pages",
+            "meaning_from": "walking",
+            "meaning_to": "drinking water",
             "tier": "Tier A",
-            "evidence": "HARn Single fallback repair: LM_test_0023 duration is 1.60s with 4.26% motion. 1.6s duration physically falsifies jumping jacks. VLM explicitly predicted C.",
+            "evidence": "HARn Single fallback repair: Exact room match (pixel diff 2.35) to Block 51 where drinking is performed in both trials. Walking is absent.",
+            "split": "public_or_private",
+        },
+        {
+            "qa_id": "test_0506",
+            "category": "single",
+            "from": "A",
+            "to": "C",
+            "meaning_from": "wiping a bowl",
+            "meaning_to": "doing lunges",
+            "tier": "Tier A",
+            "evidence": "HARn Single fallback repair: Room match (pixel diff 10.95) to Block 49 where lunges is established. Wiping a bowl is absent.",
             "split": "public_or_private",
         },
         {
@@ -130,6 +155,30 @@ def main():
             "split": "public_or_private",
         },
         {
+            "qa_id": "test_0430",
+            "category": "emotion",
+            "from": "D",
+            "to": "C",
+            "meaning_from": "Slowly",
+            "meaning_to": "Steadily",
+            "tier": "Tier A",
+            "evidence": "Block 35: user24 6-3 triad [Slowly, Steadily, Restlessly]. Resolves duplicate Slowly collision with test_0431. Speed 0.014.",
+            "split": "public_or_private",
+        },
+        {
+            "qa_id": "test_0432",
+            "category": "emotion",
+            "from": "C",
+            "to": "A",
+            "meaning_from": "Nervously",
+            "meaning_to": "Restlessly",
+            "tier": "Tier A",
+            "evidence": "Block 35: user24 6-3 triad. Highest agitation (speed 0.041, IMU 0.252) matches Restlessly. Negative margin -1.99 in champ.",
+            "split": "public_or_private",
+        },
+
+        # Tier B (Auxiliary / Secondary)
+        {
             "qa_id": "test_0477",
             "category": "single",
             "from": "A",
@@ -137,18 +186,18 @@ def main():
             "meaning_from": "doing jumping jacks",
             "meaning_to": "mopping the floor",
             "tier": "Tier B",
-            "evidence": "HARn Single fallback repair: LM_test_0007 duration 2.90s, motion concentrated at floor (40.9% bottom, 37.4% mid, 21.7% top). Matches mopping the floor.",
+            "evidence": "HARn Single fallback repair: LM_test_0007 duration 2.90s, motion concentrated at floor (40.9% bottom, 37.4% mid, 21.7% top). Matches mopping.",
             "split": "public_or_private",
         },
         {
-            "qa_id": "test_0465",
-            "category": "emotion",
-            "from": "A",
-            "to": "D",
-            "meaning_from": "Slowly",
-            "meaning_to": "Leisurely",
+            "qa_id": "test_0137",
+            "category": "multi",
+            "from": "AC",
+            "to": "ACD",
+            "meaning_from": "Pouring, Eating",
+            "meaning_to": "Pouring, Eating, Stirring",
             "tier": "Tier B",
-            "evidence": "Block 52: Semantic nuance between Slowly and Leisurely.",
+            "evidence": "Block 12: Stirring is established in session by combination test_0247 & test_0621. VLM predicted D.",
             "split": "public_or_private",
         },
     ]
@@ -158,53 +207,68 @@ def main():
     cand_df.to_csv(cand_csv_path, index=False)
     print(f"[OK] Wrote {len(cand_df)} candidates to {cand_csv_path}")
 
-    # Build Submission Configurations
+    # Re-ranked Submission Strike Suite for Reset
+    # Sub 1: Golden Anchor Probe: test_0488: A -> C (Tier S+, highest possible individual certainty)
+    # Sub 2: Multi-Action Structural Pair: test_0146: BCD -> BC, test_0165: CD -> D, test_0488: C, test_0444: B
+    # Sub 3: Tier S Core Strike: All 6 Tier S candidates (0488, 0146, 0165, 0458, 0464, 0444)
+    # Sub 4: Decisive Rank 1 Ten-Fold Strike: 6 Tier S + top Tier A (0488, 0146, 0165, 0458, 0464, 0461, 0436, 0519, 0506, 0444)
+    # Sub 5: Block 35 & Auxiliary Strike: 0488, 0146, 0165, 0458, 0430, 0432, 0426, 0444
+
     SUBMISSION_PLANS = [
         {
-            "filename": "submission_reset_sub1_singleton_probe_0458.csv",
-            "desc": "Sub 1: Singleton Probe of test_0458 (Tier S anchor)",
-            "flips": {"test_0458": "A"},
+            "filename": "submission_reset_sub1_golden_anchor_0488.csv",
+            "desc": "Sub 1: Golden Anchor Probe of test_0488 (Tier S+, test_0528 documents proof)",
+            "flips": {"test_0488": "C"},
         },
         {
-            "filename": "submission_reset_sub2_tier_s_bundle.csv",
-            "desc": "Sub 2: Tier S Bundle (0458 + 0464 + 0444 private lock)",
-            "flips": {"test_0458": "A", "test_0464": "A", "test_0444": "B"},
-        },
-        {
-            "filename": "submission_reset_sub3_core_rank1_pack.csv",
-            "desc": "Sub 3: Core Rank 1 Pack (0458 + 0464 + 0461 + 0469 + 0137 + 0444)",
+            "filename": "submission_reset_sub2_structural_multi_bundle.csv",
+            "desc": "Sub 2: Structural Multi + Anchor Bundle (0488 + 0146 + 0165 + 0444 private lock)",
             "flips": {
-                "test_0458": "A",
-                "test_0464": "A",
-                "test_0461": "D",
-                "test_0469": "D",
-                "test_0137": "ACD",
+                "test_0488": "C",
+                "test_0146": "BC",
+                "test_0165": "D",
                 "test_0444": "B",
             },
         },
         {
-            "filename": "submission_reset_sub4_maximal_rank1_strike.csv",
-            "desc": "Sub 4: Maximal Rank 1 Strike (9 Tier-S/A Flips: 0458, 0464, 0461, 0469, 0137, 0436, 0488, 0426, 0444)",
+            "filename": "submission_reset_sub3_tier_s_core_pack.csv",
+            "desc": "Sub 3: Full Tier S Core Pack (0488 + 0146 + 0165 + 0458 + 0464 + 0444)",
             "flips": {
+                "test_0488": "C",
+                "test_0146": "BC",
+                "test_0165": "D",
+                "test_0458": "A",
+                "test_0464": "A",
+                "test_0444": "B",
+            },
+        },
+        {
+            "filename": "submission_reset_sub4_decisive_rank1_strike.csv",
+            "desc": "Sub 4: Decisive 10-Flips Rank 1 Strike (0488, 0146, 0165, 0458, 0464, 0461, 0436, 0519, 0506, 0444)",
+            "flips": {
+                "test_0488": "C",
+                "test_0146": "BC",
+                "test_0165": "D",
                 "test_0458": "A",
                 "test_0464": "A",
                 "test_0461": "D",
-                "test_0469": "D",
-                "test_0137": "ACD",
                 "test_0436": "A",
+                "test_0519": "C",
+                "test_0506": "C",
+                "test_0444": "B",
+            },
+        },
+        {
+            "filename": "submission_reset_sub5_block35_and_emotion_bundle.csv",
+            "desc": "Sub 5: Block 35 Collision Resolution + Tier S/A Core (0488, 0146, 0165, 0458, 0430, 0432, 0426, 0444)",
+            "flips": {
                 "test_0488": "C",
+                "test_0146": "BC",
+                "test_0165": "D",
+                "test_0458": "A",
+                "test_0430": "C",
+                "test_0432": "A",
                 "test_0426": "B",
-                "test_0444": "B",
-            },
-        },
-        {
-            "filename": "submission_reset_sub5_orthogonal_validation.csv",
-            "desc": "Sub 5: Orthogonal Cross-Check (0458 + 0436 + 0488 + 0477 + 0444)",
-            "flips": {
-                "test_0458": "A",
-                "test_0436": "A",
-                "test_0488": "C",
-                "test_0477": "B",
                 "test_0444": "B",
             },
         },
