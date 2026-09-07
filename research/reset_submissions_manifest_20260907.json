@@ -13,34 +13,40 @@
   },
   {
     "filename": "submission_reset_sub2_structural_multi_bundle.csv",
-    "description": "Sub 2: Structural Multi + Anchor Bundle (0488 + 0146 + 0165 + 0444 private lock)",
-    "sha256": "d669997334bdf812dcf230b599ecb29570c7b3ea701adb80c6bb3f3ab279ee8c",
-    "flips_count": 4,
+    "description": "Sub 2: Structural Multi + Anchor Bundle (0488 + 0146 + 0165 + 3 proven private locks: 0444, 0647, 0206)",
+    "sha256": "171963cc07b12447731d3b5b8d91dcba4457dbaea4329edb382b703edbbe2e7d",
+    "flips_count": 6,
     "flips": {
       "test_0488": "C",
       "test_0146": "BC",
       "test_0165": "D",
-      "test_0444": "B"
+      "test_0444": "B",
+      "test_0647": "DCBA",
+      "test_0206": "CD"
     },
     "diff_summary": [
       "test_0488: A -> C",
       "test_0146: BCD -> BC",
       "test_0165: CD -> D",
-      "test_0444: C -> B"
+      "test_0444: C -> B",
+      "test_0647: DCAB -> DCBA",
+      "test_0206: D -> CD"
     ]
   },
   {
     "filename": "submission_reset_sub3_tier_s_core_pack.csv",
-    "description": "Sub 3: Full Tier S Core Pack (0488 + 0146 + 0165 + 0458 + 0464 + 0444)",
-    "sha256": "7b6e069d8262b2a08abaa46c7f96e5ae4f80bd3c5b4e00122da6c221dc76174f",
-    "flips_count": 6,
+    "description": "Sub 3: Full Tier S Core Pack (0488 + 0146 + 0165 + 0458 + 0464 + 3 private locks: 0444, 0647, 0206)",
+    "sha256": "ce58ec0537fa406ec9a32780e3bf473b7c61918e935985e7356eb6e3476f3265",
+    "flips_count": 8,
     "flips": {
       "test_0488": "C",
       "test_0146": "BC",
       "test_0165": "D",
       "test_0458": "A",
       "test_0464": "A",
-      "test_0444": "B"
+      "test_0444": "B",
+      "test_0647": "DCBA",
+      "test_0206": "CD"
     },
     "diff_summary": [
       "test_0488: A -> C",
@@ -48,14 +54,16 @@
       "test_0165: CD -> D",
       "test_0458: B -> A",
       "test_0464: D -> A",
-      "test_0444: C -> B"
+      "test_0444: C -> B",
+      "test_0647: DCAB -> DCBA",
+      "test_0206: D -> CD"
     ]
   },
   {
     "filename": "submission_reset_sub4_decisive_rank1_strike.csv",
-    "description": "Sub 4: Decisive 10-Flips Rank 1 Strike (0488, 0146, 0165, 0458, 0464, 0461, 0436, 0519, 0506, 0444)",
-    "sha256": "943b80c7fe43443fff815d16ea7377cb7d85af5f7c8997f5f9a68b6014b2f142",
-    "flips_count": 10,
+    "description": "Sub 4: Decisive Rank 1 Strike (0488, 0146, 0165, 0458, 0464, 0461, 0436, 0519, 0506, plus 3 private locks: 0444, 0647, 0206)",
+    "sha256": "8a66275500d2ab2152392f40f3473d27d8164e737fd007e6785239cc2867c08b",
+    "flips_count": 12,
     "flips": {
       "test_0488": "C",
       "test_0146": "BC",
@@ -66,7 +74,9 @@
       "test_0436": "A",
       "test_0519": "C",
       "test_0506": "C",
-      "test_0444": "B"
+      "test_0444": "B",
+      "test_0647": "DCBA",
+      "test_0206": "CD"
     },
     "diff_summary": [
       "test_0488: A -> C",
@@ -78,14 +88,16 @@
       "test_0436: C -> A",
       "test_0519: A -> C",
       "test_0506: A -> C",
-      "test_0444: C -> B"
+      "test_0444: C -> B",
+      "test_0647: DCAB -> DCBA",
+      "test_0206: D -> CD"
     ]
   },
   {
     "filename": "submission_reset_sub5_block35_and_emotion_bundle.csv",
-    "description": "Sub 5: Block 35 Collision Resolution + Tier S/A Core (0488, 0146, 0165, 0458, 0430, 0432, 0426, 0444)",
-    "sha256": "e615951c342576c53448bc4fbec18ad1c838de3cf0b87d02dafbea52dfe8ba10",
-    "flips_count": 8,
+    "description": "Sub 5: Block 35 Collision Resolution + Tier S/A Core + 3 private locks (0488, 0146, 0165, 0458, 0430, 0432, 0426, 0444, 0647, 0206)",
+    "sha256": "511cf91620a3fa2f110e23cd4db5e6dd5364a0df8f21221e25bc60d63338592a",
+    "flips_count": 10,
     "flips": {
       "test_0488": "C",
       "test_0146": "BC",
@@ -94,7 +106,9 @@
       "test_0430": "C",
       "test_0432": "A",
       "test_0426": "B",
-      "test_0444": "B"
+      "test_0444": "B",
+      "test_0647": "DCBA",
+      "test_0206": "CD"
     },
     "diff_summary": [
       "test_0488: A -> C",
@@ -104,7 +118,9 @@
       "test_0430: D -> C",
       "test_0432: C -> A",
       "test_0426: C -> B",
-      "test_0444: C -> B"
+      "test_0444: C -> B",
+      "test_0647: DCAB -> DCBA",
+      "test_0206: D -> CD"
     ]
   }
 ]

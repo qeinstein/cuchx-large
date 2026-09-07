@@ -1,8 +1,8 @@
-"""Build Expanded 15-Candidate Pool and Reset Submissions for CUHK-X Large Model Track (Session 14).
+"""Build Expanded 17-Candidate Pool and Reset Submissions for CUHK-X Large Model Track (Session 14).
 
 Generates:
-1. Complete 15-candidate metadata registry (Tier S, Tier A, Tier B).
-2. Reset submission candidates combining optimal group testing.
+1. Complete 17-candidate metadata registry (Tier S, Tier A, Tier B).
+2. Reset submission candidates combining optimal group testing and private locks.
 3. Checksum verification against 330 champion base.
 """
 import os, hashlib, json
@@ -95,6 +95,28 @@ def main():
             "meaning_to": "Patiently",
             "tier": "Tier S (Priv)",
             "evidence": "Block 41: user16 2-3 triad [Patiently, Calmly, Hurriedly]. Candidate A algebra proves d_0444 = 0 on public. Deterministic +1 private win.",
+            "split": "private_proven",
+        },
+        {
+            "qa_id": "test_0647",
+            "category": "sequence",
+            "from": "DCAB",
+            "to": "DCBA",
+            "meaning_from": "Squats, Jumping jacks, Massaging oneself, Checking body temp",
+            "meaning_to": "Squats, Jumping jacks, Checking body temp, Massaging oneself",
+            "tier": "Tier S (Priv)",
+            "evidence": "Block 21: Unique total order repair. Sibling test_0342 (ACDB) and user21 3-2 template prove Checking temp < Massaging. Singleton probe 56063402 proved d_0647 = 0 on public. Deterministic +1 private win.",
+            "split": "private_proven",
+        },
+        {
+            "qa_id": "test_0206",
+            "category": "multi",
+            "from": "D",
+            "to": "CD",
+            "meaning_from": "Grabbing utensils",
+            "meaning_to": "Stirring, Grabbing utensils",
+            "tier": "Tier S (Priv)",
+            "evidence": "Block 50 (LM_test_0192): 4-modal proof of Stirring (dense skel/imu 0.9993, DINOv2 0.9983, thermal 0.4537). Singleton probe 56063270 proved d_0206 = 0 on public. Deterministic +1 private win.",
             "split": "private_proven",
         },
 
@@ -209,10 +231,10 @@ def main():
 
     # Re-ranked Submission Strike Suite for Reset
     # Sub 1: Golden Anchor Probe: test_0488: A -> C (Tier S+, highest possible individual certainty)
-    # Sub 2: Multi-Action Structural Pair: test_0146: BCD -> BC, test_0165: CD -> D, test_0488: C, test_0444: B
-    # Sub 3: Tier S Core Strike: All 6 Tier S candidates (0488, 0146, 0165, 0458, 0464, 0444)
-    # Sub 4: Decisive Rank 1 Ten-Fold Strike: 6 Tier S + top Tier A (0488, 0146, 0165, 0458, 0464, 0461, 0436, 0519, 0506, 0444)
-    # Sub 5: Block 35 & Auxiliary Strike: 0488, 0146, 0165, 0458, 0430, 0432, 0426, 0444
+    # Sub 2: Structural Multi + Anchor Bundle + 3 Private Locks: 0488 + 0146 + 0165 + 0444 + 0647 + 0206
+    # Sub 3: Tier S Core Strike: All 8 Tier S candidates (0488, 0146, 0165, 0458, 0464, 0444, 0647, 0206)
+    # Sub 4: Decisive Rank 1 Strike: 8 Tier S + top Tier A (0488, 0146, 0165, 0458, 0464, 0461, 0436, 0519, 0506, 0444, 0647, 0206)
+    # Sub 5: Block 35 & Auxiliary Strike: 0488, 0146, 0165, 0458, 0430, 0432, 0426, 0444, 0647, 0206
 
     SUBMISSION_PLANS = [
         {
@@ -222,17 +244,19 @@ def main():
         },
         {
             "filename": "submission_reset_sub2_structural_multi_bundle.csv",
-            "desc": "Sub 2: Structural Multi + Anchor Bundle (0488 + 0146 + 0165 + 0444 private lock)",
+            "desc": "Sub 2: Structural Multi + Anchor Bundle (0488 + 0146 + 0165 + 3 proven private locks: 0444, 0647, 0206)",
             "flips": {
                 "test_0488": "C",
                 "test_0146": "BC",
                 "test_0165": "D",
                 "test_0444": "B",
+                "test_0647": "DCBA",
+                "test_0206": "CD",
             },
         },
         {
             "filename": "submission_reset_sub3_tier_s_core_pack.csv",
-            "desc": "Sub 3: Full Tier S Core Pack (0488 + 0146 + 0165 + 0458 + 0464 + 0444)",
+            "desc": "Sub 3: Full Tier S Core Pack (0488 + 0146 + 0165 + 0458 + 0464 + 3 private locks: 0444, 0647, 0206)",
             "flips": {
                 "test_0488": "C",
                 "test_0146": "BC",
@@ -240,11 +264,13 @@ def main():
                 "test_0458": "A",
                 "test_0464": "A",
                 "test_0444": "B",
+                "test_0647": "DCBA",
+                "test_0206": "CD",
             },
         },
         {
             "filename": "submission_reset_sub4_decisive_rank1_strike.csv",
-            "desc": "Sub 4: Decisive 10-Flips Rank 1 Strike (0488, 0146, 0165, 0458, 0464, 0461, 0436, 0519, 0506, 0444)",
+            "desc": "Sub 4: Decisive Rank 1 Strike (0488, 0146, 0165, 0458, 0464, 0461, 0436, 0519, 0506, plus 3 private locks: 0444, 0647, 0206)",
             "flips": {
                 "test_0488": "C",
                 "test_0146": "BC",
@@ -256,11 +282,13 @@ def main():
                 "test_0519": "C",
                 "test_0506": "C",
                 "test_0444": "B",
+                "test_0647": "DCBA",
+                "test_0206": "CD",
             },
         },
         {
             "filename": "submission_reset_sub5_block35_and_emotion_bundle.csv",
-            "desc": "Sub 5: Block 35 Collision Resolution + Tier S/A Core (0488, 0146, 0165, 0458, 0430, 0432, 0426, 0444)",
+            "desc": "Sub 5: Block 35 Collision Resolution + Tier S/A Core + 3 private locks (0488, 0146, 0165, 0458, 0430, 0432, 0426, 0444, 0647, 0206)",
             "flips": {
                 "test_0488": "C",
                 "test_0146": "BC",
@@ -270,6 +298,8 @@ def main():
                 "test_0432": "A",
                 "test_0426": "B",
                 "test_0444": "B",
+                "test_0647": "DCBA",
+                "test_0206": "CD",
             },
         },
     ]
