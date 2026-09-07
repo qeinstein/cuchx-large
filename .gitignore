@@ -36,6 +36,7 @@ venv/
 !submission_095906_328of342_CHAMPION.csv
 !submission_096198_329of342_CHAMPION.csv
 !submission_096491_330of342_CHAMPION.csv
+!research/submission_reset_*.csv
 *.npz
 hf_data/
 hf_data_manual/
