@@ -25,13 +25,17 @@ IMU, 3D Skeleton, mmWave). 682 test questions; the public leaderboard scores 342
 | 7 | `submission_090643_regen.csv` | 0.90643 | 310/342 | — | pool/manner joint solving, emopair |
 | 8 | `submission_092105_SUBMITTED.csv` | 0.92105 | 315/342 | 6/166 | 10 selective DINOv2 corrections (mech H, E) |
 | 9 | **`submission_093859_SUBMITTED.csv`** | **0.93859** | **321/342** | **5** | **mechanisms S + T + W/X** (30 changed rows) |
+| 10 | **`submission_094736_mixed14_SUBMITTED.csv`** | **0.94736** | **324/342** | — | corrected manner priors plus structural template bundle |
+| 11 | **`submission_095614_327of342_conservative_SUBMITTED.csv`** | **0.95614** | **327/342** | **3** | paired-cohort emotion + exact visible object templates |
+| 12 | `submission_095321_326of342_maximal_SUBMITTED.csv` | 0.95321 | 326/342 | 3 (team best) | added two ungated HARn-single templates; regressed one public answer |
+| 13 | **`submission_095906_328of342_CHAMPION.csv`** | **0.95906** | **328/342** | **3** | sequence total-order consistency repair (`test_0335`, `test_0647`) + multi Stirring (`test_0206`) |
+| 14 | **`submission_096198_329of342_CHAMPION.csv`** | **0.96198** | **329/342** | **3** | user1 Cohort 3 protocol matching (`test_0452`, `test_0459`, `test_0461`) |
+| 15 | **`submission_096491_330of342_CHAMPION.csv`** | **0.96491** | **330/342** | **3** | Candidate A singleton decomposition (`test_0443: D -> B`, W->R win) |
 
-**Current champion: `submission_093859_SUBMITTED.csv`** — byte-identical preserved copy of
-`submission_corrlayer_S_W_T.csv`, Kaggle submission id 56007625. Every experiment is
-evaluated against *this exact file*. Do not regenerate a baseline and compare against that.
+**Current champion: `submission_096491_330of342_CHAMPION.csv`** — public **0.96491 = 330/342, rank 3** (Kaggle submission id 56070318).
+All new candidate diffs are taken against this file. Current #1 is 334/342; gap: 4 public answers.
 
-Leaderboard context at the time of writing: #1 332/342, #2 331/342, #3 324/342, #4 322/342,
-us #5 321/342.
+Leaderboard context on 2026-09-07: #1 334/342, #2 333/342, us #3 at 330/342. Gap to #1: 4 public answers.
 
 ---
 
@@ -298,7 +302,8 @@ Mechanism flags (all default to champion behaviour): `CHAMP_REPAIR`, `CHAMP_CONF
 
 ### Rules of engagement
 
-* Never modify or overwrite `submission_093859_SUBMITTED.csv` or `submission_092105_SUBMITTED.csv`.
+* Never modify or overwrite any scored `*_SUBMITTED.csv` or the frozen
+  `submission_095614_327of342_CHAMPION.csv`.
 * No Kaggle submission without explicit authorisation.
 * A mechanism ships only with subject-disjoint flip precision measured against the exact
   champion, fold-consistency, and a per-row audit reason for every test override.

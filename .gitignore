@@ -30,11 +30,19 @@ venv/
 # Data
 *.zip
 *.csv
+!submission_095614_327of342_conservative_SUBMITTED.csv
+!submission_095321_326of342_maximal_SUBMITTED.csv
+!submission_095614_327of342_CHAMPION.csv
+!submission_095906_328of342_CHAMPION.csv
+!submission_096198_329of342_CHAMPION.csv
+!submission_096491_330of342_CHAMPION.csv
 *.npz
 hf_data/
 hf_data_manual/
 splits/
 notebooks/
+scratch
+champ/torch_cache/
 
 # IDE
 .vscode/

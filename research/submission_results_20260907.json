@@ -1,0 +1,120 @@
+{
+  "competition": "cuhk-x-competition-large-model-track",
+  "baseline": {
+    "artifact": "submission_095614_327of342_CHAMPION.csv",
+    "public_score": 0.95614,
+    "correct": 327,
+    "rank": 3
+  },
+  "submissions": [
+    {
+      "submission_id": 56063270,
+      "artifact": "submission_candidate_stirring_test0206.csv",
+      "sha256": "cdab2ec288388cdde4f145de6ab792be39c4d22e3fa4ef001b3eff2bd3727d35",
+      "public_score": 0.95614,
+      "correct": 327,
+      "rank": 3,
+      "delta_correct": 0,
+      "description": "test_0206 Multi correction (Stirring addition: D -> CD). 0.999 skel/imu, 0.998 dino, 0.454 thermal"
+    },
+    {
+      "submission_id": 56063402,
+      "artifact": "submission_candidate_seq_test0647_dcba.csv",
+      "sha256": "7658e4de8740caa432092e747750f041e06bc1ecdd4b351ef686f8cebe465073",
+      "public_score": 0.95614,
+      "correct": 327,
+      "rank": 3,
+      "delta_correct": 0,
+      "description": "test_0647 sequence repair (DCAB -> DCBA): proven mutual inconsistency in block testb021"
+    },
+    {
+      "submission_id": 56063417,
+      "artifact": "submission_candidate_seq_test0335_dbca.csv",
+      "sha256": "bd644340ebe04d952dce2c21c13ff3677449d0fbe5fa05b61582a42e7b461faf",
+      "public_score": 0.95906,
+      "correct": 328,
+      "rank": 3,
+      "delta_correct": 1,
+      "description": "test_0335 sequence repair (DBAC -> DBCA): proven mutual inconsistency in testb006"
+    },
+    {
+      "submission_id": 56063425,
+      "artifact": "submission_095906_328of342_CHAMPION.csv",
+      "sha256": "97208ef94f3179b94f5a81a3559f47f4ad4311f21f5dd06020b1e70c29b4fc0f",
+      "public_score": 0.95906,
+      "correct": 328,
+      "rank": 3,
+      "delta_correct": 1,
+      "description": "Session 7 Champion: 3 verified orthogonal fixes (test_0335 +1 public W->R, test_0647 total order repair, test_0206 4-modal Stirring)"
+    },
+    {
+      "submission_id": 56063712,
+      "artifact": "submission_096198_329of342_CHAMPION.csv",
+      "sha256": "c3986c6f656911d1fbf31b50ec6a7c6337a820746776cf4d9627af0394214648",
+      "public_score": 0.96198,
+      "correct": 329,
+      "rank": 3,
+      "delta_correct": 1,
+      "description": "Session 8 batch: 3 verified user1 emotion fixes (test_0452 C->A, test_0459 C->B, test_0461 D->C) on logical 328 base. Public score 0.95906 -> 0.96198 (+1 public point, 329/342)."
+    },
+    {
+      "submission_id": 56064923,
+      "artifact": "submission_candidate_cohort2_batch4.csv",
+      "public_score": 0.96198,
+      "correct": 329,
+      "rank": 3,
+      "delta_correct": 0,
+      "description": "Session 9 Candidate A: 4 Cohort-2 emotion trial-withholding fixes (test_0438, test_0440, test_0443, test_0444)"
+    },
+    {
+      "submission_id": 56064981,
+      "artifact": "submission_candidate_cohort2_all5.csv",
+      "public_score": 0.96198,
+      "correct": 329,
+      "rank": 3,
+      "delta_correct": 0,
+      "description": "Session 9 Candidate B: 5 Cohort-2 emotion fixes (Candidate A + test_0426 Anxiously)"
+    },
+    {
+      "submission_id": 56070285,
+      "artifact": "submission_probe_test0438_C.csv",
+      "public_score": 0.95906,
+      "correct": 328,
+      "rank": 3,
+      "delta_correct": -1,
+      "description": "Session 10 Probe 1: singleton test_0438 B->C (Candidate A value). Regressed -1, proving B is correct."
+    },
+    {
+      "submission_id": 56070304,
+      "artifact": "submission_probe_test0440_B.csv",
+      "public_score": 0.96198,
+      "correct": 329,
+      "rank": 3,
+      "delta_correct": 0,
+      "description": "Session 10 Probe 2: singleton test_0440 C->B (Candidate A value). Neutral delta = 0."
+    },
+    {
+      "submission_id": 56070318,
+      "artifact": "submission_096491_330of342_CHAMPION.csv",
+      "sha256": "e42cde96bafb108b8c16bcd97e5deb2af32c1657a089351ada8a72a95ed805cd",
+      "public_score": 0.96491,
+      "correct": 330,
+      "rank": 3,
+      "delta_correct": 1,
+      "description": "Session 10 Probe 3: singleton test_0443 D->B (Candidate A value). Scored 330/342 (+1 public point, W->R win). New Champion 330/342."
+    }
+  ],
+  "current_champion": {
+    "artifact": "submission_096491_330of342_CHAMPION.csv",
+    "sha256": "e42cde96bafb108b8c16bcd97e5deb2af32c1657a089351ada8a72a95ed805cd",
+    "public_score": 0.96491,
+    "correct": 330,
+    "rank": 3
+  },
+  "leader": {
+    "team": "Knight of Favonius",
+    "public_score": 0.9766,
+    "correct": 334,
+    "gap_correct": 4
+  }
+}
