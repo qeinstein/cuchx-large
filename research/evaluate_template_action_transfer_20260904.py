@@ -13,7 +13,13 @@ import evaluate_user_template_pairs_20260904 as E
 
 ROOT = E.ROOT
 TR = E.TR
-OOF = E.OOF
+POOL_LEDGER = os.path.join(ROOT, "research", "pool_full_subblocks_paired_oof_20260905.csv")
+if os.path.exists(POOL_LEDGER):
+    OOF = (pd.read_csv(POOL_LEDGER)[["qa_id", "pred_base"]]
+           .rename(columns={"pred_base": "pred"}).drop_duplicates("qa_id")
+           .set_index("qa_id"))
+else:
+    OOF = E.OOF
 PAIRS = {
     "user6": "user16", "user16": "user6",
     "user7": "user17", "user17": "user7",
@@ -100,6 +106,9 @@ def main():
                         truth="".join(E.letters(r.answer)),
                     ))
     d = pd.DataFrame(rows)
+    if d.empty:
+        d = pd.DataFrame(columns=["target", "donor", "block_index", "qa_id",
+                                  "category", "base", "new", "truth"])
     d.to_csv(os.path.join(ROOT, "research", "user_template_action_decisions.csv"), index=False)
     print("all", summarize(d))
     for cat in ["single", "multi", "combination"]:

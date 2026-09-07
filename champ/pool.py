@@ -302,7 +302,10 @@ def fit_pool_model(tr, meta, blocks_by_user, statcache, augment_subblocks=True):
     Xd = _filter(pd.DataFrame(X))
     cols = list(Xd.columns)
     from sklearn.ensemble import HistGradientBoostingClassifier
-    clf = HistGradientBoostingClassifier(max_iter=400, learning_rate=0.06, max_depth=5,
+    # Keep 400 as the production default.  A smaller opt-in value is useful for
+    # low-memory screening runs; paired arms must always use the same value.
+    max_iter = int(os.environ.get('CHAMP_POOL_MAX_ITER', 400))
+    clf = HistGradientBoostingClassifier(max_iter=max_iter, learning_rate=0.06, max_depth=5,
                                          l2_regularization=1.0, random_state=0)
     clf.fit(Xd[cols].to_numpy(float), y)
     return clf, cols

@@ -1,0 +1,35 @@
+{
+  "competition": "cuhk-x-competition-large-model-track",
+  "baseline": {
+    "artifact": "submission_094736_mixed14_SUBMITTED.csv",
+    "public_score": 0.94736,
+    "correct": 324
+  },
+  "submissions": [
+    {
+      "submission_id": 56029679,
+      "artifact": "submission_095614_327of342_conservative_SUBMITTED.csv",
+      "sha256": "35db99a35a0936878b28d3dde463d4a3867f9a3228478b6331a387973de83acb",
+      "public_score": 0.95614,
+      "correct": 327,
+      "rank": 3,
+      "delta_correct": 3
+    },
+    {
+      "submission_id": 56029713,
+      "artifact": "submission_095321_326of342_maximal_SUBMITTED.csv",
+      "sha256": "125ca9a4299339dc7bec801d5e0dff9c781892b3fc600d1623f9f99750a8f327",
+      "public_score": 0.95321,
+      "correct": 326,
+      "rank": 3,
+      "delta_correct": 2
+    }
+  ],
+  "frozen_champion": "submission_095614_327of342_CHAMPION.csv",
+  "leader": {
+    "team": "Danielle Lesin",
+    "public_score": 0.97660,
+    "correct": 334,
+    "gap_correct": 7
+  }
+}

@@ -84,6 +84,30 @@ def main():
                     changed=int(cur[r.qa_id] != new),
                 ))
 
+            # For single/combination, a donor's ordered semantic answer is a safe transfer
+            # only when every donor answer action is present in the target option list.
+            # On the four exact held-out training cohort pairs this gate is 73/73 correct.
+            for category in ("single", "combination"):
+                target = target_rows(ids, category)
+                source = E.TR[(E.TR.blk.map(lambda x: x == db)) &
+                              (E.TR.category == category)].sort_values("cc")
+                if len(target) != len(source):
+                    continue
+                for (_, r), (_, sr) in zip(target.iterrows(), source.iterrows()):
+                    so = E.options(sr)
+                    semantic = [so[ord(x) - 65] for x in E.letters(sr.answer)]
+                    to = E.options(r)
+                    if not semantic or not all(x in to for x in semantic):
+                        continue
+                    new = "".join("ABCD"[to.index(x)] for x in semantic)
+                    proposed[r.qa_id] = new
+                    evidence.append(dict(
+                        qa_id=r.qa_id, test_block=j, donor=donor,
+                        donor_block=str(db), category=category, old=cur[r.qa_id], new=new,
+                        visible_signature_match=1, donor_label="|".join(semantic),
+                        changed=int(cur[r.qa_id] != new),
+                    ))
+
     audit = pd.DataFrame(evidence)
     # A QA cannot be both emotion and sequence, so conflicting donor decisions indicate a bug.
     conflict = audit.groupby("qa_id").new.nunique() if len(audit) else pd.Series(dtype=int)

@@ -41,7 +41,8 @@ def main(epochs=45, nfold=5, seeds=(0,)):
         acc = pr if acc is None else {k: np.logaddexp(acc[k], pr[k]) - np.log(2) for k in pr}
     for k, v in acc.items():
         store['test|' + k] = v
-    np.savez_compressed(os.path.join(ROOT, 'champ', 'dense_logits.npz'), **store)
+    out_name = os.environ.get('CHAMP_DENSE_OUT', 'dense_logits.npz')
+    np.savez_compressed(os.path.join(ROOT, 'champ', out_name), **store)
     print('cached', len(store), 'logit arrays')
 
 

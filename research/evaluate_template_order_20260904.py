@@ -157,7 +157,14 @@ def build_pred_closure(target, mode, exclude_user):
     return out, margin, src
 
 # Mechanism-S baseline on the 305 rows with dense coverage.
-s_audit = pd.read_csv(os.path.join(ROOT, 'seqlab', 'audit_gated.csv'))
+s_path = os.path.join(ROOT, 'seqlab', 'audit_gated.csv')
+baseline_col = 'new'
+if not os.path.exists(s_path):
+    s_path = os.path.join(ROOT, 'seqlab', 'audit_run18.csv')
+    # audit_run18's ``new`` column is the experimental nested-weight arm; the shipped
+    # sequence mechanism S is its ``base`` column.
+    baseline_col = 'base'
+s_audit = pd.read_csv(s_path)
 s_audit = s_audit.set_index('qa')
 truth = {r.qa_id: ''.join(letters(r.answer)) for _, r in SEQ.iterrows()}
 fold = {r.qa: int(r.fold) for _, r in s_audit.reset_index().iterrows()}
@@ -172,7 +179,7 @@ def audit(pred, base):
     return dict(n=len(keys), base=bc, new=nc, flips=len(flips), wr=wr, rw=rw,
                 precision=wr / max(1, wr + rw), net=wr - rw)
 
-BASE = s_audit['new'].to_dict()
+BASE = s_audit[baseline_col].to_dict()
 print('sequence rows', len(SEQ), 'S audit rows', len(BASE))
 print('blocks', len(BLOCKS), 'pool sizes', Counter(map(len, POOLS.values())))
 for mode in ['same_family', 'exact_pool', 'paired_exact_pool', 'paired_family',

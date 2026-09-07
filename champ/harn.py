@@ -44,7 +44,8 @@ def fit_action_clf(meta, hold_users):
     X = d[cols].to_numpy(float)
     y = d.action.to_numpy()
     from sklearn.ensemble import HistGradientBoostingClassifier
-    clf = HistGradientBoostingClassifier(max_iter=350, learning_rate=0.07, max_depth=6,
+    max_iter = int(os.environ.get('CHAMP_HARN_AGG_MAX_ITER', 350))
+    clf = HistGradientBoostingClassifier(max_iter=max_iter, learning_rate=0.07, max_depth=6,
                                          l2_regularization=1.0, random_state=0)
     clf.fit(X, y)
     return clf, cols

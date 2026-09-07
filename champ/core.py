@@ -318,7 +318,11 @@ def fit_manner(tr, meta):
                 cnt_gr[(gr, rb)] += 1; cnt_gr_tot[gr] += 1
                 lab_by_grp[(gr, lab)] += 1
     Xd = pd.DataFrame(X)
-    cols = list(Xd.columns)
+    # Modality columns absent from every fitted row contain no information.  Older
+    # sklearn releases silently tolerated them, while newer histogram binning raises on
+    # an empty finite-value array, so discard them explicitly and deterministically.
+    cols = [c for c in Xd.columns if np.isfinite(
+        pd.to_numeric(Xd[c], errors='coerce').to_numpy(float)).any()]
     from sklearn.ensemble import HistGradientBoostingClassifier
     clf = HistGradientBoostingClassifier(max_iter=400, learning_rate=0.05, max_depth=4,
                                          l2_regularization=1.0, random_state=0)
@@ -349,7 +353,9 @@ def fit_manner(tr, meta):
     # The cache is derived from HAU Depth_Color videos and contains no answer data.
     r3d_clf = r3d_scaler = r3d_feat = None
     if float(os.environ.get('CHAMP_EMO_R3D', '0.0')):
-        rp = os.path.join(ROOT, 'research', 'r3d_depthcolor_features.npz')
+        rp = os.environ.get(
+            'CHAMP_EMO_R3D_CACHE',
+            os.path.join(ROOT, 'research', 'r3d_depthcolor_features.npz'))
         if os.path.exists(rp):
             from sklearn.linear_model import LogisticRegression
             from sklearn.preprocessing import StandardScaler

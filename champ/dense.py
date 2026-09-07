@@ -171,20 +171,42 @@ class TCN(nn.Module):
 def train_dense(items, epochs=40, seed=0, verbose=True):
     torch.manual_seed(seed)
     din = items[0]['X'].shape[1]
-    mu = np.concatenate([it['X'] for it in items]).mean(0)
-    sd = np.concatenate([it['X'] for it in items]).std(0) + 1e-6
+    # Compute the exact population moments without materialising a second copy of
+    # every frame.  A full concatenation is several GiB on the restored dataset
+    # and can be killed on otherwise adequate low-memory runners.
+    nobs = sum(len(it['X']) for it in items)
+    sx = np.zeros(din, np.float64)
+    sx2 = np.zeros(din, np.float64)
+    for it in items:
+        x64 = np.asarray(it['X'], dtype=np.float64)
+        sx += x64.sum(0)
+        sx2 += np.square(x64).sum(0)
+    mu = (sx / nobs).astype(np.float32)
+    var = np.maximum(sx2 / nobs - np.square(sx / nobs), 0.0)
+    sd = (np.sqrt(var) + 1e-6).astype(np.float32)
     net = TCN(din).to(DEV)
     opt = torch.optim.AdamW(net.parameters(), lr=2.5e-3, weight_decay=1e-4)
     sch = torch.optim.lr_scheduler.OneCycleLR(opt, 2.5e-3, epochs * len(items) // 8 + 1)
-    cnt = np.bincount(np.concatenate([it['y'] for it in items]), minlength=NCLS).astype(float)
+    cnt = np.zeros(NCLS, dtype=float)
+    for it in items:
+        cnt += np.bincount(it['y'], minlength=NCLS)
     w = (cnt.sum() / (cnt + 50.0)) ** 0.5
     w = torch.tensor(w / w.mean(), dtype=torch.float32, device=DEV)
     rng = np.random.default_rng(seed)
     for ep in range(epochs):
         net.train(); tl = 0.0; nb = 0
-        order = rng.permutation(len(items))
-        for bi in range(0, len(order), 8):
-            batch = [items[i] for i in order[bi:bi + 8]]
+        if os.environ.get('CHAMP_DENSE_BUCKET', '0') == '1':
+            # Convolutions still see the padded batch tensor, so mixing a very
+            # long session with seven short ones wastes most CPU on zeros.  Keep
+            # every example unchanged, group by length, and randomise batch order.
+            order = np.asarray(sorted(range(len(items)), key=lambda i: len(items[i]['X'])))
+            batches = [order[bi:bi + 8] for bi in range(0, len(order), 8)]
+            batches = [batches[i] for i in rng.permutation(len(batches))]
+        else:
+            order = rng.permutation(len(items))
+            batches = [order[bi:bi + 8] for bi in range(0, len(order), 8)]
+        for inds in batches:
+            batch = [items[i] for i in inds]
             T = max(len(b['X']) for b in batch)
             X = np.zeros((len(batch), T, din), np.float32)
             Y = np.full((len(batch), T), -100, np.int64)
@@ -201,7 +223,7 @@ def train_dense(items, epochs=40, seed=0, verbose=True):
             opt.step()
             try: sch.step()
             except Exception: pass
-            tl += float(loss); nb += 1
+            tl += loss.detach().item(); nb += 1
         if verbose and (ep + 1) % 10 == 0:
             print(f'    dense ep{ep+1} loss {tl/max(1,nb):.4f}', flush=True)
     return dict(net=net, mu=mu, sd=sd)

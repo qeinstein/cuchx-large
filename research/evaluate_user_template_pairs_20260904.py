@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import itertools
 import os
+import ast
 import pickle
 from collections import Counter, defaultdict
 
@@ -30,8 +31,71 @@ import pandas as pd
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TR = pd.read_csv(os.path.join(ROOT, "training_qa.csv"))
 TE = pd.read_csv(os.path.join(ROOT, "test_qa.csv"))
-OOF = pd.read_csv(os.path.join(ROOT, "champ", "audit_champ.csv")).set_index("qa_id")
-SNAP = pickle.load(open(os.path.join(ROOT, "research", "test_pool_snapshot.pkl"), "rb"))
+def load_oof_predictions():
+    audit = os.path.join(ROOT, "champ", "audit_champ.csv")
+    if os.path.exists(audit):
+        return pd.read_csv(audit).set_index("qa_id")
+    # The full audit is gitignored.  Its two columns needed here are retained in
+    # category-specific research ledgers, so the structural audit remains reproducible.
+    emo = pd.read_csv(os.path.join(
+        ROOT, "research", "emotion_manner_physics_map_20260904", "tables",
+        "emotion_residual_ledger.csv"
+    ))[["qa_id", "pred_label"]].rename(columns={"pred_label": "pred"})
+    trq = pd.read_csv(os.path.join(ROOT, "training_qa.csv"))
+    tq = trq.set_index("qa_id")
+    emo["pred"] = ["ABCD"[[str(tq.loc[q, x]).strip() for x in "ABCD"].index(p)]
+                   for q, p in zip(emo.qa_id, emo.pred)]
+    # ``new`` is the experimental sequence-transfer output from run18.  The audit
+    # must measure against the shipped champion prediction, retained as ``base``.
+    seq = pd.read_csv(os.path.join(ROOT, "seqlab", "audit_run18.csv"))[
+        ["qa", "base"]
+    ].rename(columns={"qa": "qa_id", "base": "pred"})
+    return pd.concat([emo, seq], ignore_index=True).drop_duplicates("qa_id").set_index("qa_id")
+
+
+OOF = load_oof_predictions()
+
+
+def load_test_snapshot():
+    """Load the historical snapshot, or reconstruct it from the tracked test atlas.
+
+    The original pickle was intentionally gitignored, while the atlas that records the
+    same repaired blocks and selected pools is preserved.  Merge the four conformance
+    splits back into the production-era blocks used by this template audit.
+    """
+    snapshot = os.path.join(ROOT, "research", "test_pool_snapshot.pkl")
+    if os.path.exists(snapshot):
+        return pickle.load(open(snapshot, "rb"))
+    atlas = pd.read_csv(os.path.join(
+        ROOT, "research", "multi_pair_atlas_20260904", "block_atlas_test.csv"
+    )).drop_duplicates("block_id")
+    repaired = [list(map(int, ast.literal_eval(x))) for x in atlas.block_indices]
+    merge_sets = ({101, 102, 103}, {119, 120, 121}, {168, 169, 170}, {189, 190})
+    blocks = []
+    i = 0
+    while i < len(repaired):
+        merged = None
+        for target in merge_sets:
+            acc = set()
+            j = i
+            while j < len(repaired) and acc < target and repaired[j][0] in target:
+                acc.update(repaired[j]); j += 1
+            if acc == target:
+                merged = (sorted(acc), j)
+                break
+        if merged is None:
+            blocks.append(repaired[i]); i += 1
+        else:
+            blocks.append(merged[0]); i = merged[1]
+    pool_of = {}
+    for _, r in atlas.iterrows():
+        pool = [x for x in str(r.selected_pool).split("||") if x and x != "nan"]
+        for idx in ast.literal_eval(r.block_indices):
+            pool_of[int(idx)] = pool
+    return {"blocks": blocks, "pool_of": pool_of}
+
+
+SNAP = load_test_snapshot()
 
 
 def add_keys(d: pd.DataFrame) -> pd.DataFrame:
