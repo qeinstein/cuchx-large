@@ -1,0 +1,100 @@
+[
+  {
+    "filename": "submission_reset_sub1_singleton_probe_0458.csv",
+    "description": "Sub 1: Singleton Probe of test_0458 (Tier S anchor)",
+    "sha256": "72fe83681f81548f995b82e966d426700c5986c50d727c42a8adb49fc5475b5f",
+    "flips_count": 1,
+    "flips": {
+      "test_0458": "A"
+    },
+    "diff_summary": [
+      "test_0458: B -> A"
+    ]
+  },
+  {
+    "filename": "submission_reset_sub2_tier_s_bundle.csv",
+    "description": "Sub 2: Tier S Bundle (0458 + 0464 + 0444 private lock)",
+    "sha256": "bd3f2c571c44a0e1f661aaa2734be82919678226caba962f9a0dd8e2d07f1477",
+    "flips_count": 3,
+    "flips": {
+      "test_0458": "A",
+      "test_0464": "A",
+      "test_0444": "B"
+    },
+    "diff_summary": [
+      "test_0458: B -> A",
+      "test_0464: D -> A",
+      "test_0444: C -> B"
+    ]
+  },
+  {
+    "filename": "submission_reset_sub3_core_rank1_pack.csv",
+    "description": "Sub 3: Core Rank 1 Pack (0458 + 0464 + 0461 + 0469 + 0137 + 0444)",
+    "sha256": "ea348e2f1703210073b814bb2581424b2a352450b49a5317170abbb5b941ce98",
+    "flips_count": 6,
+    "flips": {
+      "test_0458": "A",
+      "test_0464": "A",
+      "test_0461": "D",
+      "test_0469": "D",
+      "test_0137": "ACD",
+      "test_0444": "B"
+    },
+    "diff_summary": [
+      "test_0458: B -> A",
+      "test_0464: D -> A",
+      "test_0461: C -> D",
+      "test_0469: A -> D",
+      "test_0137: AC -> ACD",
+      "test_0444: C -> B"
+    ]
+  },
+  {
+    "filename": "submission_reset_sub4_maximal_rank1_strike.csv",
+    "description": "Sub 4: Maximal Rank 1 Strike (9 Tier-S/A Flips: 0458, 0464, 0461, 0469, 0137, 0436, 0488, 0426, 0444)",
+    "sha256": "1bbba7750bf167b9890f48a049995df442989752fc4c1a8b36f5be8cb1a0fbea",
+    "flips_count": 9,
+    "flips": {
+      "test_0458": "A",
+      "test_0464": "A",
+      "test_0461": "D",
+      "test_0469": "D",
+      "test_0137": "ACD",
+      "test_0436": "A",
+      "test_0488": "C",
+      "test_0426": "B",
+      "test_0444": "B"
+    },
+    "diff_summary": [
+      "test_0458: B -> A",
+      "test_0464: D -> A",
+      "test_0461: C -> D",
+      "test_0469: A -> D",
+      "test_0137: AC -> ACD",
+      "test_0436: C -> A",
+      "test_0488: A -> C",
+      "test_0426: C -> B",
+      "test_0444: C -> B"
+    ]
+  },
+  {
+    "filename": "submission_reset_sub5_orthogonal_validation.csv",
+    "description": "Sub 5: Orthogonal Cross-Check (0458 + 0436 + 0488 + 0477 + 0444)",
+    "sha256": "6e1ac238d0689121c8f91f811e80493e4b7f1d64937e6d2d9c83dd488f24f3ae",
+    "flips_count": 5,
+    "flips": {
+      "test_0458": "A",
+      "test_0436": "A",
+      "test_0488": "C",
+      "test_0477": "B",
+      "test_0444": "B"
+    },
+    "diff_summary": [
+      "test_0458: B -> A",
+      "test_0436: C -> A",
+      "test_0488: A -> C",
+      "test_0477: A -> B",
+      "test_0444: C -> B"
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+qa_id,category,from,to,meaning_from,meaning_to,tier,evidence,split
+test_0458,emotion,B,A,Hurriedly,Steadily,Tier S,"Block 48: user1 3-1 triad [Leisurely, Steadily, Hurriedly]. Recording gap 71.1s (T1->T2). Retained pair P((0,1))=75.1%. IMU variance 3.7x lower. Physical margin +3.647.",public_or_private
+test_0464,emotion,D,A,Anxiously,Steadily,Tier S,"Block 51: user1 5-1 & user20 2-2 triad [Gently, Steadily, Anxiously]. Clip 0 is Gently (T1). Gap 86.9s. Retained pair P((0,1))=65.0%, P((0,2))=0.1%. Physical margin +1.234.",public_or_private
+test_0444,emotion,C,B,Comfortably,Patiently,Tier S (Priv),"Block 41: user16 2-3 triad [Patiently, Calmly, Hurriedly]. Candidate A algebra proves d_0444 = 0 on public. Deterministic +1 private win.",private_proven
+test_0461,emotion,C,D,Casually,Seriously,Tier A,"Block 50: user1 4-1 triad [Casually, Seriously, Quickly]. Retained pair P((0,1))=84.3%. Joint solver favors Seriously over Casually.",public_or_private
+test_0469,emotion,A,D,Slowly,Comfortably,Tier A,Block 54: Kinematic and skeleton speed calibration favoring Comfortably.,public_or_private
+test_0137,multi,AC,ACD,"Pouring, Eating","Pouring, Eating, Stirring",Tier A,Block 12: Sole multi omission across all 144 multi questions. Sibling combination questions test_0247 and test_0621 confirm Stirring in session. VLM predicted D.,public_or_private
+test_0436,emotion,C,A,Thoroughly,Steadily,Tier A,"Block 37: cand = Hurriedly|Steadily|Thoroughly. Retained pair P((1,2))=71.9% (Trial 2 & 3). Sibling test_0435 is Hurriedly (T3). Joint solver margin +3.906.",public_or_private
+test_0488,single,A,C,doing jumping jacks,turning pages,Tier A,HARn Single fallback repair: LM_test_0023 duration is 1.60s with 4.26% motion. 1.6s duration physically falsifies jumping jacks. VLM explicitly predicted C.,public_or_private
+test_0426,emotion,C,B,Comfortably,Anxiously,Tier A,"Block 33: Retained pair P((0,1))=81.3%. Joint solver margin +1.617 favoring Anxiously. Sibling margin -6.42 in baseline audit.",public_or_private
+test_0477,single,A,B,doing jumping jacks,mopping the floor,Tier B,"HARn Single fallback repair: LM_test_0007 duration 2.90s, motion concentrated at floor (40.9% bottom, 37.4% mid, 21.7% top). Matches mopping the floor.",public_or_private
+test_0465,emotion,A,D,Slowly,Leisurely,Tier B,Block 52: Semantic nuance between Slowly and Leisurely.,public_or_private
