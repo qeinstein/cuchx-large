@@ -1,0 +1,115 @@
+{
+  "sub1_core_bundle": {
+    "file": "research/submission_reset_sub1_core_bundle.csv",
+    "sha256": "9937a92992fcf5a752359b9320906d82a0372d8915e0d3bd0edfd0070f041870",
+    "flips": {
+      "test_0488": "C",
+      "test_0146": "BC",
+      "test_0165": "D",
+      "test_0458": "A"
+    },
+    "diffs": [
+      "test_0488: A -> C",
+      "test_0146: BCD -> BC",
+      "test_0165: CD -> D",
+      "test_0458: B -> A"
+    ],
+    "num_flips": 4
+  },
+  "sub2_structural_pack": {
+    "file": "research/submission_reset_sub2_structural_pack.csv",
+    "sha256": "2dc3293e8bc462859eb7d24c093f9fa0af9f79cd5e08f03461f8f9b65781fb3e",
+    "flips": {
+      "test_0488": "C",
+      "test_0146": "BC",
+      "test_0165": "D"
+    },
+    "diffs": [
+      "test_0488: A -> C",
+      "test_0146: BCD -> BC",
+      "test_0165: CD -> D"
+    ],
+    "num_flips": 3
+  },
+  "sub3_adaptive_rank1_strike": {
+    "file": "research/submission_reset_sub3_adaptive_rank1_strike.csv",
+    "sha256": "a9e8b884e831ae11d0096f40dbbc59c403a54a5ba61ff83469e6ef69dec6240f",
+    "flips": {
+      "test_0488": "C",
+      "test_0146": "BC",
+      "test_0165": "D",
+      "test_0458": "A",
+      "test_0461": "D"
+    },
+    "diffs": [
+      "test_0488: A -> C",
+      "test_0146: BCD -> BC",
+      "test_0165: CD -> D",
+      "test_0458: B -> A",
+      "test_0461: C -> D"
+    ],
+    "num_flips": 5
+  },
+  "sub3_isolate_cand3_cand4": {
+    "file": "research/submission_reset_sub3_isolate_cand3_cand4.csv",
+    "sha256": "0bddce5c2e864a90f0f19ead8a8ff23ab1eb75b343e3404684ccb9396c502bb4",
+    "flips": {
+      "test_0165": "D",
+      "test_0458": "A"
+    },
+    "diffs": [
+      "test_0165: CD -> D",
+      "test_0458: B -> A"
+    ],
+    "num_flips": 2
+  },
+  "sub3_cand1_cand2_pair": {
+    "file": "research/submission_reset_sub3_cand1_cand2_pair.csv",
+    "sha256": "88c7c7927cb3a931f7e10e27d1e17e528cb24a18733c358a9a791e361b9b7805",
+    "flips": {
+      "test_0488": "C",
+      "test_0146": "BC"
+    },
+    "diffs": [
+      "test_0488: A -> C",
+      "test_0146: BCD -> BC"
+    ],
+    "num_flips": 2
+  },
+  "sub3_cand1_cand4_pair": {
+    "file": "research/submission_reset_sub3_cand1_cand4_pair.csv",
+    "sha256": "1db79c1aceca218b20d9a43102328949eebd182cf650daa6354b40e7d79680df",
+    "flips": {
+      "test_0488": "C",
+      "test_0458": "A"
+    },
+    "diffs": [
+      "test_0488: A -> C",
+      "test_0458: B -> A"
+    ],
+    "num_flips": 2
+  },
+  "final_fortified_private_champion": {
+    "file": "research/submission_reset_final_fortified_private_champion.csv",
+    "sha256": "25f85e610f9093c57b83ddc0ec9f29798fc60dac3e8fd022a56be2ea53dc97ee",
+    "flips": {
+      "test_0488": "C",
+      "test_0146": "BC",
+      "test_0165": "D",
+      "test_0458": "A",
+      "test_0444": "B",
+      "test_0647": "DCBA",
+      "test_0206": "CD"
+    },
+    "diffs": [
+      "test_0488: A -> C",
+      "test_0146: BCD -> BC",
+      "test_0165: CD -> D",
+      "test_0458: B -> A",
+      "test_0444: C -> B",
+      "test_0647: DCAB -> DCBA",
+      "test_0206: D -> CD"
+    ],
+    "num_flips": 7
+  }
+}

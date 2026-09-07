@@ -1,19 +1,17 @@
-"""Execution and Monitoring Script for Kaggle Reset Strike Suite (2026-09-08).
+"""Execution and Monitoring Script for Optimized Adaptive Reset Strike Suite (2026-09-08).
 
-Orchestrates the 5 reset submissions for the CUHK-X Large Model Track:
-  1. Verifies local file SHA-256 integrity against reset manifest.
+Orchestrates the reset submissions for the CUHK-X Large Model Track:
+  1. Verifies local file SHA-256 integrity against reset suite manifest.
   2. Monitors UTC time countdown to quota reset at 00:00:00 UTC.
-  3. Provides step-by-step submission dispatch and evaluation polling.
-  4. Records evaluation results, score deltas, and updated leaderboard state.
+  3. Dispatches submissions one by one (DO NOT AUTO-SUBMIT).
+  4. Interfaces with adaptive_reset_decoder_20260908.py to determine next best move.
 
 Usage:
-  python research/execute_reset_submissions_20260908.py check       # Verify files, quota, and countdown
-  python research/execute_reset_submissions_20260908.py status      # Poll and display latest submissions
-  python research/execute_reset_submissions_20260908.py submit 1    # Submit Sub 1 (Golden Anchor Probe)
-  python research/execute_reset_submissions_20260908.py submit 2    # Submit Sub 2 (Structural Multi Bundle)
-  python research/execute_reset_submissions_20260908.py submit 3    # Submit Sub 3 (Tier S Core Pack)
-  python research/execute_reset_submissions_20260908.py submit 4    # Submit Sub 4 (Decisive Rank 1 Strike)
-  python research/execute_reset_submissions_20260908.py submit 5    # Submit Sub 5 (Block 35 Collision Resolution)
+  python research/execute_reset_submissions_20260908.py check                    # Verify files, quota, countdown
+  python research/execute_reset_submissions_20260908.py status                   # Poll and display latest Kaggle submissions
+  python research/execute_reset_submissions_20260908.py submit sub1_core_bundle  # Submit Sub 1 (Core 4-Candidate Bundle)
+  python research/execute_reset_submissions_20260908.py submit sub2_structural   # Submit Sub 2 (Non-Emotion 3-Candidate Pack)
+  python research/execute_reset_submissions_20260908.py submit <name>            # Submit specific candidate file from manifest
 """
 
 import os
@@ -26,8 +24,7 @@ from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 COMPETITION_SLUG = "cuhk-x-competition-large-model-track"
-MANIFEST_PATH = os.path.join(ROOT, "research", "reset_submissions_manifest_20260907.json")
-RESULTS_LOG_PATH = os.path.join(ROOT, "research", "submission_results_20260908.json")
+MANIFEST_PATH = os.path.join(ROOT, "research", "reset_suite_manifest_20260908.json")
 
 def get_sha256(filepath):
     h = hashlib.sha256()
@@ -48,33 +45,32 @@ def verify_files():
     manifest = load_manifest()
     print("=== Verifying Submission Files Integrity ===")
     all_ok = True
-    for item in manifest:
-        fpath = os.path.join(ROOT, "research", item["filename"])
+    for name, item in manifest.items():
+        fpath = os.path.join(ROOT, item["file"])
         if not os.path.exists(fpath):
             print(f"[FAIL] Missing file: {fpath}")
             all_ok = False
             continue
         actual_sha = get_sha256(fpath)
         if actual_sha != item["sha256"]:
-            print(f"[FAIL] SHA mismatch for {item['filename']}: expected {item['sha256']}, got {actual_sha}")
+            print(f"[FAIL] SHA mismatch for {item['file']}: expected {item['sha256']}, got {actual_sha}")
             all_ok = False
         else:
-            print(f"[OK] {item['filename']} (flips: {item['flips_count']}, SHA: {actual_sha[:16]}...)")
+            print(f"[OK] {name:32s} (flips: {item['num_flips']}, SHA: {actual_sha[:16]}...)")
     return all_ok
 
 def check_time_and_countdown():
     now_utc = datetime.now(timezone.utc)
     print(f"Current UTC Time: {now_utc.strftime('%Y-%m-%d %H:%M:%S UTC')}")
-    # Reset is scheduled for 2026-09-08 00:00:00 UTC
     reset_target = datetime(2026, 9, 8, 0, 0, 0, tzinfo=timezone.utc)
     delta = reset_target - now_utc
     if delta.total_seconds() > 0:
         hrs, rem = divmod(int(delta.total_seconds()), 3600)
         mins, secs = divmod(rem, 60)
-        print(f"Time to Quota Reset: {hrs:02d}h {mins:02d}m {secs:02d}s")
+        print(f"Time to Quota Reset (00:00:00 UTC): {hrs:02d}h {mins:02d}m {secs:02d}s")
         return False, delta.total_seconds()
     else:
-        print("[READY] Quota reset target (00:00:00 UTC) has been passed!")
+        print("[READY] Quota reset target (00:00:00 UTC) has been passed! Submissions active.")
         return True, 0
 
 def get_kaggle_status():
@@ -84,23 +80,28 @@ def get_kaggle_status():
         return None
     return out
 
-def submit_file(sub_num):
+def submit_by_name(target_name):
     manifest = load_manifest()
-    if not (1 <= sub_num <= len(manifest)):
-        print(f"[ERROR] Invalid submission number: {sub_num} (must be 1 to {len(manifest)})")
+    matched_key = None
+    for k in manifest.keys():
+        if target_name.lower() in k.lower():
+            matched_key = k
+            break
+            
+    if not matched_key:
+        print(f"[ERROR] Submission key '{target_name}' not found. Available keys: {list(manifest.keys())}")
         return False
 
-    item = manifest[sub_num - 1]
-    fpath = os.path.join(ROOT, "research", item["filename"])
-    
-    # Re-verify SHA before submitting
+    item = manifest[matched_key]
+    fpath = os.path.join(ROOT, item["file"])
     actual_sha = get_sha256(fpath)
     assert actual_sha == item["sha256"], "SHA mismatch right before submission!"
 
-    desc = item["description"]
-    print(f"\nSubmitting: {item['filename']}")
+    desc = f"{matched_key}: {', '.join(item['diffs'])}"
+    print(f"\nSubmitting Key: {matched_key}")
+    print(f"File: {item['file']}")
     print(f"Description: {desc}")
-    print(f"File SHA-256: {actual_sha}")
+    print(f"SHA-256: {actual_sha}")
 
     cmd = f'kaggle competitions submit -c {COMPETITION_SLUG} -f "{fpath}" -m "{desc}"'
     print(f"Executing: {cmd}")
@@ -118,9 +119,12 @@ def submit_file(sub_num):
             if status_out:
                 lines = status_out.splitlines()
                 print("\n".join(lines[:6]))
-                # Check top line status
                 if len(lines) > 2 and "COMPLETE" in lines[2]:
                     print("\n[EVALUATION COMPLETE]")
+                    print("\n==================================================")
+                    print("NEXT STEP: Run adaptive decoder with observed score delta:")
+                    print("  python research/adaptive_reset_decoder_20260908.py --d1 <delta1>")
+                    print("==================================================")
                     break
         return True
     else:
@@ -141,12 +145,11 @@ def main():
             print(status)
     elif sys.argv[1] == "submit":
         if len(sys.argv) < 3:
-            print("Usage: python execute_reset_submissions_20260908.py submit <sub_number 1-5>")
+            print("Usage: python execute_reset_submissions_20260908.py submit <key_name>")
             sys.exit(1)
-        sub_num = int(sys.argv[2])
-        submit_file(sub_num)
+        submit_by_name(sys.argv[2])
     else:
         print(f"Unknown command: {sys.argv[1]}")
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
