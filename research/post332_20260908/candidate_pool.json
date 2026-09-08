@@ -1,0 +1,92 @@
+{
+  "baseline": "submission_097076_332of342_CHAMPION.csv",
+  "baseline_sha256": "25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56",
+  "candidates": [
+    {
+      "qa_id": "test_0526",
+      "from": "D",
+      "to": "C",
+      "label": "best_remaining_residual",
+      "status": "research_only",
+      "confidence": "low_to_medium",
+      "evidence": ["nested in parent session whose visible sequence includes typing", "hands-at-desk depth frames"],
+      "counterevidence": ["phone-versus-typing OOF model 149/173 gives target p(typing)=0.470", "cached dense final frames favor Using-a-phone", "object not visually resolved"],
+      "correlation": "independent of five-row sign probes; correlated with 0483 through desk/posture ambiguity",
+      "file": "ADAPTIVE_fifth_0526.csv"
+    },
+    {
+      "qa_id": "test_0483",
+      "from": "A",
+      "to": "C",
+      "label": "demoted_residual",
+      "status": "research_only_do_not_submit_without_new_evidence",
+      "confidence": "low",
+      "evidence": ["child starts inside a seated parent interval", "VLM originally favored typing"],
+      "counterevidence": ["sitting-versus-typing OOF 209/231 gives target p(typing)=0.435", "dense final frames favor reading/checking-time rather than typing", "overlaps checking-time candidate at boundary"],
+      "correlation": "correlated with 0526 through same desk/posture confound",
+      "file": "EXPLORATORY_test_0483.csv"
+    },
+    {
+      "qa_id": "test_0501",
+      "from": "B",
+      "to": "A",
+      "label": "algebraic_recovery_only",
+      "status": "not_a_new_candidate",
+      "confidence": "unknown_signed_effect",
+      "evidence": ["part of measured five-row aggregate +2", "direct video supports standing up"],
+      "counterevidence": ["individual public sign is unidentified"],
+      "correlation": "one of five aggregate signs; omitted from first four probes and inferred exactly",
+      "file": "ADAPTIVE_fifth_0526_plus_revert_0501.csv"
+    },
+    {
+      "qa_id": "test_0478",
+      "from": "C",
+      "to": "B",
+      "label": "exact_template_disagreement",
+      "status": "preserve_incumbent",
+      "confidence": "low_to_medium",
+      "evidence": ["one subject-disjoint exact-option donor predicts peeling fruit", "raw depth is compatible with hands-at-torso handling"],
+      "counterevidence": ["independent ExtraTrees action model predicts incumbent mopping", "nearest motion descriptors favor mopping/walking", "support is only one donor and exact-template single OOF is 115/118, not perfect"],
+      "correlation": "independent of five-row sign probes; same missing-modality family as 0488",
+      "file": null
+    },
+    {
+      "qa_id": "test_0507",
+      "from": "A",
+      "to": "C",
+      "label": "exact_template_disagreement",
+      "status": "preserve_incumbent",
+      "confidence": "low",
+      "evidence": ["one exact-option donor predicts using a smartphone"],
+      "counterevidence": ["independent ExtraTrees predicts incumbent walking with confidence .693", "incumbent sensor margin is 26.8", "support is one donor and exact-template single OOF is not perfect"],
+      "correlation": "independent of five-row sign probes",
+      "file": null
+    },
+    {
+      "qa_id": "test_0527",
+      "from": "C",
+      "to": "A",
+      "label": "object_template_low_purity",
+      "status": "do_not_submit",
+      "confidence": "low",
+      "evidence": ["five exact-option donors, modal remote answer"],
+      "counterevidence": ["donor purity is 0.60", "object fallback OOF gains require unanimous templates", "no independent clip evidence"],
+      "correlation": "correlated with 0526 object-vocabulary ambiguity",
+      "file": null
+    },
+    {
+      "qa_id": "test_0533",
+      "from": "A",
+      "to": "C",
+      "label": "fuzzy_template_counterexample",
+      "status": "do_not_submit",
+      "confidence": "low",
+      "evidence": ["three-of-four option overlap transfer predicts phone"],
+      "counterevidence": ["near-template OOF object accuracy is only 109/133", "purity is .565", "full exact-template modal remains remote", "same-clip action options include using a remote"],
+      "correlation": "correlated with relaxed-template false positives",
+      "file": null
+    }
+  ],
+  "killed_families": ["0430/0432 repaired-session emotion transfer", "0461/0469 middle-trial emotion swaps", "0341/0646 nonexact sequence swaps", "0150/0151 sibling-action removals"],
+  "pool_policy": "Do not inflate the pool to an arbitrary count. There are two research leads and one algebraic recovery branch; all other prior candidates lack surviving evidence."
+}

@@ -1,0 +1,525 @@
+split,qa_id,category,overlap,current,pred,support,raw_support,purity,answers,semantic
+test,test_0001,single,3,?,C,1,2,1.0,1,Listening to the music with headphones
+test,test_0002,single,2,?,B,9,34,0.5555555555555556,3,Checking the time
+test,test_0003,single,2,?,B,21,43,0.7142857142857143,4,Eating
+test,test_0004,single,2,?,D,21,31,0.6190476190476191,4,Eating
+test,test_0005,single,3,?,C,1,1,1.0,1,Sweeping
+test,test_0006,single,3,?,A,1,1,1.0,1,Wiping hands
+test,test_0007,single,2,?,C,12,29,0.5,4,Stirring
+test,test_0008,single,3,?,C,1,1,1.0,1,Undressing
+test,test_0009,single,2,?,B,14,27,0.42857142857142855,3,Typing on a keyboard
+test,test_0010,single,2,?,D,16,29,0.4375,4,Eating
+test,test_0011,single,3,?,B,3,5,0.6666666666666666,2,Combing hair
+test,test_0012,single,3,?,A,3,3,0.6666666666666666,2,Writing
+test,test_0013,single,2,?,D,16,35,0.5,4,Standing up
+test,test_0014,single,3,?,B,1,1,1.0,1,Sweeping
+test,test_0015,single,2,?,C,37,49,0.43243243243243246,4,Walking
+test,test_0016,single,2,?,D,11,27,0.36363636363636365,3,Sweeping
+test,test_0017,single,3,?,A,2,3,0.5,2,Pouring
+test,test_0018,single,3,?,B,1,1,1.0,1,Taking a selfie
+test,test_0019,single,3,?,C,1,1,1.0,1,Typing on a keyboard
+test,test_0020,single,3,?,A,1,1,1.0,1,Squats
+test,test_0021,single,3,?,A,3,3,0.6666666666666666,2,Wiping hands
+test,test_0022,single,3,?,B,1,1,1.0,1,Peeling fruit
+test,test_0023,single,2,?,C,9,19,0.4444444444444444,3,Undressing
+test,test_0024,single,3,?,B,2,2,0.5,2,Sweeping
+test,test_0025,single,3,?,D,3,4,0.6666666666666666,2,Sitting down
+test,test_0026,single,3,?,B,3,3,0.6666666666666666,2,Pouring
+test,test_0027,single,3,?,D,3,3,0.6666666666666666,2,Getting dressed
+test,test_0028,single,2,?,A,12,34,0.5,3,Grabbing utensils
+test,test_0029,single,2,?,A,18,41,0.3888888888888889,4,Listening to the music with headphones
+test,test_0030,single,3,?,B,2,2,0.5,2,Drinking
+test,test_0031,single,2,?,C,15,32,0.4,4,Wiping hands
+test,test_0032,single,2,?,D,31,45,0.8064516129032258,3,Walking
+test,test_0033,single,2,?,C,11,24,0.45454545454545453,4,Grabbing utensils
+test,test_0034,single,2,?,B,9,22,0.4444444444444444,3,Undressing
+test,test_0035,single,3,?,A,4,4,1.0,1,Walking
+test,test_0036,single,3,?,A,1,1,1.0,1,Typing on a keyboard
+test,test_0037,single,2,?,C,12,26,0.4166666666666667,3,Grabbing utensils
+test,test_0038,single,3,?,D,3,3,0.3333333333333333,3,Checking the time
+test,test_0039,single,2,?,B,11,33,0.5454545454545454,3,Checking the time
+test,test_0040,single,3,?,A,2,2,0.5,2,Taking a selfie
+test,test_0041,single,2,?,B,3,24,1.0,1,Stretching
+test,test_0042,single,3,?,B,1,1,1.0,1,Playing games
+test,test_0043,single,3,?,D,1,2,1.0,1,Listening to the music with headphones
+test,test_0044,single,2,?,C,12,30,0.4166666666666667,4,Combing hair
+test,test_0045,single,3,?,A,1,1,1.0,1,Getting dressed
+test,test_0046,single,3,?,D,2,2,1.0,1,Walking
+test,test_0047,single,3,?,B,2,2,1.0,1,Mopping
+test,test_0048,single,2,?,D,17,36,0.5882352941176471,4,Eating
+test,test_0049,single,3,?,B,2,3,0.5,2,Getting dressed
+test,test_0050,single,2,?,A,21,34,0.3333333333333333,4,Reading
+test,test_0051,single,3,?,A,2,2,1.0,1,Turning a page
+test,test_0052,single,3,?,B,3,3,0.6666666666666666,2,Walking
+test,test_0053,single,2,?,A,20,36,0.45,3,Listening to the music with headphones
+test,test_0054,single,2,?,D,11,27,0.5454545454545454,4,Drinking
+test,test_0055,single,3,?,D,1,1,1.0,1,Folding clothes
+test,test_0056,single,3,?,C,1,1,1.0,1,Undressing
+test,test_0057,single,3,?,D,2,4,0.5,2,Pouring
+test,test_0058,single,3,?,C,2,2,0.5,2,Standing up
+test,test_0059,single,3,?,C,3,4,0.3333333333333333,3,Walking
+test,test_0060,single,3,?,C,1,1,1.0,1,Washing dishes
+test,test_0061,single,2,?,D,35,45,0.6571428571428571,4,Walking
+test,test_0062,single,3,?,B,2,2,0.5,2,Running
+test,test_0063,single,2,?,D,16,28,0.5,4,Stirring
+test,test_0064,single,3,?,C,1,2,1.0,1,Peeling fruit
+test,test_0065,single,2,?,A,11,30,0.36363636363636365,3,Washing dishes
+test,test_0066,single,3,?,D,1,1,1.0,1,Typing on a keyboard
+test,test_0067,single,3,?,C,1,1,1.0,1,Eating
+test,test_0068,single,2,?,C,19,35,0.3684210526315789,4,Listening to the music with headphones
+test,test_0069,single,3,?,D,2,2,0.5,2,Listening to the music with headphones
+test,test_0070,single,2,?,A,12,36,0.5833333333333334,4,Checking the time
+test,test_0071,single,3,?,C,2,2,0.5,2,Stretching
+test,test_0072,single,3,?,A,1,1,1.0,1,Walking
+test,test_0073,single,3,?,D,1,1,1.0,1,Reading
+test,test_0074,single,2,?,A,16,28,0.375,4,Turning a page
+test,test_0075,single,2,?,B,13,38,0.6153846153846154,3,Sitting down
+test,test_0076,single,3,?,D,2,3,0.5,2,Taking medicine
+test,test_0077,single,3,?,A,1,1,1.0,1,Turning a page
+test,test_0078,single,2,?,A,17,41,0.5294117647058824,4,Eating
+test,test_0079,single,3,?,C,1,1,1.0,1,Walking
+test,test_0080,single,2,?,D,10,29,0.3,4,Grabbing utensils
+test,test_0081,single,3,?,C,1,1,1.0,1,Squats
+test,test_0082,single,2,?,C,18,38,0.5,4,Sitting down
+test,test_0083,single,3,?,D,1,1,1.0,1,Checking body temperature
+test,test_0084,single,2,?,D,15,31,0.4,4,Stirring
+test,test_0085,single,3,?,B,2,2,1.0,1,Walking
+test,test_0086,single,2,?,B,11,31,0.45454545454545453,4,Checking body temperature
+test,test_0087,single,2,?,D,24,34,0.5,3,Eating
+test,test_0088,single,3,?,B,1,2,1.0,1,Jumping jacks
+test,test_0089,single,3,?,B,2,3,0.5,2,Drinking
+test,test_0090,single,2,?,A,15,34,0.3333333333333333,4,Squats
+test,test_0091,single,3,?,D,2,2,0.5,2,Massaging oneself
+test,test_0092,single,3,?,A,3,3,1.0,1,Eating
+test,test_0093,single,3,?,B,5,5,0.6,3,Eating
+test,test_0094,single,3,?,D,3,4,0.6666666666666666,2,Walking
+test,test_0095,single,2,?,A,31,44,0.7741935483870968,3,Walking
+test,test_0096,single,3,?,A,1,1,1.0,1,Sitting down
+test,test_0097,single,2,?,D,23,40,0.391304347826087,4,Eating
+test,test_0098,single,3,?,C,3,4,0.6666666666666666,2,Stirring
+test,test_0099,single,3,?,D,2,2,1.0,1,Checking body temperature
+test,test_0100,single,3,?,D,3,4,0.6666666666666666,2,Pouring
+test,test_0101,single,3,?,A,1,1,1.0,1,Taking medicine
+test,test_0102,single,3,?,C,1,1,1.0,1,Squats
+test,test_0103,single,3,?,D,1,1,1.0,1,Running
+test,test_0104,single,2,?,B,5,22,0.6,3,Lunges
+test,test_0105,single,2,?,B,15,35,0.4,4,Getting dressed
+test,test_0106,single,3,?,C,1,1,1.0,1,Eating
+test,test_0107,single,2,?,A,17,30,0.5294117647058824,4,Peeling fruit
+test,test_0108,single,2,?,D,18,43,0.3888888888888889,4,Combing hair
+test,test_0109,single,3,?,A,1,1,1.0,1,Mopping
+test,test_0110,single,2,?,A,17,39,0.29411764705882354,4,Combing hair
+test,test_0111,single,3,?,B,2,2,0.5,2,Walking
+test,test_0112,multi,3,?,A,1,1,1.0,1,Combing hair
+test,test_0113,multi,2,?,D,7,32,0.42857142857142855,3,Eating
+test,test_0114,multi,3,?,BC,2,4,1.0,1,Walking|Sitting down
+test,test_0115,multi,3,?,C,1,1,1.0,1,Taking a selfie
+test,test_0116,multi,3,?,C,1,3,1.0,1,Using a phone
+test,test_0117,multi,2,?,D,10,39,0.3,5,Sweeping
+test,test_0118,multi,2,?,D,3,23,0.6666666666666666,2,Sitting down
+test,test_0119,multi,3,?,AD,2,4,0.5,2,Peeling fruit|Walking
+test,test_0120,multi,2,?,A,10,36,0.5,5,Checking the time
+test,test_0121,multi,3,?,B,1,3,1.0,1,Standing up
+test,test_0122,multi,2,?,D,9,22,0.3333333333333333,4,Sweeping
+test,test_0123,multi,3,?,B,1,2,1.0,1,Grabbing utensils
+test,test_0124,multi,2,?,BC,7,29,0.42857142857142855,4,Turning a page|Reading
+test,test_0125,multi,3,?,B,2,2,1.0,1,Stretching
+test,test_0126,multi,3,?,AC,3,3,0.3333333333333333,3,Combing hair|Washing face
+test,test_0127,multi,2,?,D,20,60,0.65,8,Walking
+test,test_0128,multi,3,?,DA,1,5,1.0,1,Stirring|Pouring
+test,test_0129,multi,2,?,B,10,33,0.3,5,Stirring
+test,test_0130,multi,2,?,DB,11,28,0.2727272727272727,6,Squats|Jumping jacks
+test,test_0131,multi,3,?,A,1,1,1.0,1,Squats
+test,test_0132,multi,2,?,D,17,54,0.23529411764705882,6,Standing up
+test,test_0133,multi,3,?,ACB,2,3,0.5,2,Getting dressed|Massaging oneself|Wiping hands
+test,test_0134,multi,2,?,B,8,29,0.375,5,Stirring
+test,test_0135,multi,3,?,DC,1,3,1.0,1,Walking|Listening to the music with headphones
+test,test_0136,multi,2,?,B,6,28,0.5,4,Massaging oneself
+test,test_0137,multi,3,?,DAC,6,7,0.3333333333333333,5,Stirring|Pouring|Eating
+test,test_0138,multi,3,?,AD,2,4,0.5,2,Walking|Washing dishes
+test,test_0139,multi,3,?,CD,1,2,1.0,1,Walking|Taking a selfie
+test,test_0140,multi,3,?,BDC,2,3,0.5,2,Wiping hands|Washing face|Walking
+test,test_0141,multi,3,?,DAC,1,1,1.0,1,Wiping hands|Washing face|Walking
+test,test_0142,multi,3,?,CAD,3,3,0.3333333333333333,3,Using a phone|Walking|Writing
+test,test_0143,multi,3,?,C,4,5,0.5,3,Walking
+test,test_0144,multi,2,?,A,6,36,0.6666666666666666,2,Sweeping
+test,test_0145,multi,3,?,B,3,3,0.3333333333333333,3,Grabbing utensils
+test,test_0146,multi,3,?,C,4,7,0.25,4,Walking
+test,test_0147,multi,3,?,CDB,1,1,1.0,1,Standing up|Walking|Turning a page
+test,test_0148,multi,3,?,DC,1,2,1.0,1,Peeling fruit|Grabbing utensils
+test,test_0149,multi,3,?,CD,4,5,0.5,3,Wiping hands|Peeling fruit
+test,test_0150,multi,3,?,BC,4,6,0.25,4,Walking|Sitting down
+test,test_0151,multi,3,?,CB,2,2,0.5,2,Massaging oneself|Checking body temperature
+test,test_0152,multi,3,?,A,1,2,1.0,1,Standing up
+test,test_0153,multi,3,?,C,1,2,1.0,1,Stirring
+test,test_0154,multi,2,?,A,2,19,0.5,2,Combing hair
+test,test_0155,multi,2,?,A,8,22,0.25,6,Combing hair
+test,test_0156,multi,3,?,BCD,3,6,0.3333333333333333,3,Sitting down|Walking|Standing up
+test,test_0157,multi,3,?,D,1,1,1.0,1,Taking a selfie
+test,test_0158,multi,2,?,C,8,37,0.375,6,Listening to the music with headphones
+test,test_0159,multi,2,?,CB,13,57,0.23076923076923078,8,Peeling fruit|Eating
+test,test_0160,multi,2,?,A,13,44,0.3076923076923077,5,Standing up
+test,test_0161,multi,3,?,B,1,1,1.0,1,Getting dressed
+test,test_0162,multi,3,?,DB,2,2,1.0,1,Pouring|Walking
+test,test_0163,multi,3,?,D,2,3,0.5,2,Walking
+test,test_0164,multi,3,?,DCB,1,1,1.0,1,Mopping|Drinking|Grabbing utensils
+test,test_0165,multi,2,?,D,3,16,0.6666666666666666,2,Drinking
+test,test_0166,multi,3,?,DAB,1,2,1.0,1,Stretching|Massaging oneself|Wiping hands
+test,test_0167,multi,2,?,A,7,32,0.2857142857142857,4,Massaging oneself
+test,test_0168,multi,2,?,B,20,75,0.5,7,Walking
+test,test_0169,multi,2,?,A,5,23,0.6,2,Combing hair
+test,test_0170,multi,3,?,B,1,2,1.0,1,Checking body temperature
+test,test_0171,multi,3,?,DC,2,4,0.5,2,Undressing|Taking medicine
+test,test_0172,multi,3,?,DC,2,3,0.5,2,Peeling fruit|Grabbing utensils
+test,test_0173,multi,3,?,A,1,1,1.0,1,Peeling fruit
+test,test_0174,multi,2,?,C,5,28,0.4,4,Stretching
+test,test_0175,multi,3,?,AC,1,1,1.0,1,Sweeping|Mopping
+test,test_0176,multi,3,?,ACB,2,2,0.5,2,Getting dressed|Stretching|Undressing
+test,test_0177,multi,3,?,DA,1,2,1.0,1,Wiping hands|Washing face
+test,test_0178,multi,3,?,A,1,1,1.0,1,Squats
+test,test_0179,multi,3,?,CB,2,4,0.5,2,Listening to the music with headphones|Checking the time
+test,test_0180,multi,2,?,D,6,28,0.5,4,Stretching
+test,test_0181,multi,3,?,DC,2,3,0.5,2,Sitting down|Checking the time
+test,test_0182,multi,3,?,C,1,1,1.0,1,Squats
+test,test_0183,multi,3,?,CB,4,6,0.5,3,Grabbing utensils|Walking
+test,test_0184,multi,2,?,C,4,20,0.5,2,Stirring
+test,test_0185,multi,3,?,D,1,1,1.0,1,Lunges
+test,test_0186,multi,3,?,A,1,1,1.0,1,Lunges
+test,test_0187,multi,3,?,DB,3,3,0.3333333333333333,3,Combing hair|Washing face
+test,test_0188,multi,2,?,CB,10,30,0.2,7,Washing face|Combing hair
+test,test_0189,multi,3,?,D,1,1,1.0,1,Squats
+test,test_0190,multi,2,?,C,9,30,0.3333333333333333,6,Squats
+test,test_0191,multi,2,?,D,11,40,0.2727272727272727,6,Getting dressed
+test,test_0192,multi,2,?,AD,6,29,0.16666666666666666,6,Stretching|Running
+test,test_0193,multi,2,?,D,8,30,0.25,5,Watching TV
+test,test_0194,multi,3,?,A,1,1,1.0,1,Grabbing utensils
+test,test_0195,multi,3,?,C,1,1,1.0,1,Listening to the music with headphones
+test,test_0196,multi,3,?,B,3,6,0.3333333333333333,3,Walking
+test,test_0197,multi,3,?,AD,2,2,0.5,2,Sitting down|Massaging oneself
+test,test_0198,multi,2,?,D,5,34,0.4,3,Eating
+test,test_0199,multi,2,?,A,3,28,0.3333333333333333,3,Taking medicine
+test,test_0200,multi,2,?,D,9,24,0.3333333333333333,4,Checking the time
+test,test_0201,multi,3,?,B,2,2,0.5,2,Sitting down
+test,test_0202,multi,2,?,D,5,24,0.6,3,Wiping hands
+test,test_0203,multi,3,?,DB,3,3,0.3333333333333333,3,Walking|Reading
+test,test_0204,multi,2,?,D,6,28,0.3333333333333333,4,Stretching
+test,test_0205,multi,3,?,C,1,3,1.0,1,Walking
+test,test_0206,multi,2,?,CD,6,48,0.16666666666666666,6,Stirring|Grabbing utensils
+test,test_0207,multi,2,?,A,6,26,0.5,4,Wiping surface
+test,test_0208,multi,3,?,BAC,1,2,1.0,1,Undressing|Typing on a keyboard|Sitting down
+test,test_0209,multi,3,?,AC,2,2,0.5,2,Eating|Stirring
+test,test_0210,multi,2,?,A,5,31,0.6,3,Folding clothes
+test,test_0211,multi,2,?,C,9,31,0.4444444444444444,3,Squats
+test,test_0212,multi,2,?,C,5,28,0.8,2,Sitting down
+test,test_0213,multi,2,?,A,8,46,0.5,3,Sitting down
+test,test_0214,multi,2,?,C,7,35,0.5714285714285714,4,Eating
+test,test_0215,multi,2,?,D,7,27,0.8571428571428571,2,Grabbing utensils
+test,test_0216,multi,2,?,A,8,34,0.5,4,Grabbing utensils
+test,test_0217,multi,3,?,DCB,9,10,0.2222222222222222,6,Peeling fruit|Eating|Walking
+test,test_0218,multi,2,?,B,8,25,0.5,5,Eating
+test,test_0219,multi,2,?,B,7,26,0.2857142857142857,5,Typing on a keyboard
+test,test_0220,multi,3,?,AC,2,3,0.5,2,Listening to the music with headphones|Sitting down
+test,test_0221,multi,3,?,ABC,2,3,0.5,2,Stretching|Standing up|Lunges
+test,test_0222,multi,3,?,D,2,5,1.0,1,Walking
+test,test_0277,combination,2,?,C,1,1,1.0,1,"Wiping hands, Massaging oneself"
+test,test_0316,combination,2,?,A,1,1,1.0,1,"Eating, Stirring"
+test,test_0330,sequence,3,?,CDAB,1,10,1.0,1,Walking|Grabbing utensils|Sweeping|Mopping
+test,test_0334,sequence,3,?,BACD,1,3,1.0,1,Typing on a keyboard|Turning a page|Drinking|Using a phone
+test,test_0336,sequence,3,?,BADC,3,9,1.0,1,Walking|Washing face|Brushing teeth|Combing hair
+test,test_0337,sequence,3,?,ADCB,3,9,1.0,1,Walking|Washing face|Brushing teeth|Combing hair
+test,test_0341,sequence,3,?,DCBA,3,9,1.0,1,Walking|Reading|Checking the time|Standing up
+test,test_0342,sequence,3,?,ACDB,2,7,1.0,1,Walking|Squats|Checking body temperature|Massaging oneself
+test,test_0344,sequence,3,?,CBDA,3,6,1.0,1,Using a phone|Calling|Standing up|Walking
+test,test_0345,sequence,3,?,DCAB,3,6,1.0,1,Using a phone|Calling|Standing up|Walking
+test,test_0346,sequence,3,?,DBCA,3,7,1.0,1,Walking|Using a phone|Listening to the music with headphones|Peeling fruit
+test,test_0347,sequence,3,?,BADC,3,7,1.0,1,Walking|Using a phone|Listening to the music with headphones|Peeling fruit
+test,test_0350,sequence,3,?,DCBA,3,27,1.0,1,Standing up|Walking|Sitting down|Typing on a keyboard
+test,test_0351,sequence,3,?,DABC,3,27,1.0,1,Standing up|Walking|Sitting down|Typing on a keyboard
+test,test_0359,sequence,3,?,DBAC,2,3,1.0,1,Sitting down|Taking medicine|Massaging oneself|Stretching
+test,test_0360,emotion,3,?,D,5,6,0.6,3,Slowly
+test,test_0361,emotion,3,?,C,3,4,0.3333333333333333,3,Slowly
+test,test_0362,emotion,3,?,C,3,3,0.3333333333333333,3,Smoothly
+test,test_0363,emotion,3,?,D,3,3,0.3333333333333333,3,Smoothly
+test,test_0364,emotion,3,?,A,6,6,0.3333333333333333,4,Naturally
+test,test_0365,emotion,3,?,C,4,4,0.5,3,Naturally
+test,test_0366,emotion,3,?,C,8,8,0.375,3,Steadily
+test,test_0367,emotion,3,?,A,7,7,0.42857142857142855,3,Anxiously
+test,test_0368,emotion,3,?,B,4,4,0.5,3,Hastily
+test,test_0369,emotion,3,?,B,5,6,0.6,3,Hastily
+test,test_0370,emotion,3,?,A,3,3,0.3333333333333333,3,Patiently
+test,test_0371,emotion,3,?,C,4,4,0.25,4,Leisurely
+test,test_0372,emotion,3,?,C,3,4,0.3333333333333333,3,Casually
+test,test_0373,emotion,3,?,B,3,3,0.3333333333333333,3,Casually
+test,test_0374,emotion,3,?,C,4,4,0.5,3,Hastily
+test,test_0375,emotion,3,?,D,4,4,0.5,3,Hastily
+test,test_0376,emotion,3,?,C,3,3,0.3333333333333333,3,Frantically
+test,test_0377,emotion,3,?,D,3,3,0.3333333333333333,3,Frantically
+test,test_0378,emotion,3,?,A,6,6,0.3333333333333333,3,Lightly
+test,test_0379,emotion,3,?,D,6,6,0.3333333333333333,3,Lightly
+test,test_0380,emotion,3,?,D,4,5,0.5,3,Slowly
+test,test_0381,emotion,3,?,D,6,9,0.5,4,Slowly
+test,test_0382,emotion,3,?,C,4,5,0.5,3,Carefully
+test,test_0383,emotion,3,?,D,7,8,0.2857142857142857,4,Leisurely
+test,test_0384,emotion,3,?,D,2,2,0.5,2,Gracefully
+test,test_0385,emotion,3,?,B,5,5,0.4,3,Leisurely
+test,test_0386,emotion,3,?,A,8,8,0.375,4,Steadily
+test,test_0387,emotion,3,?,D,6,7,0.3333333333333333,3,Lightly
+test,test_0388,emotion,3,?,D,3,4,0.3333333333333333,3,Gently
+test,test_0389,emotion,3,?,D,3,4,0.3333333333333333,3,Gently
+test,test_0390,emotion,3,?,D,10,11,0.4,3,Steadily
+test,test_0391,emotion,3,?,B,9,10,0.3333333333333333,3,Relaxedly
+test,test_0392,emotion,3,?,A,17,17,0.35294117647058826,3,Slowly
+test,test_0393,emotion,3,?,A,16,17,0.375,3,Steadily
+test,test_0394,emotion,3,?,B,14,14,0.35714285714285715,3,Slowly
+test,test_0395,emotion,3,?,D,14,14,0.35714285714285715,3,Slowly
+test,test_0396,emotion,3,?,A,14,15,0.35714285714285715,4,Slowly
+test,test_0397,emotion,3,?,D,16,18,0.375,4,Hastily
+test,test_0398,emotion,3,?,D,8,9,0.375,3,Calmly
+test,test_0399,emotion,3,?,B,6,7,0.3333333333333333,3,Carefully
+test,test_0400,emotion,3,?,B,7,7,0.42857142857142855,3,Calmly
+test,test_0401,emotion,3,?,C,10,10,0.5,4,Calmly
+test,test_0402,emotion,3,?,D,3,3,0.3333333333333333,3,Unhurriedly
+test,test_0403,emotion,3,?,D,4,4,0.5,3,Quickly
+test,test_0404,emotion,3,?,C,6,7,0.3333333333333333,3,Gracefully
+test,test_0405,emotion,3,?,B,6,8,0.3333333333333333,3,Gracefully
+test,test_0406,emotion,3,?,B,3,3,0.3333333333333333,3,Leisurely
+test,test_0407,emotion,3,?,A,4,4,0.5,3,Leisurely
+test,test_0408,emotion,3,?,A,42,42,0.3333333333333333,4,Slowly
+test,test_0409,emotion,3,?,C,18,19,0.3888888888888889,3,Steadily
+test,test_0410,emotion,3,?,D,4,4,0.25,4,Carefully
+test,test_0411,emotion,3,?,A,3,3,0.3333333333333333,3,Peacefully
+test,test_0412,emotion,3,?,B,10,11,0.4,3,Steadily
+test,test_0413,emotion,3,?,D,9,9,0.4444444444444444,3,Steadily
+test,test_0414,emotion,3,?,B,3,3,0.3333333333333333,3,Slowly
+test,test_0415,emotion,3,?,C,4,4,0.5,3,Slowly
+test,test_0416,emotion,3,?,C,12,14,0.3333333333333333,4,Hurriedly
+test,test_0417,emotion,3,?,C,3,4,0.3333333333333333,3,Gently
+test,test_0418,emotion,3,?,C,2,2,1.0,1,Hurriedly
+test,test_0419,emotion,3,?,B,2,3,1.0,1,Hurriedly
+test,test_0420,emotion,3,?,C,11,12,0.36363636363636365,3,Calmly
+test,test_0421,emotion,3,?,A,11,11,0.36363636363636365,3,Calmly
+test,test_0422,emotion,2,?,C,13,21,0.9230769230769231,2,Quickly
+test,test_0423,emotion,3,?,A,1,1,1.0,1,Quickly
+test,test_0424,emotion,3,?,C,34,36,0.3235294117647059,4,Slowly
+test,test_0425,emotion,3,?,B,10,11,0.4,4,Steadily
+test,test_0426,emotion,2,?,B,3,8,0.6666666666666666,2,Anxiously
+test,test_0427,emotion,2,?,A,8,16,0.5,3,Anxiously
+test,test_0428,emotion,3,?,C,1,4,1.0,1,Calmly
+test,test_0429,emotion,3,?,A,2,6,0.5,2,Calmly
+test,test_0430,emotion,3,?,D,26,27,0.38461538461538464,3,Slowly
+test,test_0431,emotion,2,?,C,11,24,0.36363636363636365,3,Nervously
+test,test_0432,emotion,2,?,D,17,32,0.35294117647058826,4,Slowly
+test,test_0433,emotion,2,?,A,63,96,0.4126984126984127,4,Leisurely
+test,test_0434,emotion,3,?,C,2,3,0.5,2,Steadily
+test,test_0435,emotion,2,?,D,28,51,0.5357142857142857,3,Hurriedly
+test,test_0436,emotion,3,?,B,1,3,1.0,1,Rapidly
+test,test_0437,emotion,2,?,B,13,26,0.5384615384615384,3,Steadily
+test,test_0438,emotion,3,?,B,7,7,0.42857142857142855,3,Steadily
+test,test_0439,emotion,3,?,A,1,2,1.0,1,Leisurely
+test,test_0440,emotion,3,?,B,2,3,1.0,1,Leisurely
+test,test_0441,emotion,3,?,B,1,2,1.0,1,Gently
+test,test_0442,emotion,3,?,B,2,3,0.5,2,Hastily
+test,test_0443,emotion,2,?,B,13,22,0.6153846153846154,3,Hurriedly
+test,test_0444,emotion,2,?,A,11,19,0.7272727272727273,3,Hurriedly
+test,test_0445,emotion,2,?,A,2,12,1.0,1,Smoothly
+test,test_0446,emotion,2,?,D,3,11,1.0,1,Smoothly
+test,test_0447,emotion,3,?,D,1,1,1.0,1,Seriously
+test,test_0448,emotion,3,?,A,1,1,1.0,1,Seriously
+test,test_0449,emotion,3,?,C,11,12,0.36363636363636365,3,Calmly
+test,test_0450,emotion,3,?,D,21,22,0.38095238095238093,4,Calmly
+test,test_0451,emotion,3,?,A,5,8,0.4,3,Slowly
+test,test_0452,emotion,3,?,C,14,15,0.35714285714285715,4,Calmly
+test,test_0453,emotion,3,?,D,3,3,0.3333333333333333,3,Gently
+test,test_0454,emotion,3,?,D,4,4,0.5,3,Hastily
+test,test_0455,emotion,3,?,C,42,42,0.3333333333333333,4,Slowly
+test,test_0456,emotion,3,?,B,26,28,0.34615384615384615,3,Slowly
+test,test_0457,emotion,3,?,B,9,10,0.3333333333333333,3,Leisurely
+test,test_0458,emotion,3,?,D,13,15,0.3076923076923077,4,Leisurely
+test,test_0459,emotion,3,?,B,3,3,0.3333333333333333,3,Casually
+test,test_0460,emotion,3,?,C,4,4,0.5,3,Meticulously
+test,test_0461,emotion,3,?,C,3,3,0.3333333333333333,3,Casually
+test,test_0462,emotion,3,?,C,3,3,0.3333333333333333,3,Casually
+test,test_0463,emotion,3,?,C,13,13,0.3076923076923077,4,Gently
+test,test_0464,emotion,3,?,B,10,10,0.4,4,Gently
+test,test_0465,emotion,3,?,B,7,7,0.42857142857142855,3,Quickly
+test,test_0466,emotion,3,?,C,6,7,0.3333333333333333,3,Slowly
+test,test_0467,emotion,3,?,A,10,11,0.3,4,Leisurely
+test,test_0468,emotion,3,?,D,3,4,0.3333333333333333,3,Leisurely
+test,test_0469,emotion,3,?,A,15,15,0.3333333333333333,3,Slowly
+test,test_0470,emotion,3,?,D,22,23,0.3181818181818182,4,Calmly
+test,test_0471,single,3,?,B,3,4,1.0,1,stirring a drink
+test,test_0472,single,3,?,C,4,5,0.5,2,stirring a drink
+test,test_0473,single,3,?,A,6,7,0.5,3,doing squats
+test,test_0474,single,3,?,B,5,6,0.6,2,peeling fruit
+test,test_0475,single,3,?,A,1,3,1.0,1,using a remote
+test,test_0476,single,3,?,A,11,13,0.5454545454545454,2,sweeping the floor
+test,test_0477,single,3,?,A,2,3,1.0,1,doing jumping jacks
+test,test_0478,single,3,?,B,1,5,1.0,1,peeling fruit
+test,test_0479,single,3,?,C,1,5,1.0,1,wiping a bowl
+test,test_0480,single,3,?,B,2,5,1.0,1,reading documents
+test,test_0481,single,3,?,B,5,6,1.0,1,lying down
+test,test_0482,single,3,?,C,1,7,1.0,1,typing on the keyboard
+test,test_0483,single,3,?,A,6,6,0.6666666666666666,3,sitting down
+test,test_0484,single,3,?,A,1,1,1.0,1,doing lunges
+test,test_0485,single,3,?,C,7,11,0.5714285714285714,3,brushing their teeth
+test,test_0486,single,3,?,A,12,13,0.8333333333333334,2,brushing their teeth
+test,test_0487,single,3,?,B,1,3,1.0,1,mopping the floor
+test,test_0488,single,3,?,A,4,5,0.5,3,doing jumping jacks
+test,test_0489,single,3,?,C,1,2,1.0,1,turning pages
+test,test_0490,single,3,?,A,3,4,0.3333333333333333,3,turning pages
+test,test_0491,single,3,?,C,3,5,0.6666666666666666,2,taking medicine
+test,test_0492,single,3,?,C,9,10,0.6666666666666666,3,brushing their teeth
+test,test_0493,single,3,?,B,8,10,0.75,3,using a smartphone
+test,test_0494,single,3,?,C,1,2,1.0,1,using a remote
+test,test_0495,single,3,?,B,4,5,0.5,3,throwing away rubbish
+test,test_0496,single,3,?,B,1,2,1.0,1,opening the cabinet
+test,test_0497,single,3,?,B,2,6,0.5,2,wiping surfaces
+test,test_0498,single,3,?,A,13,14,0.7692307692307693,2,combing their hair
+test,test_0499,single,3,?,A,11,12,0.9090909090909091,2,combing their hair
+test,test_0500,single,3,?,A,11,12,0.9090909090909091,2,combing their hair
+test,test_0501,single,3,?,B,8,10,0.875,2,standing up
+test,test_0502,single,3,?,B,7,9,0.5714285714285714,2,standing up
+test,test_0503,single,3,?,A,7,9,0.5714285714285714,2,standing up
+test,test_0504,single,3,?,C,10,10,0.6,2,sitting down
+test,test_0505,single,3,?,C,2,2,1.0,1,wiping surfaces
+test,test_0506,single,3,?,B,7,7,0.5714285714285714,3,doing jumping jacks
+test,test_0507,single,3,?,C,4,5,1.0,1,using a smartphone
+test,test_0508,single,3,?,A,6,14,0.6666666666666666,3,taking their body temperature
+test,test_0509,single,3,?,B,1,1,1.0,1,jogging in place
+test,test_0510,single,3,?,B,2,4,0.5,2,standing on one leg
+test,test_0511,single,3,?,B,4,5,0.5,3,standing on one leg
+test,test_0512,single,3,?,A,4,10,1.0,1,peeling with a knife
+test,test_0513,single,3,?,B,2,2,1.0,1,throwing away rubbish
+test,test_0514,single,2,?,B,30,86,0.3333333333333333,3,using a remote
+test,test_0515,single,3,?,C,11,12,0.7272727272727273,3,wiping their hands
+test,test_0516,single,3,?,C,12,12,0.75,3,wiping their hands
+test,test_0517,single,3,?,A,10,12,0.8,2,putting on clothes
+test,test_0518,single,3,?,C,12,14,0.75,3,putting on clothes
+test,test_0519,single,3,?,A,2,4,0.5,2,walking
+test,test_0520,single,3,?,B,3,4,0.6666666666666666,2,using a remote
+test,test_0521,single,3,?,A,4,4,0.5,2,jogging in place
+test,test_0522,object_interaction,3,?,C,10,10,1.0,1,a cloth
+test,test_0523,object_interaction,3,?,A,10,10,1.0,1,a cloth
+test,test_0524,object_interaction,3,?,B,10,10,1.0,1,a cloth
+test,test_0525,object_interaction,3,?,C,10,10,1.0,1,a cloth
+test,test_0526,object_interaction,3,?,D,20,23,0.6,2,a phone
+test,test_0527,object_interaction,3,?,C,23,25,0.5652173913043478,2,a phone
+test,test_0528,object_interaction,3,?,D,20,20,1.0,1,a documents
+test,test_0529,object_interaction,3,?,C,20,20,1.0,1,a documents
+test,test_0530,object_interaction,3,?,D,7,7,1.0,1,a headphones
+test,test_0531,object_interaction,3,?,A,7,7,1.0,1,a headphones
+test,test_0532,object_interaction,3,?,B,19,32,0.6842105263157895,2,a phone
+test,test_0533,object_interaction,3,?,C,23,25,0.5652173913043478,2,a phone
+test,test_0534,object_interaction,3,?,B,13,21,0.7692307692307693,2,a remote
+test,test_0535,object_interaction,3,?,A,24,26,0.75,2,a smartphone
+test,test_0536,object_interaction,3,?,C,18,20,1.0,1,a smartphone
+test,test_0537,object_interaction,3,?,A,18,23,1.0,1,a smartphone
+test,test_0538,object_interaction,3,?,C,10,10,1.0,1,a cabinet
+test,test_0539,object_interaction,3,?,B,10,10,1.0,1,a cabinet
+test,test_0540,object_interaction,3,?,D,10,10,1.0,1,a cabinet
+test,test_0541,object_interaction,3,?,C,20,20,1.0,1,a clothes
+test,test_0542,object_interaction,3,?,B,20,20,1.0,1,a clothes
+test,test_0543,single,3,?,D,1,1,1.0,1,Combing hair
+test,test_0544,single,3,?,A,2,2,0.5,2,Typing on a keyboard
+test,test_0545,single,2,?,A,29,41,0.3448275862068966,4,Squats
+test,test_0546,single,3,?,B,2,2,0.5,2,Lying down
+test,test_0547,single,2,?,C,12,33,0.4166666666666667,4,Checking body temperature
+test,test_0548,single,2,?,C,18,27,0.5,4,Eating
+test,test_0549,single,3,?,A,1,3,1.0,1,Undressing
+test,test_0550,single,2,?,C,10,32,0.4,4,Mopping
+test,test_0551,single,3,?,B,3,3,0.6666666666666666,2,Listening to the music with headphones
+test,test_0552,single,3,?,A,1,2,1.0,1,Wiping hands
+test,test_0553,single,2,?,D,9,28,0.4444444444444444,3,Wiping hands
+test,test_0554,single,2,?,D,9,31,0.4444444444444444,3,Mopping
+test,test_0555,single,3,?,B,1,1,1.0,1,Listening to the music with headphones
+test,test_0556,single,3,?,A,1,1,1.0,1,Sitting down
+test,test_0557,single,3,?,B,1,2,1.0,1,Walking
+test,test_0558,single,2,?,C,30,43,0.9666666666666667,2,Walking
+test,test_0559,single,3,?,C,2,2,0.5,2,Typing on a keyboard
+test,test_0560,single,3,?,B,1,1,1.0,1,Peeling fruit
+test,test_0561,single,3,?,C,1,2,1.0,1,Taking medicine
+test,test_0562,single,3,?,A,4,4,0.75,2,Walking
+test,test_0563,single,3,?,A,1,2,1.0,1,Listening to the music with headphones
+test,test_0564,single,3,?,B,1,1,1.0,1,Washing face
+test,test_0565,single,3,?,D,1,1,1.0,1,Walking
+test,test_0566,single,3,?,C,1,1,1.0,1,Washing dishes
+test,test_0567,single,3,?,D,2,2,1.0,1,Squats
+test,test_0568,single,3,?,B,1,1,1.0,1,Drinking
+test,test_0569,single,2,?,C,21,39,0.6190476190476191,4,Eating
+test,test_0570,single,2,?,D,15,29,0.4,4,Taking a selfie
+test,test_0571,single,3,?,D,2,2,0.5,2,Walking
+test,test_0572,single,2,?,B,12,31,0.4166666666666667,4,Taking medicine
+test,test_0573,single,3,?,A,1,2,1.0,1,Taking a selfie
+test,test_0574,single,3,?,C,1,2,1.0,1,Grabbing utensils
+test,test_0575,single,3,?,C,2,2,0.5,2,Wiping hands
+test,test_0576,multi,2,?,AC,7,37,0.14285714285714285,7,Typing on a keyboard|Checking the time
+test,test_0577,multi,3,?,AD,1,2,1.0,1,Peeling fruit|Drinking
+test,test_0578,multi,3,?,CD,3,4,0.6666666666666666,2,Pouring|Walking
+test,test_0579,multi,3,?,CDA,1,2,1.0,1,Checking the time|Undressing|Getting dressed
+test,test_0580,multi,2,?,CB,10,56,0.3,6,Stirring|Pouring
+test,test_0581,multi,3,?,BD,3,3,0.6666666666666666,2,Mopping|Sweeping
+test,test_0582,multi,2,?,A,4,23,0.25,4,Folding clothes
+test,test_0583,multi,3,?,B,2,3,1.0,1,Walking
+test,test_0584,multi,3,?,CDA,7,8,0.42857142857142855,4,Grabbing utensils|Stirring|Pouring
+test,test_0585,multi,2,?,BC,9,31,0.3333333333333333,6,Squats|Jumping jacks
+test,test_0586,multi,2,?,A,11,37,0.2727272727272727,5,Taking a selfie
+test,test_0587,multi,3,?,CDA,3,3,0.3333333333333333,3,Stretching|Standing up|Lunges
+test,test_0588,multi,3,?,A,1,1,1.0,1,Drinking
+test,test_0589,multi,2,?,A,6,24,0.5,3,Grabbing utensils
+test,test_0590,multi,3,?,DB,1,1,1.0,1,Standing up|Peeling fruit
+test,test_0591,multi,3,?,AD,1,1,1.0,1,Using a phone|Listening to the music with headphones
+test,test_0592,multi,2,?,B,2,22,1.0,1,Using a phone
+test,test_0593,multi,2,?,C,9,26,0.3333333333333333,5,Checking the time
+test,test_0594,multi,3,?,B,1,1,1.0,1,Running
+test,test_0595,multi,2,?,D,3,26,0.3333333333333333,3,Peeling fruit
+test,test_0596,multi,2,?,D,5,28,0.2,5,Standing up
+test,test_0597,multi,2,?,A,5,23,0.6,3,Folding clothes
+test,test_0598,multi,3,?,A,2,2,0.5,2,Walking
+test,test_0599,multi,3,?,B,1,2,1.0,1,Eating
+test,test_0600,multi,2,?,D,8,27,0.375,5,Getting dressed
+test,test_0601,multi,3,?,CD,2,4,0.5,2,Turning a page|Checking the time
+test,test_0602,multi,2,?,C,10,31,0.6,4,Grabbing utensils
+test,test_0603,multi,3,?,DB,1,1,1.0,1,Massaging oneself|Checking body temperature
+test,test_0604,multi,3,?,B,4,6,0.25,4,Folding clothes
+test,test_0605,multi,2,?,D,4,22,0.25,4,Getting dressed
+test,test_0606,multi,3,?,AD,3,3,0.3333333333333333,3,Drinking|Eating
+test,test_0607,multi,2,?,C,7,33,0.42857142857142855,4,Peeling fruit
+test,test_0608,multi,2,?,C,13,36,0.46153846153846156,4,Grabbing utensils
+test,test_0642,sequence,3,?,DABC,3,31,0.6666666666666666,2,Walking|Sitting down|Turning a page|Typing on a keyboard
+test,test_0644,sequence,3,?,BCAD,3,9,1.0,1,Walking|Washing face|Brushing teeth|Combing hair
+test,test_0646,sequence,3,?,BADC,3,9,1.0,1,Walking|Reading|Checking the time|Standing up
+test,test_0648,sequence,3,?,ABCD,3,6,1.0,1,Using a phone|Calling|Standing up|Walking
+test,test_0649,sequence,3,?,ADBC,3,7,1.0,1,Walking|Using a phone|Listening to the music with headphones|Peeling fruit
+test,test_0650,emotion,3,?,C,3,3,0.3333333333333333,3,Slowly
+test,test_0651,emotion,3,?,C,9,9,0.3333333333333333,4,Smoothly
+test,test_0652,emotion,3,?,B,3,3,0.3333333333333333,3,Slowly
+test,test_0653,emotion,3,?,D,7,7,0.42857142857142855,3,Anxiously
+test,test_0654,emotion,3,?,B,6,6,0.3333333333333333,4,Orderly
+test,test_0655,emotion,3,?,C,4,4,0.5,3,Quickly
+test,test_0656,emotion,3,?,D,3,3,0.3333333333333333,3,Casually
+test,test_0657,emotion,3,?,A,4,4,0.5,3,Hastily
+test,test_0658,emotion,3,?,B,3,3,0.3333333333333333,3,Frantically
+test,test_0659,emotion,3,?,B,6,7,0.3333333333333333,3,Lightly
+test,test_0660,emotion,3,?,D,5,7,0.6,3,Slowly
+test,test_0661,emotion,3,?,D,4,4,0.5,3,Carefully
+test,test_0662,emotion,3,?,C,3,3,0.6666666666666666,2,Gracefully
+test,test_0663,emotion,3,?,C,6,6,0.3333333333333333,3,Lightly
+test,test_0664,emotion,3,?,D,5,7,0.4,4,Smoothly
+test,test_0665,emotion,3,?,D,9,10,0.3333333333333333,3,Relaxedly
+test,test_0666,emotion,3,?,B,17,17,0.35294117647058826,3,Slowly
+test,test_0667,emotion,3,?,A,13,13,0.38461538461538464,3,Hastily
+test,test_0668,emotion,3,?,C,5,8,0.4,3,Quickly
+test,test_0669,emotion,3,?,D,7,7,0.42857142857142855,3,Calmly
+test,test_0670,emotion,3,?,D,8,8,0.5,3,Calmly
+test,test_0671,emotion,3,?,C,3,3,0.3333333333333333,3,Unhurriedly
+test,test_0672,emotion,3,?,C,6,7,0.3333333333333333,3,Gracefully
+test,test_0673,emotion,3,?,D,4,4,0.5,3,Hurriedly
+test,test_0674,emotion,3,?,B,19,19,0.3684210526315789,4,Steadily
+test,test_0675,emotion,3,?,C,3,3,0.3333333333333333,3,Peacefully
+test,test_0676,emotion,3,?,B,18,19,0.3888888888888889,4,Steadily
+test,test_0677,emotion,3,?,C,4,4,0.5,3,Slowly
+test,test_0678,emotion,3,?,D,11,12,0.36363636363636365,4,Steadily
+test,test_0679,emotion,3,?,C,2,2,1.0,1,Hurriedly
+test,test_0680,emotion,3,?,D,12,12,0.4166666666666667,3,Calmly
+test,test_0681,emotion,2,?,B,12,19,0.9166666666666666,2,Quickly
+test,test_0682,emotion,3,?,A,34,36,0.3235294117647059,4,Slowly

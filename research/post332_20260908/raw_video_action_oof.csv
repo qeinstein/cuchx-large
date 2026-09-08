@@ -1,0 +1,810 @@
+fold,path,user,truth,prediction,confidence,correct
+0,HAU/user1/1-1-1,user1,Jumping jacks,Sitting down,0.10482297937342815,0
+0,HAU/user1/1-1-2,user1,Jumping jacks,Sitting down,0.12374270458150698,0
+0,HAU/user1/1-1-3,user1,Combing hair,Sitting down,0.10466976323357029,0
+0,HAU/user1/1-2-1,user1,Peeling fruit,Drinking,0.15837208598754604,0
+0,HAU/user1/1-2-2,user1,Grabbing utensils,Eating,0.16381531701063407,0
+0,HAU/user1/1-2-3,user1,Eating,Eating,0.2606089807292144,1
+0,HAU/user1/2-1-1,user1,Peeling fruit,Sweeping,0.14156608964383122,0
+0,HAU/user1/2-1-2,user1,Peeling fruit,Walking,0.17822561856815894,0
+0,HAU/user1/2-1-3,user1,Grabbing utensils,Drinking,0.16533154441212256,0
+0,HAU/user1/2-2-1,user1,Walking,Sitting down,0.13756483629311164,0
+0,HAU/user1/2-2-2,user1,Walking,Reading,0.09597695512089231,0
+0,HAU/user1/2-2-3,user1,Walking,Sitting down,0.10051599500911859,0
+0,HAU/user1/3-1-1,user1,Eating,Eating,0.26196179180283696,1
+0,HAU/user1/3-1-2,user1,Eating,Eating,0.28672000677670095,1
+0,HAU/user1/3-1-3,user1,Eating,Eating,0.2305017420734454,1
+0,HAU/user1/3-2-1,user1,Walking,Standing up,0.13820454944520844,0
+0,HAU/user1/3-2-2,user1,Checking the time,Standing up,0.1457863839436853,0
+0,HAU/user1/3-2-3,user1,Squats,Running,0.10445753636820979,0
+0,HAU/user1/4-1-1,user1,Drinking,Eating,0.14356751618052102,0
+0,HAU/user1/4-1-2,user1,Peeling fruit,Eating,0.1735102276537615,0
+0,HAU/user1/4-1-3,user1,Pouring,Eating,0.1811586582851504,0
+0,HAU/user1/5-1-1,user1,Taking a selfie,Eating,0.17728016098176483,0
+0,HAU/user1/5-1-2,user1,Listening to the music with headphones,Eating,0.19895512484278907,0
+0,HAU/user1/5-1-3,user1,Taking a selfie,Eating,0.17307731579368857,0
+0,HAU/user1/6-1-1,user1,Eating,Mopping,0.2021579034489877,0
+0,HAU/user1/6-1-2,user1,Eating,Eating,0.18580434203100069,1
+0,HAU/user1/6-1-3,user1,Walking,Walking,0.177056511064884,1
+0,HAU/user1/6-2-1,user1,Turning a page,Reading,0.11549497121582014,0
+0,HAU/user1/6-2-2,user1,Standing up,Reading,0.11544785208332274,0
+0,HAU/user1/6-2-3,user1,Sweeping,Sitting down,0.13082592897299125,0
+0,HAU/user1/7-1-1,user1,Sitting down,Writing,0.10302487486363311,0
+0,HAU/user1/7-1-2,user1,Sitting down,Writing,0.11342115735452125,0
+0,HAU/user1/7-1-3,user1,Taking medicine,Standing up,0.11117164026706843,0
+0,HAU/user17/1-1-1,user17,Combing hair,Massaging oneself,0.3189487189247559,0
+0,HAU/user17/1-1-2,user17,Getting dressed,Combing hair,0.27917025197530043,0
+0,HAU/user17/1-1-3,user17,Getting dressed,Massaging oneself,0.3511275198013004,0
+0,HAU/user17/1-2-1,user17,Checking the time,Lunges,0.38608794283210307,0
+0,HAU/user17/1-2-2,user17,Checking the time,Checking the time,0.2660118566112213,1
+0,HAU/user17/1-2-3,user17,Sitting down,Lunges,0.33103180967655704,0
+0,HAU/user17/2-1-1,user17,Pouring,Pouring,0.19781569325677617,1
+0,HAU/user17/2-1-2,user17,Pouring,Eating,0.21986339900769777,0
+0,HAU/user17/2-1-3,user17,Grabbing utensils,Wiping surface,0.19089128048628548,0
+0,HAU/user17/2-2-1,user17,Stirring,Lying down,0.26928330557057517,0
+0,HAU/user17/2-2-2,user17,Wiping surface,Lunges,0.4402807719907844,0
+0,HAU/user17/2-2-3,user17,Stirring,Lying down,0.3550870051907537,0
+0,HAU/user17/3-1-1,user17,Stretching,Lunges,0.22643410852713178,0
+0,HAU/user17/3-1-2,user17,Running,Lunges,0.3055118952151831,0
+0,HAU/user17/3-1-3,user17,Sweeping,Lunges,0.2862015503875969,0
+0,HAU/user17/3-2-1,user17,Washing dishes,Eating,0.3057905802159091,0
+0,HAU/user17/3-2-2,user17,Walking,Pouring,0.29836339220309643,0
+0,HAU/user17/3-2-3,user17,Walking,Eating,0.3015803529951294,0
+0,HAU/user17/3-3-1,user17,Wiping surface,Lunges,0.22654618473895582,0
+0,HAU/user17/3-3-2,user17,Walking,Lunges,0.2632128514056225,0
+0,HAU/user17/3-3-3,user17,Walking,Lying down,0.22309972135538084,0
+0,HAU/user17/4-1-1,user17,Taking medicine,Typing on a keyboard,0.20325854491572812,0
+0,HAU/user17/4-1-2,user17,Typing on a keyboard,Typing on a keyboard,0.22060250222948966,1
+0,HAU/user17/4-1-3,user17,Checking body temperature,Typing on a keyboard,0.24235803705483847,0
+0,HAU/user17/5-1-1,user17,Undressing,Lunges,0.2607115987460815,0
+0,HAU/user17/5-1-2,user17,Undressing,Lying down,0.3459777908587117,0
+0,HAU/user17/5-1-3,user17,Watching TV,Lunges,0.238067920585162,0
+0,HAU/user17/5-2-1,user17,Stirring,Eating,0.24154925602979405,0
+0,HAU/user17/5-2-2,user17,Pouring,Pouring,0.24011391846743346,1
+0,HAU/user17/5-2-3,user17,Stirring,Eating,0.31225443752477083,0
+0,HAU/user17/5-3-1,user17,Eating,Checking the time,0.14094530284073895,0
+0,HAU/user17/5-3-2,user17,Walking,Checking the time,0.14320027767364604,0
+0,HAU/user17/5-3-3,user17,Grabbing utensils,Checking the time,0.1694868060580874,0
+0,HAU/user17/6-1-1,user17,Folding clothes,Typing on a keyboard,0.14490273710721024,0
+0,HAU/user17/6-1-2,user17,Getting dressed,Typing on a keyboard,0.15778188694347725,0
+0,HAU/user17/6-1-3,user17,Folding clothes,Typing on a keyboard,0.12114670252372188,0
+0,HAU/user17/6-2-1,user17,Listening to the music with headphones,Typing on a keyboard,0.15036388877175055,0
+0,HAU/user17/6-2-2,user17,Listening to the music with headphones,Jumping jacks,0.1307682215811592,0
+0,HAU/user17/6-2-3,user17,Listening to the music with headphones,Undressing,0.20102204893700348,0
+0,HAU/user17/6-3-1,user17,Sitting down,Sitting down,0.10365447852027401,1
+0,HAU/user17/6-3-2,user17,Walking,Lying down,0.13688815649236727,0
+0,HAU/user17/6-3-3,user17,Typing on a keyboard,Checking the time,0.12462324617409853,0
+0,HAU/user17/7-1-1,user17,Listening to the music with headphones,Listening to the music with headphones,0.17964809663162287,1
+0,HAU/user17/7-1-2,user17,Checking body temperature,Listening to the music with headphones,0.13132637626761753,0
+0,HAU/user17/7-1-3,user17,Sitting down,Listening to the music with headphones,0.19116145144101246,0
+0,HAU/user17/7-2-1,user17,Peeling fruit,Pouring,0.26154012981415,0
+0,HAU/user17/7-2-2,user17,Eating,Eating,0.25233529850611386,1
+0,HAU/user17/7-2-3,user17,Wiping hands,Pouring,0.20020671569931311,0
+0,HAU/user22/1-1-2,user22,Wiping hands,Wiping hands,0.23024542826496988,1
+0,HAU/user22/1-1-3,user22,Brushing teeth,Washing face,0.41383876239481654,0
+0,HAU/user22/1-2-1,user22,Listening to the music with headphones,Reading,0.1740224478980282,0
+0,HAU/user22/1-2-2,user22,Reading,Reading,0.1443881650601473,1
+0,HAU/user22/1-2-3,user22,Typing on a keyboard,Reading,0.2210946595324062,0
+0,HAU/user22/2-1-1,user22,Drinking,Grabbing utensils,0.17393619745250471,0
+0,HAU/user22/2-1-2,user22,Wiping surface,Eating,0.15721233930387074,0
+0,HAU/user22/2-1-3,user22,Washing dishes,Grabbing utensils,0.17651042084923563,0
+0,HAU/user22/2-2-1,user22,Combing hair,Taking a selfie,0.2418603967262745,0
+0,HAU/user22/2-2-2,user22,Getting dressed,Washing face,0.3245478958410556,0
+0,HAU/user22/2-2-3,user22,Getting dressed,Taking a selfie,0.21361427641631234,0
+0,HAU/user22/3-1-1,user22,Walking,Eating,0.21144371877482426,0
+0,HAU/user22/3-1-2,user22,Writing,Eating,0.20636650722861907,0
+0,HAU/user22/3-2-1,user22,Folding clothes,Squats,0.2515222713650626,0
+0,HAU/user22/3-2-2,user22,Stretching,Using a phone,0.20975828435130767,0
+0,HAU/user22/3-2-3,user22,Walking,Squats,0.20691316850709593,0
+0,HAU/user22/3-3-1,user22,Eating,Grabbing utensils,0.41843699840571613,0
+0,HAU/user22/3-3-2,user22,Peeling fruit,Grabbing utensils,0.6974334764057496,0
+0,HAU/user22/3-3-3,user22,Peeling fruit,Grabbing utensils,0.3822677814042451,0
+0,HAU/user22/4-1-1,user22,Typing on a keyboard,Listening to the music with headphones,0.3433670115214818,0
+0,HAU/user22/4-1-2,user22,Calling,Listening to the music with headphones,0.3123809517071012,0
+0,HAU/user22/4-1-3,user22,Turning a page,Listening to the music with headphones,0.30262794787717384,0
+0,HAU/user22/4-2-1,user22,Taking a selfie,Washing face,0.25185903245418456,0
+0,HAU/user22/4-2-2,user22,Taking a selfie,Taking a selfie,0.3162240998756402,1
+0,HAU/user22/4-2-3,user22,Walking,Taking a selfie,0.20260323246122766,0
+0,HAU/user22/4-3-1,user22,Sitting down,Listening to the music with headphones,0.35096456650917557,0
+0,HAU/user22/4-3-2,user22,Stirring,Calling,0.09392407156437926,0
+0,HAU/user22/4-3-3,user22,Peeling fruit,Listening to the music with headphones,0.28758034497727114,0
+0,HAU/user22/5-1-1,user22,Checking body temperature,Checking body temperature,0.3062519592403639,1
+0,HAU/user22/5-1-2,user22,Massaging oneself,Checking body temperature,0.19919640318486628,0
+0,HAU/user22/5-1-3,user22,Checking body temperature,Checking body temperature,0.19901882160000006,1
+0,HAU/user22/5-2-1,user22,Walking,Listening to the music with headphones,0.20666853460974663,0
+0,HAU/user22/5-2-2,user22,Using a phone,Listening to the music with headphones,0.16753215245170924,0
+0,HAU/user22/5-2-3,user22,Sitting down,Listening to the music with headphones,0.18770363548638716,0
+0,HAU/user22/6-1-1,user22,Getting dressed,Getting dressed,0.25943149470974375,1
+0,HAU/user22/6-1-2,user22,Checking the time,Washing face,0.20400219330283376,0
+0,HAU/user22/6-1-3,user22,Checking the time,Undressing,0.19156964245630725,0
+0,HAU/user22/6-2-1,user22,Grabbing utensils,Listening to the music with headphones,0.12383947942854871,0
+0,HAU/user22/6-2-2,user22,Massaging oneself,Listening to the music with headphones,0.11501202209083866,0
+0,HAU/user22/6-2-3,user22,Sitting down,Listening to the music with headphones,0.1738253758744205,0
+0,HAU/user22/7-1-1,user22,Sitting down,Listening to the music with headphones,0.13183363250272642,0
+0,HAU/user22/7-1-2,user22,Sitting down,Listening to the music with headphones,0.14383507743421325,0
+0,HAU/user22/7-1-3,user22,Sitting down,Listening to the music with headphones,0.1689540926172888,0
+0,HAU/user22/7-2-1,user22,Undressing,Running,0.11415132054660039,0
+0,HAU/user22/7-2-2,user22,Running,Standing up,0.10221541790090408,0
+0,HAU/user22/7-2-3,user22,Running,Standing up,0.10123369687806229,0
+0,HAU/user22/7-3-1,user22,Standing up,Standing up,0.11433911989758815,1
+0,HAU/user22/7-3-2,user22,Standing up,Standing up,0.12524253445159717,1
+0,HAU/user22/7-3-3,user22,Stretching,Running,0.09847281764523144,0
+0,HAU/user6/1-1-1,user6,Walking,Wiping hands,0.29244770062064196,0
+0,HAU/user6/1-1-2,user6,Washing face,Brushing teeth,0.3191294371067584,0
+0,HAU/user6/1-1-3,user6,Washing face,Wiping hands,0.28363125573885756,0
+0,HAU/user6/1-2-1,user6,Stirring,Stirring,0.2438076529206881,1
+0,HAU/user6/1-2-2,user6,Peeling fruit,Peeling fruit,0.24866537821633344,1
+0,HAU/user6/1-2-3,user6,Peeling fruit,Peeling fruit,0.24654434318615776,1
+0,HAU/user6/2-1-1,user6,Stirring,Stirring,0.3659542629158509,1
+0,HAU/user6/2-1-2,user6,Stirring,Stirring,0.32436835812455794,1
+0,HAU/user6/2-1-3,user6,Grabbing utensils,Pouring,0.3594211985538237,0
+0,HAU/user6/2-2-1,user6,Wiping hands,Combing hair,0.19980131666144524,0
+0,HAU/user6/2-2-2,user6,Combing hair,Wiping hands,0.26505849828293176,0
+0,HAU/user6/2-2-3,user6,Combing hair,Brushing teeth,0.27316603823473873,0
+0,HAU/user6/2-3-1,user6,Grabbing utensils,Pouring,0.3248412997386988,0
+0,HAU/user6/2-3-2,user6,Peeling fruit,Pouring,0.3341424465760307,0
+0,HAU/user6/2-3-3,user6,Grabbing utensils,Pouring,0.29927055167113265,0
+0,HAU/user6/3-1-1,user6,Squats,Lying down,0.2071766605753269,0
+0,HAU/user6/3-1-2,user6,Walking,Lying down,0.23434916797421343,0
+0,HAU/user6/3-1-3,user6,Walking,Lying down,0.16116177313887084,0
+0,HAU/user6/3-2-1,user6,Drinking,Stirring,0.21632616189329837,0
+0,HAU/user6/3-2-2,user6,Drinking,Stirring,0.22672468707009316,0
+0,HAU/user6/3-2-3,user6,Peeling fruit,Pouring,0.18886401803232294,0
+0,HAU/user6/3-3-1,user6,Walking,Undressing,0.15677730251591004,0
+0,HAU/user6/3-3-2,user6,Walking,Undressing,0.14110850887021606,0
+0,HAU/user6/3-3-3,user6,Walking,Lying down,0.12075858376959417,0
+0,HAU/user6/4-1-1,user6,Turning a page,Listening to the music with headphones,0.2419453493131708,0
+0,HAU/user6/4-1-2,user6,Standing up,Listening to the music with headphones,0.26635877538757396,0
+0,HAU/user6/4-1-3,user6,Sitting down,Listening to the music with headphones,0.30682080155217906,0
+0,HAU/user6/5-1-1,user6,Listening to the music with headphones,Undressing,0.37289515397267,0
+0,HAU/user6/5-1-2,user6,Using a phone,Undressing,0.4729774982306817,0
+0,HAU/user6/5-1-3,user6,Using a phone,Undressing,0.34168062394743975,0
+0,HAU/user6/5-2-1,user6,Peeling fruit,Stirring,0.32765121665497254,0
+0,HAU/user6/5-2-2,user6,Walking,Pouring,0.3344045106437671,0
+0,HAU/user6/5-2-3,user6,Peeling fruit,Pouring,0.2502328909182006,0
+0,HAU/user6/5-3-1,user6,Checking the time,Undressing,0.19079973052157892,0
+0,HAU/user6/5-3-2,user6,Checking the time,Undressing,0.19852123753338807,0
+0,HAU/user6/5-3-3,user6,Sitting down,Running,0.1349144498874921,0
+0,HAU/user6/6-1-1,user6,Jumping jacks,Running,0.15370954236785045,0
+0,HAU/user6/6-1-2,user6,Jumping jacks,Running,0.1797481978615344,0
+0,HAU/user6/6-1-3,user6,Lunges,Running,0.19170822595679538,0
+0,HAU/user6/6-2-1,user6,Using a phone,Stirring,0.36945006307562184,0
+0,HAU/user6/6-2-2,user6,Taking medicine,Stirring,0.28604959463764007,0
+0,HAU/user6/6-2-3,user6,Checking body temperature,Stirring,0.20234553259074914,0
+0,HAU/user6/7-1-1,user6,Massaging oneself,Listening to the music with headphones,0.4007412803638967,0
+0,HAU/user6/7-1-2,user6,Sitting down,Listening to the music with headphones,0.3681180042625737,0
+0,HAU/user6/7-1-3,user6,Massaging oneself,Listening to the music with headphones,0.3018269017946014,0
+0,HAU/user6/7-2-1,user6,Pouring,Peeling fruit,0.287773527139555,0
+0,HAU/user6/7-2-2,user6,Grabbing utensils,Stirring,0.2768611439514125,0
+0,HAU/user6/7-2-3,user6,Grabbing utensils,Stirring,0.30110825286278864,0
+0,HAU/user6/7-3-1,user6,Reading,Squats,0.10254477789092152,0
+0,HAU/user6/7-3-2,user6,Reading,Listening to the music with headphones,0.11143402225179287,0
+0,HAU/user6/7-3-3,user6,Walking,Listening to the music with headphones,0.19027291847373823,0
+1,HAU/user18/1-1-1,user18,Brushing teeth,Brushing teeth,0.23058406963654812,1
+1,HAU/user18/1-1-2,user18,Wiping hands,Combing hair,0.21623378500926635,0
+1,HAU/user18/1-1-3,user18,Brushing teeth,Brushing teeth,0.24263128825876043,1
+1,HAU/user18/1-2-1,user18,Walking,Listening to the music with headphones,0.3423157214591304,0
+1,HAU/user18/1-2-2,user18,Walking,Listening to the music with headphones,0.35765657759092023,0
+1,HAU/user18/1-2-3,user18,Reading,Using a phone,0.1737158962463898,0
+1,HAU/user18/2-1-1,user18,Sitting down,Undressing,0.19621816465619527,0
+1,HAU/user18/2-1-2,user18,Calling,Undressing,0.1972078402876951,0
+1,HAU/user18/2-1-3,user18,Sitting down,Undressing,0.21711128442707392,0
+1,HAU/user18/2-2-1,user18,Wiping surface,Washing dishes,0.2468414009605939,0
+1,HAU/user18/2-2-2,user18,Walking,Grabbing utensils,0.1792346486565468,0
+1,HAU/user18/2-2-3,user18,Wiping surface,Pouring,0.15421867660035046,0
+1,HAU/user18/3-1-1,user18,Sweeping,Lying down,0.1803710641896661,0
+1,HAU/user18/3-1-2,user18,Sweeping,Squats,0.19001107687112548,0
+1,HAU/user18/3-1-3,user18,Mopping,Squats,0.186018818796759,0
+1,HAU/user18/3-2-1,user18,Washing dishes,Washing dishes,0.20146371311308103,1
+1,HAU/user18/3-2-2,user18,Washing dishes,Pouring,0.17434058322975227,0
+1,HAU/user18/3-2-3,user18,Stirring,Pouring,0.20067848820608816,0
+1,HAU/user18/3-3-1,user18,Wiping surface,Walking,0.19406715447476658,0
+1,HAU/user18/3-3-2,user18,Wiping surface,Checking the time,0.21509506740830375,0
+1,HAU/user18/3-3-3,user18,Wiping surface,Calling,0.2222870267267874,0
+1,HAU/user18/4-1-1,user18,Writing,Writing,0.2951892514899159,1
+1,HAU/user18/4-1-2,user18,Turning a page,Listening to the music with headphones,0.22012208427008048,0
+1,HAU/user18/4-1-3,user18,Listening to the music with headphones,Listening to the music with headphones,0.21182704546675568,1
+1,HAU/user18/4-2-1,user18,Pouring,Peeling fruit,0.16892353414050723,0
+1,HAU/user18/4-2-2,user18,Walking,Pouring,0.19605261496896956,0
+1,HAU/user18/4-2-3,user18,Pouring,Pouring,0.3102341080850005,1
+1,HAU/user18/5-1-1,user18,Stretching,Lunges,0.14385030864197532,0
+1,HAU/user18/5-1-2,user18,Standing up,Squats,0.15344419033969048,0
+1,HAU/user18/5-1-3,user18,Running,Squats,0.13631110130725616,0
+1,HAU/user18/6-1-1,user18,Squats,Listening to the music with headphones,0.1555016650695352,0
+1,HAU/user18/6-1-2,user18,Undressing,Writing,0.17300512101618637,0
+1,HAU/user18/6-1-3,user18,Undressing,Listening to the music with headphones,0.22613723333163283,0
+1,HAU/user18/6-2-1,user18,Walking,Squats,0.09807715114653823,0
+1,HAU/user18/6-2-2,user18,Walking,Squats,0.12122390706197564,0
+1,HAU/user18/6-2-3,user18,Stretching,Walking,0.1072754844008195,0
+1,HAU/user18/7-1-1,user18,Wiping hands,Getting dressed,0.28855194910083104,0
+1,HAU/user18/7-1-2,user18,Massaging oneself,Combing hair,0.2741292546851301,0
+1,HAU/user18/7-1-3,user18,Getting dressed,Getting dressed,0.22562817772061408,1
+1,HAU/user18/7-2-1,user18,Pouring,Peeling fruit,0.20795741913480956,0
+1,HAU/user18/7-2-2,user18,Taking medicine,Peeling fruit,0.14635520712048847,0
+1,HAU/user18/7-2-3,user18,Eating,Sweeping,0.16602425324054593,0
+1,HAU/user2/1-1-1,user2,Folding clothes,Sitting down,0.19327607478345912,0
+1,HAU/user2/1-1-2,user2,Folding clothes,Checking the time,0.16276319658278035,0
+1,HAU/user2/1-1-3,user2,Folding clothes,Sitting down,0.1193214171104605,0
+1,HAU/user2/1-2-1,user2,Walking,Drinking,0.2596035570955601,0
+1,HAU/user2/1-2-2,user2,Stretching,Drinking,0.25789950971829223,0
+1,HAU/user2/1-2-3,user2,Drinking,Drinking,0.3353464423181581,1
+1,HAU/user2/2-1-1,user2,Pouring,Drinking,0.16205296121385915,0
+1,HAU/user2/2-1-2,user2,Drinking,Drinking,0.20752822363979906,1
+1,HAU/user2/2-1-3,user2,Grabbing utensils,Drinking,0.1912468477798903,0
+1,HAU/user2/2-2-1,user2,Massaging oneself,Standing up,0.13219495157808303,0
+1,HAU/user2/2-2-2,user2,Eating,Taking a selfie,0.11693841280466453,0
+1,HAU/user2/2-2-3,user2,Eating,Sitting down,0.11335176727831091,0
+1,HAU/user2/3-1-1,user2,Sweeping,Grabbing utensils,0.2090961873242925,0
+1,HAU/user2/3-1-2,user2,Sweeping,Peeling fruit,0.21689977559669488,0
+1,HAU/user2/3-1-3,user2,Mopping,Peeling fruit,0.22777663750112892,0
+1,HAU/user2/3-2-2,user2,Walking,Stretching,0.0922742677490172,0
+1,HAU/user2/3-2-3,user2,Reading,Stretching,0.10210807392163566,0
+1,HAU/user2/4-1-1,user2,Using a phone,Watching TV,0.1768033596837945,0
+1,HAU/user2/4-1-2,user2,Writing,Sitting down,0.18320742927453545,0
+1,HAU/user2/4-1-3,user2,Calling,Sitting down,0.09637739891230773,0
+1,HAU/user2/4-2-1,user2,Grabbing utensils,Eating,0.2959683985063909,0
+1,HAU/user2/4-2-2,user2,Eating,Eating,0.30541256384944054,1
+1,HAU/user2/4-2-3,user2,Eating,Eating,0.31622302831785143,1
+1,HAU/user2/4-3-1,user2,Walking,Stretching,0.1438293495015753,0
+1,HAU/user2/4-3-2,user2,Sitting down,Sweeping,0.12462790937042771,0
+1,HAU/user2/4-3-3,user2,Sitting down,Walking,0.14384388659480452,0
+1,HAU/user2/5-1-1,user2,Squats,Standing up,0.11197185188085797,0
+1,HAU/user2/5-1-2,user2,Squats,Standing up,0.11990209277995029,0
+1,HAU/user2/5-1-3,user2,Running,Sitting down,0.15891389525911243,0
+1,HAU/user2/5-2-1,user2,Eating,Drinking,0.21579608854942037,0
+1,HAU/user2/5-2-2,user2,Walking,Eating,0.20072204845941516,0
+1,HAU/user2/5-2-3,user2,Peeling fruit,Eating,0.19701893652053043,0
+1,HAU/user2/6-1-1,user2,Stretching,Standing up,0.14422725881707746,0
+1,HAU/user2/6-1-2,user2,Pouring,Standing up,0.13962172058521682,0
+1,HAU/user2/7-1-1,user2,Taking medicine,Sitting down,0.24785820607431439,0
+1,HAU/user2/7-1-2,user2,Taking medicine,Sitting down,0.2399566189493459,0
+1,HAU/user2/7-1-3,user2,Taking medicine,Sitting down,0.21023763309532267,0
+1,HAU/user2/7-2-1,user2,Walking,Drinking,0.21502858068508657,0
+1,HAU/user2/7-2-2,user2,Walking,Writing,0.10927077280964355,0
+1,HAU/user2/7-2-3,user2,Walking,Drinking,0.21924823318236145,0
+1,HAU/user2/7-3-1,user2,Wiping hands,Standing up,0.11163816443741886,0
+1,HAU/user2/7-3-2,user2,Listening to the music with headphones,Playing games,0.10704500381388254,0
+1,HAU/user2/7-3-3,user2,Listening to the music with headphones,Squats,0.10689878785265897,0
+1,HAU/user23/1-1-1,user23,Wiping hands,Getting dressed,0.15497325943287357,0
+1,HAU/user23/1-1-2,user23,Washing face,Getting dressed,0.1958687254243882,0
+1,HAU/user23/1-1-3,user23,Washing face,Getting dressed,0.16665697016577105,0
+1,HAU/user23/1-2-1,user23,Squats,Watching TV,0.2378644362883493,0
+1,HAU/user23/1-2-2,user23,Squats,Jumping jacks,0.1891057940067737,0
+1,HAU/user23/1-2-3,user23,Squats,Jumping jacks,0.20858915835972713,0
+1,HAU/user23/2-1-1,user23,Grabbing utensils,Peeling fruit,0.1214131083217151,0
+1,HAU/user23/2-1-2,user23,Grabbing utensils,Grabbing utensils,0.1933424006078271,1
+1,HAU/user23/2-1-3,user23,Peeling fruit,Mopping,0.2348929142772686,0
+1,HAU/user23/2-2-1,user23,Walking,Getting dressed,0.26140120363557734,0
+1,HAU/user23/2-2-2,user23,Combing hair,Taking a selfie,0.185651530817146,0
+1,HAU/user23/2-2-3,user23,Combing hair,Getting dressed,0.15187398008308997,0
+1,HAU/user23/2-3-1,user23,Eating,Eating,0.18125943238994058,1
+1,HAU/user23/2-3-2,user23,Stirring,Wiping surface,0.12413745626711946,0
+1,HAU/user23/2-3-3,user23,Eating,Writing,0.5046901433000295,0
+1,HAU/user23/3-1-1,user23,Wiping surface,Jumping jacks,0.16362982364104572,0
+1,HAU/user23/3-1-2,user23,Wiping surface,Jumping jacks,0.1550523460083714,0
+1,HAU/user23/3-1-3,user23,Wiping surface,Watching TV,0.4866666666666667,0
+1,HAU/user23/3-2-1,user23,Walking,Calling,0.15889461914616745,0
+1,HAU/user23/3-2-2,user23,Sitting down,Watching TV,0.2704400960449346,0
+1,HAU/user23/3-2-3,user23,Sitting down,Watching TV,0.31916966261052243,0
+1,HAU/user23/4-1-1,user23,Writing,Playing games,0.18093590278929336,0
+1,HAU/user23/4-1-2,user23,Writing,Playing games,0.1743786904115576,0
+1,HAU/user23/4-1-3,user23,Writing,Playing games,0.18129878523900536,0
+1,HAU/user23/4-2-1,user23,Taking a selfie,Taking a selfie,0.1501500035221271,1
+1,HAU/user23/4-2-2,user23,Taking a selfie,Taking a selfie,0.2820503340578127,1
+1,HAU/user23/4-2-3,user23,Calling,Taking a selfie,0.3726814419781111,0
+1,HAU/user23/4-3-1,user23,Getting dressed,Reading,0.13325337763560557,0
+1,HAU/user23/4-3-2,user23,Getting dressed,Reading,0.20863447360313528,0
+1,HAU/user23/4-3-3,user23,Undressing,Watching TV,0.21811701466680422,0
+1,HAU/user23/5-1-1,user23,Playing games,Sitting down,0.10338784781261304,0
+1,HAU/user23/5-1-2,user23,Listening to the music with headphones,Sitting down,0.13912955345807962,0
+1,HAU/user23/5-1-3,user23,Listening to the music with headphones,Watching TV,0.29550024469379277,0
+1,HAU/user23/5-2-1,user23,Undressing,Getting dressed,0.2938836655350246,0
+1,HAU/user23/5-2-2,user23,Undressing,Getting dressed,0.20485278680703647,0
+1,HAU/user23/5-2-3,user23,Getting dressed,Getting dressed,0.23416648238456622,1
+1,HAU/user23/5-3-2,user23,Standing up,Watching TV,0.09554089279895725,0
+1,HAU/user23/5-3-3,user23,Pouring,Massaging oneself,0.08784116672064705,0
+1,HAU/user23/6-1-1,user23,Stretching,Checking the time,0.12317904169770147,0
+1,HAU/user23/6-1-2,user23,Running,Massaging oneself,0.1238664525824818,0
+1,HAU/user23/6-1-3,user23,Standing up,Sitting down,0.12171181665434763,0
+1,HAU/user23/6-3-1,user23,Squats,Jumping jacks,0.20984672771507235,0
+1,HAU/user23/6-3-2,user23,Squats,Jumping jacks,0.26649696008637735,0
+1,HAU/user23/6-3-3,user23,Squats,Jumping jacks,0.3478937729196774,0
+1,HAU/user23/7-1-1,user23,Taking medicine,Standing up,0.17428641696713396,0
+1,HAU/user23/7-1-2,user23,Writing,Sitting down,0.0991653882292815,0
+1,HAU/user23/7-1-3,user23,Writing,Sitting down,0.11082186364261062,0
+1,HAU/user23/7-2-1,user23,Checking body temperature,Taking medicine,0.13977113456009685,0
+1,HAU/user23/7-2-2,user23,Checking body temperature,Massaging oneself,0.1503177456426546,0
+1,HAU/user23/7-2-3,user23,Taking medicine,Washing face,0.14883333501842713,0
+1,HAU/user23/7-3-1,user23,Stretching,Standing up,0.1794625848669012,0
+1,HAU/user23/7-3-2,user23,Using a phone,Standing up,0.12811513277798986,0
+1,HAU/user23/7-3-3,user23,Using a phone,Watching TV,0.3156257147386176,0
+1,HAU/user7/1-1-1,user7,Brushing teeth,Brushing teeth,0.1789231627436075,1
+1,HAU/user7/1-1-2,user7,Wiping hands,Brushing teeth,0.19121666880184815,0
+1,HAU/user7/1-1-3,user7,Combing hair,Combing hair,0.21202463436774346,1
+1,HAU/user7/1-2-1,user7,Walking,Listening to the music with headphones,0.19238096765351456,0
+1,HAU/user7/1-2-2,user7,Sitting down,Listening to the music with headphones,0.20631058520441437,0
+1,HAU/user7/1-2-3,user7,Walking,Listening to the music with headphones,0.15805228340602254,0
+1,HAU/user7/2-1-1,user7,Pouring,Grabbing utensils,0.23695974603777092,0
+1,HAU/user7/2-1-2,user7,Stirring,Grabbing utensils,0.20249147484286908,0
+1,HAU/user7/2-1-3,user7,Pouring,Grabbing utensils,0.22485246035130782,0
+1,HAU/user7/2-2-1,user7,Lying down,Listening to the music with headphones,0.11732394983360664,0
+1,HAU/user7/2-2-2,user7,Lying down,Listening to the music with headphones,0.10902801779806653,0
+1,HAU/user7/2-2-3,user7,Stirring,Listening to the music with headphones,0.11498376597157353,0
+1,HAU/user7/3-1-1,user7,Sweeping,Lunges,0.10604693216019899,0
+1,HAU/user7/3-1-2,user7,Running,Lunges,0.11567998530220493,0
+1,HAU/user7/3-1-3,user7,Stretching,Lunges,0.1583359457161804,0
+1,HAU/user7/3-2-1,user7,Walking,Washing dishes,0.39188508790631016,0
+1,HAU/user7/3-2-2,user7,Eating,Washing dishes,0.41642106507085314,0
+1,HAU/user7/3-2-3,user7,Grabbing utensils,Washing dishes,0.36013322743364756,0
+1,HAU/user7/3-3-1,user7,Wiping surface,Calling,0.14239813637307025,0
+1,HAU/user7/3-3-3,user7,Walking,Walking,0.11671783537482969,1
+1,HAU/user7/4-1-1,user7,Taking medicine,Getting dressed,0.17642459428361246,0
+1,HAU/user7/4-1-2,user7,Taking medicine,Reading,0.18651270754350283,0
+1,HAU/user7/4-1-3,user7,Standing up,Sitting down,0.1517422637259581,0
+1,HAU/user7/5-1-1,user7,Undressing,Using a phone,0.25014980872849996,0
+1,HAU/user7/5-1-2,user7,Undressing,Listening to the music with headphones,0.19031260334807804,0
+1,HAU/user7/5-1-3,user7,Undressing,Listening to the music with headphones,0.17442243085493805,0
+1,HAU/user7/5-2-1,user7,Stirring,Washing dishes,0.3738940303768001,0
+1,HAU/user7/5-2-2,user7,Pouring,Washing dishes,0.44633879003007043,0
+1,HAU/user7/5-2-3,user7,Pouring,Washing dishes,0.3835636753681382,0
+1,HAU/user7/5-3-1,user7,Eating,Walking,0.2210011627734104,0
+1,HAU/user7/5-3-2,user7,Sitting down,Walking,0.20739593590240377,0
+1,HAU/user7/5-3-3,user7,Eating,Walking,0.17931570455252968,0
+1,HAU/user7/6-1-1,user7,Getting dressed,Squats,0.16695592983088411,0
+1,HAU/user7/6-1-2,user7,Getting dressed,Squats,0.10018288888425991,0
+1,HAU/user7/6-1-3,user7,Getting dressed,Folding clothes,0.12230709649827297,0
+1,HAU/user7/6-2-1,user7,Listening to the music with headphones,Sitting down,0.26135229045348907,0
+1,HAU/user7/6-2-2,user7,Listening to the music with headphones,Squats,0.12922018830924184,0
+1,HAU/user7/6-2-3,user7,Listening to the music with headphones,Sitting down,0.16585533700316057,0
+1,HAU/user7/6-3-1,user7,Sitting down,Listening to the music with headphones,0.1315526784121521,0
+1,HAU/user7/6-3-3,user7,Walking,Listening to the music with headphones,0.1639066198219647,0
+1,HAU/user7/7-1-1,user7,Checking body temperature,Sitting down,0.2578497788006645,0
+1,HAU/user7/7-1-2,user7,Checking body temperature,Sitting down,0.1676219139992492,0
+1,HAU/user7/7-1-3,user7,Listening to the music with headphones,Sitting down,0.22172951161707818,0
+1,HAU/user7/7-2-1,user7,Eating,Washing dishes,0.5269881065641634,0
+1,HAU/user7/7-2-2,user7,Wiping hands,Washing dishes,0.488559938807259,0
+1,HAU/user7/7-2-3,user7,Eating,Washing dishes,0.5123614748369769,0
+2,HAU/user19/1-1-1,user19,Getting dressed,Getting dressed,0.4281457568221119,1
+2,HAU/user19/1-1-2,user19,Combing hair,Getting dressed,0.2673038918944508,0
+2,HAU/user19/1-1-3,user19,Combing hair,Getting dressed,0.2617215432131548,0
+2,HAU/user19/1-2-1,user19,Typing on a keyboard,Typing on a keyboard,0.1706820100040723,1
+2,HAU/user19/1-2-2,user19,Listening to the music with headphones,Checking the time,0.10615491127113744,0
+2,HAU/user19/1-2-3,user19,Typing on a keyboard,Typing on a keyboard,0.1320494212156267,1
+2,HAU/user19/2-1-1,user19,Stirring,Pouring,0.28640778365717656,0
+2,HAU/user19/2-1-2,user19,Pouring,Pouring,0.31860828952680914,1
+2,HAU/user19/2-1-3,user19,Grabbing utensils,Pouring,0.28296895816713546,0
+2,HAU/user19/2-2-1,user19,Walking,Getting dressed,0.12269345487884625,0
+2,HAU/user19/2-2-2,user19,Jumping jacks,Squats,0.1548924467988616,0
+2,HAU/user19/2-2-3,user19,Walking,Squats,0.1346738538484229,0
+2,HAU/user19/2-3-1,user19,Walking,Pouring,0.16679408101012103,0
+2,HAU/user19/2-3-2,user19,Walking,Pouring,0.16930858068027482,0
+2,HAU/user19/2-3-3,user19,Walking,Pouring,0.13059083226020374,0
+2,HAU/user19/3-1-1,user19,Playing games,Stretching,0.10704230961913931,0
+2,HAU/user19/3-1-2,user19,Undressing,Turning a page,0.20386679570370794,0
+2,HAU/user19/3-1-3,user19,Undressing,Turning a page,0.14775766509457597,0
+2,HAU/user19/3-2-1,user19,Pouring,Pouring,0.1637519420275502,1
+2,HAU/user19/3-2-2,user19,Pouring,Stirring,0.194352151364375,0
+2,HAU/user19/3-2-3,user19,Walking,Eating,0.16721175396941956,0
+2,HAU/user19/3-3-1,user19,Walking,Sweeping,0.12434643879869085,0
+2,HAU/user19/3-3-2,user19,Lying down,Sweeping,0.25493799427762925,0
+2,HAU/user19/3-3-3,user19,Squats,Mopping,0.2838278815541082,0
+2,HAU/user19/4-1-1,user19,Reading,Typing on a keyboard,0.1024112787694642,0
+2,HAU/user19/4-1-2,user19,Typing on a keyboard,Typing on a keyboard,0.11883214619080566,1
+2,HAU/user19/4-1-3,user19,Checking the time,Typing on a keyboard,0.10933596093727954,0
+2,HAU/user19/4-2-1,user19,Walking,Mopping,0.13025112384795728,0
+2,HAU/user19/4-2-2,user19,Squats,Running,0.10350710394581954,0
+2,HAU/user19/4-2-3,user19,Squats,Walking,0.09156109501389041,0
+2,HAU/user19/4-3-1,user19,Walking,Checking the time,0.16094574027184616,0
+2,HAU/user19/4-3-2,user19,Typing on a keyboard,Typing on a keyboard,0.08814818946849606,1
+2,HAU/user19/4-3-3,user19,Sitting down,Typing on a keyboard,0.18435712720782452,0
+2,HAU/user19/5-1-1,user19,Playing games,Sitting down,0.08841722499090718,0
+2,HAU/user19/5-1-2,user19,Playing games,Sitting down,0.10030656642354119,0
+2,HAU/user19/5-1-3,user19,Listening to the music with headphones,Sitting down,0.13367233965993083,0
+2,HAU/user19/5-2-1,user19,Wiping hands,Eating,0.22607011177766106,0
+2,HAU/user19/5-2-2,user19,Wiping hands,Eating,0.1906588650563301,0
+2,HAU/user19/5-2-3,user19,Peeling fruit,Pouring,0.24788744010490713,0
+2,HAU/user19/5-3-1,user19,Playing games,Typing on a keyboard,0.15492554952314572,0
+2,HAU/user19/5-3-2,user19,Massaging oneself,Listening to the music with headphones,0.11570480409064601,0
+2,HAU/user19/5-3-3,user19,Checking the time,Watching TV,0.09573453548735948,0
+2,HAU/user19/6-1-1,user19,Sitting down,Reading,0.15568867467947586,0
+2,HAU/user19/6-1-2,user19,Typing on a keyboard,Typing on a keyboard,0.20888604950787973,1
+2,HAU/user19/6-1-3,user19,Reading,Reading,0.19611455482447687,1
+2,HAU/user19/6-2-1,user19,Taking a selfie,Turning a page,0.20700799397790254,0
+2,HAU/user19/6-2-2,user19,Taking medicine,Turning a page,0.26993100535035697,0
+2,HAU/user19/6-2-3,user19,Taking medicine,Turning a page,0.2562657604542784,0
+2,HAU/user19/7-1-1,user19,Massaging oneself,Combing hair,0.21962418191746905,0
+2,HAU/user19/7-1-2,user19,Massaging oneself,Combing hair,0.25973343376747016,0
+2,HAU/user19/7-1-3,user19,Massaging oneself,Combing hair,0.26892314192689765,0
+2,HAU/user19/7-2-1,user19,Eating,Stirring,0.22313884004323573,0
+2,HAU/user19/7-2-2,user19,Walking,Stirring,0.23912632994270303,0
+2,HAU/user19/7-2-3,user19,Eating,Stirring,0.24975089475794823,0
+2,HAU/user24/1-1-1,user24,Taking a selfie,Checking body temperature,0.3039122127392959,0
+2,HAU/user24/1-1-2,user24,Taking a selfie,Checking body temperature,0.24220623803923022,0
+2,HAU/user24/1-1-3,user24,Taking a selfie,Checking body temperature,0.25173362192096677,0
+2,HAU/user24/1-2-1,user24,Turning a page,Using a phone,0.15164267621179645,0
+2,HAU/user24/1-2-2,user24,Reading,Listening to the music with headphones,0.13578521765473775,0
+2,HAU/user24/1-2-3,user24,Reading,Turning a page,0.10864598064285114,0
+2,HAU/user24/2-1-1,user24,Drinking,Listening to the music with headphones,0.12649404442212958,0
+2,HAU/user24/2-1-2,user24,Eating,Listening to the music with headphones,0.12539845603234684,0
+2,HAU/user24/2-1-3,user24,Peeling fruit,Listening to the music with headphones,0.13712576388441058,0
+2,HAU/user24/2-2-1,user24,Watching TV,Writing,0.13897452922571654,0
+2,HAU/user24/2-2-2,user24,Watching TV,Writing,0.19984228851037925,0
+2,HAU/user24/2-2-3,user24,Watching TV,Writing,0.1703530943156925,0
+2,HAU/user24/3-2-1,user24,Running,Stretching,0.12554614164116526,0
+2,HAU/user24/3-2-2,user24,Running,Using a phone,0.16982223426550436,0
+2,HAU/user24/3-2-3,user24,Calling,Using a phone,0.13153638220822564,0
+2,HAU/user24/4-1-1,user24,Using a phone,Squats,0.12520517323865618,0
+2,HAU/user24/4-1-2,user24,Sitting down,Squats,0.10067787265665273,0
+2,HAU/user24/4-1-3,user24,Sitting down,Squats,0.10469653044378885,0
+2,HAU/user24/4-2-1,user24,Drinking,Peeling fruit,0.22825392819788276,0
+2,HAU/user24/4-2-2,user24,Drinking,Eating,0.2032497252903115,0
+2,HAU/user24/4-2-3,user24,Walking,Eating,0.26929531767704046,0
+2,HAU/user24/4-3-1,user24,Massaging oneself,Writing,0.16920453800249197,0
+2,HAU/user24/4-3-2,user24,Playing games,Writing,0.2693946603672273,0
+2,HAU/user24/4-3-3,user24,Playing games,Writing,0.2185073702465007,0
+2,HAU/user24/5-1-1,user24,Walking,Using a phone,0.2232305517350002,0
+2,HAU/user24/5-1-2,user24,Standing up,Stretching,0.14544551134922615,0
+2,HAU/user24/5-1-3,user24,Listening to the music with headphones,Stretching,0.12054185931172944,0
+2,HAU/user24/5-2-1,user24,Checking body temperature,Checking body temperature,0.3851091570246566,1
+2,HAU/user24/5-2-2,user24,Taking medicine,Checking body temperature,0.41592645651266397,0
+2,HAU/user24/5-2-3,user24,Taking medicine,Checking body temperature,0.38686925417882634,0
+2,HAU/user24/5-3-1,user24,Watching TV,Using a phone,0.33930061321053545,0
+2,HAU/user24/5-3-2,user24,Walking,Listening to the music with headphones,0.09114107172925133,0
+2,HAU/user24/5-3-3,user24,Walking,Using a phone,0.09813260882204192,0
+2,HAU/user24/6-2-1,user24,Washing face,Wiping hands,0.261536073059268,0
+2,HAU/user24/6-2-2,user24,Walking,Taking a selfie,0.27338547657388235,0
+2,HAU/user24/6-2-3,user24,Washing face,Wiping hands,0.2740888196412513,0
+2,HAU/user24/6-3-1,user24,Squats,Squats,0.20137371130525986,1
+2,HAU/user24/6-3-2,user24,Standing up,Squats,0.19046896724351914,0
+2,HAU/user24/6-3-3,user24,Squats,Squats,0.21023411735991107,1
+2,HAU/user24/7-1-1,user24,Massaging oneself,Checking body temperature,0.2748773045921786,0
+2,HAU/user24/7-1-2,user24,Combing hair,Combing hair,0.258024888278178,1
+2,HAU/user24/7-1-3,user24,Taking medicine,Combing hair,0.2390046986773234,0
+2,HAU/user24/7-2-1,user24,Reading,Sitting down,0.09342117188580046,0
+2,HAU/user24/7-2-2,user24,Reading,Using a phone,0.15088527247866135,0
+2,HAU/user24/7-2-3,user24,Sitting down,Stretching,0.10063038459994687,0
+2,HAU/user3/1-1-1,user3,Checking the time,Jumping jacks,0.10154646455167911,0
+2,HAU/user3/1-1-2,user3,Checking the time,Folding clothes,0.10403600464576074,0
+2,HAU/user3/1-1-3,user3,Checking the time,Squats,0.1116515376850094,0
+2,HAU/user3/1-2-1,user3,Drinking,Mopping,0.18328314765379947,0
+2,HAU/user3/1-2-2,user3,Walking,Drinking,0.20731988475127025,0
+2,HAU/user3/1-2-3,user3,Combing hair,Drinking,0.20984224128561127,0
+2,HAU/user3/2-1-1,user3,Squats,Typing on a keyboard,0.10170448350309623,0
+2,HAU/user3/2-1-2,user3,Squats,Running,0.09098997480453476,0
+2,HAU/user3/2-1-3,user3,Walking,Sitting down,0.11074928703208928,0
+2,HAU/user3/2-2-1,user3,Walking,Drinking,0.20133242544945637,0
+2,HAU/user3/2-2-2,user3,Taking medicine,Drinking,0.18231865392127353,0
+2,HAU/user3/2-2-3,user3,Massaging oneself,Walking,0.14402773262401664,0
+2,HAU/user3/3-1-1,user3,Peeling fruit,Eating,0.26978576475876165,0
+2,HAU/user3/3-1-2,user3,Washing dishes,Eating,0.22915569425677315,0
+2,HAU/user3/3-1-3,user3,Peeling fruit,Eating,0.14789153309631395,0
+2,HAU/user3/3-2-1,user3,Walking,Walking,0.23891020046069783,1
+2,HAU/user3/3-2-2,user3,Writing,Typing on a keyboard,0.13545471318035293,0
+2,HAU/user3/3-2-3,user3,Calling,Walking,0.29223739694470313,0
+2,HAU/user3/4-1-1,user3,Drinking,Turning a page,0.28070089616291377,0
+2,HAU/user3/4-1-2,user3,Turning a page,Turning a page,0.24121106781563664,1
+2,HAU/user3/4-1-3,user3,Eating,Turning a page,0.2660787837362288,0
+2,HAU/user3/5-1-1,user3,Drinking,Grabbing utensils,0.12079329564942579,0
+2,HAU/user3/5-1-2,user3,Stirring,Eating,0.27759497803689803,0
+2,HAU/user3/5-1-3,user3,Drinking,Eating,0.18513943830555882,0
+2,HAU/user3/5-2-1,user3,Grabbing utensils,Walking,0.3112679390210497,0
+2,HAU/user3/5-2-2,user3,Eating,Standing up,0.14632454226076652,0
+2,HAU/user3/5-2-3,user3,Turning a page,Standing up,0.14485193651439127,0
+2,HAU/user3/6-1-1,user3,Drinking,Drinking,0.37106657546264116,1
+2,HAU/user3/6-1-2,user3,Drinking,Drinking,0.18636139142615796,1
+2,HAU/user3/6-1-3,user3,Walking,Drinking,0.14278971631831533,0
+2,HAU/user3/6-2-1,user3,Sweeping,Sitting down,0.0883788722889686,0
+2,HAU/user3/6-2-2,user3,Checking the time,Walking,0.10027039807576704,0
+2,HAU/user3/6-2-3,user3,Standing up,Calling,0.10578036317206727,0
+2,HAU/user3/7-1-1,user3,Standing up,Standing up,0.1033494932416918,1
+2,HAU/user3/7-1-2,user3,Stretching,Stretching,0.13145615213273748,1
+2,HAU/user3/7-1-3,user3,Stirring,Jumping jacks,0.17067099031403404,0
+2,HAU/user8/1-1-1,user8,Brushing teeth,Combing hair,0.1855648724878907,0
+2,HAU/user8/1-1-2,user8,Wiping hands,Wiping hands,0.15491999516555818,1
+2,HAU/user8/1-1-3,user8,Wiping hands,Wiping hands,0.1325585803108937,1
+2,HAU/user8/1-2-1,user8,Listening to the music with headphones,Walking,0.26550818646266106,0
+2,HAU/user8/1-2-2,user8,Taking a selfie,Sitting down,0.1765632460473349,0
+2,HAU/user8/1-2-3,user8,Calling,Walking,0.16749097078156602,0
+2,HAU/user8/2-1-1,user8,Folding clothes,Undressing,0.1869699794657985,0
+2,HAU/user8/2-1-2,user8,Listening to the music with headphones,Undressing,0.18894734353867035,0
+2,HAU/user8/2-1-3,user8,Folding clothes,Walking,0.160927619229266,0
+2,HAU/user8/2-2-1,user8,Walking,Pouring,0.31632397408818025,0
+2,HAU/user8/2-2-2,user8,Wiping surface,Pouring,0.27659047532783837,0
+2,HAU/user8/2-2-3,user8,Walking,Pouring,0.32119267002362173,0
+2,HAU/user8/3-1-1,user8,Sweeping,Stretching,0.13928334012669233,0
+2,HAU/user8/3-1-2,user8,Mopping,Stretching,0.11432617489192438,0
+2,HAU/user8/3-1-3,user8,Sweeping,Stretching,0.10048595908411331,0
+2,HAU/user8/3-2-1,user8,Washing dishes,Eating,0.2106699749275952,0
+2,HAU/user8/3-2-2,user8,Pouring,Eating,0.1574062675025595,0
+2,HAU/user8/3-2-3,user8,Washing dishes,Pouring,0.2054561991633531,0
+2,HAU/user8/3-3-1,user8,Walking,Walking,0.15827414554105904,1
+2,HAU/user8/3-3-2,user8,Walking,Walking,0.13533908977210363,1
+2,HAU/user8/3-3-3,user8,Walking,Walking,0.26312256126633427,1
+2,HAU/user8/4-1-1,user8,Sitting down,Massaging oneself,0.3245592514285123,0
+2,HAU/user8/4-1-2,user8,Sitting down,Massaging oneself,0.20686115686316675,0
+2,HAU/user8/4-1-3,user8,Listening to the music with headphones,Massaging oneself,0.22846857353103128,0
+2,HAU/user8/4-2-1,user8,Stirring,Pouring,0.3427178709438002,0
+2,HAU/user8/4-2-2,user8,Walking,Grabbing utensils,0.18832455466342574,0
+2,HAU/user8/4-2-3,user8,Walking,Pouring,0.3246166687297181,0
+2,HAU/user8/5-1-1,user8,Lunges,Stretching,0.14209589418418198,0
+2,HAU/user8/5-1-2,user8,Running,Lying down,0.11734552845528455,0
+2,HAU/user8/5-1-3,user8,Checking the time,Lying down,0.16402425197721368,0
+2,HAU/user8/6-1-1,user8,Squats,Listening to the music with headphones,0.13030016203652003,0
+2,HAU/user8/6-1-2,user8,Getting dressed,Listening to the music with headphones,0.10217947831510528,0
+2,HAU/user8/6-1-3,user8,Undressing,Listening to the music with headphones,0.10245490089994512,0
+2,HAU/user8/6-2-1,user8,Standing up,Lying down,0.16150341315613304,0
+2,HAU/user8/6-2-2,user8,Turning a page,Lying down,0.18456104460492592,0
+2,HAU/user8/6-2-3,user8,Stretching,Lying down,0.1848726977214571,0
+2,HAU/user8/7-1-1,user8,Undressing,Combing hair,0.2189977234495653,0
+2,HAU/user8/7-1-2,user8,Wiping hands,Brushing teeth,0.24656590105717086,0
+2,HAU/user8/7-1-3,user8,Massaging oneself,Brushing teeth,0.17118779238582701,0
+2,HAU/user8/7-2-1,user8,Peeling fruit,Peeling fruit,0.25835066258245243,1
+2,HAU/user8/7-2-2,user8,Stirring,Pouring,0.18577520631581212,0
+2,HAU/user8/7-2-3,user8,Peeling fruit,Peeling fruit,0.31117043954450724,1
+3,HAU/user20/1-1-1,user20,Combing hair,Combing hair,0.20458543811206084,1
+3,HAU/user20/1-1-2,user20,Checking the time,Massaging oneself,0.17201621211812268,0
+3,HAU/user20/1-1-3,user20,Combing hair,Brushing teeth,0.2548390748108791,0
+3,HAU/user20/1-2-1,user20,Squats,Jumping jacks,0.1798137138959237,0
+3,HAU/user20/1-2-2,user20,Stretching,Jumping jacks,0.22894408142506975,0
+3,HAU/user20/1-2-3,user20,Squats,Jumping jacks,0.19937902873285368,0
+3,HAU/user20/2-1-1,user20,Pouring,Washing dishes,0.2180010147180558,0
+3,HAU/user20/2-1-2,user20,Eating,Pouring,0.285310198089493,0
+3,HAU/user20/2-1-3,user20,Drinking,Pouring,0.33356395655722687,0
+3,HAU/user20/2-2-1,user20,Typing on a keyboard,Typing on a keyboard,0.3119087825308415,1
+3,HAU/user20/2-2-2,user20,Typing on a keyboard,Typing on a keyboard,0.2376863257636139,1
+3,HAU/user20/2-2-3,user20,Checking the time,Typing on a keyboard,0.3823272284337738,0
+3,HAU/user20/3-1-1,user20,Pouring,Washing dishes,0.2707498635122177,0
+3,HAU/user20/3-1-2,user20,Washing dishes,Washing dishes,0.2040257710409675,1
+3,HAU/user20/3-1-3,user20,Pouring,Washing dishes,0.17017503343415008,0
+3,HAU/user20/3-2-1,user20,Wiping surface,Washing face,0.07934360410830997,0
+3,HAU/user20/3-2-2,user20,Sweeping,Combing hair,0.07145255074958705,0
+3,HAU/user20/3-2-3,user20,Mopping,Checking the time,0.11241532356160727,0
+3,HAU/user20/4-1-1,user20,Turning a page,Taking a selfie,0.09726484123779293,0
+3,HAU/user20/4-1-2,user20,Turning a page,Taking medicine,0.30035524538132624,0
+3,HAU/user20/4-1-3,user20,Typing on a keyboard,Taking medicine,0.31828794347880723,0
+3,HAU/user20/4-2-1,user20,Combing hair,Combing hair,0.18992681288684096,1
+3,HAU/user20/4-2-2,user20,Combing hair,Combing hair,0.24950667799213158,1
+3,HAU/user20/4-2-3,user20,Brushing teeth,Combing hair,0.19007771567330733,0
+3,HAU/user20/5-1-1,user20,Pouring,Typing on a keyboard,0.15449491648545594,0
+3,HAU/user20/5-1-2,user20,Typing on a keyboard,Typing on a keyboard,0.151467100698245,1
+3,HAU/user20/5-1-3,user20,Grabbing utensils,Typing on a keyboard,0.1416960970531253,0
+3,HAU/user20/6-1-1,user20,Squats,Running,0.10694932205130764,0
+3,HAU/user20/6-1-2,user20,Jumping jacks,Running,0.140806999335046,0
+3,HAU/user20/6-1-3,user20,Jumping jacks,Running,0.09968103254893737,0
+3,HAU/user20/6-2-1,user20,Wiping hands,Combing hair,0.2677332886628665,0
+3,HAU/user20/6-2-2,user20,Wiping hands,Brushing teeth,0.1782893202382555,0
+3,HAU/user20/6-2-3,user20,Massaging oneself,Brushing teeth,0.21522951996461165,0
+3,HAU/user20/6-3-1,user20,Mopping,Squats,0.1206375540429183,0
+3,HAU/user20/6-3-2,user20,Walking,Stretching,0.09474561000249425,0
+3,HAU/user20/6-3-3,user20,Listening to the music with headphones,Stretching,0.11798632732089959,0
+3,HAU/user20/7-1-1,user20,Grabbing utensils,Washing dishes,0.21329288893311876,0
+3,HAU/user20/7-1-2,user20,Massaging oneself,Washing dishes,0.23674465227372973,0
+3,HAU/user20/7-1-3,user20,Grabbing utensils,Washing dishes,0.21942044326944063,0
+3,HAU/user20/7-2-1,user20,Walking,Combing hair,0.23423118238110519,0
+3,HAU/user20/7-2-2,user20,Walking,Combing hair,0.22927176013982367,0
+3,HAU/user20/7-2-3,user20,Walking,Combing hair,0.19872876581161014,0
+3,HAU/user4/1-1-1,user4,Washing face,Washing face,0.45116022899554165,1
+3,HAU/user4/1-1-2,user4,Washing face,Washing face,0.48312273564602426,1
+3,HAU/user4/1-1-3,user4,Wiping hands,Washing face,0.48505623504084305,0
+3,HAU/user4/1-2-1,user4,Walking,Drinking,0.30709031508093665,0
+3,HAU/user4/1-2-2,user4,Peeling fruit,Mopping,0.21700670956390591,0
+3,HAU/user4/1-2-3,user4,Grabbing utensils,Drinking,0.16275938461092326,0
+3,HAU/user4/2-1-1,user4,Eating,Turning a page,0.2307593655487206,0
+3,HAU/user4/2-1-2,user4,Drinking,Turning a page,0.20302020368908377,0
+3,HAU/user4/2-1-3,user4,Standing up,Turning a page,0.22245589605860255,0
+3,HAU/user4/2-2-1,user4,Mopping,Drinking,0.19216139200793103,0
+3,HAU/user4/2-2-2,user4,Sweeping,Drinking,0.23541177165972782,0
+3,HAU/user4/2-2-3,user4,Mopping,Drinking,0.20421897888484403,0
+3,HAU/user4/3-2-1,user4,Jumping jacks,Standing up,0.15459202929127255,0
+3,HAU/user4/3-2-2,user4,Standing up,Squats,0.10095570378065016,0
+3,HAU/user4/3-2-3,user4,Stretching,Standing up,0.13513395054047594,0
+3,HAU/user4/4-1-1,user4,Typing on a keyboard,Eating,0.2541155594792367,0
+3,HAU/user4/4-1-2,user4,Turning a page,Turning a page,0.27113588021335205,1
+3,HAU/user4/4-1-3,user4,Turning a page,Turning a page,0.2898647101003179,1
+3,HAU/user4/4-2-1,user4,Washing dishes,Walking,0.1627971744355672,0
+3,HAU/user4/4-2-2,user4,Drinking,Mopping,0.207551973551064,0
+3,HAU/user4/4-2-3,user4,Drinking,Walking,0.19059660548568394,0
+3,HAU/user4/5-1-1,user4,Eating,Drinking,0.18116832597281587,0
+3,HAU/user4/5-1-2,user4,Eating,Mopping,0.20705007032501632,0
+3,HAU/user4/5-1-3,user4,Stirring,Drinking,0.1938201748375167,0
+3,HAU/user4/5-2-1,user4,Typing on a keyboard,Reading,0.11759152823130568,0
+3,HAU/user4/5-2-2,user4,Walking,Stretching,0.15470487953063403,0
+3,HAU/user4/5-2-3,user4,Typing on a keyboard,Stretching,0.11583718971727151,0
+3,HAU/user4/6-1-1,user4,Listening to the music with headphones,Eating,0.16899868734331622,0
+3,HAU/user4/6-1-2,user4,Calling,Eating,0.26008948998010667,0
+3,HAU/user4/6-1-3,user4,Using a phone,Turning a page,0.2678241035778698,0
+3,HAU/user4/7-1-1,user4,Peeling fruit,Drinking,0.13873907732179697,0
+3,HAU/user4/7-1-2,user4,Taking medicine,Mopping,0.21828149187574433,0
+3,HAU/user4/7-1-3,user4,Peeling fruit,Mopping,0.22619714768778218,0
+3,HAU/user4/7-2-1,user4,Eating,Squats,0.15506512656302446,0
+3,HAU/user4/7-2-2,user4,Massaging oneself,Squats,0.13616716282877017,0
+3,HAU/user4/7-2-3,user4,Sitting down,Squats,0.1477074059690366,0
+3,HAU/user9/1-1-1,user9,Brushing teeth,Brushing teeth,0.30355034127919966,1
+3,HAU/user9/1-1-2,user9,Getting dressed,Wiping hands,0.28565560412896385,0
+3,HAU/user9/1-1-3,user9,Combing hair,Brushing teeth,0.25216708803022003,0
+3,HAU/user9/1-2-1,user9,Listening to the music with headphones,Reading,0.15012812187130864,0
+3,HAU/user9/1-2-2,user9,Typing on a keyboard,Reading,0.1543250879474534,0
+3,HAU/user9/1-2-3,user9,Typing on a keyboard,Reading,0.19633984051999975,0
+3,HAU/user9/2-1-1,user9,Pouring,Peeling fruit,0.269148523641418,0
+3,HAU/user9/2-1-2,user9,Stirring,Stirring,0.30731491391899224,1
+3,HAU/user9/2-1-3,user9,Grabbing utensils,Stirring,0.2552574288922744,0
+3,HAU/user9/2-2-1,user9,Squats,Getting dressed,0.23181223502947934,0
+3,HAU/user9/2-2-2,user9,Jumping jacks,Getting dressed,0.21178054185306558,0
+3,HAU/user9/2-2-3,user9,Walking,Getting dressed,0.2024459849911863,0
+3,HAU/user9/2-3-1,user9,Walking,Peeling fruit,0.2178419204246991,0
+3,HAU/user9/2-3-2,user9,Peeling fruit,Peeling fruit,0.2260530377684438,1
+3,HAU/user9/2-3-3,user9,Peeling fruit,Peeling fruit,0.1852287581563561,1
+3,HAU/user9/3-1-1,user9,Playing games,Using a phone,0.15374733119031497,0
+3,HAU/user9/3-1-2,user9,Undressing,Undressing,0.13049959194240718,1
+3,HAU/user9/3-1-3,user9,Playing games,Using a phone,0.1505677869891171,0
+3,HAU/user9/3-2-1,user9,Drinking,Peeling fruit,0.22263702722665538,0
+3,HAU/user9/3-2-2,user9,Walking,Peeling fruit,0.26485974080842106,0
+3,HAU/user9/3-2-3,user9,Pouring,Peeling fruit,0.1831189079354475,0
+3,HAU/user9/3-3-1,user9,Lying down,Walking,0.1485875374232221,0
+3,HAU/user9/3-3-2,user9,Mopping,Walking,0.1300590212987615,0
+3,HAU/user9/3-3-3,user9,Lying down,Walking,0.13645811473662373,0
+3,HAU/user9/4-1-1,user9,Checking the time,Playing games,0.2211299130602741,0
+3,HAU/user9/4-1-2,user9,Typing on a keyboard,Playing games,0.20228220349651568,0
+3,HAU/user9/4-1-3,user9,Reading,Playing games,0.1675121795800593,0
+3,HAU/user9/4-2-1,user9,Walking,Walking,0.12468649538531475,1
+3,HAU/user9/4-2-2,user9,Stretching,Stretching,0.15307903217266605,1
+3,HAU/user9/4-2-3,user9,Squats,Stretching,0.2528348930697347,0
+3,HAU/user9/4-3-1,user9,Walking,Reading,0.19131590029056197,0
+3,HAU/user9/4-3-2,user9,Walking,Reading,0.22804611562205754,0
+3,HAU/user9/4-3-3,user9,Typing on a keyboard,Reading,0.17930730496897443,0
+3,HAU/user9/5-1-1,user9,Standing up,Turning a page,0.14118801318983917,0
+3,HAU/user9/5-1-2,user9,Listening to the music with headphones,Turning a page,0.13462329415102373,0
+3,HAU/user9/5-1-3,user9,Listening to the music with headphones,Turning a page,0.11898894098617338,0
+3,HAU/user9/5-2-1,user9,Peeling fruit,Peeling fruit,0.13149914251392691,1
+3,HAU/user9/5-2-2,user9,Wiping hands,Peeling fruit,0.14030580849672195,0
+3,HAU/user9/5-2-3,user9,Wiping hands,Washing dishes,0.13662369473760913,0
+3,HAU/user9/5-3-1,user9,Checking the time,Reading,0.1077295258564879,0
+3,HAU/user9/5-3-2,user9,Sitting down,Reading,0.14499886429869058,0
+3,HAU/user9/5-3-3,user9,Playing games,Reading,0.11308902166429582,0
+3,HAU/user9/6-1-1,user9,Checking the time,Watching TV,0.17736882716049382,0
+3,HAU/user9/6-1-2,user9,Checking the time,Playing games,0.08740933929458518,0
+3,HAU/user9/6-1-3,user9,Reading,Sitting down,0.19983264032515585,0
+3,HAU/user9/6-2-1,user9,Taking medicine,Undressing,0.15099800105889843,0
+3,HAU/user9/6-2-2,user9,Lying down,Undressing,0.14713535942845044,0
+3,HAU/user9/6-2-3,user9,Taking a selfie,Undressing,0.11827645639211369,0
+3,HAU/user9/7-1-1,user9,Massaging oneself,Wiping hands,0.2701854121777602,0
+3,HAU/user9/7-1-2,user9,Checking body temperature,Wiping hands,0.25969953168486737,0
+3,HAU/user9/7-1-3,user9,Checking body temperature,Wiping hands,0.23844717692662096,0
+3,HAU/user9/7-2-1,user9,Sweeping,Peeling fruit,0.2432977022099583,0
+3,HAU/user9/7-2-2,user9,Eating,Peeling fruit,0.26394864618223346,0
+3,HAU/user9/7-2-3,user9,Sweeping,Peeling fruit,0.26079494647026485,0
+4,HAU/user16/1-1-1,user16,Brushing teeth,Brushing teeth,0.20735210144043903,1
+4,HAU/user16/1-1-2,user16,Brushing teeth,Brushing teeth,0.20995914210288213,1
+4,HAU/user16/1-1-3,user16,Walking,Brushing teeth,0.19404292119846753,0
+4,HAU/user16/1-2-1,user16,Pouring,Peeling fruit,0.34047511839454603,0
+4,HAU/user16/1-2-2,user16,Eating,Wiping hands,0.3356192577094183,0
+4,HAU/user16/1-2-3,user16,Stirring,Wiping hands,0.33359457136876275,0
+4,HAU/user16/2-1-1,user16,Stirring,Stirring,0.3058944208675389,1
+4,HAU/user16/2-1-2,user16,Pouring,Stirring,0.2763522675847153,0
+4,HAU/user16/2-1-3,user16,Stirring,Pouring,0.16998791737938004,0
+4,HAU/user16/2-2-1,user16,Combing hair,Combing hair,0.15971931288243743,1
+4,HAU/user16/2-2-2,user16,Combing hair,Massaging oneself,0.1299680219586364,0
+4,HAU/user16/2-2-3,user16,Combing hair,Massaging oneself,0.118372039933415,0
+4,HAU/user16/2-3-1,user16,Peeling fruit,Pouring,0.34533429417001876,0
+4,HAU/user16/2-3-2,user16,Grabbing utensils,Wiping surface,0.21898633444769974,0
+4,HAU/user16/2-3-3,user16,Peeling fruit,Pouring,0.3157307350998052,0
+4,HAU/user16/3-1-1,user16,Walking,Squats,0.09134472262896443,0
+4,HAU/user16/3-1-2,user16,Walking,Stirring,0.12654423681979043,0
+4,HAU/user16/3-1-3,user16,Squats,Stirring,0.11319715221879581,0
+4,HAU/user16/3-2-1,user16,Drinking,Pouring,0.2129120754995156,0
+4,HAU/user16/3-2-2,user16,Drinking,Wiping hands,0.2627959778813185,0
+4,HAU/user16/3-2-3,user16,Peeling fruit,Wiping hands,0.2860033126444001,0
+4,HAU/user16/3-3-1,user16,Wiping surface,Wiping surface,0.1376769377018752,1
+4,HAU/user16/3-3-2,user16,Walking,Wiping surface,0.25631404400139113,0
+4,HAU/user16/3-3-3,user16,Walking,Wiping surface,0.33275190448369923,0
+4,HAU/user16/4-1-1,user16,Calling,Squats,0.14426502607044892,0
+4,HAU/user16/4-1-2,user16,Turning a page,Reading,0.112435672102792,0
+4,HAU/user16/4-1-3,user16,Checking the time,Squats,0.0899719449222557,0
+4,HAU/user16/5-1-1,user16,Sitting down,Sitting down,0.23620728561748738,1
+4,HAU/user16/5-1-2,user16,Listening to the music with headphones,Sitting down,0.26179559993905066,0
+4,HAU/user16/5-1-3,user16,Listening to the music with headphones,Sitting down,0.24576876335376932,0
+4,HAU/user16/5-2-1,user16,Eating,Pouring,0.2734580095271502,0
+4,HAU/user16/5-2-2,user16,Walking,Pouring,0.28569745963894577,0
+4,HAU/user16/5-2-3,user16,Eating,Wiping surface,0.2690929524567152,0
+4,HAU/user16/5-3-1,user16,Drinking,Checking the time,0.19270966332348127,0
+4,HAU/user16/5-3-2,user16,Checking the time,Watching TV,0.2503854431271449,0
+4,HAU/user16/5-3-3,user16,Lying down,Checking the time,0.22572974320149575,0
+4,HAU/user16/6-1-1,user16,Lunges,Checking the time,0.16991157143968513,0
+4,HAU/user16/6-1-2,user16,Lunges,Wiping surface,0.1602112243956468,0
+4,HAU/user16/6-1-3,user16,Lunges,Wiping surface,0.22427135199104403,0
+4,HAU/user16/6-2-1,user16,Sweeping,Eating,0.17335862729899174,0
+4,HAU/user16/6-2-2,user16,Sweeping,Wiping hands,0.2200640686573947,0
+4,HAU/user16/6-2-3,user16,Taking medicine,Wiping hands,0.24607462543163328,0
+4,HAU/user16/7-1-1,user16,Massaging oneself,Writing,0.2000563675686103,0
+4,HAU/user16/7-1-2,user16,Sitting down,Reading,0.2195836067138878,0
+4,HAU/user16/7-1-3,user16,Sitting down,Writing,0.12832982456140352,0
+4,HAU/user16/7-2-1,user16,Eating,Wiping hands,0.2741325087646556,0
+4,HAU/user16/7-2-2,user16,Eating,Peeling fruit,0.2227426642122727,0
+4,HAU/user16/7-2-3,user16,Eating,Wiping hands,0.27795801310992707,0
+4,HAU/user16/7-3-1,user16,Walking,Writing,0.18183564317801879,0
+4,HAU/user16/7-3-2,user16,Checking the time,Writing,0.13759691451479378,0
+4,HAU/user16/7-3-3,user16,Sitting down,Reading,0.16304196826404482,0
+4,HAU/user21/1-1-1,user21,Wiping hands,Washing face,0.2414550859941601,0
+4,HAU/user21/1-1-2,user21,Walking,Washing face,0.38366991341873985,0
+4,HAU/user21/1-1-3,user21,Wiping hands,Washing face,0.42659441129747605,0
+4,HAU/user21/1-2-1,user21,Using a phone,Squats,0.24512363175112697,0
+4,HAU/user21/1-2-2,user21,Listening to the music with headphones,Checking the time,0.17971160970832176,0
+4,HAU/user21/1-2-3,user21,Walking,Typing on a keyboard,0.17569093380791165,0
+4,HAU/user21/2-1-1,user21,Sweeping,Peeling fruit,0.23367572303673767,0
+4,HAU/user21/2-1-2,user21,Mopping,Peeling fruit,0.33743228924681234,0
+4,HAU/user21/2-1-3,user21,Grabbing utensils,Peeling fruit,0.3328844599672842,0
+4,HAU/user21/2-2-1,user21,Turning a page,Squats,0.19974199784263386,0
+4,HAU/user21/2-2-2,user21,Turning a page,Squats,0.2663104326137335,0
+4,HAU/user21/2-2-3,user21,Standing up,Reading,0.1694904551014874,0
+4,HAU/user21/3-1-1,user21,Grabbing utensils,Peeling fruit,0.3759834883431372,0
+4,HAU/user21/3-1-2,user21,Grabbing utensils,Peeling fruit,0.3771633237428228,0
+4,HAU/user21/3-1-3,user21,Grabbing utensils,Peeling fruit,0.3760433319637046,0
+4,HAU/user21/3-2-1,user21,Jumping jacks,Squats,0.3839003980111048,0
+4,HAU/user21/3-2-2,user21,Jumping jacks,Squats,0.517891759146232,0
+4,HAU/user21/3-2-3,user21,Checking body temperature,Squats,0.43301631887665043,0
+4,HAU/user21/4-1-1,user21,Calling,Wiping surface,0.15768786549707595,0
+4,HAU/user21/4-1-2,user21,Calling,Walking,0.1524950023535652,0
+4,HAU/user21/4-1-3,user21,Calling,Wiping surface,0.18543327658735087,0
+4,HAU/user21/4-2-1,user21,Combing hair,Checking body temperature,0.19413306759645146,0
+4,HAU/user21/4-2-2,user21,Brushing teeth,Combing hair,0.16256817585970001,0
+4,HAU/user21/4-2-3,user21,Washing face,Taking medicine,0.186953584629769,0
+4,HAU/user21/5-1-1,user21,Taking a selfie,Combing hair,0.26094583831035684,0
+4,HAU/user21/5-1-2,user21,Walking,Combing hair,0.22462939752167946,0
+4,HAU/user21/5-1-3,user21,Walking,Combing hair,0.18632883625729005,0
+4,HAU/user21/5-2-1,user21,Walking,Writing,0.13846377690814995,0
+4,HAU/user21/5-2-2,user21,Listening to the music with headphones,Walking,0.15174003317947096,0
+4,HAU/user21/5-2-3,user21,Listening to the music with headphones,Walking,0.1881116688227686,0
+4,HAU/user21/6-1-1,user21,Getting dressed,Combing hair,0.1760802021811978,0
+4,HAU/user21/6-1-2,user21,Checking body temperature,Combing hair,0.294611786524115,0
+4,HAU/user21/6-1-3,user21,Getting dressed,Combing hair,0.23068035983296553,0
+4,HAU/user21/6-2-1,user21,Checking the time,Sitting down,0.11961958163011883,0
+4,HAU/user21/6-2-2,user21,Checking the time,Wiping surface,0.13844512250843086,0
+4,HAU/user21/6-2-3,user21,Walking,Using a phone,0.28707084130173094,0
+4,HAU/user21/7-1-1,user21,Eating,Peeling fruit,0.3817966102023991,0
+4,HAU/user21/7-1-2,user21,Taking medicine,Peeling fruit,0.3889284073185028,0
+4,HAU/user21/7-1-3,user21,Taking medicine,Peeling fruit,0.3158873506676002,0
+4,HAU/user21/7-2-1,user21,Wiping hands,Washing face,0.18375074436867717,0
+4,HAU/user21/7-2-2,user21,Massaging oneself,Washing face,0.41349930118563305,0
+4,HAU/user21/7-2-3,user21,Wiping hands,Wiping hands,0.19710620951326285,1
+4,HAU/user5/1-1-1,user5,Washing face,Wiping hands,0.24401103196540375,0
+4,HAU/user5/1-1-2,user5,Combing hair,Washing face,0.3150893729145613,0
+4,HAU/user5/1-1-3,user5,Washing face,Washing face,0.3260202001016428,1
+4,HAU/user5/1-2-1,user5,Eating,Eating,0.13133887667977936,1
+4,HAU/user5/1-2-2,user5,Pouring,Peeling fruit,0.09870260608344451,0
+4,HAU/user5/1-2-3,user5,Drinking,Eating,0.1115437494421185,0
+4,HAU/user5/2-1-1,user5,Eating,Turning a page,0.17571578930003834,0
+4,HAU/user5/2-1-2,user5,Reading,Listening to the music with headphones,0.1191728419637499,0
+4,HAU/user5/2-1-3,user5,Turning a page,Using a phone,0.09282969441448931,0
+4,HAU/user5/3-1-1,user5,Reading,Standing up,0.09751572788810416,0
+4,HAU/user5/3-1-2,user5,Standing up,Standing up,0.0898419253560095,1
+4,HAU/user5/3-1-3,user5,Sweeping,Sitting down,0.11618343797721588,0
+4,HAU/user5/3-2-1,user5,Eating,Eating,0.10544615864719095,1
+4,HAU/user5/3-2-2,user5,Drinking,Grabbing utensils,0.10421566014531351,0
+4,HAU/user5/3-2-3,user5,Drinking,Eating,0.15682506934153825,0
+4,HAU/user5/4-1-1,user5,Typing on a keyboard,Writing,0.28757716348863505,0
+4,HAU/user5/4-1-2,user5,Typing on a keyboard,Writing,0.2767470083907454,0
+4,HAU/user5/4-1-3,user5,Calling,Writing,0.23070516153312903,0
+4,HAU/user5/4-2-1,user5,Pouring,Mopping,0.15751240972454067,0
+4,HAU/user5/4-2-2,user5,Walking,Mopping,0.21806574314622704,0
+4,HAU/user5/4-2-3,user5,Pouring,Grabbing utensils,0.16240718966757958,0
+4,HAU/user5/4-3-1,user5,Reading,Writing,0.24445097820246195,0
+4,HAU/user5/4-3-2,user5,Turning a page,Writing,0.2076294385718798,0
+4,HAU/user5/4-3-3,user5,Walking,Writing,0.2020914349088761,0
+4,HAU/user5/5-1-1,user5,Walking,Walking,0.14783167886470666,1
+4,HAU/user5/5-1-2,user5,Wiping surface,Drinking,0.14483647189223023,0
+4,HAU/user5/5-1-3,user5,Walking,Walking,0.13377820827133546,1
+4,HAU/user5/5-2-1,user5,Stretching,Calling,0.15827836862718692,0
+4,HAU/user5/5-2-2,user5,Stretching,Calling,0.1668978606507797,0
+4,HAU/user5/5-2-3,user5,Walking,Writing,0.1474109811919521,0
+4,HAU/user5/6-1-1,user5,Lunges,Stretching,0.1292323288256427,0
+4,HAU/user5/6-1-2,user5,Lunges,Stretching,0.14258522959589234,0
+4,HAU/user5/6-1-3,user5,Walking,Standing up,0.10035252420025918,0
+4,HAU/user5/6-2-1,user5,Peeling fruit,Mopping,0.24055090826826392,0
+4,HAU/user5/6-2-2,user5,Eating,Mopping,0.15122290351807816,0
+4,HAU/user5/6-2-3,user5,Walking,Eating,0.18673390004119153,0
+4,HAU/user5/7-1-1,user5,Sitting down,Eating,0.14933287202440199,0
+4,HAU/user5/7-1-2,user5,Combing hair,Eating,0.10631591201481547,0
+4,HAU/user5/7-1-3,user5,Standing up,Eating,0.11616370997043707,0
+4,HAU/user5/7-2-1,user5,Mopping,Eating,0.13810551041282212,0
+4,HAU/user5/7-2-2,user5,Drinking,Sweeping,0.1699470725342375,0
+4,HAU/user5/7-2-3,user5,Walking,Peeling fruit,0.1589558257004571,0
