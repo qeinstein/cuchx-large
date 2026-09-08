@@ -109,6 +109,8 @@ def main():
         if donors:
             x = one_row(r, donors, tr)
             x["current"] = current[r["qa_id"]]
+            options = [r[L].strip() for L in "ABCD"]
+            x["current_text"] = options["ABCD".index(x["current"])]
             test_rows.append(x)
 
     # Sweep conservative gates.  A gate is promotable only if it has zero R->W on
@@ -132,12 +134,12 @@ def main():
     for g in gates:
         rows = [r for r in test_rows if r["support"] >= g["support"] and
                 r["purity"] >= g["purity"] and r["vote_margin"] >= g["vote_margin"] and
-                r["template"] != r["fallback"]]
+                r["template"] != r["current_text"]]
         if rows:
             proposals.append({"gate": {k: g[k] for k in ("support", "purity", "vote_margin")},
                               "oof": {k: g[k] for k in ("flips", "w_to_r", "r_to_w", "precision", "net")},
                               "test": [{k: r[k] for k in ("qa_id", "support", "purity",
-                                  "vote_margin", "template", "fallback", "current")}
+                                  "vote_margin", "template", "fallback", "current", "current_text")}
                                        for r in rows]})
 
     # A crucial guard against a misleading aggregate precision: if a test

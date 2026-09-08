@@ -176,7 +176,9 @@ the remaining object disagreements are checked separately, including unchanged O
 
 Thus no non-unanimous relaxation is legitimate. A gate such as support≥5, purity≥0.60 can
 look positive if it counts only changed rows, but it would admit the ambiguous 0526/0527
-signatures; they are explicitly rejected. The full results are in
+signatures; they are explicitly rejected. After mapping letters back to semantic option
+text, the only zero-R→W relaxation that creates a genuinely new test disagreement is the
+support≥6, purity≥0.50 tie for 0526; its own exact-signature transfer is 0/6. The full results are in
 `object_gate_relaxation_audit.json`.
 
 ### Focused 0526 audit
