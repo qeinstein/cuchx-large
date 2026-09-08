@@ -19,10 +19,12 @@ def main(nfold=5, tag='full', pair_frac=0.0):
         ctx = P.fit_all(tr, meta, hold)
         tr_eval = thin_to_pairs(tr, hold, pair_frac, seed=fi) if pair_frac else tr
         vis, key, aux = make_pseudo(tr_eval, meta, hold, seed=100 + fi)
-        pred, blocks, _ = P.solve(vis, ctx, 'oof')
+        pred, blocks, _, diag = P.solve(vis, ctx, 'oof')
         ans = dict(zip(key.qa_id, key.answer))
         for r in vis.itertuples():
-            pv = pred.get(r.qa_id, 'A')
+            # ``None`` is an explicit no-evidence result.  Count it as an
+            # error instead of silently turning it into option A.
+            pv = pred.get(r.qa_id)
             rows.append(dict(qa_id=r.qa_id, fold=fi, source=r.source, category=r.category,
                              pred=pv, answer=ans[r.qa_id], correct=int(pv == ans[r.qa_id])))
         print(f'  fold {fi} done ({len(hold)} users)', flush=True)

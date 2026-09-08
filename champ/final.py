@@ -5,8 +5,8 @@ subject-disjoint held-out validation and the real Kaggle test set.
   python champ/final.py test         -> submission_final.csv + coverage/fallback report
 
 Fallback policy: `solve` returns None for any question whose evidence is entirely absent.
-Those are filled from submission_v8.csv (test) or counted as errors (validation), and are
-reported explicitly.  A silent constant answer is never produced.
+Those are filled from the immutable champion (or `CHAMP_FALLBACK`) on test and counted as
+errors on validation.  A silent constant answer is never produced.
 """
 import os, sys, json
 from collections import defaultdict
@@ -100,7 +100,14 @@ def run_test():
     vis = real_test_view(te)
     pred, blocks, pool_of, diag = P.solve(vis, ctx, 'test')
 
-    v8 = pd.read_csv(os.path.join(ROOT, 'submission_v8.csv')).set_index('qa_id').prediction
+    fallback_name = os.environ.get('CHAMP_FALLBACK',
+                                    'submission_097076_332of342_CHAMPION.csv')
+    fallback_path = os.path.join(ROOT, fallback_name)
+    if not os.path.exists(fallback_path):
+        raise FileNotFoundError('CHAMP_FALLBACK does not exist: ' + fallback_path)
+    v8 = pd.read_csv(fallback_path).set_index('qa_id').prediction
+    if list(v8.index) != list(te.qa_id):
+        raise ValueError('fallback row order/key mismatch: ' + fallback_path)
     out, nfb = [], 0
     for q in te.qa_id:
         p = pred.get(q)
@@ -131,7 +138,7 @@ def run_test():
     coverage_report(vis, diag, 'test')
     print(f'\n  blocks inferred: {len(blocks)}  sizes '
           f'{pd.Series([len(b) for b in blocks]).value_counts().to_dict()}')
-    print(f'  fallback predictions taken from v8: {nfb}')
+    print(f'  fallback predictions taken from {fallback_name}: {nfb}')
     print('\n--- prediction distribution by category ---')
     mm = te[['qa_id', 'source', 'category']].merge(sub, on='qa_id')
     for (s, c), g in mm.groupby(['source', 'category']):

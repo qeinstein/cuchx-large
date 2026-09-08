@@ -41,8 +41,16 @@ def caches(meta):
     _C['meta_idx'] = meta.set_index('qa_path')
     _C['mi'] = set(_C['meta_idx'].index)
     _C['skel'] = np.load(os.path.join(ROOT, 'champ', 'skel_seq.npz'))
-    _C['lg'] = np.load(os.path.join(ROOT, 'champ', os.environ.get(
-        'CHAMP_LOGITS', 'dense_logits.npz')))
+    logits_name = os.environ.get('CHAMP_LOGITS', 'dense_logits.npz')
+    logits_path = os.path.join(ROOT, 'champ', logits_name)
+    if not os.path.exists(logits_path):
+        available = sorted(x for x in os.listdir(os.path.join(ROOT, 'champ'))
+                           if x.startswith('dense_logits') and x.endswith('.npz'))
+        hint = ', '.join(available) if available else '(none)'
+        raise FileNotFoundError(
+            f'dense-logit cache {logits_name!r} is missing at {logits_path}; '
+            f'set CHAMP_LOGITS explicitly or regenerate it (available: {hint})')
+    _C['lg'] = np.load(logits_path)
     # HARn -> parent nesting, from timestamps and global frame indices only
     for kind, hkind in (('train_harn', 'train_hau'), ('test', 'test')):
         pass

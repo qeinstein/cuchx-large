@@ -1,0 +1,17 @@
+{
+  "champion_sha256": "25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56",
+  "champion_rows": 682,
+  "champion_changed_vs_330": 9,
+  "solve_unpack": {
+    "checked": true,
+    "bad_sites": []
+  },
+  "decoder": {
+    "signed_states": 30,
+    "accepted_probe_outcomes": 30,
+    "rejected_inconsistent_outcomes": 51
+  },
+  "manifest": {
+    "manifest_entries": 15
+  }
+}

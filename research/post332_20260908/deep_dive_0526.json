@@ -1,0 +1,136 @@
+{
+  "qa_id": "test_0526",
+  "donor_group": {
+    "test_options": {
+      "A": "a tablet",
+      "B": "a calculator",
+      "C": "a keyboard",
+      "D": "a phone"
+    },
+    "test_full_donor_support": 6,
+    "test_full_donor_counts": {
+      "a keyboard": 3,
+      "a phone": 3
+    },
+    "leave_user_out": [
+      {
+        "qa_id": "training_3985",
+        "user": "user17",
+        "truth": "a keyboard",
+        "prediction": "a phone",
+        "support": 5,
+        "counts": {
+          "a keyboard": 2,
+          "a phone": 3
+        },
+        "correct": 0
+      },
+      {
+        "qa_id": "training_3986",
+        "user": "user19",
+        "truth": "a keyboard",
+        "prediction": "a phone",
+        "support": 5,
+        "counts": {
+          "a keyboard": 2,
+          "a phone": 3
+        },
+        "correct": 0
+      },
+      {
+        "qa_id": "training_3990",
+        "user": "user6",
+        "truth": "a keyboard",
+        "prediction": "a phone",
+        "support": 5,
+        "counts": {
+          "a keyboard": 2,
+          "a phone": 3
+        },
+        "correct": 0
+      },
+      {
+        "qa_id": "training_3994",
+        "user": "user16",
+        "truth": "a phone",
+        "prediction": "a keyboard",
+        "support": 5,
+        "counts": {
+          "a keyboard": 3,
+          "a phone": 2
+        },
+        "correct": 0
+      },
+      {
+        "qa_id": "training_3998",
+        "user": "user8",
+        "truth": "a phone",
+        "prediction": "a keyboard",
+        "support": 4,
+        "counts": {
+          "a keyboard": 3,
+          "a phone": 1
+        },
+        "correct": 0
+      },
+      {
+        "qa_id": "training_3999",
+        "user": "user8",
+        "truth": "a phone",
+        "prediction": "a keyboard",
+        "support": 4,
+        "counts": {
+          "a keyboard": 3,
+          "a phone": 1
+        },
+        "correct": 0
+      }
+    ],
+    "leave_user_out_accuracy": 0.0
+  },
+  "cached_phone_typing_probe": {
+    "clip": "LM_test_0016",
+    "p_typing_binary": 0.4699043954142083,
+    "hip_z_delta": 0.02353954315185547,
+    "nframes": 17
+  },
+  "feature_diagnostics": {
+    "training_rows": 174,
+    "classes": {
+      "typing": 86,
+      "phone": 88
+    },
+    "subject_disjoint_knn": {
+      "3": {
+        "correct": 101,
+        "n": 174,
+        "accuracy": 0.5804597701149425
+      },
+      "5": {
+        "correct": 102,
+        "n": 174,
+        "accuracy": 0.5862068965517241
+      },
+      "11": {
+        "correct": 103,
+        "n": 174,
+        "accuracy": 0.5919540229885057
+      }
+    },
+    "test": {
+      "knn11_prediction": "phone",
+      "knn11_probabilities": {
+        "phone": 0.8136848742318004,
+        "typing": 0.18631512576819964
+      }
+    },
+    "clip_features": {
+      "nf": 17.0,
+      "f0": 146.0,
+      "sk_v_mean": 0.008312570450196,
+      "sk_vwrist_mean": 0.0087884631456025,
+      "imu_gyr_mean": 53.66940528411002
+    }
+  },
+  "interpretation": "Exact option donors are a 3-keyboard/3-phone tie, and leave-user-out transfer is intentionally evaluated on every row of that group.  Feature diagnostics disagree (KNN versus aggregate/logistic); no object correction is approved."
+}

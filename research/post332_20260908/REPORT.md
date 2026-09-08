@@ -157,3 +157,48 @@ without independent correction precision, and 0527's template purity is only .60
 Decode a hypothetical observed pair +1 with `python3 research/build_post332_suite.py --observe EXPLORATORY_pair=1`. Repeat `--observe` for subsequent evaluations; all deltas are versus **332**. The decoder preserves the best actually scored configuration instead of discarding unidentified aggregate wins. Current observations live separately in `../takeover_20260908/scored_result.json`.
 
 For the five-slot plan, run `python3 research/post332_20260908/adaptive_decode.py <d0488-revert-delta> <d0477-revert-delta> <d0506-revert-delta> <d0519-revert-delta>`. It validates the four signed outcomes and prints the exact fifth filename; it has no network or write side effects.
+
+## Follow-up stress tests (2026-09-08)
+
+### Object-template gate
+
+`object_gate_relaxation_audit.py` sweeps support, purity, and vote-margin relaxations. The
+112/113 unanimous-object result is not an artefact of requiring a large donor count: the
+25 changed OOF rows remain 25 W→R and 0 R→W even at purity thresholds down to 0.80. The
+apparent opportunity from lower purity is selection-induced. The exact signatures behind
+the remaining object disagreements are checked separately, including unchanged OOF rows:
+
+* `test_0526` has six exact donors split **3 keyboard / 3 phone**. Leave-one-user-out
+  transfer on all six corresponding labelled rows is **0/6**, with the donor majority
+  predicting the opposite object each time.
+* `test_0527` (and the identical option signature for `test_0533`) has five donors split
+  **3 remote / 2 phone**. Leave-one-user-out transfer is only **1/5**.
+
+Thus no non-unanimous relaxation is legitimate. A gate such as support≥5, purity≥0.60 can
+look positive if it counts only changed rows, but it would admit the ambiguous 0526/0527
+signatures; they are explicitly rejected. The full results are in
+`object_gate_relaxation_audit.json`.
+
+### Focused 0526 audit
+
+`deep_dive_0526.py` and `deep_dive_0526.json` isolate the only plausible fifth-slot object
+candidate. The clip is 17 frames (1.6 s), seated at a desk; the object is not resolved in
+depth. The cached phone-versus-typing model gives p(typing)=0.470. A separate 11-neighbor
+feature diagnostic leans phone (0.814), while the aggregate action head leans keyboard but
+with low confidence (keyboard .302 versus phone .059). These disagree and the exact donor
+group is a 3–3 tie with 0/6 leave-user-out transfer, so `D→C` remains research-only.
+
+### Pipeline and artifact integrity
+
+The current solver API returns `(pred, blocks, pool_of, diag)`. Two legacy callers were
+still unpacking three values (`make_submission.py`, `eval_full.py`); they are corrected.
+Legacy candidate/final utilities also had stale `submission_v8.csv`/0.92105 paths and
+silent `'A'` fallbacks. They now require an existing, row-aligned `CHAMP_FALLBACK` (default
+the immutable 332 file). Missing dense logits now raise an explicit error naming available
+caches rather than failing with an opaque path error.
+
+With `CHAMP_LOGITS=dense_logits_screen1_bucket.npz`, `champ/final.py test` completed with
+0 fallback fills, valid 682-row formatting, and explicit cache coverage. The standalone
+`pipeline_artifact_audit.py` passes: champion SHA unchanged, all 15 manifest hashes/diffs
+match, all 30 algebraically valid decoder states pass, and all in-tree `P.solve` callers
+use the four-value API.

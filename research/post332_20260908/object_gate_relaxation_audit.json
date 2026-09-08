@@ -1,0 +1,2324 @@
+{
+  "oof_rows": 126,
+  "oof_unanimous": {
+    "flips": 25,
+    "w_to_r": 25,
+    "r_to_w": 0,
+    "precision": 1.0,
+    "net": 25
+  },
+  "test_rows_with_exact_donors": 19,
+  "test_rows": [
+    {
+      "qa_id": "test_0522",
+      "user": "",
+      "support": 1,
+      "purity": 1.0,
+      "vote_margin": 1,
+      "answer_count": 1,
+      "template": "a cloth",
+      "fallback": "a clothes",
+      "truth": null,
+      "changed": 1,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "C"
+    },
+    {
+      "qa_id": "test_0523",
+      "user": "",
+      "support": 1,
+      "purity": 1.0,
+      "vote_margin": 1,
+      "answer_count": 1,
+      "template": "a cloth",
+      "fallback": "a clothes",
+      "truth": null,
+      "changed": 1,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "A"
+    },
+    {
+      "qa_id": "test_0524",
+      "user": "",
+      "support": 1,
+      "purity": 1.0,
+      "vote_margin": 1,
+      "answer_count": 1,
+      "template": "a cloth",
+      "fallback": "a clothes",
+      "truth": null,
+      "changed": 1,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "B"
+    },
+    {
+      "qa_id": "test_0525",
+      "user": "",
+      "support": 1,
+      "purity": 1.0,
+      "vote_margin": 1,
+      "answer_count": 1,
+      "template": "a cloth",
+      "fallback": "a clothes",
+      "truth": null,
+      "changed": 1,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "C"
+    },
+    {
+      "qa_id": "test_0526",
+      "user": "",
+      "support": 6,
+      "purity": 0.5,
+      "vote_margin": 0,
+      "answer_count": 2,
+      "template": "a keyboard",
+      "fallback": "a phone",
+      "truth": null,
+      "changed": 1,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "D"
+    },
+    {
+      "qa_id": "test_0527",
+      "user": "",
+      "support": 5,
+      "purity": 0.6,
+      "vote_margin": 1,
+      "answer_count": 2,
+      "template": "a remote",
+      "fallback": "a phone",
+      "truth": null,
+      "changed": 1,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "C"
+    },
+    {
+      "qa_id": "test_0528",
+      "user": "",
+      "support": 3,
+      "purity": 1.0,
+      "vote_margin": 3,
+      "answer_count": 1,
+      "template": "a documents",
+      "fallback": "a documents",
+      "truth": null,
+      "changed": 0,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "D"
+    },
+    {
+      "qa_id": "test_0529",
+      "user": "",
+      "support": 5,
+      "purity": 1.0,
+      "vote_margin": 5,
+      "answer_count": 1,
+      "template": "a documents",
+      "fallback": "a documents",
+      "truth": null,
+      "changed": 0,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "C"
+    },
+    {
+      "qa_id": "test_0530",
+      "user": "",
+      "support": 2,
+      "purity": 1.0,
+      "vote_margin": 2,
+      "answer_count": 1,
+      "template": "a headphones",
+      "fallback": "a phone",
+      "truth": null,
+      "changed": 1,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "D"
+    },
+    {
+      "qa_id": "test_0531",
+      "user": "",
+      "support": 1,
+      "purity": 1.0,
+      "vote_margin": 1,
+      "answer_count": 1,
+      "template": "a headphones",
+      "fallback": "a phone",
+      "truth": null,
+      "changed": 1,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "A"
+    },
+    {
+      "qa_id": "test_0532",
+      "user": "",
+      "support": 3,
+      "purity": 1.0,
+      "vote_margin": 3,
+      "answer_count": 1,
+      "template": "a phone",
+      "fallback": "a phone",
+      "truth": null,
+      "changed": 0,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "B"
+    },
+    {
+      "qa_id": "test_0533",
+      "user": "",
+      "support": 5,
+      "purity": 0.6,
+      "vote_margin": 1,
+      "answer_count": 2,
+      "template": "a remote",
+      "fallback": "a phone",
+      "truth": null,
+      "changed": 1,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "A"
+    },
+    {
+      "qa_id": "test_0534",
+      "user": "",
+      "support": 3,
+      "purity": 1.0,
+      "vote_margin": 3,
+      "answer_count": 1,
+      "template": "a remote",
+      "fallback": "a keyboard",
+      "truth": null,
+      "changed": 1,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "B"
+    },
+    {
+      "qa_id": "test_0535",
+      "user": "",
+      "support": 2,
+      "purity": 1.0,
+      "vote_margin": 2,
+      "answer_count": 1,
+      "template": "a smartphone",
+      "fallback": "a smartphone",
+      "truth": null,
+      "changed": 0,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "A"
+    },
+    {
+      "qa_id": "test_0536",
+      "user": "",
+      "support": 3,
+      "purity": 1.0,
+      "vote_margin": 3,
+      "answer_count": 1,
+      "template": "a smartphone",
+      "fallback": "a smartphone",
+      "truth": null,
+      "changed": 0,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "C"
+    },
+    {
+      "qa_id": "test_0537",
+      "user": "",
+      "support": 8,
+      "purity": 1.0,
+      "vote_margin": 8,
+      "answer_count": 1,
+      "template": "a smartphone",
+      "fallback": "a smartphone",
+      "truth": null,
+      "changed": 0,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "A"
+    },
+    {
+      "qa_id": "test_0538",
+      "user": "",
+      "support": 1,
+      "purity": 1.0,
+      "vote_margin": 1,
+      "answer_count": 1,
+      "template": "a cabinet",
+      "fallback": "a clothes",
+      "truth": null,
+      "changed": 1,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "C"
+    },
+    {
+      "qa_id": "test_0539",
+      "user": "",
+      "support": 2,
+      "purity": 1.0,
+      "vote_margin": 2,
+      "answer_count": 1,
+      "template": "a cabinet",
+      "fallback": "a clothes",
+      "truth": null,
+      "changed": 1,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "B"
+    },
+    {
+      "qa_id": "test_0540",
+      "user": "",
+      "support": 1,
+      "purity": 1.0,
+      "vote_margin": 1,
+      "answer_count": 1,
+      "template": "a cabinet",
+      "fallback": "a clothes",
+      "truth": null,
+      "changed": 1,
+      "template_correct": null,
+      "fallback_correct": null,
+      "current": "D"
+    }
+  ],
+  "test_signature_group_audit": [
+    {
+      "test_qa_id": "test_0522",
+      "full_donor_support": 1,
+      "full_donor_counts": {
+        "a cloth": 1
+      },
+      "test_template": "a cloth",
+      "test_fallback": "a clothes",
+      "test_current": "C",
+      "oof_leave_user_out": [],
+      "oof_accuracy": null
+    },
+    {
+      "test_qa_id": "test_0523",
+      "full_donor_support": 1,
+      "full_donor_counts": {
+        "a cloth": 1
+      },
+      "test_template": "a cloth",
+      "test_fallback": "a clothes",
+      "test_current": "A",
+      "oof_leave_user_out": [],
+      "oof_accuracy": null
+    },
+    {
+      "test_qa_id": "test_0524",
+      "full_donor_support": 1,
+      "full_donor_counts": {
+        "a cloth": 1
+      },
+      "test_template": "a cloth",
+      "test_fallback": "a clothes",
+      "test_current": "B",
+      "oof_leave_user_out": [],
+      "oof_accuracy": null
+    },
+    {
+      "test_qa_id": "test_0525",
+      "full_donor_support": 1,
+      "full_donor_counts": {
+        "a cloth": 1
+      },
+      "test_template": "a cloth",
+      "test_fallback": "a clothes",
+      "test_current": "C",
+      "oof_leave_user_out": [],
+      "oof_accuracy": null
+    },
+    {
+      "test_qa_id": "test_0526",
+      "full_donor_support": 6,
+      "full_donor_counts": {
+        "a keyboard": 3,
+        "a phone": 3
+      },
+      "test_template": "a keyboard",
+      "test_fallback": "a phone",
+      "test_current": "D",
+      "oof_leave_user_out": [
+        {
+          "qa_id": "training_3985",
+          "user": "user17",
+          "truth": "a keyboard",
+          "prediction": "a phone",
+          "correct": 0,
+          "support": 5
+        },
+        {
+          "qa_id": "training_3986",
+          "user": "user19",
+          "truth": "a keyboard",
+          "prediction": "a phone",
+          "correct": 0,
+          "support": 5
+        },
+        {
+          "qa_id": "training_3990",
+          "user": "user6",
+          "truth": "a keyboard",
+          "prediction": "a phone",
+          "correct": 0,
+          "support": 5
+        },
+        {
+          "qa_id": "training_3994",
+          "user": "user16",
+          "truth": "a phone",
+          "prediction": "a keyboard",
+          "correct": 0,
+          "support": 5
+        },
+        {
+          "qa_id": "training_3998",
+          "user": "user8",
+          "truth": "a phone",
+          "prediction": "a keyboard",
+          "correct": 0,
+          "support": 4
+        },
+        {
+          "qa_id": "training_3999",
+          "user": "user8",
+          "truth": "a phone",
+          "prediction": "a keyboard",
+          "correct": 0,
+          "support": 4
+        }
+      ],
+      "oof_accuracy": 0.0
+    },
+    {
+      "test_qa_id": "test_0527",
+      "full_donor_support": 5,
+      "full_donor_counts": {
+        "a phone": 2,
+        "a remote": 3
+      },
+      "test_template": "a remote",
+      "test_fallback": "a phone",
+      "test_current": "C",
+      "oof_leave_user_out": [
+        {
+          "qa_id": "training_4000",
+          "user": "user8",
+          "truth": "a phone",
+          "prediction": "a remote",
+          "correct": 0,
+          "support": 4
+        },
+        {
+          "qa_id": "training_4036",
+          "user": "user4",
+          "truth": "a phone",
+          "prediction": "a remote",
+          "correct": 0,
+          "support": 4
+        },
+        {
+          "qa_id": "training_4040",
+          "user": "user1",
+          "truth": "a remote",
+          "prediction": "a phone",
+          "correct": 0,
+          "support": 4
+        },
+        {
+          "qa_id": "training_4043",
+          "user": "user24",
+          "truth": "a remote",
+          "prediction": "a remote",
+          "correct": 1,
+          "support": 4
+        },
+        {
+          "qa_id": "training_4046",
+          "user": "user7",
+          "truth": "a remote",
+          "prediction": "a phone",
+          "correct": 0,
+          "support": 4
+        }
+      ],
+      "oof_accuracy": 0.2
+    },
+    {
+      "test_qa_id": "test_0528",
+      "full_donor_support": 3,
+      "full_donor_counts": {
+        "a documents": 3
+      },
+      "test_template": "a documents",
+      "test_fallback": "a documents",
+      "test_current": "D",
+      "oof_leave_user_out": [
+        {
+          "qa_id": "training_4008",
+          "user": "user24",
+          "truth": "a documents",
+          "prediction": "a documents",
+          "correct": 1,
+          "support": 1
+        },
+        {
+          "qa_id": "training_4014",
+          "user": "user18",
+          "truth": "a documents",
+          "prediction": "a documents",
+          "correct": 1,
+          "support": 2
+        },
+        {
+          "qa_id": "training_4017",
+          "user": "user24",
+          "truth": "a documents",
+          "prediction": "a documents",
+          "correct": 1,
+          "support": 1
+        }
+      ],
+      "oof_accuracy": 1.0
+    },
+    {
+      "test_qa_id": "test_0529",
+      "full_donor_support": 5,
+      "full_donor_counts": {
+        "a documents": 5
+      },
+      "test_template": "a documents",
+      "test_fallback": "a documents",
+      "test_current": "C",
+      "oof_leave_user_out": [
+        {
+          "qa_id": "training_4002",
+          "user": "user1",
+          "truth": "a documents",
+          "prediction": "a documents",
+          "correct": 1,
+          "support": 4
+        },
+        {
+          "qa_id": "training_4004",
+          "user": "user18",
+          "truth": "a documents",
+          "prediction": "a documents",
+          "correct": 1,
+          "support": 4
+        },
+        {
+          "qa_id": "training_4005",
+          "user": "user23",
+          "truth": "a documents",
+          "prediction": "a documents",
+          "correct": 1,
+          "support": 4
+        },
+        {
+          "qa_id": "training_4015",
+          "user": "user20",
+          "truth": "a documents",
+          "prediction": "a documents",
+          "correct": 1,
+          "support": 4
+        },
+        {
+          "qa_id": "training_4019",
+          "user": "user24",
+          "truth": "a documents",
+          "prediction": "a documents",
+          "correct": 1,
+          "support": 4
+        }
+      ],
+      "oof_accuracy": 1.0
+    },
+    {
+      "test_qa_id": "test_0530",
+      "full_donor_support": 2,
+      "full_donor_counts": {
+        "a headphones": 2
+      },
+      "test_template": "a headphones",
+      "test_fallback": "a phone",
+      "test_current": "D",
+      "oof_leave_user_out": [
+        {
+          "qa_id": "training_4022",
+          "user": "user1",
+          "truth": "a headphones",
+          "prediction": "a headphones",
+          "correct": 1,
+          "support": 1
+        },
+        {
+          "qa_id": "training_4027",
+          "user": "user9",
+          "truth": "a headphones",
+          "prediction": "a headphones",
+          "correct": 1,
+          "support": 1
+        }
+      ],
+      "oof_accuracy": 1.0
+    },
+    {
+      "test_qa_id": "test_0531",
+      "full_donor_support": 1,
+      "full_donor_counts": {
+        "a headphones": 1
+      },
+      "test_template": "a headphones",
+      "test_fallback": "a phone",
+      "test_current": "A",
+      "oof_leave_user_out": [],
+      "oof_accuracy": null
+    },
+    {
+      "test_qa_id": "test_0532",
+      "full_donor_support": 3,
+      "full_donor_counts": {
+        "a phone": 3
+      },
+      "test_template": "a phone",
+      "test_fallback": "a phone",
+      "test_current": "B",
+      "oof_leave_user_out": [
+        {
+          "qa_id": "training_3995",
+          "user": "user2",
+          "truth": "a phone",
+          "prediction": "a phone",
+          "correct": 1,
+          "support": 1
+        },
+        {
+          "qa_id": "training_4030",
+          "user": "user2",
+          "truth": "a phone",
+          "prediction": "a phone",
+          "correct": 1,
+          "support": 1
+        },
+        {
+          "qa_id": "training_4038",
+          "user": "user7",
+          "truth": "a phone",
+          "prediction": "a phone",
+          "correct": 1,
+          "support": 2
+        }
+      ],
+      "oof_accuracy": 1.0
+    },
+    {
+      "test_qa_id": "test_0533",
+      "full_donor_support": 5,
+      "full_donor_counts": {
+        "a phone": 2,
+        "a remote": 3
+      },
+      "test_template": "a remote",
+      "test_fallback": "a phone",
+      "test_current": "A",
+      "oof_leave_user_out": [
+        {
+          "qa_id": "training_4000",
+          "user": "user8",
+          "truth": "a phone",
+          "prediction": "a remote",
+          "correct": 0,
+          "support": 4
+        },
+        {
+          "qa_id": "training_4036",
+          "user": "user4",
+          "truth": "a phone",
+          "prediction": "a remote",
+          "correct": 0,
+          "support": 4
+        },
+        {
+          "qa_id": "training_4040",
+          "user": "user1",
+          "truth": "a remote",
+          "prediction": "a phone",
+          "correct": 0,
+          "support": 4
+        },
+        {
+          "qa_id": "training_4043",
+          "user": "user24",
+          "truth": "a remote",
+          "prediction": "a remote",
+          "correct": 1,
+          "support": 4
+        },
+        {
+          "qa_id": "training_4046",
+          "user": "user7",
+          "truth": "a remote",
+          "prediction": "a phone",
+          "correct": 0,
+          "support": 4
+        }
+      ],
+      "oof_accuracy": 0.2
+    },
+    {
+      "test_qa_id": "test_0534",
+      "full_donor_support": 3,
+      "full_donor_counts": {
+        "a remote": 3
+      },
+      "test_template": "a remote",
+      "test_fallback": "a keyboard",
+      "test_current": "B",
+      "oof_leave_user_out": [
+        {
+          "qa_id": "training_4041",
+          "user": "user24",
+          "truth": "a remote",
+          "prediction": "a remote",
+          "correct": 1,
+          "support": 1
+        },
+        {
+          "qa_id": "training_4045",
+          "user": "user24",
+          "truth": "a remote",
+          "prediction": "a remote",
+          "correct": 1,
+          "support": 1
+        },
+        {
+          "qa_id": "training_4048",
+          "user": "user7",
+          "truth": "a remote",
+          "prediction": "a remote",
+          "correct": 1,
+          "support": 2
+        }
+      ],
+      "oof_accuracy": 1.0
+    },
+    {
+      "test_qa_id": "test_0535",
+      "full_donor_support": 2,
+      "full_donor_counts": {
+        "a smartphone": 2
+      },
+      "test_template": "a smartphone",
+      "test_fallback": "a smartphone",
+      "test_current": "A",
+      "oof_leave_user_out": [
+        {
+          "qa_id": "training_4050",
+          "user": "user23",
+          "truth": "a smartphone",
+          "prediction": "a smartphone",
+          "correct": 1,
+          "support": 1
+        },
+        {
+          "qa_id": "training_4059",
+          "user": "user18",
+          "truth": "a smartphone",
+          "prediction": "a smartphone",
+          "correct": 1,
+          "support": 1
+        }
+      ],
+      "oof_accuracy": 1.0
+    },
+    {
+      "test_qa_id": "test_0536",
+      "full_donor_support": 3,
+      "full_donor_counts": {
+        "a smartphone": 3
+      },
+      "test_template": "a smartphone",
+      "test_fallback": "a smartphone",
+      "test_current": "C",
+      "oof_leave_user_out": [
+        {
+          "qa_id": "training_4052",
+          "user": "user24",
+          "truth": "a smartphone",
+          "prediction": "a smartphone",
+          "correct": 1,
+          "support": 2
+        },
+        {
+          "qa_id": "training_4058",
+          "user": "user17",
+          "truth": "a smartphone",
+          "prediction": "a smartphone",
+          "correct": 1,
+          "support": 2
+        },
+        {
+          "qa_id": "training_4063",
+          "user": "user23",
+          "truth": "a smartphone",
+          "prediction": "a smartphone",
+          "correct": 1,
+          "support": 2
+        }
+      ],
+      "oof_accuracy": 1.0
+    },
+    {
+      "test_qa_id": "test_0537",
+      "full_donor_support": 8,
+      "full_donor_counts": {
+        "a smartphone": 8
+      },
+      "test_template": "a smartphone",
+      "test_fallback": "a smartphone",
+      "test_current": "A",
+      "oof_leave_user_out": [
+        {
+          "qa_id": "training_4049",
+          "user": "user16",
+          "truth": "a smartphone",
+          "prediction": "a smartphone",
+          "correct": 1,
+          "support": 7
+        },
+        {
+          "qa_id": "training_4051",
+          "user": "user23",
+          "truth": "a smartphone",
+          "prediction": "a smartphone",
+          "correct": 1,
+          "support": 7
+        },
+        {
+          "qa_id": "training_4054",
+          "user": "user24",
+          "truth": "a smartphone",
+          "prediction": "a smartphone",
+          "correct": 1,
+          "support": 6
+        },
+        {
+          "qa_id": "training_4055",
+          "user": "user24",
+          "truth": "a smartphone",
+          "prediction": "a smartphone",
+          "correct": 1,
+          "support": 6
+        },
+        {
+          "qa_id": "training_4057",
+          "user": "user1",
+          "truth": "a smartphone",
+          "prediction": "a smartphone",
+          "correct": 1,
+          "support": 7
+        },
+        {
+          "qa_id": "training_4061",
+          "user": "user21",
+          "truth": "a smartphone",
+          "prediction": "a smartphone",
+          "correct": 1,
+          "support": 7
+        },
+        {
+          "qa_id": "training_4064",
+          "user": "user4",
+          "truth": "a smartphone",
+          "prediction": "a smartphone",
+          "correct": 1,
+          "support": 7
+        },
+        {
+          "qa_id": "training_4065",
+          "user": "user8",
+          "truth": "a smartphone",
+          "prediction": "a smartphone",
+          "correct": 1,
+          "support": 7
+        }
+      ],
+      "oof_accuracy": 1.0
+    },
+    {
+      "test_qa_id": "test_0538",
+      "full_donor_support": 1,
+      "full_donor_counts": {
+        "a cabinet": 1
+      },
+      "test_template": "a cabinet",
+      "test_fallback": "a clothes",
+      "test_current": "C",
+      "oof_leave_user_out": [],
+      "oof_accuracy": null
+    },
+    {
+      "test_qa_id": "test_0539",
+      "full_donor_support": 2,
+      "full_donor_counts": {
+        "a cabinet": 2
+      },
+      "test_template": "a cabinet",
+      "test_fallback": "a clothes",
+      "test_current": "B",
+      "oof_leave_user_out": [
+        {
+          "qa_id": "training_4070",
+          "user": "user20",
+          "truth": "a cabinet",
+          "prediction": "a cabinet",
+          "correct": 1,
+          "support": 1
+        },
+        {
+          "qa_id": "training_4074",
+          "user": "user7",
+          "truth": "a cabinet",
+          "prediction": "a cabinet",
+          "correct": 1,
+          "support": 1
+        }
+      ],
+      "oof_accuracy": 1.0
+    },
+    {
+      "test_qa_id": "test_0540",
+      "full_donor_support": 1,
+      "full_donor_counts": {
+        "a cabinet": 1
+      },
+      "test_template": "a cabinet",
+      "test_fallback": "a clothes",
+      "test_current": "D",
+      "oof_leave_user_out": [],
+      "oof_accuracy": null
+    }
+  ],
+  "best_nonunanimous_zero_rw_gates": [
+    {
+      "gate": {
+        "support": 1,
+        "purity": 0.8,
+        "vote_margin": 0
+      },
+      "oof": {
+        "flips": 25,
+        "w_to_r": 25,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 25
+      },
+      "test": [
+        {
+          "qa_id": "test_0522",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0523",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "A"
+        },
+        {
+          "qa_id": "test_0524",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0525",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0531",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "A"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0538",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0540",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "D"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 1,
+        "purity": 0.8,
+        "vote_margin": 1
+      },
+      "oof": {
+        "flips": 25,
+        "w_to_r": 25,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 25
+      },
+      "test": [
+        {
+          "qa_id": "test_0522",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0523",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "A"
+        },
+        {
+          "qa_id": "test_0524",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0525",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0531",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "A"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0538",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0540",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "D"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 1,
+        "purity": 0.8,
+        "vote_margin": 2
+      },
+      "oof": {
+        "flips": 14,
+        "w_to_r": 14,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 14
+      },
+      "test": [
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 1,
+        "purity": 0.8333333333333334,
+        "vote_margin": 0
+      },
+      "oof": {
+        "flips": 25,
+        "w_to_r": 25,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 25
+      },
+      "test": [
+        {
+          "qa_id": "test_0522",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0523",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "A"
+        },
+        {
+          "qa_id": "test_0524",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0525",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0531",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "A"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0538",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0540",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "D"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 1,
+        "purity": 0.8333333333333334,
+        "vote_margin": 1
+      },
+      "oof": {
+        "flips": 25,
+        "w_to_r": 25,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 25
+      },
+      "test": [
+        {
+          "qa_id": "test_0522",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0523",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "A"
+        },
+        {
+          "qa_id": "test_0524",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0525",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0531",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "A"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0538",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0540",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "D"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 1,
+        "purity": 0.8333333333333334,
+        "vote_margin": 2
+      },
+      "oof": {
+        "flips": 14,
+        "w_to_r": 14,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 14
+      },
+      "test": [
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 1,
+        "purity": 0.9,
+        "vote_margin": 0
+      },
+      "oof": {
+        "flips": 25,
+        "w_to_r": 25,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 25
+      },
+      "test": [
+        {
+          "qa_id": "test_0522",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0523",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "A"
+        },
+        {
+          "qa_id": "test_0524",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0525",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0531",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "A"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0538",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0540",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "D"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 1,
+        "purity": 0.9,
+        "vote_margin": 1
+      },
+      "oof": {
+        "flips": 25,
+        "w_to_r": 25,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 25
+      },
+      "test": [
+        {
+          "qa_id": "test_0522",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0523",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "A"
+        },
+        {
+          "qa_id": "test_0524",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0525",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cloth",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0531",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "A"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0538",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "C"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0540",
+          "support": 1,
+          "purity": 1.0,
+          "vote_margin": 1,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "D"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 1,
+        "purity": 0.9,
+        "vote_margin": 2
+      },
+      "oof": {
+        "flips": 14,
+        "w_to_r": 14,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 14
+      },
+      "test": [
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 2,
+        "purity": 0.8,
+        "vote_margin": 0
+      },
+      "oof": {
+        "flips": 14,
+        "w_to_r": 14,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 14
+      },
+      "test": [
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 2,
+        "purity": 0.8,
+        "vote_margin": 1
+      },
+      "oof": {
+        "flips": 14,
+        "w_to_r": 14,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 14
+      },
+      "test": [
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 2,
+        "purity": 0.8,
+        "vote_margin": 2
+      },
+      "oof": {
+        "flips": 14,
+        "w_to_r": 14,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 14
+      },
+      "test": [
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 2,
+        "purity": 0.8333333333333334,
+        "vote_margin": 0
+      },
+      "oof": {
+        "flips": 14,
+        "w_to_r": 14,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 14
+      },
+      "test": [
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 2,
+        "purity": 0.8333333333333334,
+        "vote_margin": 1
+      },
+      "oof": {
+        "flips": 14,
+        "w_to_r": 14,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 14
+      },
+      "test": [
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 2,
+        "purity": 0.8333333333333334,
+        "vote_margin": 2
+      },
+      "oof": {
+        "flips": 14,
+        "w_to_r": 14,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 14
+      },
+      "test": [
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 2,
+        "purity": 0.9,
+        "vote_margin": 0
+      },
+      "oof": {
+        "flips": 14,
+        "w_to_r": 14,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 14
+      },
+      "test": [
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 2,
+        "purity": 0.9,
+        "vote_margin": 1
+      },
+      "oof": {
+        "flips": 14,
+        "w_to_r": 14,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 14
+      },
+      "test": [
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 2,
+        "purity": 0.9,
+        "vote_margin": 2
+      },
+      "oof": {
+        "flips": 14,
+        "w_to_r": 14,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 14
+      },
+      "test": [
+        {
+          "qa_id": "test_0530",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a headphones",
+          "fallback": "a phone",
+          "current": "D"
+        },
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        },
+        {
+          "qa_id": "test_0539",
+          "support": 2,
+          "purity": 1.0,
+          "vote_margin": 2,
+          "template": "a cabinet",
+          "fallback": "a clothes",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 3,
+        "purity": 0.8,
+        "vote_margin": 0
+      },
+      "oof": {
+        "flips": 7,
+        "w_to_r": 7,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 7
+      },
+      "test": [
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 3,
+        "purity": 0.8,
+        "vote_margin": 1
+      },
+      "oof": {
+        "flips": 7,
+        "w_to_r": 7,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 7
+      },
+      "test": [
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 3,
+        "purity": 0.8,
+        "vote_margin": 2
+      },
+      "oof": {
+        "flips": 7,
+        "w_to_r": 7,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 7
+      },
+      "test": [
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 3,
+        "purity": 0.8333333333333334,
+        "vote_margin": 0
+      },
+      "oof": {
+        "flips": 7,
+        "w_to_r": 7,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 7
+      },
+      "test": [
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 3,
+        "purity": 0.8333333333333334,
+        "vote_margin": 1
+      },
+      "oof": {
+        "flips": 7,
+        "w_to_r": 7,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 7
+      },
+      "test": [
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 3,
+        "purity": 0.8333333333333334,
+        "vote_margin": 2
+      },
+      "oof": {
+        "flips": 7,
+        "w_to_r": 7,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 7
+      },
+      "test": [
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 3,
+        "purity": 0.9,
+        "vote_margin": 0
+      },
+      "oof": {
+        "flips": 7,
+        "w_to_r": 7,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 7
+      },
+      "test": [
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 3,
+        "purity": 0.9,
+        "vote_margin": 1
+      },
+      "oof": {
+        "flips": 7,
+        "w_to_r": 7,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 7
+      },
+      "test": [
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 3,
+        "purity": 0.9,
+        "vote_margin": 2
+      },
+      "oof": {
+        "flips": 7,
+        "w_to_r": 7,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 7
+      },
+      "test": [
+        {
+          "qa_id": "test_0534",
+          "support": 3,
+          "purity": 1.0,
+          "vote_margin": 3,
+          "template": "a remote",
+          "fallback": "a keyboard",
+          "current": "B"
+        }
+      ]
+    },
+    {
+      "gate": {
+        "support": 6,
+        "purity": 0.5,
+        "vote_margin": 0
+      },
+      "oof": {
+        "flips": 5,
+        "w_to_r": 5,
+        "r_to_w": 0,
+        "precision": 1.0,
+        "net": 5
+      },
+      "test": [
+        {
+          "qa_id": "test_0526",
+          "support": 6,
+          "purity": 0.5,
+          "vote_margin": 0,
+          "template": "a keyboard",
+          "fallback": "a phone",
+          "current": "D"
+        }
+      ]
+    }
+  ],
+  "conclusion": "No non-unanimous gate should be promoted unless its proposed test rows also have independent clip evidence; non-unanimous 0526/0527 remain ambiguous."
+}

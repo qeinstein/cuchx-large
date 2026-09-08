@@ -16,7 +16,8 @@ from core import load_all, real_test_view
 import pipeline as P
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CHAMP = os.path.join(ROOT, 'submission_092105_SUBMITTED.csv')
+CHAMP = os.path.join(ROOT, os.environ.get(
+    'CHAMP_BASE', 'submission_097076_332of342_CHAMPION.csv'))
 
 
 def main(name):
@@ -28,8 +29,12 @@ def main(name):
     ctx = P.fit_all(tr, meta, hold_users=[], split_train='oof')   # fit on ALL subjects
     vis = real_test_view(te)
     pred, blocks, pool_of, diag = P.solve(vis, ctx, 'test')
+    fallback = pd.read_csv(CHAMP).set_index('qa_id').prediction
+    if list(fallback.index) != list(te.qa_id):
+        raise ValueError('fallback row order/key mismatch: ' + CHAMP)
     sub = pd.DataFrame({'qa_id': te.qa_id,
-                        'prediction': [pred.get(q) if pred.get(q) else 'A' for q in te.qa_id]})
+                        'prediction': [pred.get(q) if pred.get(q) is not None
+                                       else fallback.loc[q] for q in te.qa_id]})
     assert len(sub) == 682 and sub.prediction.notna().all()
     assert sub.prediction.map(lambda s: len(s) > 0 and all(c in 'ABCD' for c in s)).all()
     out = os.path.join(ROOT, f'{name}.csv')
