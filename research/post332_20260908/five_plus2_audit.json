@@ -1,0 +1,106 @@
+{
+  "rows": [
+    {
+      "qa_id": "test_0488",
+      "clip": "LM_test_0023",
+      "category": "single",
+      "old_330": "A",
+      "champion_332": "C",
+      "changed_from_330": true,
+      "options": {
+        "A": "doing jumping jacks",
+        "B": "peeling fruit",
+        "C": "turning pages",
+        "D": ""
+      },
+      "metadata_present": false,
+      "feature_present": false,
+      "dense_logits_present": false,
+      "parent_found_by_pipeline": false,
+      "failure_class": "no_meta_no_dense_no_parent -> solve(None) then champion fallback"
+    },
+    {
+      "qa_id": "test_0477",
+      "clip": "LM_test_0007",
+      "category": "single",
+      "old_330": "A",
+      "champion_332": "B",
+      "changed_from_330": true,
+      "options": {
+        "A": "doing jumping jacks",
+        "B": "mopping the floor",
+        "C": "turning pages",
+        "D": ""
+      },
+      "metadata_present": false,
+      "feature_present": false,
+      "dense_logits_present": false,
+      "parent_found_by_pipeline": false,
+      "failure_class": "no_meta_no_dense_no_parent -> solve(None) then champion fallback"
+    },
+    {
+      "qa_id": "test_0506",
+      "clip": "LM_test_0046",
+      "category": "single",
+      "old_330": "A",
+      "champion_332": "C",
+      "changed_from_330": true,
+      "options": {
+        "A": "wiping a bowl",
+        "B": "doing jumping jacks",
+        "C": "doing lunges",
+        "D": ""
+      },
+      "metadata_present": false,
+      "feature_present": false,
+      "dense_logits_present": false,
+      "parent_found_by_pipeline": false,
+      "failure_class": "no_meta_no_dense_no_parent -> solve(None) then champion fallback"
+    },
+    {
+      "qa_id": "test_0519",
+      "clip": "LM_test_0062",
+      "category": "single",
+      "old_330": "A",
+      "champion_332": "C",
+      "changed_from_330": true,
+      "options": {
+        "A": "walking",
+        "B": "writing",
+        "C": "drinking water",
+        "D": ""
+      },
+      "metadata_present": false,
+      "feature_present": false,
+      "dense_logits_present": false,
+      "parent_found_by_pipeline": false,
+      "failure_class": "no_meta_no_dense_no_parent -> solve(None) then champion fallback"
+    },
+    {
+      "qa_id": "test_0501",
+      "clip": "LM_test_0041",
+      "category": "single",
+      "old_330": "A",
+      "champion_332": "B",
+      "changed_from_330": true,
+      "options": {
+        "A": "mopping the floor",
+        "B": "standing up",
+        "C": "walking",
+        "D": ""
+      },
+      "metadata_present": true,
+      "feature_present": true,
+      "dense_logits_present": true,
+      "parent_found_by_pipeline": false,
+      "failure_class": "aggregate/interval evidence only; no parent session"
+    }
+  ],
+  "shared_class": {
+    "all_harn_single": true,
+    "all_parentless": true,
+    "no_meta_count": 4,
+    "no_dense_count": 4,
+    "interpretation": "The bundle is predominantly a weak/no-evidence HARn-single fallback cohort; 0501 is the only row with cached feature/logit evidence. The +2 score identifies only the aggregate, not a repeatable per-row label rule."
+  }
+}

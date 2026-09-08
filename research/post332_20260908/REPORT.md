@@ -202,3 +202,13 @@ With `CHAMP_LOGITS=dense_logits_screen1_bucket.npz`, `champ/final.py test` compl
 `pipeline_artifact_audit.py` passes: champion SHA unchanged, all 15 manifest hashes/diffs
 match, all 30 algebraically valid decoder states pass, and all in-tree `P.solve` callers
 use the four-value API.
+
+### Five-row +2 failure-class trace
+
+`five_plus2_audit.py` confirms all five unresolved rows are HARn `single` questions with no
+pipeline parent session. Four of five (0488, 0477, 0506, 0519) have neither metadata features
+nor dense logits, so the solver intentionally returns `None` and the final runner uses the
+explicit champion fallback. Only 0501 has feature/logit evidence; it still has no parent and
+is decided by the aggregate/interval path. This is a repeatable **weak/no-evidence fallback
+class**, not a repeatable semantic label rule. The measured +2 therefore cannot identify an
+individual row without tomorrow's signed reversion probes.
