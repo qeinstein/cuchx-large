@@ -449,3 +449,15 @@ Active materially different branch:
   The corrected local production source is SHA-256
   `8eb21f7ae2b920a4c20b738da33a59f41ef77e5d20089feac6600bf5d8409a0d`;
   no GPU rerun is needed for this correction.
+- Fold-0 emotion completed. On 159 rows shared with the OOF baseline, the remote full-session
+  decode scored 137 vs 136 (+1 overall; 10 W→R, 9 R→W, 6 both-wrong across 25 changes).
+  The corrected decode scored 135 vs 136 (-1 overall), but the complete-session disagreement
+  gate **frozen before replication** at assignment margin ≥0.5 made 10 changes with 6 W→R,
+  1 R→W and 3 both-wrong: net +5. The signal is concentrated (five wins on user17, one on
+  user22, the loss on user6), so it is not deployable from this fold alone. Pair-context
+  decoding is retired (-12 remote / -16 corrected vs baseline). Raw prediction SHA-256
+  `b33f0c706d44c7377784862c662410d11d2b622162511ec56a468f5343a1b62d`.
+- Fold 1 is the single authorized replication, using the corrected decoder and the immutable
+  complete-session margin ≥0.5 gate. It was pushed as kernel version 2 with source SHA-256
+  `2b06999306754d1cfc0975dcc6f9d9c98f58d2541c4bc7d186923abeb491e701`.
+  No threshold retuning on fold 1 is permitted.

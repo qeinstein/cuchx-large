@@ -130,9 +130,20 @@ def evaluate(frame: pd.DataFrame, baseline: pd.DataFrame,
         "losses": int(losses.sum()),
         "both_wrong": int(both_wrong.sum()),
         "net": int(joint.model_ok.sum() - joint.base_ok.sum()),
+        "fixed_complete_session_gate_margin_ge_0_5": {},
         "topk_assignment_margin": [],
     }
     ranked = joint[changed].sort_values(margin, ascending=False)
+    gated = ranked[ranked[margin] >= 0.5]
+    gated_wins = int((gated.model_ok & ~gated.base_ok).sum())
+    gated_losses = int((~gated.model_ok & gated.base_ok).sum())
+    report["fixed_complete_session_gate_margin_ge_0_5"] = {
+        "changes": len(gated),
+        "wins": gated_wins,
+        "losses": gated_losses,
+        "both_wrong": int((~gated.model_ok & ~gated.base_ok).sum()),
+        "net": gated_wins - gated_losses,
+    }
     for k in (1, 2, 3, 5, 8, 10, 15, 20):
         part = ranked.head(k)
         if len(part) < k:
@@ -169,6 +180,7 @@ def main() -> None:
         "regimes": {},
     }
     output_dir = args.predictions.parent
+    prefix = args.predictions.stem.removesuffix("_predictions")
     for regime, frame in pred.groupby("regime"):
         joint, remote = evaluate(frame, base, "prediction", "assignment_margin")
         _, corrected = evaluate(
@@ -178,8 +190,8 @@ def main() -> None:
             "remote_candidate_count_decode": remote,
             "corrected_observed_clip_position_decode": corrected,
         }
-        joint.to_csv(output_dir / f"videomae_emotion_fold0_{regime}_joint_audit.csv", index=False)
-    path = output_dir / "videomae_emotion_fold0_joint_audit.summary.json"
+        joint.to_csv(output_dir / f"{prefix}_{regime}_joint_audit.csv", index=False)
+    path = output_dir / f"{prefix}_joint_audit.summary.json"
     path.write_text(json.dumps(summary, indent=2) + "\n")
     print(json.dumps(summary, indent=2))
 

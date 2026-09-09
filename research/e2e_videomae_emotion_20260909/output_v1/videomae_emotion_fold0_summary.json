@@ -1,0 +1,26 @@
+{
+  "model": "MCG-NJU/videomae-base-finetuned-kinetics",
+  "fold": 0,
+  "hold_users": [
+    "user17",
+    "user22",
+    "user4",
+    "user6"
+  ],
+  "frames": 16,
+  "epochs": 5,
+  "unfrozen_blocks": 2,
+  "task": "manner_group_plus_ordinal_rank_plus_structured_assignment",
+  "regimes": {
+    "full": {
+      "n": 184,
+      "correct": 159,
+      "accuracy": 0.8641304347826086
+    },
+    "pair": {
+      "n": 157,
+      "correct": 122,
+      "accuracy": 0.7770700636942676
+    }
+  }
+}

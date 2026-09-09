@@ -1,0 +1,345 @@
+{
+  "protocol": "subject-disjoint fold-0; any margin gate requires fold-1 replication",
+  "regimes": {
+    "full": {
+      "remote_candidate_count_decode": {
+        "shared": 159,
+        "model_correct": 137,
+        "base_correct": 136,
+        "prediction_disagreements": 25,
+        "wins": 10,
+        "losses": 9,
+        "both_wrong": 6,
+        "net": 1,
+        "topk_assignment_margin": [
+          {
+            "k": 1,
+            "minimum_margin": 1.5602731704711914,
+            "wins": 1,
+            "losses": 0,
+            "both_wrong": 0,
+            "net": 1,
+            "precision": 1.0
+          },
+          {
+            "k": 2,
+            "minimum_margin": 1.4262757301330566,
+            "wins": 2,
+            "losses": 0,
+            "both_wrong": 0,
+            "net": 2,
+            "precision": 1.0
+          },
+          {
+            "k": 3,
+            "minimum_margin": 1.0228638648986816,
+            "wins": 2,
+            "losses": 0,
+            "both_wrong": 1,
+            "net": 2,
+            "precision": 0.6666666666666666
+          },
+          {
+            "k": 5,
+            "minimum_margin": 1.0228638648986816,
+            "wins": 2,
+            "losses": 0,
+            "both_wrong": 3,
+            "net": 2,
+            "precision": 0.4
+          },
+          {
+            "k": 8,
+            "minimum_margin": 0.5634088516235352,
+            "wins": 4,
+            "losses": 1,
+            "both_wrong": 3,
+            "net": 3,
+            "precision": 0.5
+          },
+          {
+            "k": 10,
+            "minimum_margin": 0.5165081024169922,
+            "wins": 6,
+            "losses": 1,
+            "both_wrong": 3,
+            "net": 5,
+            "precision": 0.6
+          },
+          {
+            "k": 15,
+            "minimum_margin": 0.2505626678466797,
+            "wins": 9,
+            "losses": 2,
+            "both_wrong": 4,
+            "net": 7,
+            "precision": 0.6
+          },
+          {
+            "k": 20,
+            "minimum_margin": 0.0627455711364746,
+            "wins": 10,
+            "losses": 6,
+            "both_wrong": 4,
+            "net": 4,
+            "precision": 0.5
+          }
+        ]
+      },
+      "corrected_observed_clip_position_decode": {
+        "shared": 159,
+        "model_correct": 135,
+        "base_correct": 136,
+        "prediction_disagreements": 27,
+        "wins": 10,
+        "losses": 11,
+        "both_wrong": 6,
+        "net": -1,
+        "topk_assignment_margin": [
+          {
+            "k": 1,
+            "minimum_margin": 1.5602731673147412,
+            "wins": 1,
+            "losses": 0,
+            "both_wrong": 0,
+            "net": 1,
+            "precision": 1.0
+          },
+          {
+            "k": 2,
+            "minimum_margin": 1.4262758052232862,
+            "wins": 2,
+            "losses": 0,
+            "both_wrong": 0,
+            "net": 2,
+            "precision": 1.0
+          },
+          {
+            "k": 3,
+            "minimum_margin": 1.0228641311260507,
+            "wins": 2,
+            "losses": 0,
+            "both_wrong": 1,
+            "net": 2,
+            "precision": 0.6666666666666666
+          },
+          {
+            "k": 5,
+            "minimum_margin": 1.0228641311260507,
+            "wins": 2,
+            "losses": 0,
+            "both_wrong": 3,
+            "net": 2,
+            "precision": 0.4
+          },
+          {
+            "k": 8,
+            "minimum_margin": 0.5634090685525486,
+            "wins": 4,
+            "losses": 1,
+            "both_wrong": 3,
+            "net": 3,
+            "precision": 0.5
+          },
+          {
+            "k": 10,
+            "minimum_margin": 0.5165078157028553,
+            "wins": 6,
+            "losses": 1,
+            "both_wrong": 3,
+            "net": 5,
+            "precision": 0.6
+          },
+          {
+            "k": 15,
+            "minimum_margin": 0.3262806588750058,
+            "wins": 9,
+            "losses": 3,
+            "both_wrong": 3,
+            "net": 6,
+            "precision": 0.6
+          },
+          {
+            "k": 20,
+            "minimum_margin": 0.12948079879869123,
+            "wins": 10,
+            "losses": 6,
+            "both_wrong": 4,
+            "net": 4,
+            "precision": 0.5
+          }
+        ]
+      }
+    },
+    "pair": {
+      "remote_candidate_count_decode": {
+        "shared": 135,
+        "model_correct": 104,
+        "base_correct": 116,
+        "prediction_disagreements": 29,
+        "wins": 5,
+        "losses": 17,
+        "both_wrong": 7,
+        "net": -12,
+        "topk_assignment_margin": [
+          {
+            "k": 1,
+            "minimum_margin": 1.4262757301330566,
+            "wins": 1,
+            "losses": 0,
+            "both_wrong": 0,
+            "net": 1,
+            "precision": 1.0
+          },
+          {
+            "k": 2,
+            "minimum_margin": 1.0228638648986816,
+            "wins": 1,
+            "losses": 0,
+            "both_wrong": 1,
+            "net": 1,
+            "precision": 0.5
+          },
+          {
+            "k": 3,
+            "minimum_margin": 1.0228638648986816,
+            "wins": 1,
+            "losses": 0,
+            "both_wrong": 2,
+            "net": 1,
+            "precision": 0.3333333333333333
+          },
+          {
+            "k": 5,
+            "minimum_margin": 0.7645866870880127,
+            "wins": 2,
+            "losses": 0,
+            "both_wrong": 3,
+            "net": 2,
+            "precision": 0.4
+          },
+          {
+            "k": 8,
+            "minimum_margin": 0.336742639541626,
+            "wins": 3,
+            "losses": 2,
+            "both_wrong": 3,
+            "net": 1,
+            "precision": 0.375
+          },
+          {
+            "k": 10,
+            "minimum_margin": 0.336742639541626,
+            "wins": 3,
+            "losses": 4,
+            "both_wrong": 3,
+            "net": -1,
+            "precision": 0.3
+          },
+          {
+            "k": 15,
+            "minimum_margin": 0.1450560092926025,
+            "wins": 4,
+            "losses": 8,
+            "both_wrong": 3,
+            "net": -4,
+            "precision": 0.26666666666666666
+          },
+          {
+            "k": 20,
+            "minimum_margin": 0.0383906364440918,
+            "wins": 4,
+            "losses": 11,
+            "both_wrong": 5,
+            "net": -7,
+            "precision": 0.2
+          }
+        ]
+      },
+      "corrected_observed_clip_position_decode": {
+        "shared": 135,
+        "model_correct": 100,
+        "base_correct": 116,
+        "prediction_disagreements": 33,
+        "wins": 5,
+        "losses": 21,
+        "both_wrong": 7,
+        "net": -16,
+        "topk_assignment_margin": [
+          {
+            "k": 1,
+            "minimum_margin": 1.4262758052232862,
+            "wins": 1,
+            "losses": 0,
+            "both_wrong": 0,
+            "net": 1,
+            "precision": 1.0
+          },
+          {
+            "k": 2,
+            "minimum_margin": 1.0228641311260507,
+            "wins": 1,
+            "losses": 0,
+            "both_wrong": 1,
+            "net": 1,
+            "precision": 0.5
+          },
+          {
+            "k": 3,
+            "minimum_margin": 1.0228641311260507,
+            "wins": 1,
+            "losses": 0,
+            "both_wrong": 2,
+            "net": 1,
+            "precision": 0.3333333333333333
+          },
+          {
+            "k": 5,
+            "minimum_margin": 0.6488526372191759,
+            "wins": 1,
+            "losses": 1,
+            "both_wrong": 3,
+            "net": 0,
+            "precision": 0.2
+          },
+          {
+            "k": 8,
+            "minimum_margin": 0.4349921776409085,
+            "wins": 2,
+            "losses": 3,
+            "both_wrong": 3,
+            "net": -1,
+            "precision": 0.25
+          },
+          {
+            "k": 10,
+            "minimum_margin": 0.3689601427070164,
+            "wins": 2,
+            "losses": 5,
+            "both_wrong": 3,
+            "net": -3,
+            "precision": 0.2
+          },
+          {
+            "k": 15,
+            "minimum_margin": 0.2354161316300507,
+            "wins": 4,
+            "losses": 7,
+            "both_wrong": 4,
+            "net": -3,
+            "precision": 0.26666666666666666
+          },
+          {
+            "k": 20,
+            "minimum_margin": 0.07630010246206709,
+            "wins": 4,
+            "losses": 11,
+            "both_wrong": 5,
+            "net": -7,
+            "precision": 0.2
+          }
+        ]
+      }
+    }
+  }
+}

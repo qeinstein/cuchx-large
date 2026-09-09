@@ -44,7 +44,7 @@ from transformers import VideoMAEForVideoClassification, VideoMAEImageProcessor
 
 
 SEED = 20260909
-FOLD = 0
+FOLD = 1
 MODEL_ID = "MCG-NJU/videomae-base-finetuned-kinetics"
 N_FRAMES = 16
 EPOCHS = 5
