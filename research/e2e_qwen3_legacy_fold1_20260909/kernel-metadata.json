@@ -1,0 +1,14 @@
+{
+  "id": "toheebogunade/cuchx-qwen3-vl-session-legacy-fold-1",
+  "title": "CUCHX Qwen3-VL Session Legacy Fold 1",
+  "code_file": "qwen3_session_legacy_fold1.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "toheebogunade/cuchx-hau-video-training-corpus"
+  ]
+}

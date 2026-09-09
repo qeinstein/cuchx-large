@@ -1,0 +1,43 @@
+{
+  "model": "Qwen/Qwen2.5-VL-3B-Instruct",
+  "fold": 0,
+  "hold_users": [
+    "user17",
+    "user22",
+    "user4",
+    "user6"
+  ],
+  "frames": 12,
+  "epochs": 2,
+  "questions": 799,
+  "correct": 506,
+  "accuracy": 0.6332916145181476,
+  "parse_rate": 1.0,
+  "per_category": {
+    "combination": {
+      "n": 181,
+      "correct": 162,
+      "accuracy": 0.8950276243093923
+    },
+    "emotion": {
+      "n": 184,
+      "correct": 44,
+      "accuracy": 0.2391304347826087
+    },
+    "multi": {
+      "n": 184,
+      "correct": 121,
+      "accuracy": 0.657608695652174
+    },
+    "sequence": {
+      "n": 66,
+      "correct": 10,
+      "accuracy": 0.15151515151515152
+    },
+    "single": {
+      "n": 184,
+      "correct": 169,
+      "accuracy": 0.9184782608695652
+    }
+  }
+}

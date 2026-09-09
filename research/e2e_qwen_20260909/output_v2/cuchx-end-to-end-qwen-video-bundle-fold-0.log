@@ -1,0 +1,45 @@
+[{"stream_name":"stdout","time":5.302505386,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.4/10.4 MB 86.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":5.689439207,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 46.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":5.741686875,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 36.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":5.7899857059999995,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 91.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.123005163,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.8/35.8 MB 55.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":6.261035779,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.6/13.6 MB 95.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":35.314698749,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":35.314759384,"data":"    Found GPU0 Tesla P100-PCIE-16GB which is of cuda capability 6.0.\n"}
+,{"stream_name":"stderr","time":35.314764177,"data":"    Minimum and Maximum cuda capability supported by this version of PyTorch is\n"}
+,{"stream_name":"stderr","time":35.31476785,"data":"    (7.0) - (12.0)\n"}
+,{"stream_name":"stderr","time":35.314770954,"data":"    \n"}
+,{"stream_name":"stderr","time":35.314773822,"data":"  queued_call()\n"}
+,{"stream_name":"stderr","time":35.314776722,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":35.314779683,"data":"    Please install PyTorch with a following CUDA\n"}
+,{"stream_name":"stderr","time":35.314782682,"data":"    configurations:  12.6 following instructions at\n"}
+,{"stream_name":"stderr","time":35.314785539,"data":"    https://pytorch.org/get-started/locally/\n"}
+,{"stream_name":"stderr","time":35.314788363,"data":"    \n"}
+,{"stream_name":"stderr","time":35.3147911,"data":"  queued_call()\n"}
+,{"stream_name":"stderr","time":35.315082037,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":35.315097073,"data":"Tesla P100-PCIE-16GB with CUDA capability sm_60 is not compatible with the current PyTorch installation.\n"}
+,{"stream_name":"stderr","time":35.315100642,"data":"The current PyTorch install supports CUDA capabilities sm_70 sm_75 sm_80 sm_86 sm_90 sm_100 sm_120.\n"}
+,{"stream_name":"stderr","time":35.31510381,"data":"If you want to use the Tesla P100-PCIE-16GB GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/\n"}
+,{"stream_name":"stderr","time":35.315106924,"data":"\n"}
+,{"stream_name":"stderr","time":35.31510965,"data":"  queued_call()\n"}
+,{"stream_name":"stderr","time":52.965016278,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":52.965056993,"data":"  File \"/kaggle/src/script.py\", line 78, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":52.965064639,"data":"    with tarfile.open(archive_path) as archive:\n"}
+,{"stream_name":"stderr","time":52.965168025,"data":"         ^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":52.96519543,"data":"  File \"/usr/lib/python3.12/tarfile.py\", line 1855, in open\n"}
+,{"stream_name":"stderr","time":52.966606261,"data":"    return func(name, \"r\", fileobj, **kwargs)\n"}
+,{"stream_name":"stderr","time":52.966634,"data":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":52.96663911,"data":"  File \"/usr/lib/python3.12/tarfile.py\", line 1923, in gzopen\n"}
+,{"stream_name":"stderr","time":52.967182059,"data":"    fileobj = GzipFile(name, mode + \"b\", compresslevel, fileobj)\n"}
+,{"stream_name":"stderr","time":52.967260357,"data":"              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":52.967273654,"data":"  File \"/usr/lib/python3.12/gzip.py\", line 201, in __init__\n"}
+,{"stream_name":"stderr","time":52.968257198,"data":"    fileobj = self.myfileobj = builtins.open(filename, mode or 'rb')\n"}
+,{"stream_name":"stderr","time":52.968329544,"data":"                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":52.968469207,"data":"FileNotFoundError: [Errno 2] No such file or directory: '/kaggle/input/cuchx-hau-video-training-corpus/hau_videos.tar'\n"}
+,{"stream_name":"stderr","time":58.256310536,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":58.256345308,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":58.485123676,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":58.485160224,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":59.142583412,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":60.001964411,"data":"[NbConvertApp] Writing 341861 bytes to __results__.html\n"}
+]

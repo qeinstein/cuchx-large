@@ -1,0 +1,50 @@
+{
+  "baseline": "/home/fluxx/Workspace/cuchx-large/champ/oof_e2e_baseline_20260909.csv",
+  "baseline_sha256": "a4744abb27ebecb8ba8767b803271323b6a3295d6f42185da858230c42ae037a",
+  "qwen": [
+    {
+      "path": "research/e2e_qwen3_session_20260909/output_v3/fold0_session_predictions.csv",
+      "sha256": "8393acf40fa524e98a97384db1890b48abfb132c98d5e3abad819a93962648e1"
+    },
+    {
+      "path": "research/e2e_qwen3_session_20260909/output_v4/fold0_session_predictions.csv",
+      "sha256": "411175e15efcb9139385fbc39cb5458856d34c389b803f55ef162fb8004bab72"
+    }
+  ],
+  "baseline_weight": 1.0,
+  "qwen_weight_each": 1.0,
+  "eligible_rows": 105,
+  "eligible_baseline_correct": 94,
+  "eligible_fused_correct": 95,
+  "net": 1,
+  "changed_rows": 2,
+  "w_to_r": 1,
+  "r_to_w": 0,
+  "both_wrong": 1,
+  "per_user": {
+    "user17": {
+      "n": 30,
+      "baseline": 28,
+      "fused": 28,
+      "net": 0
+    },
+    "user22": {
+      "n": 39,
+      "baseline": 34,
+      "fused": 35,
+      "net": 1
+    },
+    "user4": {
+      "n": 18,
+      "baseline": 14,
+      "fused": 14,
+      "net": 0
+    },
+    "user6": {
+      "n": 18,
+      "baseline": 18,
+      "fused": 18,
+      "net": 0
+    }
+  }
+}

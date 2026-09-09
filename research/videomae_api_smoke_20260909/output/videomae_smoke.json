@@ -1,0 +1,14 @@
+{
+  "processor": "VideoMAEImageProcessor",
+  "hidden_shape": [
+    1,
+    1568,
+    768
+  ],
+  "logits_shape": [
+    1,
+    5
+  ],
+  "encoder_blocks": 12,
+  "has_layernorm": true
+}

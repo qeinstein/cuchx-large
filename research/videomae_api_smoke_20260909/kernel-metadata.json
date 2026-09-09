@@ -1,0 +1,12 @@
+{
+  "id": "toheebogunade/cuchx-videomae-api-smoke",
+  "title": "CUCHX VideoMAE API Smoke",
+  "code_file": "smoke.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": []
+}

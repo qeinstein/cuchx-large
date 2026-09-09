@@ -1,0 +1,50 @@
+{
+  "baseline": "../../champ/oof_e2e_baseline_20260909.csv",
+  "baseline_sha256": "a4744abb27ebecb8ba8767b803271323b6a3295d6f42185da858230c42ae037a",
+  "qwen": [
+    {
+      "path": "output_v4/fold0_session_predictions.csv",
+      "sha256": "411175e15efcb9139385fbc39cb5458856d34c389b803f55ef162fb8004bab72"
+    },
+    {
+      "path": "../e2e_qwen3_emotion_assignment_20260909/output/fold0_session_predictions.csv",
+      "sha256": "44995e5b22889581d9c3ce8e758ed23925737808ec6bfffcbf21c2481a40e365"
+    }
+  ],
+  "baseline_weight": 1.0,
+  "qwen_weight_each": 1.0,
+  "eligible_rows": 105,
+  "eligible_baseline_correct": 94,
+  "eligible_fused_correct": 94,
+  "net": 0,
+  "changed_rows": 0,
+  "w_to_r": 0,
+  "r_to_w": 0,
+  "both_wrong": 0,
+  "per_user": {
+    "user17": {
+      "n": 30,
+      "baseline": 28,
+      "fused": 28,
+      "net": 0
+    },
+    "user22": {
+      "n": 39,
+      "baseline": 34,
+      "fused": 34,
+      "net": 0
+    },
+    "user4": {
+      "n": 18,
+      "baseline": 14,
+      "fused": 14,
+      "net": 0
+    },
+    "user6": {
+      "n": 18,
+      "baseline": 18,
+      "fused": 18,
+      "net": 0
+    }
+  }
+}

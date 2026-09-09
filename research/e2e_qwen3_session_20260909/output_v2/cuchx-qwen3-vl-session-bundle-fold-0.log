@@ -1,0 +1,84 @@
+[{"stream_name":"stdout","time":12.320606914,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 780.4/780.4 MB 2.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":14.866151391,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.3/7.3 MB 112.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":15.063550165,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.7/23.7 MB 229.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":15.17970962,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 823.6/823.6 kB 231.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":15.327634733,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.1/14.1 MB 129.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":22.835005404,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 664.8/664.8 MB 2.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.117392495,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 410.6/410.6 MB 77.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":29.141883401,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.6/121.6 MB 101.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":29.869671977,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.5/56.5 MB 150.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":30.80801358,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.2/124.2 MB 124.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":32.699133607,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 196.0/196.0 MB 118.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":35.164508733,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.7/188.7 MB 130.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":36.785013715,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.1/99.1 kB 107.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":38.821501241,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 209.6/209.6 MB 8.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":41.392228167,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 116.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":155.611148472,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":155.611203568,"data":"torchaudio 2.10.0+cu128 requires torch==2.10.0, but you have torch 2.5.1+cu121 which is incompatible.\n"}
+,{"stream_name":"stdout","time":157.389430793,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.0/44.0 kB 3.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":159.983908118,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 108.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":160.382092212,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 49.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":160.422852647,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 31.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":160.791195887,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.8/35.8 MB 40.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":160.910810199,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.6/13.6 MB 105.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":201.924466184,"data":"{\n"}
+,{"stream_name":"stdout","time":201.924538596,"data":"  \"gpu\": \"Tesla P100-PCIE-16GB\",\n"}
+,{"stream_name":"stdout","time":201.924547091,"data":"  \"train_users\": [\n"}
+,{"stream_name":"stdout","time":201.9245517,"data":"    \"user1\",\n"}
+,{"stream_name":"stdout","time":201.924556193,"data":"    \"user16\",\n"}
+,{"stream_name":"stdout","time":201.924560897,"data":"    \"user18\",\n"}
+,{"stream_name":"stdout","time":201.924565616,"data":"    \"user19\",\n"}
+,{"stream_name":"stdout","time":201.92457168,"data":"    \"user2\",\n"}
+,{"stream_name":"stdout","time":201.924580338,"data":"    \"user20\",\n"}
+,{"stream_name":"stdout","time":201.924583463,"data":"    \"user21\",\n"}
+,{"stream_name":"stdout","time":201.924586396,"data":"    \"user23\",\n"}
+,{"stream_name":"stdout","time":201.924590565,"data":"    \"user24\",\n"}
+,{"stream_name":"stdout","time":201.924593725,"data":"    \"user3\",\n"}
+,{"stream_name":"stdout","time":201.924596757,"data":"    \"user5\",\n"}
+,{"stream_name":"stdout","time":201.924599739,"data":"    \"user7\",\n"}
+,{"stream_name":"stdout","time":201.92460272,"data":"    \"user8\",\n"}
+,{"stream_name":"stdout","time":201.924605748,"data":"    \"user9\"\n"}
+,{"stream_name":"stdout","time":201.924608734,"data":"  ],\n"}
+,{"stream_name":"stdout","time":201.924611781,"data":"  \"hold_users\": [\n"}
+,{"stream_name":"stdout","time":201.924614863,"data":"    \"user17\",\n"}
+,{"stream_name":"stdout","time":201.92461796,"data":"    \"user22\",\n"}
+,{"stream_name":"stdout","time":201.924621005,"data":"    \"user4\",\n"}
+,{"stream_name":"stdout","time":201.924624013,"data":"    \"user6\"\n"}
+,{"stream_name":"stdout","time":201.92462702,"data":"  ],\n"}
+,{"stream_name":"stdout","time":201.924629993,"data":"  \"train_sessions\": 210,\n"}
+,{"stream_name":"stdout","time":201.9246331,"data":"  \"valid_sessions\": 62,\n"}
+,{"stream_name":"stdout","time":201.924636135,"data":"  \"train_questions\": 2726,\n"}
+,{"stream_name":"stdout","time":201.924639233,"data":"  \"valid_questions\": 799\n"}
+,{"stream_name":"stdout","time":201.924642296,"data":"}\n"}
+,{"stream_name":"stdout","time":252.758434134,"data":"trainable params: 17,432,576 || all params: 2,144,964,608 || trainable%: 0.8127\n"}
+,{"stream_name":"stderr","time":253.308140833,"data":"Asked to sample `fps` frames per second but no video metadata was provided which is required when sampling with `fps`. Defaulting to `fps=24`. Please provide `video_metadata` for more accurate results.\n"}
+,{"stream_name":"stderr","time":253.308314025,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":253.308344908,"data":"  File \"/kaggle/src/script.py\", line 379, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":253.308621704,"data":"    batch = to_device(processor_inputs(processor, clips, frame_sets, fps_values, True))\n"}
+,{"stream_name":"stderr","time":253.308888216,"data":"                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":253.308955817,"data":"  File \"/kaggle/src/script.py\", line 244, in processor_inputs\n"}
+,{"stream_name":"stderr","time":253.309159407,"data":"    prompt = processor(\n"}
+,{"stream_name":"stderr","time":253.30916842,"data":"             ^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":253.309197892,"data":"  File \"/usr/local/lib/python3.12/dist-packages/transformers/models/qwen3_vl/processing_qwen3_vl.py\", line 170, in __call__\n"}
+,{"stream_name":"stderr","time":253.309443819,"data":"    videos_inputs = self.video_processor(videos=videos, **output_kwargs[\"videos_kwargs\"])\n"}
+,{"stream_name":"stderr","time":253.309673593,"data":"                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":253.309706085,"data":"  File \"/usr/local/lib/python3.12/dist-packages/transformers/video_processing_utils.py\", line 206, in __call__\n"}
+,{"stream_name":"stderr","time":253.310049879,"data":"    return self.preprocess(videos, **kwargs)\n"}
+,{"stream_name":"stderr","time":253.310134065,"data":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":253.310189886,"data":"  File \"/usr/local/lib/python3.12/dist-packages/transformers/video_processing_utils.py\", line 372, in preprocess\n"}
+,{"stream_name":"stderr","time":253.310440333,"data":"    videos, video_metadata = self._decode_and_sample_videos(\n"}
+,{"stream_name":"stderr","time":253.310553017,"data":"                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":253.310577945,"data":"  File \"/usr/local/lib/python3.12/dist-packages/transformers/video_processing_utils.py\", line 304, in _decode_and_sample_videos\n"}
+,{"stream_name":"stderr","time":253.310860261,"data":"    indices = sample_indices_fn(metadata=metadata)\n"}
+,{"stream_name":"stderr","time":253.311017632,"data":"              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":253.311025466,"data":"  File \"/usr/local/lib/python3.12/dist-packages/transformers/models/qwen3_vl/video_processing_qwen3_vl.py\", line 166, in sample_frames\n"}
+,{"stream_name":"stderr","time":253.311218672,"data":"    num_frames = int(total_num_frames / metadata.fps * fps)\n"}
+,{"stream_name":"stderr","time":253.311342639,"data":"                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~\n"}
+,{"stream_name":"stderr","time":253.311366034,"data":"TypeError: can't multiply sequence by non-int of type 'float'\n"}
+,{"stream_name":"stderr","time":257.992903143,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":257.992936771,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":258.209328399,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":258.209364472,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":259.216906423,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":260.05290636,"data":"[NbConvertApp] Writing 357606 bytes to __results__.html\n"}
+]

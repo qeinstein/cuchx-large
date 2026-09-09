@@ -1,0 +1,17 @@
+{
+  "fold": 0,
+  "held_users": [
+    "user17",
+    "user22",
+    "user4",
+    "user6"
+  ],
+  "n": 66,
+  "exact_correct": 20,
+  "exact_accuracy": 0.30303030303030304,
+  "pair_correct": 294,
+  "pair_total": 396,
+  "pair_accuracy": 0.7424242424242424,
+  "epochs": 55,
+  "device": "cpu"
+}

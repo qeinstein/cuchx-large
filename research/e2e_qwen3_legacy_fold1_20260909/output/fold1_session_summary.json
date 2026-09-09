@@ -1,0 +1,82 @@
+{
+  "model": "Qwen/Qwen3-VL-2B-Instruct",
+  "fold": 1,
+  "hold_users": [
+    "user1",
+    "user16",
+    "user21",
+    "user24"
+  ],
+  "frames_per_video": 8,
+  "epochs": 4,
+  "pair_augment_probability": 0.45,
+  "option_shuffle_probability": 0.0,
+  "regimes": {
+    "full": {
+      "questions": 753,
+      "correct": 610,
+      "accuracy": 0.8100929614873837,
+      "parse_rate": 1.0,
+      "per_category": {
+        "combination": {
+          "n": 168,
+          "correct": 157,
+          "accuracy": 0.9345238095238095
+        },
+        "emotion": {
+          "n": 171,
+          "correct": 136,
+          "accuracy": 0.7953216374269005
+        },
+        "multi": {
+          "n": 171,
+          "correct": 139,
+          "accuracy": 0.8128654970760234
+        },
+        "sequence": {
+          "n": 72,
+          "correct": 11,
+          "accuracy": 0.1527777777777778
+        },
+        "single": {
+          "n": 171,
+          "correct": 167,
+          "accuracy": 0.9766081871345029
+        }
+      }
+    },
+    "pair": {
+      "questions": 643,
+      "correct": 507,
+      "accuracy": 0.7884914463452566,
+      "parse_rate": 1.0,
+      "per_category": {
+        "combination": {
+          "n": 144,
+          "correct": 135,
+          "accuracy": 0.9375
+        },
+        "emotion": {
+          "n": 146,
+          "correct": 104,
+          "accuracy": 0.7123287671232876
+        },
+        "multi": {
+          "n": 146,
+          "correct": 117,
+          "accuracy": 0.8013698630136986
+        },
+        "sequence": {
+          "n": 61,
+          "correct": 8,
+          "accuracy": 0.13114754098360656
+        },
+        "single": {
+          "n": 146,
+          "correct": 143,
+          "accuracy": 0.9794520547945206
+        }
+      }
+    }
+  }
+}

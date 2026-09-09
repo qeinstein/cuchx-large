@@ -1,0 +1,10 @@
+{
+  "title": "CUCHX HAU Video Training Corpus",
+  "id": "toheebogunade/cuchx-hau-video-training-corpus",
+  "licenses": [
+    {"name": "CC0-1.0"}
+  ],
+  "subtitle": "Private research bundle for subject-disjoint multimodal video QA",
+  "description": "Training QA metadata and flattened HAU Depth_Color videos for private competition model development.",
+  "keywords": ["video", "multimodal", "research"]
+}

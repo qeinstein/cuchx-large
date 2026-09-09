@@ -1,0 +1,182 @@
+[{"stream_name":"stdout","time":12.010037268,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 780.4/780.4 MB 2.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":14.870427886,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.3/7.3 MB 92.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":15.433412042,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.7/23.7 MB 193.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":15.808039787,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 823.6/823.6 kB 227.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":15.958581222,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.1/14.1 MB 233.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":23.491534279,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 664.8/664.8 MB 2.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":27.854675741,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 410.6/410.6 MB 91.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":30.218567404,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.6/121.6 MB 138.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":30.943481493,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.5/56.5 MB 176.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":31.808372987,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.2/124.2 MB 150.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":33.379565376,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 196.0/196.0 MB 139.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":36.381503932,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.7/188.7 MB 93.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":36.980109276,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.1/99.1 kB 125.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":39.137541811,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 209.6/209.6 MB 7.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":41.549411816,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 80.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":155.97754842,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":155.977611327,"data":"torchaudio 2.10.0+cu128 requires torch==2.10.0, but you have torch 2.5.1+cu121 which is incompatible.\n"}
+,{"stream_name":"stdout","time":159.259529576,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.4/10.4 MB 83.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":159.62909884,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 49.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":159.690523913,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 31.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":159.738084089,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 92.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":160.042372484,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.8/35.8 MB 61.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":160.180702756,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.6/13.6 MB 99.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":198.457649295,"data":"{\n"}
+,{"stream_name":"stdout","time":198.45769526,"data":"  \"data\": \"/kaggle/input/cuchx-hau-video-training-corpus\",\n"}
+,{"stream_name":"stdout","time":198.457700702,"data":"  \"train_users\": [\n"}
+,{"stream_name":"stdout","time":198.457703964,"data":"    \"user1\",\n"}
+,{"stream_name":"stdout","time":198.457707102,"data":"    \"user16\",\n"}
+,{"stream_name":"stdout","time":198.45771012,"data":"    \"user18\",\n"}
+,{"stream_name":"stdout","time":198.457713113,"data":"    \"user19\",\n"}
+,{"stream_name":"stdout","time":198.457716033,"data":"    \"user2\",\n"}
+,{"stream_name":"stdout","time":198.457719047,"data":"    \"user20\",\n"}
+,{"stream_name":"stdout","time":198.457722087,"data":"    \"user21\",\n"}
+,{"stream_name":"stdout","time":198.457725068,"data":"    \"user23\",\n"}
+,{"stream_name":"stdout","time":198.457727922,"data":"    \"user24\",\n"}
+,{"stream_name":"stdout","time":198.457730781,"data":"    \"user3\",\n"}
+,{"stream_name":"stdout","time":198.457733705,"data":"    \"user5\",\n"}
+,{"stream_name":"stdout","time":198.457736556,"data":"    \"user7\",\n"}
+,{"stream_name":"stdout","time":198.457739417,"data":"    \"user8\",\n"}
+,{"stream_name":"stdout","time":198.457742276,"data":"    \"user9\"\n"}
+,{"stream_name":"stdout","time":198.457745208,"data":"  ],\n"}
+,{"stream_name":"stdout","time":198.457748058,"data":"  \"hold_users\": [\n"}
+,{"stream_name":"stdout","time":198.457750988,"data":"    \"user17\",\n"}
+,{"stream_name":"stdout","time":198.45775384,"data":"    \"user22\",\n"}
+,{"stream_name":"stdout","time":198.457756693,"data":"    \"user4\",\n"}
+,{"stream_name":"stdout","time":198.457759555,"data":"    \"user6\"\n"}
+,{"stream_name":"stdout","time":198.457762408,"data":"  ],\n"}
+,{"stream_name":"stdout","time":198.457765229,"data":"  \"train_clips\": 625,\n"}
+,{"stream_name":"stdout","time":198.457768193,"data":"  \"valid_clips\": 184,\n"}
+,{"stream_name":"stdout","time":198.457771053,"data":"  \"train_questions\": 2726,\n"}
+,{"stream_name":"stdout","time":198.457774097,"data":"  \"valid_questions\": 799\n"}
+,{"stream_name":"stdout","time":198.457777105,"data":"}\n"}
+,{"stream_name":"stderr","time":198.879123929,"data":"Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.\n"}
+,{"stream_name":"stderr","time":237.481233996,"data":"\rFetching 2 files:   0%|          | 0/2 [00:00\u003c?, ?it/s]\rFetching 2 files:  50%|█████     | 1/2 [00:34\u003c00:34, 34.75s/it]\rFetching 2 files: 100%|██████████| 2/2 [00:34\u003c00:00, 17.38s/it]\n"}
+,{"stream_name":"stderr","time":248.249784752,"data":"\rLoading checkpoint shards:   0%|          | 0/2 [00:00\u003c?, ?it/s]\rLoading checkpoint shards:  50%|█████     | 1/2 [00:05\u003c00:05,  5.08s/it]\rLoading checkpoint shards: 100%|██████████| 2/2 [00:10\u003c00:00,  5.13s/it]\rLoading checkpoint shards: 100%|██████████| 2/2 [00:10\u003c00:00,  5.12s/it]\n"}
+,{"stream_name":"stdout","time":249.275273036,"data":"trainable params: 37,152,768 || all params: 3,791,775,744 || trainable%: 0.9798\n"}
+,{"stream_name":"stderr","time":249.715571221,"data":"/usr/local/lib/python3.12/dist-packages/torch/_dynamo/eval_frame.py:632: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.5 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.\n"}
+,{"stream_name":"stderr","time":249.715615108,"data":"  return fn(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":249.715939888,"data":"/usr/local/lib/python3.12/dist-packages/torch/utils/checkpoint.py:87: UserWarning: None of the inputs have requires_grad=True. Gradients will be None\n"}
+,{"stream_name":"stderr","time":249.71594837,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":249.858144383,"data":"/usr/local/lib/python3.12/dist-packages/bitsandbytes/backends/cuda/ops.py:957: UserWarning: inner dimension (3420) is not aligned for fast kernel with blocksize=64, falling back to slower implementation.\n"}
+,{"stream_name":"stderr","time":249.858219159,"data":"  warn(\n"}
+,{"stream_name":"stdout","time":319.748863659,"data":"epoch=0 clip=25/625 step=3 loss=0.5473\n"}
+,{"stream_name":"stdout","time":388.564230962,"data":"epoch=0 clip=50/625 step=6 loss=0.4042\n"}
+,{"stream_name":"stdout","time":458.543413645,"data":"epoch=0 clip=75/625 step=9 loss=0.3971\n"}
+,{"stream_name":"stdout","time":527.179361508,"data":"epoch=0 clip=100/625 step=12 loss=0.3715\n"}
+,{"stream_name":"stdout","time":596.959398216,"data":"epoch=0 clip=125/625 step=15 loss=0.3113\n"}
+,{"stream_name":"stdout","time":665.693030655,"data":"epoch=0 clip=150/625 step=18 loss=0.3082\n"}
+,{"stream_name":"stdout","time":734.461266487,"data":"epoch=0 clip=175/625 step=21 loss=0.3043\n"}
+,{"stream_name":"stdout","time":802.524705034,"data":"epoch=0 clip=200/625 step=25 loss=0.2569\n"}
+,{"stream_name":"stdout","time":869.729722957,"data":"epoch=0 clip=225/625 step=28 loss=0.2450\n"}
+,{"stream_name":"stdout","time":937.05653973,"data":"epoch=0 clip=250/625 step=31 loss=0.1958\n"}
+,{"stream_name":"stdout","time":1005.867565738,"data":"epoch=0 clip=275/625 step=34 loss=0.2243\n"}
+,{"stream_name":"stdout","time":1074.299296333,"data":"epoch=0 clip=300/625 step=37 loss=0.2290\n"}
+,{"stream_name":"stdout","time":1144.773547742,"data":"epoch=0 clip=325/625 step=40 loss=0.2187\n"}
+,{"stream_name":"stdout","time":1213.376735212,"data":"epoch=0 clip=350/625 step=43 loss=0.2175\n"}
+,{"stream_name":"stdout","time":1282.45697162,"data":"epoch=0 clip=375/625 step=46 loss=0.2500\n"}
+,{"stream_name":"stdout","time":1350.844339825,"data":"epoch=0 clip=400/625 step=50 loss=0.2488\n"}
+,{"stream_name":"stdout","time":1421.499018449,"data":"epoch=0 clip=425/625 step=53 loss=0.2102\n"}
+,{"stream_name":"stdout","time":1489.876684881,"data":"epoch=0 clip=450/625 step=56 loss=0.2237\n"}
+,{"stream_name":"stdout","time":1558.715846953,"data":"epoch=0 clip=475/625 step=59 loss=0.2539\n"}
+,{"stream_name":"stdout","time":1627.094948403,"data":"epoch=0 clip=500/625 step=62 loss=0.2699\n"}
+,{"stream_name":"stdout","time":1696.013908129,"data":"epoch=0 clip=525/625 step=65 loss=0.2111\n"}
+,{"stream_name":"stdout","time":1764.847167244,"data":"epoch=0 clip=550/625 step=68 loss=0.2154\n"}
+,{"stream_name":"stdout","time":1833.613385208,"data":"epoch=0 clip=575/625 step=71 loss=0.2140\n"}
+,{"stream_name":"stdout","time":1900.84275181,"data":"epoch=0 clip=600/625 step=75 loss=0.2026\n"}
+,{"stream_name":"stdout","time":1970.696012499,"data":"epoch=0 clip=625/625 step=79 loss=0.2333\n"}
+,{"stream_name":"stdout","time":2038.476471201,"data":"epoch=1 clip=25/625 step=82 loss=0.1445\n"}
+,{"stream_name":"stdout","time":2107.290349902,"data":"epoch=1 clip=50/625 step=85 loss=0.1787\n"}
+,{"stream_name":"stdout","time":2176.564937219,"data":"epoch=1 clip=75/625 step=88 loss=0.1987\n"}
+,{"stream_name":"stdout","time":2244.537673236,"data":"epoch=1 clip=100/625 step=91 loss=0.1838\n"}
+,{"stream_name":"stdout","time":2314.127298066,"data":"epoch=1 clip=125/625 step=94 loss=0.1868\n"}
+,{"stream_name":"stdout","time":2382.575542659,"data":"epoch=1 clip=150/625 step=97 loss=0.1976\n"}
+,{"stream_name":"stdout","time":2451.604067257,"data":"epoch=1 clip=175/625 step=100 loss=0.1742\n"}
+,{"stream_name":"stdout","time":2520.021098877,"data":"epoch=1 clip=200/625 step=104 loss=0.1653\n"}
+,{"stream_name":"stdout","time":2588.671504344,"data":"epoch=1 clip=225/625 step=107 loss=0.1248\n"}
+,{"stream_name":"stdout","time":2656.936409154,"data":"epoch=1 clip=250/625 step=110 loss=0.1779\n"}
+,{"stream_name":"stdout","time":2726.094781599,"data":"epoch=1 clip=275/625 step=113 loss=0.1676\n"}
+,{"stream_name":"stdout","time":2794.171907495,"data":"epoch=1 clip=300/625 step=116 loss=0.1479\n"}
+,{"stream_name":"stdout","time":2862.756933284,"data":"epoch=1 clip=325/625 step=119 loss=0.1802\n"}
+,{"stream_name":"stdout","time":2932.043533555,"data":"epoch=1 clip=350/625 step=122 loss=0.1874\n"}
+,{"stream_name":"stdout","time":2999.777367761,"data":"epoch=1 clip=375/625 step=125 loss=0.1429\n"}
+,{"stream_name":"stdout","time":3067.955243244,"data":"epoch=1 clip=400/625 step=129 loss=0.1699\n"}
+,{"stream_name":"stdout","time":3137.105287918,"data":"epoch=1 clip=425/625 step=132 loss=0.1671\n"}
+,{"stream_name":"stdout","time":3204.528940726,"data":"epoch=1 clip=450/625 step=135 loss=0.1372\n"}
+,{"stream_name":"stdout","time":3272.424849187,"data":"epoch=1 clip=475/625 step=138 loss=0.1723\n"}
+,{"stream_name":"stdout","time":3340.092556674,"data":"epoch=1 clip=500/625 step=141 loss=0.2096\n"}
+,{"stream_name":"stdout","time":3408.040569741,"data":"epoch=1 clip=525/625 step=144 loss=0.1444\n"}
+,{"stream_name":"stdout","time":3477.269461782,"data":"epoch=1 clip=550/625 step=147 loss=0.1819\n"}
+,{"stream_name":"stdout","time":3546.27984963,"data":"epoch=1 clip=575/625 step=150 loss=0.1651\n"}
+,{"stream_name":"stdout","time":3615.245868017,"data":"epoch=1 clip=600/625 step=154 loss=0.1757\n"}
+,{"stream_name":"stdout","time":3684.251182106,"data":"epoch=1 clip=625/625 step=158 loss=0.1556\n"}
+,{"stream_name":"stderr","time":3685.553844295,"data":"/usr/local/lib/python3.12/dist-packages/transformers/generation/configuration_utils.py:631: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `1e-06` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.\n"}
+,{"stream_name":"stderr","time":3685.553884936,"data":"  warnings.warn(\n"}
+,{"stream_name":"stdout","time":3720.182148785,"data":"valid=10/184 acc=0.6809 parse=1.0000\n"}
+,{"stream_name":"stdout","time":3752.236414177,"data":"valid=20/184 acc=0.6522 parse=1.0000\n"}
+,{"stream_name":"stdout","time":3783.769594956,"data":"valid=30/184 acc=0.6370 parse=1.0000\n"}
+,{"stream_name":"stdout","time":3813.632034608,"data":"valid=40/184 acc=0.6477 parse=1.0000\n"}
+,{"stream_name":"stdout","time":3844.182287592,"data":"valid=50/184 acc=0.6606 parse=1.0000\n"}
+,{"stream_name":"stdout","time":3878.702858755,"data":"valid=60/184 acc=0.6554 parse=1.0000\n"}
+,{"stream_name":"stdout","time":3907.519588311,"data":"valid=70/184 acc=0.6515 parse=1.0000\n"}
+,{"stream_name":"stdout","time":3936.902775567,"data":"valid=80/184 acc=0.6609 parse=1.0000\n"}
+,{"stream_name":"stdout","time":3969.533621124,"data":"valid=90/184 acc=0.6590 parse=1.0000\n"}
+,{"stream_name":"stdout","time":4000.406999717,"data":"valid=100/184 acc=0.6583 parse=1.0000\n"}
+,{"stream_name":"stdout","time":4030.205396024,"data":"valid=110/184 acc=0.6562 parse=1.0000\n"}
+,{"stream_name":"stdout","time":4060.271224322,"data":"valid=120/184 acc=0.6551 parse=1.0000\n"}
+,{"stream_name":"stdout","time":4093.912819034,"data":"valid=130/184 acc=0.6566 parse=1.0000\n"}
+,{"stream_name":"stdout","time":4124.324877981,"data":"valid=140/184 acc=0.6562 parse=1.0000\n"}
+,{"stream_name":"stdout","time":4154.411111405,"data":"valid=150/184 acc=0.6508 parse=1.0000\n"}
+,{"stream_name":"stdout","time":4185.503867806,"data":"valid=160/184 acc=0.6441 parse=1.0000\n"}
+,{"stream_name":"stdout","time":4216.20375022,"data":"valid=170/184 acc=0.6459 parse=1.0000\n"}
+,{"stream_name":"stdout","time":4246.946798352,"data":"valid=180/184 acc=0.6346 parse=1.0000\n"}
+,{"stream_name":"stdout","time":4260.326145189,"data":"{\n"}
+,{"stream_name":"stdout","time":4260.326175296,"data":"  \"model\": \"Qwen/Qwen2.5-VL-3B-Instruct\",\n"}
+,{"stream_name":"stdout","time":4260.326181226,"data":"  \"fold\": 0,\n"}
+,{"stream_name":"stdout","time":4260.326209311,"data":"  \"hold_users\": [\n"}
+,{"stream_name":"stdout","time":4260.326216826,"data":"    \"user17\",\n"}
+,{"stream_name":"stdout","time":4260.326221714,"data":"    \"user22\",\n"}
+,{"stream_name":"stdout","time":4260.326225796,"data":"    \"user4\",\n"}
+,{"stream_name":"stdout","time":4260.326230757,"data":"    \"user6\"\n"}
+,{"stream_name":"stdout","time":4260.32623549,"data":"  ],\n"}
+,{"stream_name":"stdout","time":4260.326240705,"data":"  \"frames\": 12,\n"}
+,{"stream_name":"stdout","time":4260.326245569,"data":"  \"epochs\": 2,\n"}
+,{"stream_name":"stdout","time":4260.326250343,"data":"  \"questions\": 799,\n"}
+,{"stream_name":"stdout","time":4260.326254646,"data":"  \"correct\": 506,\n"}
+,{"stream_name":"stdout","time":4260.326258908,"data":"  \"accuracy\": 0.6332916145181476,\n"}
+,{"stream_name":"stdout","time":4260.326269498,"data":"  \"parse_rate\": 1.0,\n"}
+,{"stream_name":"stdout","time":4260.326273634,"data":"  \"per_category\": {\n"}
+,{"stream_name":"stdout","time":4260.326296414,"data":"    \"combination\": {\n"}
+,{"stream_name":"stdout","time":4260.326301486,"data":"      \"n\": 181,\n"}
+,{"stream_name":"stdout","time":4260.326306025,"data":"      \"correct\": 162,\n"}
+,{"stream_name":"stdout","time":4260.326310245,"data":"      \"accuracy\": 0.8950276243093923\n"}
+,{"stream_name":"stdout","time":4260.3263146,"data":"    },\n"}
+,{"stream_name":"stdout","time":4260.326318638,"data":"    \"emotion\": {\n"}
+,{"stream_name":"stdout","time":4260.326323103,"data":"      \"n\": 184,\n"}
+,{"stream_name":"stdout","time":4260.326337848,"data":"      \"correct\": 44,\n"}
+,{"stream_name":"stdout","time":4260.326343082,"data":"      \"accuracy\": 0.2391304347826087\n"}
+,{"stream_name":"stdout","time":4260.326348023,"data":"    },\n"}
+,{"stream_name":"stdout","time":4260.326363575,"data":"    \"multi\": {\n"}
+,{"stream_name":"stdout","time":4260.326367266,"data":"      \"n\": 184,\n"}
+,{"stream_name":"stdout","time":4260.326372274,"data":"      \"correct\": 121,\n"}
+,{"stream_name":"stdout","time":4260.326378864,"data":"      \"accuracy\": 0.657608695652174\n"}
+,{"stream_name":"stdout","time":4260.326381581,"data":"    },\n"}
+,{"stream_name":"stdout","time":4260.326383774,"data":"    \"sequence\": {\n"}
+,{"stream_name":"stdout","time":4260.326385906,"data":"      \"n\": 66,\n"}
+,{"stream_name":"stdout","time":4260.326388091,"data":"      \"correct\": 10,\n"}
+,{"stream_name":"stdout","time":4260.326390496,"data":"      \"accuracy\": 0.15151515151515152\n"}
+,{"stream_name":"stdout","time":4260.326392721,"data":"    },\n"}
+,{"stream_name":"stdout","time":4260.326394819,"data":"    \"single\": {\n"}
+,{"stream_name":"stdout","time":4260.326397033,"data":"      \"n\": 184,\n"}
+,{"stream_name":"stdout","time":4260.326399211,"data":"      \"correct\": 169,\n"}
+,{"stream_name":"stdout","time":4260.326401417,"data":"      \"accuracy\": 0.9184782608695652\n"}
+,{"stream_name":"stdout","time":4260.326403751,"data":"    }\n"}
+,{"stream_name":"stdout","time":4260.326405883,"data":"  }\n"}
+,{"stream_name":"stdout","time":4260.326408016,"data":"}\n"}
+,{"stream_name":"stderr","time":4264.645146268,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":4264.645174283,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":4264.846054304,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":4264.846093203,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":4265.453314948,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":4266.237838585,"data":"[NbConvertApp] Writing 345490 bytes to __results__.html\n"}
+]

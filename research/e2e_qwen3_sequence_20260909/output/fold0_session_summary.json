@@ -1,0 +1,29 @@
+{
+  "model": "Qwen/Qwen3-VL-2B-Instruct",
+  "fold": 0,
+  "hold_users": [
+    "user17",
+    "user22",
+    "user4",
+    "user6"
+  ],
+  "frames_per_video": 32,
+  "epochs": 6,
+  "task": "dense_video_sequence_order",
+  "option_shuffle_probability": 1.0,
+  "regimes": {
+    "full": {
+      "questions": 66,
+      "correct": 18,
+      "accuracy": 0.2727272727272727,
+      "parse_rate": 1.0,
+      "per_category": {
+        "sequence": {
+          "n": 66,
+          "correct": 18,
+          "accuracy": 0.2727272727272727
+        }
+      }
+    }
+  }
+}

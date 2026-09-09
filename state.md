@@ -5,9 +5,68 @@ architecture and the falsified-directions list; this file is the session-by-sess
 
 Same documentation rule: **measured numbers only, labelled by protocol.** No projections.
 
-**Current champion:** `submission_096491_330of342_CHAMPION.csv` — public
-**0.96491 = 330/342, rank 3** (Kaggle submission id 56070318, SHA-256 `e42cde96bafb108b8c16bcd97e5deb2af32c1657a089351ada8a72a95ed805cd`).
-All new candidate diffs are taken against this file. Current #1 is 334/342; gap: 4 public answers.
+**Current champion:** `submission_097076_332of342_CHAMPION.csv` — public
+**0.97076 = 332/342, rank 3** (Kaggle submission id 56090799, status COMPLETE,
+SHA-256 `25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56`).
+Submitted once with explicit user authorization on 2026-09-08. The latest measured leader
+score is 336/342 (2026-09-09); our best remains 332/342. New post332 artifacts use this scored champion;
+historical takeover subset files still use the 330 base and must not be confused with it.
+
+Post-332 autonomous research: all 197 local test depth videos match official source ZIP
+members by size+CRC. 0483 is demoted after exact parent/child timing inspection and a
+subject-disjoint sitting-vs-typing probe (209/231 OOF; target p(typing)=.435). 0526 remains
+the best residual lead but is not promoted (phone-vs-typing OOF 149/173; target p(typing)=.470;
+raw object unresolved). Emotion swaps, repaired-session block35 transfers, and nonexact
+sequence swaps were falsified or demoted. Tomorrow's adaptive files, hashes, and decoder
+are in `research/post332_20260908/REPORT.md` and `submission_manifest.json`: four singleton
+reversions probe 0488/0477/0506/0519; the omitted 0501 sign is algebraically forced, and
+the fifth file tests 0526 alone or with 0501 recovery when 0501 is forced to be the unique
+loss. No additional submission was made today.
+
+The five HARn changes have measured sum +2: either 2 wins/0 losses/3 neutral effects
+or 3 wins/1 loss/1 neutral effect. Thirty signed assignments remain. No individual
+winner or private membership is established. The four additional changes each had
+previously measured public contribution zero. See
+`research/takeover_20260908/scored_result.json` for the recorded COMPLETE result.
+
+Latest post332 audit artifacts: `research/post332_20260908/residual_audit.json` records the
+only positive OOF fallback route (unanimous exact object templates: 25 W→R/0 R→W on 25
+changes) and kills recovered-pool, child-sequence, frame-forest, and paired-pool families;
+`fallback_static_audit.json` inventories every explicit solver fallback and 22 test-side
+likely-fallback signatures; `residual_rank.csv` is a transparent 682-row screening order.
+The dense segment probe reaches 79.5% on 385 subject-disjoint child intervals and produces
+no safe test flip. Three exact-template disagreement variants are prebuilt but explicitly
+preserve the 332 incumbent and are excluded from tomorrow's queue.
+
+## Takeover audit (2026-09-08) — no new submission
+
+User supplied today's measured deltas: ABCD=-1, ABC=0, AB=0, and
+0461+0150+0151+0469=0. Therefore 0458=-1 (prohibited), 0165=0,
+and 0488+0146=0; individual zero-bundle contributions remain unresolved.
+Zero public contribution does **not** establish private membership.
+
+Final recommended local file: `research/takeover_20260908/TODAY_RECOMMENDED.csv`.
+SHA-256 `25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56`.
+Five proposed gain changes: 0488=C, 0477=B, 0506=C, 0519=C, **0501=B (new)**;
+four measured-zero changes: 0444=B, 0426=B, 0647=DCBA, 0206=CD.
+Public range -5…+5; no scored result or private gain is claimed. Nothing submitted.
+
+The previous exhaustive-action-set claims were falsified: 219/308 sequence and
+364/790 combination training answers omit other labeled same-clip actions.
+The cited single-distractor check cannot be extended to combination members
+(206/4804 violations). Raw clips show sitting in 0146 and jumping jacks in 0150.
+Preserve their base predictions. A blank-fourth-option tie-check bug pattern was
+identified; historical model provenance was not fully replayed.
+
+Full evidence, caveats, 12-row queue (5 promoted, 7 conditional), 32 prebuilt primary
+subsets, hashes/diffs and tomorrow's adaptive strategy:
+`research/takeover_20260908/REPORT.md`.
+Decoder: `research/decode_takeover_20260908.py`; exhaustive signed-state checks pass.
+This report supersedes earlier "guaranteed/private lock/Tier S" confidence claims.
+
+The 12-row queue and 32 subsets above are the historical pre-score takeover artifacts.
+The post-score authoritative pool and five-slot plan are
+`research/post332_20260908/REPORT.md`, `candidate_pool.json`, and `submission_manifest.json`.
 
 ## Session 6 (2026-09-05) — exact supervision and two scored arms
 
@@ -311,3 +370,66 @@ are retained in `research/multi_pair_atlas_20260904/RESULTS.md`.
    - `submission_096491_330of342_CHAMPION.csv` (SHA-256 `e42cde96bafb108b8c16bcd97e5deb2af32c1657a089351ada8a72a95ed805cd`).
    - Public score: **330 / 342 = 0.96491**, Rank 3.
    - Gap to tie for #1: **4 answers**. Gap to undisputed #1: **5 answers**.
+
+## Session 11 (2026-09-09) — scored algebra and final authorized gamble
+
+- Four-slot cycle is recorded exactly in
+  `research/takeover_20260908/submission_cycle_20260909.json`. Against the immutable
+  332 champion: reverting 0488 scored -1; reverting 0477 scored -1; reverting 0506
+  scored 0; reverting 0501+0519 and adding 0526 scored 0. Thus the incumbent answers
+  for 0488 and 0477 are proven public wins, 0506 is public-neutral under that exact
+  alternative, and the aggregate reversion effect `E0501 + E0519 = 0`. The zero bundles
+  do not identify private membership or either constituent sign.
+- The later user-authorized gamble changed `test_0461 C→D` and `test_0519 C→A`.
+  Submission 56116621 scored 332/342 (delta 0), proving only
+  `E0461 + E0519 = 0`. Artifact
+  `research/post332_20260908/FINAL_GAMBLE__0461_D__0519_A.csv`, SHA-256
+  `4db53d19c1ef6ebcb9ae2093b2b97d8a06e57356493945c8cc72a09db04512c9`.
+  Combined feasible triples `(E0461,E0501,E0519)` are `(-1,-1,+1)`, `(0,0,0)`,
+  and `(+1,+1,-1)`. No individual sign is claimed.
+- The observed leader had advanced to 336/342. No model-building kernel in Session 12
+  calls the competition submission API.
+
+## Session 12 (2026-09-09) — end-to-end multimodal replacement research
+
+Compute policy: one subject-disjoint fold per materially new family; no five-fold scaling
+unless the challenger beats the shipped mechanism at the decision level; no rerun of weak
+ideas. Kaggle GPU quota is treated as a hard budget, and competition submissions remain
+forbidden without explicit approval.
+
+Measured retired branches:
+
+- Generic Qwen3-VL session fine-tuning failed to replicate. Fold-0 v3/v4 strict
+  complete-triple fusion was only +1 on 105 shared rows; on independent fold 1 it was -2
+  on 102. Fold-1 compact and legacy full accuracies were 609/753 and 610/753.
+- A structured one-to-one Qwen3-VL emotion assignment model scored 155/184 full-session
+  questions on fold 0 but lost five net decisions to the diagnostic baseline on shared
+  full triples and 22 net on pairs. Prediction SHA-256
+  `44995e5b22889581d9c3ce8e758ed23925737808ec6bfffcbf21c2481a40e365`.
+- A temporal CTC probe scored 20/66 exact sequence answers and was retired. Prediction
+  SHA-256 `168aea74746c3b15ab6b5f08c6ae0e0bad826dd9ba7e2a5abde337fd2df7b37c`.
+- A dense 32-frame Qwen3-VL sequence specialist scored 18/66. On the same 66 questions,
+  Mechanism S scored 50/66; Qwen disagreed 45 times and corrected zero of them while
+  breaking 32 correct S decisions. Prediction SHA-256
+  `2e9e6f68c6f4275051f2cd091a2f4a4926913c45be495f6d66ab6235e48eb14b`.
+  The whole generative-Qwen replacement family is retired.
+
+Active materially different branch:
+
+- The VideoMAE API smoke test validated 16-frame inputs, `[1,1568,768]` hidden states,
+  12 encoder blocks, and classification logits. Smoke artifact SHA-256
+  `4886f554ad545a3c2b7eddf8d62c6d416d1c6825288e50259b334e5a8c68ae3`.
+- `research/e2e_videomae_action_timeline_20260909/videomae_action_timeline_fold0.py`
+  trains a Kinetics-pretrained VideoMAE on 2,927 exact HARn intervals plus background,
+  holds out users 17/22/4/6, audits HARn multiple-choice decisions, then performs a
+  24-window CTC permutation decode on held HAU sequence clips. This is exact temporal
+  supervision, not weak whole-clip prompting.
+- Kernel v1 failed immediately because Kaggle's default torch build did not support the
+  assigned P100. Kernel v2 installed torch 2.5.1/cu121 successfully and reached model
+  construction, then failed before training because the Kinetics mean-pooling config uses
+  `model.fc_norm` while `model.videomae.layernorm` is intentionally `None`.
+- Kernel v3 contains the exact architecture fix and includes the active final norm in the
+  optimizer. Pushed source SHA-256
+  `e353836f72d26cef73fd90669efbfb01bceba524a25d1bfc3c0609ff3f45f073`.
+  It is the only active GPU experiment. The continuation gate is positive net disagreements
+  against Mechanism S on the same held questions; otherwise this branch is retired.

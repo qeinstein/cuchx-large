@@ -1,0 +1,42 @@
+{
+  "model": "Qwen/Qwen3-VL-2B-Instruct",
+  "fold": 0,
+  "hold_users": [
+    "user17",
+    "user22",
+    "user4",
+    "user6"
+  ],
+  "frames_per_video": 12,
+  "epochs": 5,
+  "pair_augment_probability": 0.45,
+  "task": "one_to_one_candidate_manner_assignment",
+  "regimes": {
+    "full": {
+      "questions": 184,
+      "correct": 155,
+      "accuracy": 0.842391304347826,
+      "parse_rate": 1.0,
+      "per_category": {
+        "emotion": {
+          "n": 184,
+          "correct": 155,
+          "accuracy": 0.842391304347826
+        }
+      }
+    },
+    "pair": {
+      "questions": 157,
+      "correct": 110,
+      "accuracy": 0.7006369426751592,
+      "parse_rate": 1.0,
+      "per_category": {
+        "emotion": {
+          "n": 157,
+          "correct": 110,
+          "accuracy": 0.7006369426751592
+        }
+      }
+    }
+  }
+}

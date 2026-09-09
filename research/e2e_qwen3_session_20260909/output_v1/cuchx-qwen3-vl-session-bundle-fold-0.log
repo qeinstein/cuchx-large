@@ -1,0 +1,37 @@
+[{"stream_name":"stdout","time":12.369054754,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 780.4/780.4 MB 2.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":15.449582651,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.3/7.3 MB 71.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":16.002076436,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.7/23.7 MB 209.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":16.777993833,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 823.6/823.6 kB 215.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":17.404346271,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.1/14.1 MB 226.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":24.333618431,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 664.8/664.8 MB 2.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.380357017,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 410.6/410.6 MB 90.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":31.32070193,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.6/121.6 MB 160.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":32.338724054,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.5/56.5 MB 203.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":33.400215581,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.2/124.2 MB 159.3 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":35.722744001,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 196.0/196.0 MB 135.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":37.457437329,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.7/188.7 MB 142.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":38.673879986,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.1/99.1 kB 111.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":41.759029254,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 209.6/209.6 MB 5.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":43.171499082,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 15.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":158.902316984,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":158.902388909,"data":"torchaudio 2.10.0+cu128 requires torch==2.10.0, but you have torch 2.5.1+cu121 which is incompatible.\n"}
+,{"stream_name":"stdout","time":161.144739775,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.0/44.0 kB 551.8 kB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":163.196349452,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 48.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":163.996990211,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.1/43.1 MB 32.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":164.138361224,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 38.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":164.810089559,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.8/35.8 MB 37.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":165.096845773,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.6/13.6 MB 48.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":204.397369278,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":204.397418545,"data":"  File \"/kaggle/src/script.py\", line 87, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":204.397426865,"data":"    DATA = find_input()\n"}
+,{"stream_name":"stderr","time":204.397431907,"data":"           ^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":204.397436805,"data":"  File \"/kaggle/src/script.py\", line 83, in find_input\n"}
+,{"stream_name":"stderr","time":204.397486911,"data":"    raise FileNotFoundError(\"cuchx-hau-video-training-corpus is not mounted\")\n"}
+,{"stream_name":"stderr","time":204.397524053,"data":"FileNotFoundError: cuchx-hau-video-training-corpus is not mounted\n"}
+,{"stream_name":"stderr","time":208.171513261,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":208.171544973,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":208.36136347,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":208.361387739,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":208.971901318,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":209.81921339,"data":"[NbConvertApp] Writing 355926 bytes to __results__.html\n"}
+]

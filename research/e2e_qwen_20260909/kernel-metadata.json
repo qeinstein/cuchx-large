@@ -1,0 +1,14 @@
+{
+  "id": "toheebogunade/cuchx-end-to-end-qwen-video-bundle-fold-0",
+  "title": "CUCHX End-to-End Qwen Video Bundle Fold 0",
+  "code_file": "qwen_clip_bundle_fold0.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "toheebogunade/cuchx-hau-video-training-corpus"
+  ]
+}

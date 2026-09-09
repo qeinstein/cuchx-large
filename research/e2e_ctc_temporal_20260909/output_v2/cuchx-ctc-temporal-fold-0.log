@@ -1,0 +1,56 @@
+[{"stream_name":"stderr","time":6.805581255,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":6.805654246,"data":"    Found GPU0 Tesla P100-PCIE-16GB which is of cuda capability 6.0.\n"}
+,{"stream_name":"stderr","time":6.8056589469999995,"data":"    Minimum and Maximum cuda capability supported by this version of PyTorch is\n"}
+,{"stream_name":"stderr","time":6.805661855,"data":"    (7.0) - (12.0)\n"}
+,{"stream_name":"stderr","time":6.805664205,"data":"    \n"}
+,{"stream_name":"stderr","time":6.805666493,"data":"  queued_call()\n"}
+,{"stream_name":"stderr","time":6.805668825,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":6.805671172,"data":"    Please install PyTorch with a following CUDA\n"}
+,{"stream_name":"stderr","time":6.805673446,"data":"    configurations:  12.6 following instructions at\n"}
+,{"stream_name":"stderr","time":6.805675799,"data":"    https://pytorch.org/get-started/locally/\n"}
+,{"stream_name":"stderr","time":6.805678159,"data":"    \n"}
+,{"stream_name":"stderr","time":6.805680437,"data":"  queued_call()\n"}
+,{"stream_name":"stderr","time":6.805774703,"data":"/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py:435: UserWarning: \n"}
+,{"stream_name":"stderr","time":6.805782934,"data":"Tesla P100-PCIE-16GB with CUDA capability sm_60 is not compatible with the current PyTorch installation.\n"}
+,{"stream_name":"stderr","time":6.805787008,"data":"The current PyTorch install supports CUDA capabilities sm_70 sm_75 sm_80 sm_86 sm_90 sm_100 sm_120.\n"}
+,{"stream_name":"stderr","time":6.805790916,"data":"If you want to use the Tesla P100-PCIE-16GB GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/\n"}
+,{"stream_name":"stderr","time":6.805794482,"data":"\n"}
+,{"stream_name":"stderr","time":6.805797641,"data":"  queued_call()\n"}
+,{"stream_name":"stdout","time":6.815492085,"data":"device=cpu fold=0 epochs=55\n"}
+,{"stream_name":"stdout","time":9.260841778,"data":"items=797 train=613 valid=184 train_transcripts=239 valid_transcripts=66 hold=[np.str_('user17'), np.str_('user22'), np.str_('user4'), np.str_('user6')]\n"}
+,{"stream_name":"stdout","time":38.342696535,"data":"epoch=01 loss=24.34144\n"}
+,{"stream_name":"stdout","time":133.5580443,"data":"epoch=05 loss=12.75395\n"}
+,{"stream_name":"stdout","time":251.70966889,"data":"epoch=10 loss=12.78143\n"}
+,{"stream_name":"stdout","time":370.271718263,"data":"epoch=15 loss=12.77737\n"}
+,{"stream_name":"stdout","time":488.248911561,"data":"epoch=20 loss=11.15090\n"}
+,{"stream_name":"stdout","time":606.709032705,"data":"epoch=25 loss=8.46608\n"}
+,{"stream_name":"stdout","time":724.278522084,"data":"epoch=30 loss=7.21144\n"}
+,{"stream_name":"stdout","time":841.201488423,"data":"epoch=35 loss=5.84147\n"}
+,{"stream_name":"stdout","time":958.171881661,"data":"epoch=40 loss=4.97258\n"}
+,{"stream_name":"stdout","time":1078.706633597,"data":"epoch=45 loss=3.96170\n"}
+,{"stream_name":"stdout","time":1198.893592127,"data":"epoch=50 loss=3.51615\n"}
+,{"stream_name":"stdout","time":1319.316760633,"data":"epoch=55 loss=3.40818\n"}
+,{"stream_name":"stdout","time":1321.826466093,"data":"{\n"}
+,{"stream_name":"stdout","time":1321.826506441,"data":"  \"fold\": 0,\n"}
+,{"stream_name":"stdout","time":1321.826512484,"data":"  \"held_users\": [\n"}
+,{"stream_name":"stdout","time":1321.82651704,"data":"    \"user17\",\n"}
+,{"stream_name":"stdout","time":1321.826521502,"data":"    \"user22\",\n"}
+,{"stream_name":"stdout","time":1321.826538101,"data":"    \"user4\",\n"}
+,{"stream_name":"stdout","time":1321.82658231,"data":"    \"user6\"\n"}
+,{"stream_name":"stdout","time":1321.826588971,"data":"  ],\n"}
+,{"stream_name":"stdout","time":1321.82659237,"data":"  \"n\": 66,\n"}
+,{"stream_name":"stdout","time":1321.826595798,"data":"  \"exact_correct\": 20,\n"}
+,{"stream_name":"stdout","time":1321.826599251,"data":"  \"exact_accuracy\": 0.30303030303030304,\n"}
+,{"stream_name":"stdout","time":1321.826602885,"data":"  \"pair_correct\": 294,\n"}
+,{"stream_name":"stdout","time":1321.826609433,"data":"  \"pair_total\": 396,\n"}
+,{"stream_name":"stdout","time":1321.826612459,"data":"  \"pair_accuracy\": 0.7424242424242424,\n"}
+,{"stream_name":"stdout","time":1321.826615015,"data":"  \"epochs\": 55,\n"}
+,{"stream_name":"stdout","time":1321.826617443,"data":"  \"device\": \"cpu\"\n"}
+,{"stream_name":"stdout","time":1321.826619798,"data":"}\n"}
+,{"stream_name":"stderr","time":1326.191910714,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1326.191967445,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1326.427726016,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1326.42775823,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1327.060428324,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1328.402543585,"data":"[NbConvertApp] Writing 390687 bytes to __results__.html\n"}
+]

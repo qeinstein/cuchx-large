@@ -1,0 +1,50 @@
+{
+  "baseline": "../../champ/oof_e2e_baseline_20260909.csv",
+  "baseline_sha256": "a4744abb27ebecb8ba8767b803271323b6a3295d6f42185da858230c42ae037a",
+  "qwen": [
+    {
+      "path": "../e2e_qwen3_session_20260909/output_fold1_compact/fold1_session_predictions.csv",
+      "sha256": "a8844fb0bfc8d47d512ab57e8f4f2e335b631ed35f3eb8ae553bf563fa99dff0"
+    },
+    {
+      "path": "../e2e_qwen3_legacy_fold1_20260909/output/fold1_session_predictions.csv",
+      "sha256": "39ce987ab32ee79a47e4c1fde885d7c791ab0f26c4e00436d2a5ecb518bdbac2"
+    }
+  ],
+  "baseline_weight": 1.0,
+  "qwen_weight_each": 1.0,
+  "eligible_rows": 102,
+  "eligible_baseline_correct": 98,
+  "eligible_fused_correct": 96,
+  "net": -2,
+  "changed_rows": 2,
+  "w_to_r": 0,
+  "r_to_w": 2,
+  "both_wrong": 0,
+  "per_user": {
+    "user1": {
+      "n": 18,
+      "baseline": 18,
+      "fused": 18,
+      "net": 0
+    },
+    "user16": {
+      "n": 33,
+      "baseline": 31,
+      "fused": 31,
+      "net": 0
+    },
+    "user21": {
+      "n": 27,
+      "baseline": 27,
+      "fused": 25,
+      "net": -2
+    },
+    "user24": {
+      "n": 24,
+      "baseline": 22,
+      "fused": 22,
+      "net": 0
+    }
+  }
+}

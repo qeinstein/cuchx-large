@@ -1,0 +1,49 @@
+[{"stream_name":"stdout","time":11.616491668,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 780.4/780.4 MB 2.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":14.265670683,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.3/7.3 MB 108.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":14.800926817,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.7/23.7 MB 132.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":15.336355039,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 823.6/823.6 kB 236.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":15.815208057,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.1/14.1 MB 120.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":23.03652797,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 664.8/664.8 MB 2.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.966179083,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 410.6/410.6 MB 66.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":31.577229735,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.6/121.6 MB 105.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":32.405779054,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.5/56.5 MB 105.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":33.777174879,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.2/124.2 MB 103.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":36.734015082,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 196.0/196.0 MB 87.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":38.734233806,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.7/188.7 MB 92.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":40.854099404,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.1/99.1 kB 125.9 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":43.370962987,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 209.6/209.6 MB 8.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":44.768910472,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 73.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":159.3191997,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":159.319237009,"data":"torchaudio 2.10.0+cu128 requires torch==2.10.0, but you have torch 2.5.1+cu121 which is incompatible.\n"}
+,{"stream_name":"stdout","time":161.145053078,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.0/44.0 kB 2.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":162.551432168,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 14.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":162.577147606,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 41.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":200.020748549,"data":"{\n"}
+,{"stream_name":"stdout","time":200.020792868,"data":"  \"device\": \"cuda\",\n"}
+,{"stream_name":"stdout","time":200.020810506,"data":"  \"hold_users\": [\n"}
+,{"stream_name":"stdout","time":200.020816171,"data":"    \"user17\",\n"}
+,{"stream_name":"stdout","time":200.020821736,"data":"    \"user22\",\n"}
+,{"stream_name":"stdout","time":200.020826884,"data":"    \"user4\",\n"}
+,{"stream_name":"stdout","time":200.020832015,"data":"    \"user6\"\n"}
+,{"stream_name":"stdout","time":200.020836513,"data":"  ],\n"}
+,{"stream_name":"stdout","time":200.020840853,"data":"  \"actions\": 40,\n"}
+,{"stream_name":"stdout","time":200.020845328,"data":"  \"train_items\": 2772,\n"}
+,{"stream_name":"stdout","time":200.020849781,"data":"  \"valid_segments\": 692,\n"}
+,{"stream_name":"stdout","time":200.020854364,"data":"  \"background_items\": 537\n"}
+,{"stream_name":"stdout","time":200.020862636,"data":"}\n"}
+,{"stream_name":"stderr","time":205.832762267,"data":"Some weights of VideoMAEForVideoClassification were not initialized from the model checkpoint at MCG-NJU/videomae-base-finetuned-kinetics and are newly initialized because the shapes did not match:\n"}
+,{"stream_name":"stderr","time":205.832805278,"data":"- classifier.bias: found shape torch.Size([400]) in the checkpoint and torch.Size([41]) in the model instantiated\n"}
+,{"stream_name":"stderr","time":205.832831922,"data":"- classifier.weight: found shape torch.Size([400, 768]) in the checkpoint and torch.Size([41, 768]) in the model instantiated\n"}
+,{"stream_name":"stderr","time":205.832838486,"data":"You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.\n"}
+,{"stream_name":"stderr","time":205.958732476,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":205.958766774,"data":"  File \"/kaggle/src/script.py\", line 267, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":205.958864284,"data":"    for parameter in model.videomae.layernorm.parameters():\n"}
+,{"stream_name":"stderr","time":205.959063319,"data":"                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":205.95915376,"data":"AttributeError: 'NoneType' object has no attribute 'parameters'\n"}
+,{"stream_name":"stderr","time":209.807005211,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":209.807038374,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":210.020311306,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":210.020343562,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":210.652656886,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":211.540372054,"data":"[NbConvertApp] Writing 391305 bytes to __results__.html\n"}
+]

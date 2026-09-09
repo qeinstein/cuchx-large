@@ -1,0 +1,14 @@
+{
+  "id": "toheebogunade/cuchx-videomae-emotion-fold-0",
+  "title": "CUCHX VideoMAE Emotion Fold 0",
+  "code_file": "videomae_emotion_fold0.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "toheebogunade/cuchx-hau-video-training-corpus"
+  ]
+}

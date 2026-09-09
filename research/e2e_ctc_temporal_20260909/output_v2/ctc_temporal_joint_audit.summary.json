@@ -1,0 +1,13 @@
+{
+  "n": 66,
+  "direct_exact": 20,
+  "direct_accuracy": 0.30303030303030304,
+  "direct_pair_accuracy": 0.7424242424242424,
+  "joint_exact": 20,
+  "joint_accuracy": 0.30303030303030304,
+  "joint_pair_accuracy": 0.7272727272727273,
+  "joint_changes": 21,
+  "joint_w_to_r": 3,
+  "joint_r_to_w": 3,
+  "historical_mechanism_s_fold0_exact": 47
+}

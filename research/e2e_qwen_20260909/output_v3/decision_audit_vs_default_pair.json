@@ -1,0 +1,92 @@
+{
+  "predictions": "research/e2e_qwen_20260909/output_v3/fold0_predictions.csv",
+  "predictions_sha256": "94ccdce1ddf19aff3ece86df9616cb4741700ae32907abbd797a9eb23a16aff0",
+  "baseline": "champ/oof_e2e_baseline_20260909.csv",
+  "baseline_sha256": "a4744abb27ebecb8ba8767b803271323b6a3295d6f42185da858230c42ae037a",
+  "regime": null,
+  "model_rows": 799,
+  "baseline_rows": 3689,
+  "shared_rows": 692,
+  "model_only": 107,
+  "baseline_only": 2997,
+  "overall": {
+    "n": 692,
+    "model_correct": 441,
+    "model_accuracy": 0.6372832369942196,
+    "baseline_correct": 629,
+    "baseline_accuracy": 0.9089595375722543,
+    "r_to_w_wins": 15,
+    "w_to_r_losses": 203,
+    "net": -188,
+    "disagreements": 254,
+    "flip_precision": 0.06880733944954129,
+    "oracle_union_correct": 644
+  },
+  "per_category": {
+    "combination": {
+      "n": 156,
+      "model_correct": 143,
+      "model_accuracy": 0.9166666666666666,
+      "baseline_correct": 155,
+      "baseline_accuracy": 0.9935897435897436,
+      "r_to_w_wins": 1,
+      "w_to_r_losses": 13,
+      "net": -12,
+      "disagreements": 14,
+      "flip_precision": 0.07142857142857142,
+      "oracle_union_correct": 156
+    },
+    "emotion": {
+      "n": 159,
+      "model_correct": 38,
+      "model_accuracy": 0.2389937106918239,
+      "baseline_correct": 136,
+      "baseline_accuracy": 0.8553459119496856,
+      "r_to_w_wins": 7,
+      "w_to_r_losses": 105,
+      "net": -98,
+      "disagreements": 125,
+      "flip_precision": 0.0625,
+      "oracle_union_correct": 143
+    },
+    "multi": {
+      "n": 159,
+      "model_correct": 106,
+      "model_accuracy": 0.6666666666666666,
+      "baseline_correct": 151,
+      "baseline_accuracy": 0.949685534591195,
+      "r_to_w_wins": 3,
+      "w_to_r_losses": 48,
+      "net": -45,
+      "disagreements": 55,
+      "flip_precision": 0.058823529411764705,
+      "oracle_union_correct": 154
+    },
+    "sequence": {
+      "n": 59,
+      "model_correct": 7,
+      "model_accuracy": 0.11864406779661017,
+      "baseline_correct": 28,
+      "baseline_accuracy": 0.4745762711864407,
+      "r_to_w_wins": 4,
+      "w_to_r_losses": 25,
+      "net": -21,
+      "disagreements": 48,
+      "flip_precision": 0.13793103448275862,
+      "oracle_union_correct": 32
+    },
+    "single": {
+      "n": 159,
+      "model_correct": 147,
+      "model_accuracy": 0.9245283018867925,
+      "baseline_correct": 159,
+      "baseline_accuracy": 1.0,
+      "r_to_w_wins": 0,
+      "w_to_r_losses": 12,
+      "net": -12,
+      "disagreements": 12,
+      "flip_precision": 0.0,
+      "oracle_union_correct": 159
+    }
+  }
+}
