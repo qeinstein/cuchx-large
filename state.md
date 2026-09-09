@@ -433,3 +433,11 @@ Active materially different branch:
   `e353836f72d26cef73fd90669efbfb01bceba524a25d1bfc3c0609ff3f45f073`.
   It is the only active GPU experiment. The continuation gate is positive net disagreements
   against Mechanism S on the same held questions; otherwise this branch is retired.
+- `evaluate_action_timeline.py` is prebuilt to report exact prediction disagreements,
+  W→R/R→W/both-wrong counts, and fixed top-k margin diagnostics against Mechanism S and
+  the HARn OOF baseline. Any same-fold margin pattern is descriptive and requires fold-1
+  replication before deployment.
+- The unlaunched VideoMAE emotion script was hardened without spending GPU quota: it now
+  installs the P100-compatible torch wheel before import and uses/optimizes the active
+  mean-pooling `fc_norm` consistently in training and validation. Source SHA-256
+  `e1ac18a7b5f3dfa6346dc82aad1fce435afedd9dca8a5006e14ac28f81466823`.

@@ -17,6 +17,19 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+gpu_name = subprocess.run(
+    ["nvidia-smi", "--query-gpu=name", "--format=csv,noheader"],
+    capture_output=True,
+    text=True,
+    check=False,
+).stdout.strip()
+if "P100" in gpu_name:
+    subprocess.check_call([
+        sys.executable, "-m", "pip", "install", "-q",
+        "--index-url", "https://download.pytorch.org/whl/cu121",
+        "torch==2.5.1", "torchvision==0.20.1",
+    ])
+
 subprocess.check_call([
     sys.executable, "-m", "pip", "install", "-q",
     "transformers>=4.48.0,<5", "accelerate>=1.2.0", "opencv-python-headless",
@@ -233,14 +246,18 @@ for parameter in model.videomae.parameters():
 for block in model.videomae.encoder.layer[-UNFREEZE_BLOCKS:]:
     for parameter in block.parameters():
         parameter.requires_grad = True
-for parameter in model.videomae.layernorm.parameters():
-    parameter.requires_grad = True
+final_norm = model.fc_norm if model.fc_norm is not None else model.videomae.layernorm
+if final_norm is not None:
+    for parameter in final_norm.parameters():
+        parameter.requires_grad = True
 for parameter in model.classifier.parameters():
     parameter.requires_grad = True
 rank_head = torch.nn.Linear(model.config.hidden_size, 1).to(DEVICE)
 
 backbone_params = [p for p in model.videomae.parameters() if p.requires_grad]
 head_params = list(model.classifier.parameters()) + list(rank_head.parameters())
+if final_norm is not None:
+    head_params += list(final_norm.parameters())
 optimizer = torch.optim.AdamW([
     {"params": backbone_params, "lr": LR},
     {"params": head_params, "lr": HEAD_LR},
@@ -264,6 +281,8 @@ def session_loss(rows: list[pd.Series], rng: random.Random):
     )
     output = model.videomae(pixel_values)
     pooled = output.last_hidden_state.mean(1)
+    if model.fc_norm is not None:
+        pooled = model.fc_norm(pooled)
     logits = model.classifier(pooled)
     ce = F.cross_entropy(logits, targets, label_smoothing=0.05)
     speed = rank_head(pooled).flatten()
