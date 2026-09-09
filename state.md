@@ -461,3 +461,40 @@ Active materially different branch:
   complete-session margin ≥0.5 gate. It was pushed as kernel version 2 with source SHA-256
   `2b06999306754d1cfc0975dcc6f9d9c98f58d2541c4bc7d186923abeb491e701`.
   No threshold retuning on fold 1 is permitted.
+- Kernel `toheebogunade/cuchx-videomae-action-timeline-fold-0` completed. Evaluated against Mechanism S
+  (`seqlab/audit_run18.csv`) and OOF baseline (`champ/oof_e2e_baseline_20260909.csv`):
+  - Sequence: 39 vs 50 (8 W→R, 19 R→W, 8 both-wrong, net -11). Margin top-k was nonpositive beyond k=1.
+  - HARn single: 83 vs 84 (3 W→R, 4 R→W, 0 both-wrong, net -1).
+  - Terminal gate decision: Action timeline is weak and negative at the decision level. The entire
+    VideoMAE action timeline branch is retired. No further action fold authorized.
+  - Artifact SHA-256s:
+    - `videomae_action_timeline_fold0_predictions.csv`: `479acabfe18049cfc71f69cdcd37c36b370c6b6c98d5261ac05facaf423a6033`
+    - `videomae_action_fold0_mc_predictions.csv`: `bc6b4ca88ed3fc04bd9e2b75b43ea67858637f6a9a20cfbb7bda0bcffa4d6090`
+    - `videomae_action_timeline_fold0_joint_audit.summary.json`: `ca5c6bf8dcbe88b06daf331ca31b14fee6d4bd57fac8311562b0445203e2ddb4`
+- Kernel `toheebogunade/cuchx-videomae-emotion-fold-0` (version 2, fold 1) completed. Evaluated against
+  OOF baseline (`champ/oof_e2e_baseline_20260909.csv`):
+  - Complete sessions (144 shared rows, 125 vs 126): 23 disagreements.
+  - Frozen complete-session gate (margin ≥ 0.5): 14 changes, 9 W→R, 5 R→W, 0 both-wrong, net +4.
+  - User distribution on fold 1: user1 (net +2), user16 (net +2), user21 (net -1), user24 (net +1).
+  - Replicated combined performance across fold 0 (+5 net) and fold 1 (+4 net):
+    - Total changes: 24 (10 fold 0, 14 fold 1)
+    - Total wins: 15 (6 fold 0, 9 fold 1)
+    - Total losses: 6 (1 fold 0, 5 fold 1)
+    - Total both-wrong: 3 (3 fold 0, 0 fold 1)
+    - Combined Net: +9 (win rate 15/21 = 71.4%, flip precision 15/24 = 62.5%).
+  - Terminal gate decision: VideoMAE emotion complete-session margin ≥ 0.5 gate REPLICATED POSITIVELY.
+    Branch cleared for minimum full-data/test inference candidate generation.
+  - Artifact SHA-256s:
+    - `videomae_emotion_fold1_predictions.csv`: `7cdad044ddaced4697bd5b2df12fac0c7de9843417c395ecc806e7d6619de3ad`
+    - `videomae_emotion_fold1_joint_audit.summary.json`: `2b761631cc0303d013fa2a0896635fa58d14ccfc458b082236fa69e637180931`
+- Minimum full-data test inference candidate build launched:
+  - Staged private dataset `toheebogunade/cuchx-hau-test-triples` (87 videos across 29 complete 3-clip test sessions)
+    via zero-disk hard links, verified ready.
+  - Script `research/e2e_videomae_emotion_20260909/test_inference/videomae_emotion_full_inference.py`, source SHA-256
+    `7c84f6ce7e4d37965576910ae9aa827cfc9d8666be251c0c129aea74cc670c91`.
+  - Kernel `toheebogunade/cuchx-videomae-emotion-test-inference` pushed as version 1; running on P100 GPU.
+  - Protocol: Full-data training for 5 epochs over 270 valid sessions with frozen complete-session gate (margin ≥ 0.50).
+    Overrides are gated strictly against the verified 332 champion (`submission_097076_332of342_CHAMPION.csv`).
+  - No submission API calls present in kernel or locally.
+
+

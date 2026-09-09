@@ -1,0 +1,15 @@
+{
+  "id": "toheebogunade/cuchx-videomae-emotion-test-inference",
+  "title": "CUCHX VideoMAE Emotion Test Inference",
+  "code_file": "videomae_emotion_full_inference.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "toheebogunade/cuchx-hau-video-training-corpus",
+    "toheebogunade/cuchx-hau-test-triples"
+  ]
+}
