@@ -441,3 +441,11 @@ Active materially different branch:
   installs the P100-compatible torch wheel before import and uses/optimizes the active
   mean-pooling `fc_norm` consistently in training and validation. Source SHA-256
   `e1ac18a7b5f3dfa6346dc82aad1fce435afedd9dca8a5006e14ac28f81466823`.
+- One fold-0 emotion run was then launched under that exact remote source hash; no second
+  fold is authorized unless it beats the baseline at decision level. A subsequent static
+  audit found an inference-only candidate-count bug: 3 observed clips with 4 common options
+  incorrectly requested an untrained k=4 position prior. Training and raw emitted logits
+  are unaffected, so `evaluate_videomae_emotion.py` will re-decode the completed run on CPU.
+  The corrected local production source is SHA-256
+  `8eb21f7ae2b920a4c20b738da33a59f41ef77e5d20089feac6600bf5d8409a0d`;
+  no GPU rerun is needed for this correction.

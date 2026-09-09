@@ -356,31 +356,20 @@ def clip_logits(rows: list[pd.Series]) -> np.ndarray:
 def decode_assignment(rows: list[pd.Series], logits: np.ndarray) -> tuple[list[str], float]:
     candidates = candidate_manners(rows)
     k = len(rows)
-    slots = len(candidates) if k < len(candidates) <= 4 else k
     logp = logits - np.logaddexp.reduce(logits, axis=1, keepdims=True)
     scored = []
-    if slots > k:
-        present_sets = list(itertools.combinations(range(slots), k))
-        for assignment in itertools.permutations(range(len(candidates)), k):
-            manners = [candidates[index] for index in assignment]
-            if any(manners[i] not in {str(rows[i][letter]).strip() for letter in "ABCD"}
-                   for i in range(k)):
-                continue
-            for present in present_sets:
-                value = sum(logp[i, G2I[manner_group(manners[i])]] for i in range(k))
-                value += 0.30 * sum(math.log(max(POS_PRIOR.get(
-                    (manners[i], present[i], slots), 1 / slots), 1e-6)) for i in range(k))
-                scored.append((float(value), manners))
-    else:
-        for assignment in itertools.permutations(range(len(candidates)), k):
-            manners = [candidates[index] for index in assignment]
-            if any(manners[i] not in {str(rows[i][letter]).strip() for letter in "ABCD"}
-                   for i in range(k)):
-                continue
-            value = sum(logp[i, G2I[manner_group(manners[i])]] for i in range(k))
-            value += 0.30 * sum(math.log(max(POS_PRIOR.get(
-                (manners[i], i, k), 1 / k), 1e-6)) for i in range(k))
-            scored.append((float(value), manners))
+    # The position index is the observed clip position, not an index in the candidate
+    # vocabulary.  With 3 clips and 4 shared candidates we still use the k=3 prior while
+    # the 4P3 assignments naturally model which candidate is absent.
+    for assignment in itertools.permutations(range(len(candidates)), k):
+        manners = [candidates[index] for index in assignment]
+        if any(manners[i] not in {str(rows[i][letter]).strip() for letter in "ABCD"}
+               for i in range(k)):
+            continue
+        value = sum(logp[i, G2I[manner_group(manners[i])]] for i in range(k))
+        value += 0.30 * sum(math.log(max(POS_PRIOR.get(
+            (manners[i], i, k), 1 / k), 1e-6)) for i in range(k))
+        scored.append((float(value), manners))
     scored.sort(key=lambda item: item[0], reverse=True)
     if not scored:
         return ["" for _ in rows], float("nan")
