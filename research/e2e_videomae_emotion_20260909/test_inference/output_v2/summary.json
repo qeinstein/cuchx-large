@@ -1,0 +1,75 @@
+{
+  "model": "MCG-NJU/videomae-base-finetuned-kinetics",
+  "protocol": "full_training_5_epochs_test_inference",
+  "test_sessions": 29,
+  "test_questions": 87,
+  "gate_margin": 0.5,
+  "flips_count": 8,
+  "flips": [
+    {
+      "qa_id": "test_0658",
+      "clip": "LM_test_0089",
+      "old_champ": "B",
+      "new_pred": "C",
+      "margin": 0.7130107879638672,
+      "manner": "Gracefully"
+    },
+    {
+      "qa_id": "test_0377",
+      "clip": "LM_test_0091",
+      "old_champ": "C",
+      "new_pred": "D",
+      "margin": 0.7130107879638672,
+      "manner": "Frantically"
+    },
+    {
+      "qa_id": "test_0382",
+      "clip": "LM_test_0099",
+      "old_champ": "B",
+      "new_pred": "C",
+      "margin": 1.157374382019043,
+      "manner": "Carefully"
+    },
+    {
+      "qa_id": "test_0383",
+      "clip": "LM_test_0100",
+      "old_champ": "C",
+      "new_pred": "B",
+      "margin": 1.157374382019043,
+      "manner": "Rapidly"
+    },
+    {
+      "qa_id": "test_0412",
+      "clip": "LM_test_0144",
+      "old_champ": "C",
+      "new_pred": "B",
+      "margin": 0.5198931694030762,
+      "manner": "Steadily"
+    },
+    {
+      "qa_id": "test_0413",
+      "clip": "LM_test_0145",
+      "old_champ": "D",
+      "new_pred": "C",
+      "margin": 0.5198931694030762,
+      "manner": "Hastily"
+    },
+    {
+      "qa_id": "test_0420",
+      "clip": "LM_test_0156",
+      "old_champ": "D",
+      "new_pred": "C",
+      "margin": 1.5032920837402344,
+      "manner": "Calmly"
+    },
+    {
+      "qa_id": "test_0421",
+      "clip": "LM_test_0157",
+      "old_champ": "A",
+      "new_pred": "C",
+      "margin": 1.5032920837402344,
+      "manner": "Hastily"
+    }
+  ],
+  "candidate_submission_sha256": "d585a9df6715c3bcf3121b683aa7dd57e4e8668d46e4f88df5371bf2a439f8dd"
+}

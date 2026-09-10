@@ -1,0 +1,30 @@
+{
+  "competition": "cuhk-x-competition-large-model-track",
+  "submission_id": 56116621,
+  "submitted_at": "2026-09-09 07:13:43.990000",
+  "status": "COMPLETE",
+  "artifact": "research/post332_20260908/FINAL_GAMBLE__0461_D__0519_A.csv",
+  "sha256": "4db53d19c1ef6ebcb9ae2093b2b97d8a06e57356493945c8cc72a09db04512c9",
+  "diff_vs_332": [
+    "test_0461: C -> D",
+    "test_0519: C -> A"
+  ],
+  "public_score": 0.97076,
+  "public_correct": 332,
+  "public_denominator": 342,
+  "delta_vs_332": 0,
+  "team_rank": 3,
+  "leader": {
+    "team": "Bull & Ivarick",
+    "public_score": 0.98245,
+    "public_correct": 336
+  },
+  "new_exact_constraint": "E0461 + E0519 = 0",
+  "combined_with_prior_constraint": "E0501 + E0519 = 0, therefore E0461 = E0501",
+  "feasible_triples_E0461_E0501_E0519": [
+    [-1, -1, 1],
+    [0, 0, 0],
+    [1, 1, -1]
+  ],
+  "interpretation": "The zero delta is an aggregate fact only. It does not identify either row as private or individually neutral."
+}

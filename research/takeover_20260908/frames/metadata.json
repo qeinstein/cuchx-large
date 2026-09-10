@@ -1,0 +1,78 @@
+[
+  {
+    "clip": "0007",
+    "frames": 29,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0007/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0023",
+    "frames": 16,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0023/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0046",
+    "frames": 22,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0046/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0059",
+    "frames": 73,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0059/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0062",
+    "frames": 21,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0062/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0103",
+    "missing": true
+  },
+  {
+    "clip": "0107",
+    "frames": 177,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0107/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0110",
+    "frames": 176,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0110/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0135",
+    "frames": 135,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0135/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0123",
+    "frames": 123,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0123/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0124",
+    "frames": 78,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0124/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0117",
+    "frames": 118,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0117/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0145",
+    "frames": 173,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0145/Depth_Color/Depth_Color.mp4"
+  }
+]

@@ -1,0 +1,34 @@
+[{"stream_name":"stdout","time":12.057303513,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 780.4/780.4 MB 2.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":14.718035944,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.3/7.3 MB 114.5 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":15.256983262,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.7/23.7 MB 98.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":15.410414487,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 823.6/823.6 kB 205.6 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":15.580895778,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.1/14.1 MB 132.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":22.597909701,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 664.8/664.8 MB 2.4 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":28.853825092,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 410.6/410.6 MB 57.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":32.548721272,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.6/121.6 MB 108.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":33.39596884,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.5/56.5 MB 125.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":34.855481528,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.2/124.2 MB 68.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":37.67966107,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 196.0/196.0 MB 79.2 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":39.797171868,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.7/188.7 MB 81.1 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":40.870390419,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.1/99.1 kB 93.7 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":43.08174498,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 209.6/209.6 MB 9.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":43.983996731,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 62.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":164.155910136,"data":"ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.\n"}
+,{"stream_name":"stderr","time":164.155985894,"data":"torchaudio 2.10.0+cu128 requires torch==2.10.0, but you have torch 2.5.1+cu121 which is incompatible.\n"}
+,{"stream_name":"stdout","time":166.930726738,"data":"     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.0/44.0 kB 2.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":167.756863166,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 103.0 MB/s eta 0:00:00\n"}
+,{"stream_name":"stdout","time":167.787973533,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 34.8 MB/s eta 0:00:00\n"}
+,{"stream_name":"stderr","time":207.213730877,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":207.21377549,"data":"  File \"/kaggle/src/script.py\", line 122, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":207.213881192,"data":"    TEST_ROOT = find_test_input()\n"}
+,{"stream_name":"stderr","time":207.214076467,"data":"                ^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":207.214105472,"data":"  File \"/kaggle/src/script.py\", line 117, in find_test_input\n"}
+,{"stream_name":"stderr","time":207.214268817,"data":"    raise FileNotFoundError(\"cannot identify HAU test triples corpus\")\n"}
+,{"stream_name":"stderr","time":207.214287152,"data":"FileNotFoundError: cannot identify HAU test triples corpus\n"}
+,{"stream_name":"stderr","time":211.025272591,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":211.02529727,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":211.249583775,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":211.249610884,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":211.997606119,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":212.952252386,"data":"[NbConvertApp] Writing 475604 bytes to __results__.html\n"}
+]

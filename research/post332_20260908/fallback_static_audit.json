@@ -1,0 +1,197 @@
+{
+  "branches": {
+    "test_v8_fill": "final.run_test fills solve(None) with submission_v8; label unavailable at test time",
+    "sequence_no_evidence": "no dense logits or unmapped option in solve sequence branch",
+    "harn_no_evidence": "HARn clip has sensor metadata but none of classifier/dino/aggregate/pool evidence",
+    "harn_flat_scores": "single score vector ties exactly after allowed-action filtering",
+    "object_flat_prior": "object candidate prior tuples are all equal",
+    "never_predicted": "question was not visited by any branch",
+    "harn_filter_empty": "allowed-action filter empty; solver explicitly retries unfiltered (not a default answer)"
+  },
+  "test_counts": {
+    "source": {
+      "HAU": 610,
+      "HARn": 72
+    },
+    "category": {
+      "single": 195,
+      "multi": 144,
+      "emotion": 144,
+      "combination": 139,
+      "sequence": 39,
+      "object_interaction": 21
+    },
+    "meta_present": {
+      "true": 667,
+      "false": 15
+    },
+    "margin_zero": {
+      "false": 668,
+      "true": 14
+    },
+    "likely_fallback": {
+      "false": 660,
+      "true": 22
+    },
+    "likely_rows": [
+      {
+        "qa_id": "test_0477",
+        "source": "HARn",
+        "category": "single",
+        "lm": "LM_test_0007",
+        "margin": 0.0
+      },
+      {
+        "qa_id": "test_0488",
+        "source": "HARn",
+        "category": "single",
+        "lm": "LM_test_0023",
+        "margin": 0.0
+      },
+      {
+        "qa_id": "test_0506",
+        "source": "HARn",
+        "category": "single",
+        "lm": "LM_test_0046",
+        "margin": 0.0
+      },
+      {
+        "qa_id": "test_0510",
+        "source": "HARn",
+        "category": "single",
+        "lm": "LM_test_0050",
+        "margin": 1000000.0
+      },
+      {
+        "qa_id": "test_0511",
+        "source": "HARn",
+        "category": "single",
+        "lm": "LM_test_0051",
+        "margin": 1000000.0
+      },
+      {
+        "qa_id": "test_0512",
+        "source": "HARn",
+        "category": "single",
+        "lm": "LM_test_0052",
+        "margin": 1000000.0
+      },
+      {
+        "qa_id": "test_0513",
+        "source": "HARn",
+        "category": "single",
+        "lm": "LM_test_0053",
+        "margin": 1000000.0
+      },
+      {
+        "qa_id": "test_0514",
+        "source": "HARn",
+        "category": "single",
+        "lm": "LM_test_0055",
+        "margin": 1000000.0
+      },
+      {
+        "qa_id": "test_0517",
+        "source": "HARn",
+        "category": "single",
+        "lm": "LM_test_0059",
+        "margin": 0.0
+      },
+      {
+        "qa_id": "test_0519",
+        "source": "HARn",
+        "category": "single",
+        "lm": "LM_test_0062",
+        "margin": 0.0
+      },
+      {
+        "qa_id": "test_0523",
+        "source": "HARn",
+        "category": "object_interaction",
+        "lm": "LM_test_0011",
+        "margin": 0.0
+      },
+      {
+        "qa_id": "test_0524",
+        "source": "HARn",
+        "category": "object_interaction",
+        "lm": "LM_test_0012",
+        "margin": 0.0
+      },
+      {
+        "qa_id": "test_0525",
+        "source": "HARn",
+        "category": "object_interaction",
+        "lm": "LM_test_0013",
+        "margin": 0.0
+      },
+      {
+        "qa_id": "test_0526",
+        "source": "HARn",
+        "category": "object_interaction",
+        "lm": "LM_test_0016",
+        "margin": 0.0
+      },
+      {
+        "qa_id": "test_0528",
+        "source": "HARn",
+        "category": "object_interaction",
+        "lm": "LM_test_0023",
+        "margin": 0.0
+      },
+      {
+        "qa_id": "test_0529",
+        "source": "HARn",
+        "category": "object_interaction",
+        "lm": "LM_test_0024",
+        "margin": 0.0
+      },
+      {
+        "qa_id": "test_0530",
+        "source": "HARn",
+        "category": "object_interaction",
+        "lm": "LM_test_0027",
+        "margin": 0.0
+      },
+      {
+        "qa_id": "test_0533",
+        "source": "HARn",
+        "category": "object_interaction",
+        "lm": "LM_test_0032",
+        "margin": 0.0
+      },
+      {
+        "qa_id": "test_0534",
+        "source": "HARn",
+        "category": "object_interaction",
+        "lm": "LM_test_0033",
+        "margin": 0.0
+      },
+      {
+        "qa_id": "test_0538",
+        "source": "HARn",
+        "category": "object_interaction",
+        "lm": "LM_test_0054",
+        "margin": 10.0
+      },
+      {
+        "qa_id": "test_0539",
+        "source": "HARn",
+        "category": "object_interaction",
+        "lm": "LM_test_0055",
+        "margin": 10.0
+      },
+      {
+        "qa_id": "test_0540",
+        "source": "HARn",
+        "category": "object_interaction",
+        "lm": "LM_test_0056",
+        "margin": 10.0
+      }
+    ]
+  },
+  "known_oof_analogs": {
+    "object_flat_prior_vs_exact_template": "exact_visible_object_fallback_oof_20260905.csv",
+    "harn_weak_sensor_vs_exact_template": "harn_template_sensor_gate_oof_20260905.csv"
+  }
+}

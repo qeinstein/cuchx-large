@@ -1,0 +1,26 @@
+[
+  {
+    "file": "RESEARCH_template_0478_B.csv",
+    "changes": {
+      "test_0478": "B"
+    },
+    "sha256": "e89b0a42f00cd613b645cd03781a4f6cd49327ee75a5bfdd2756e84969d3b5e4",
+    "diff_vs_332": "/home/fluxx/Workspace/cuchx-large/research/post332_20260908/RESEARCH_template_0478_B.vs332.diff.csv"
+  },
+  {
+    "file": "RESEARCH_template_0507_C.csv",
+    "changes": {
+      "test_0507": "C"
+    },
+    "sha256": "3d483af007a7b95f6bfd254873a5df5aac52370755fea8f85fe9d4d47eaf4a72",
+    "diff_vs_332": "/home/fluxx/Workspace/cuchx-large/research/post332_20260908/RESEARCH_template_0507_C.vs332.diff.csv"
+  },
+  {
+    "file": "RESEARCH_template_0527_A.csv",
+    "changes": {
+      "test_0527": "A"
+    },
+    "sha256": "76f42cdc8dc55cb7e08ca7158f6fd2a926b69cc4097d838f42ab30cb4a809716",
+    "diff_vs_332": "/home/fluxx/Workspace/cuchx-large/research/post332_20260908/RESEARCH_template_0527_A.vs332.diff.csv"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "clip": "0116",
+    "frames": 186,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0116/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0118",
+    "frames": 96,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0118/Depth_Color/Depth_Color.mp4"
+  }
+]

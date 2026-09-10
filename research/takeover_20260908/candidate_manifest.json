@@ -1,0 +1,188 @@
+{
+  "base_sha256": "e42cde96bafb108b8c16bcd97e5deb2af32c1657a089351ada8a72a95ed805cd",
+  "promoted_count": 5,
+  "conditional_count": 7,
+  "conditional_files_are_not_recommended_for_automatic_use": true,
+  "files": {
+    "primary_singleton_test_0488": {
+      "file": "research/takeover_20260908/primary_singleton_test_0488.csv",
+      "sha256": "e862da127ca496cf07326a3cff5e0861e6f3b7d61d8d1f17506f6a390877f247",
+      "diffs": [
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        }
+      ]
+    },
+    "primary_singleton_test_0501": {
+      "file": "research/takeover_20260908/primary_singleton_test_0501.csv",
+      "sha256": "2167fc55795edd61899b7825dea0a5c2f83fa871762eb08cfc72056cda6464b1",
+      "diffs": [
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        }
+      ]
+    },
+    "primary_singleton_test_0477": {
+      "file": "research/takeover_20260908/primary_singleton_test_0477.csv",
+      "sha256": "c9fa71a5e1135806fdc413c9ec5a66cc769477f44d767c94b6a3df85d5b6bb18",
+      "diffs": [
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        }
+      ]
+    },
+    "primary_singleton_test_0506": {
+      "file": "research/takeover_20260908/primary_singleton_test_0506.csv",
+      "sha256": "1499b9d8c3f95c8bfc5e39f9e791d8667d96c629c1959ef3f0f57b6bb15d573d",
+      "diffs": [
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        }
+      ]
+    },
+    "primary_singleton_test_0519": {
+      "file": "research/takeover_20260908/primary_singleton_test_0519.csv",
+      "sha256": "0508812ed8d65600c3a3cdfc74b35bb64bd0cfc7adf6dd57657554b87f550c4f",
+      "diffs": [
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        }
+      ]
+    },
+    "primary_singleton_test_0483": {
+      "file": "research/takeover_20260908/primary_singleton_test_0483.csv",
+      "sha256": "35e5474fd98bebb29b258fe85789c2b55a0a3f9486a296532b9b3b23828111b0",
+      "diffs": [
+        {
+          "qa_id": "test_0483",
+          "from": "A",
+          "to": "C"
+        }
+      ]
+    },
+    "research_only_test_0461": {
+      "file": "research/takeover_20260908/research_only_test_0461.csv",
+      "sha256": "d5f023a8d426d19014fb524bc9a1e221ddae8c45df8f39d7fcecefe23eb95b51",
+      "diffs": [
+        {
+          "qa_id": "test_0461",
+          "from": "C",
+          "to": "D"
+        }
+      ]
+    },
+    "research_only_test_0469": {
+      "file": "research/takeover_20260908/research_only_test_0469.csv",
+      "sha256": "539892f038ff1f63f0afc988e547ced18ae3e4057660026547723f26ef8e586f",
+      "diffs": [
+        {
+          "qa_id": "test_0469",
+          "from": "A",
+          "to": "D"
+        }
+      ]
+    },
+    "research_only_test_0430": {
+      "file": "research/takeover_20260908/research_only_test_0430.csv",
+      "sha256": "d64bb39eea7f38363616c65da8e7f49df20c1c3e4b88736fb292ee9caf59bdce",
+      "diffs": [
+        {
+          "qa_id": "test_0430",
+          "from": "D",
+          "to": "C"
+        }
+      ]
+    },
+    "research_only_test_0432": {
+      "file": "research/takeover_20260908/research_only_test_0432.csv",
+      "sha256": "7d14c01e88b87fb7ec81c8033582eba060570d974b9b65633ce64704c394fa21",
+      "diffs": [
+        {
+          "qa_id": "test_0432",
+          "from": "C",
+          "to": "A"
+        }
+      ]
+    },
+    "research_only_test_0341": {
+      "file": "research/takeover_20260908/research_only_test_0341.csv",
+      "sha256": "5c700cf6c7a63ee18224591950a32e9270aee7f503c76a26eb6f30c23ba50ca5",
+      "diffs": [
+        {
+          "qa_id": "test_0341",
+          "from": "DCBA",
+          "to": "DBCA"
+        }
+      ]
+    },
+    "research_only_test_0646": {
+      "file": "research/takeover_20260908/research_only_test_0646.csv",
+      "sha256": "b0738ee21f95dfbda3ad74021025850b07cf1fd5e35fd87a1fedf3034fdc7685",
+      "diffs": [
+        {
+          "qa_id": "test_0646",
+          "from": "BADC",
+          "to": "BDAC"
+        }
+      ]
+    },
+    "research_only_emotion_pair": {
+      "file": "research/takeover_20260908/research_only_emotion_pair.csv",
+      "sha256": "e4f401d6faa16625a425f04b6c7c28a2a9dc386943b23c2f4670dfb819c6e6bf",
+      "diffs": [
+        {
+          "qa_id": "test_0461",
+          "from": "C",
+          "to": "D"
+        },
+        {
+          "qa_id": "test_0469",
+          "from": "A",
+          "to": "D"
+        }
+      ]
+    },
+    "research_only_block35": {
+      "file": "research/takeover_20260908/research_only_block35.csv",
+      "sha256": "6a70b279a4d6e354c2403b5d03b69d01d2e557516cae4fb9a1df6e43546423d5",
+      "diffs": [
+        {
+          "qa_id": "test_0430",
+          "from": "D",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0432",
+          "from": "C",
+          "to": "A"
+        }
+      ]
+    },
+    "research_only_order_pair": {
+      "file": "research/takeover_20260908/research_only_order_pair.csv",
+      "sha256": "232217d85f61288a0df3396dd0f5cf3d2a3fb857163a7110f86732d344af253f",
+      "diffs": [
+        {
+          "qa_id": "test_0341",
+          "from": "DCBA",
+          "to": "DBCA"
+        },
+        {
+          "qa_id": "test_0646",
+          "from": "BADC",
+          "to": "BDAC"
+        }
+      ]
+    }
+  }
+}

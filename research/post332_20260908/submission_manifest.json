@@ -1,0 +1,931 @@
+{
+  "KEEP_SCORED_332": {
+    "sha256": "25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56",
+    "changes": {},
+    "diffs": {
+      "332": [],
+      "330": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "gate": "scored"
+  },
+  "EXPLORATORY_test_0483": {
+    "sha256": "73af4eed273709936e6619c0d4b85d652fe0adaf34d8804a54d57cbb4899c254",
+    "changes": {
+      "test_0483": "C"
+    },
+    "diffs": {
+      "332": [
+        {
+          "qa_id": "test_0483",
+          "from": "A",
+          "to": "C"
+        }
+      ],
+      "330": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0483",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "gate": "NOT approved for submission; requires additional evidence or informative score constraints"
+  },
+  "EXPLORATORY_test_0526": {
+    "sha256": "fc386cb51497729ba65682928acc279bf11b7e968cbfdeaa26b9f576a2b956a7",
+    "changes": {
+      "test_0526": "C"
+    },
+    "diffs": {
+      "332": [
+        {
+          "qa_id": "test_0526",
+          "from": "D",
+          "to": "C"
+        }
+      ],
+      "330": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0526",
+          "from": "D",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "gate": "NOT approved for submission; requires additional evidence or informative score constraints"
+  },
+  "EXPLORATORY_pair": {
+    "sha256": "da3f16c700829f4b3b89c75d6a2bee58e3a5dedb362fcc1f6b4f457ca5baef80",
+    "changes": {
+      "test_0483": "C",
+      "test_0526": "C"
+    },
+    "diffs": {
+      "332": [
+        {
+          "qa_id": "test_0483",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0526",
+          "from": "D",
+          "to": "C"
+        }
+      ],
+      "330": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0483",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0526",
+          "from": "D",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "gate": "NOT approved for submission; requires additional evidence or informative score constraints"
+  },
+  "CONDITIONAL_revert_test_0488": {
+    "sha256": "5c424b408967b7750661e495b296e1975de4599afa29fa905e6aa0d0a7d47ffd",
+    "changes": {
+      "test_0488": "A"
+    },
+    "diffs": {
+      "332": [
+        {
+          "qa_id": "test_0488",
+          "from": "C",
+          "to": "A"
+        }
+      ],
+      "330": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "gate": "NOT approved for submission; requires additional evidence or informative score constraints"
+  },
+  "CONDITIONAL_revert_test_0477": {
+    "sha256": "02d63945c94855115c05d668c2308af30be4b702741123857ffde84e42897399",
+    "changes": {
+      "test_0477": "A"
+    },
+    "diffs": {
+      "332": [
+        {
+          "qa_id": "test_0477",
+          "from": "B",
+          "to": "A"
+        }
+      ],
+      "330": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "gate": "NOT approved for submission; requires additional evidence or informative score constraints"
+  },
+  "CONDITIONAL_revert_test_0506": {
+    "sha256": "204b72a7b24f5b07e5acac9948b27253f218caeee3d809090fe6883ce8b18fd6",
+    "changes": {
+      "test_0506": "A"
+    },
+    "diffs": {
+      "332": [
+        {
+          "qa_id": "test_0506",
+          "from": "C",
+          "to": "A"
+        }
+      ],
+      "330": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "gate": "NOT approved for submission; requires additional evidence or informative score constraints"
+  },
+  "CONDITIONAL_revert_test_0519": {
+    "sha256": "40f59896dedd3622122424aeba3c163dc4894a35b28866a44f494d9bb190ec49",
+    "changes": {
+      "test_0519": "A"
+    },
+    "diffs": {
+      "332": [
+        {
+          "qa_id": "test_0519",
+          "from": "C",
+          "to": "A"
+        }
+      ],
+      "330": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "gate": "NOT approved for submission; requires additional evidence or informative score constraints"
+  },
+  "CONDITIONAL_revert_test_0501": {
+    "sha256": "bbe173fa463cc07b4731bb8e304b1159a63519dad816d26e449f64d7737281e9",
+    "changes": {
+      "test_0501": "A"
+    },
+    "diffs": {
+      "332": [
+        {
+          "qa_id": "test_0501",
+          "from": "B",
+          "to": "A"
+        }
+      ],
+      "330": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "gate": "NOT approved for submission; requires additional evidence or informative score constraints"
+  },
+  "ADAPTIVE_probe_revert_test_0488": {
+    "sha256": "5c424b408967b7750661e495b296e1975de4599afa29fa905e6aa0d0a7d47ffd",
+    "changes": {
+      "test_0488": "A"
+    },
+    "diffs": {
+      "332": [
+        {
+          "qa_id": "test_0488",
+          "from": "C",
+          "to": "A"
+        }
+      ],
+      "330": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "gate": "NOT approved for submission; requires additional evidence or informative score constraints"
+  },
+  "ADAPTIVE_probe_revert_test_0477": {
+    "sha256": "02d63945c94855115c05d668c2308af30be4b702741123857ffde84e42897399",
+    "changes": {
+      "test_0477": "A"
+    },
+    "diffs": {
+      "332": [
+        {
+          "qa_id": "test_0477",
+          "from": "B",
+          "to": "A"
+        }
+      ],
+      "330": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "gate": "NOT approved for submission; requires additional evidence or informative score constraints"
+  },
+  "ADAPTIVE_probe_revert_test_0506": {
+    "sha256": "204b72a7b24f5b07e5acac9948b27253f218caeee3d809090fe6883ce8b18fd6",
+    "changes": {
+      "test_0506": "A"
+    },
+    "diffs": {
+      "332": [
+        {
+          "qa_id": "test_0506",
+          "from": "C",
+          "to": "A"
+        }
+      ],
+      "330": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "gate": "NOT approved for submission; requires additional evidence or informative score constraints"
+  },
+  "ADAPTIVE_probe_revert_test_0519": {
+    "sha256": "40f59896dedd3622122424aeba3c163dc4894a35b28866a44f494d9bb190ec49",
+    "changes": {
+      "test_0519": "A"
+    },
+    "diffs": {
+      "332": [
+        {
+          "qa_id": "test_0519",
+          "from": "C",
+          "to": "A"
+        }
+      ],
+      "330": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "gate": "NOT approved for submission; requires additional evidence or informative score constraints"
+  },
+  "ADAPTIVE_fifth_0526": {
+    "sha256": "fc386cb51497729ba65682928acc279bf11b7e968cbfdeaa26b9f576a2b956a7",
+    "changes": {
+      "test_0526": "C"
+    },
+    "diffs": {
+      "332": [
+        {
+          "qa_id": "test_0526",
+          "from": "D",
+          "to": "C"
+        }
+      ],
+      "330": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0526",
+          "from": "D",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "gate": "NOT approved for submission; requires additional evidence or informative score constraints"
+  },
+  "ADAPTIVE_fifth_0526_plus_revert_0501": {
+    "sha256": "8a5a02f0138af255c32a499122e4b1cd418599c48636842586af598a422d1c9d",
+    "changes": {
+      "test_0526": "C",
+      "test_0501": "A"
+    },
+    "diffs": {
+      "332": [
+        {
+          "qa_id": "test_0501",
+          "from": "B",
+          "to": "A"
+        },
+        {
+          "qa_id": "test_0526",
+          "from": "D",
+          "to": "C"
+        }
+      ],
+      "330": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0526",
+          "from": "D",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "gate": "NOT approved for submission; requires additional evidence or informative score constraints"
+  }
+}

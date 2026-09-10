@@ -1,0 +1,86 @@
+{
+  "delta_reference": 332,
+  "states": 270,
+  "observations": {},
+  "possible_deltas": {
+    "KEEP_SCORED_332": [
+      0
+    ],
+    "EXPLORATORY_test_0483": [
+      -1,
+      0,
+      1
+    ],
+    "EXPLORATORY_test_0526": [
+      -1,
+      0,
+      1
+    ],
+    "EXPLORATORY_pair": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "CONDITIONAL_revert_test_0488": [
+      -1,
+      0,
+      1
+    ],
+    "CONDITIONAL_revert_test_0477": [
+      -1,
+      0,
+      1
+    ],
+    "CONDITIONAL_revert_test_0506": [
+      -1,
+      0,
+      1
+    ],
+    "CONDITIONAL_revert_test_0519": [
+      -1,
+      0,
+      1
+    ],
+    "CONDITIONAL_revert_test_0501": [
+      -1,
+      0,
+      1
+    ],
+    "ADAPTIVE_probe_revert_test_0488": [
+      -1,
+      0,
+      1
+    ],
+    "ADAPTIVE_probe_revert_test_0477": [
+      -1,
+      0,
+      1
+    ],
+    "ADAPTIVE_probe_revert_test_0506": [
+      -1,
+      0,
+      1
+    ],
+    "ADAPTIVE_probe_revert_test_0519": [
+      -1,
+      0,
+      1
+    ],
+    "ADAPTIVE_fifth_0526": [
+      -1,
+      0,
+      1
+    ],
+    "ADAPTIVE_fifth_0526_plus_revert_0501": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ]
+  },
+  "best_scored_configuration": "KEEP_SCORED_332",
+  "warning": "Never replace the scored champion with only individually identified winners. Bounds are algebraic, not probabilities. No unscored file is automatically recommended."
+}

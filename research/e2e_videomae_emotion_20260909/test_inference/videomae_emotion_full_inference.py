@@ -100,26 +100,42 @@ def seed_all(seed: int) -> None:
         torch.cuda.manual_seed_all(seed)
 
 
-def find_input() -> Path:
-    roots = sorted(Path("/kaggle/input").glob("cuchx-hau-video-training-corpus*"))
-    if roots:
-        return roots[0]
-    qa = sorted(Path("/kaggle/input").glob("**/training_qa.csv"))
-    if len(qa) == 1:
-        return qa[0].parent
-    raise FileNotFoundError(f"cannot identify HAU training corpus: {qa}")
+def find_all_inputs() -> tuple[Path, Path, Path, Path]:
+    input_dir = Path("/kaggle/input")
+    print("Scanning /kaggle/input:", [str(p.name) for p in sorted(input_dir.iterdir())], flush=True)
+    
+    train_videos = list(input_dir.rglob("hau__user1__1-1-1.mp4"))
+    if not train_videos:
+        train_videos = list(input_dir.rglob("hau__*.mp4"))
+    if not train_videos:
+        raise FileNotFoundError("cannot locate HAU training videos (hau__*.mp4)")
+    video_root = train_videos[0].parent
+
+    test_videos = list(input_dir.rglob("test__LM_test_0065.mp4"))
+    if not test_videos:
+        test_videos = list(input_dir.rglob("test__*.mp4"))
+    if not test_videos:
+        sample_files = [str(p) for p in list(input_dir.rglob("*"))[:50]]
+        raise FileNotFoundError(f"cannot locate HAU test videos (test__*.mp4). Sample files under input: {sample_files}")
+    test_root = test_videos[0].parent
+
+    qa_paths = list(input_dir.rglob("training_qa.csv"))
+    if not qa_paths:
+        raise FileNotFoundError("cannot locate training_qa.csv")
+    training_qa_path = qa_paths[0]
+
+    te_paths = list(input_dir.rglob("test_qa.csv"))
+    if not te_paths:
+        raise FileNotFoundError("cannot locate test_qa.csv")
+    test_qa_path = te_paths[0]
+
+    print(f"Paths located: video_root={video_root}, test_root={test_root}, "
+          f"training_qa={training_qa_path}, test_qa={test_qa_path}", flush=True)
+    return video_root, test_root, training_qa_path, test_qa_path
 
 
-def find_test_input() -> Path:
-    roots = sorted(Path("/kaggle/input").glob("cuchx-hau-test-triples*"))
-    if roots:
-        return roots[0]
-    raise FileNotFoundError("cannot identify HAU test triples corpus")
+VIDEO_ROOT, TEST_ROOT, TRAINING_QA_PATH, TEST_QA_PATH = find_all_inputs()
 
-
-DATA = find_input()
-VIDEO_ROOT = DATA / "hau_videos"
-TEST_ROOT = find_test_input()
 
 
 def path_parts(path: str) -> tuple[str, str, int]:
@@ -199,7 +215,7 @@ def decode_frames(path: Path, rng: random.Random | None) -> list[np.ndarray]:
     return result
 
 
-qa = pd.read_csv(DATA / "training_qa.csv")
+qa = pd.read_csv(TRAINING_QA_PATH)
 qa = qa[(qa.source == "HAU") & (qa.category == "emotion")].copy()
 qa["user"] = qa.path.map(lambda value: path_parts(value)[0])
 qa["session"] = qa.path.map(session_of)
@@ -350,8 +366,7 @@ for epoch in range(EPOCHS):
 
 print("--- Full Training Complete. Starting Test Inference ---", flush=True)
 
-test_qa_path = sorted(Path("/kaggle/input").glob("**/test_qa.csv"))[0]
-te_df = pd.read_csv(test_qa_path).set_index("qa_id")
+te_df = pd.read_csv(TEST_QA_PATH).set_index("qa_id")
 
 @torch.inference_mode()
 def test_clip_logits(clip: str) -> np.ndarray:

@@ -1,0 +1,495 @@
+{
+  "training_metrics": {
+    "single_negative_checks": 3285,
+    "single_negative_violations": 0,
+    "combination_clips": 790,
+    "combination_incomplete": 364,
+    "combination_individual_negative_checks": 4804,
+    "combination_individual_negative_violations": 206,
+    "sequence_clips": 308,
+    "sequence_incomplete": 219
+  },
+  "training_counterexamples": {
+    "combination_incomplete": [
+      {
+        "qa_id": "training_1623",
+        "outside": [
+          "combing hair",
+          "jumping jacks",
+          "walking"
+        ]
+      },
+      {
+        "qa_id": "training_1624",
+        "outside": [
+          "combing hair",
+          "getting dressed",
+          "jumping jacks",
+          "squats"
+        ]
+      },
+      {
+        "qa_id": "training_1625",
+        "outside": [
+          "squats"
+        ]
+      },
+      {
+        "qa_id": "training_1628",
+        "outside": [
+          "eating"
+        ]
+      },
+      {
+        "qa_id": "training_1630",
+        "outside": [
+          "grabbing utensils",
+          "walking"
+        ]
+      },
+      {
+        "qa_id": "training_1632",
+        "outside": [
+          "walking"
+        ]
+      },
+      {
+        "qa_id": "training_1633",
+        "outside": [
+          "typing on a keyboard",
+          "walking"
+        ]
+      },
+      {
+        "qa_id": "training_1634",
+        "outside": [
+          "sitting down",
+          "typing on a keyboard"
+        ]
+      },
+      {
+        "qa_id": "training_1638",
+        "outside": [
+          "checking the time",
+          "mopping",
+          "sitting down",
+          "walking"
+        ]
+      },
+      {
+        "qa_id": "training_1639",
+        "outside": [
+          "lunges",
+          "typing on a keyboard"
+        ]
+      },
+      {
+        "qa_id": "training_1640",
+        "outside": [
+          "squats",
+          "typing on a keyboard",
+          "walking"
+        ]
+      },
+      {
+        "qa_id": "training_1641",
+        "outside": [
+          "drinking",
+          "eating"
+        ]
+      }
+    ],
+    "sequence_incomplete": [
+      {
+        "qa_id": "training_2415",
+        "outside": [
+          "jumping jacks"
+        ]
+      },
+      {
+        "qa_id": "training_2416",
+        "outside": [
+          "getting dressed",
+          "jumping jacks"
+        ]
+      },
+      {
+        "qa_id": "training_2417",
+        "outside": [
+          "combing hair"
+        ]
+      },
+      {
+        "qa_id": "training_2421",
+        "outside": [
+          "typing on a keyboard",
+          "walking"
+        ]
+      },
+      {
+        "qa_id": "training_2422",
+        "outside": [
+          "checking the time",
+          "lunges",
+          "squats"
+        ]
+      },
+      {
+        "qa_id": "training_2423",
+        "outside": [
+          "lunges",
+          "reading",
+          "squats",
+          "standing up",
+          "walking"
+        ]
+      },
+      {
+        "qa_id": "training_2424",
+        "outside": [
+          "drinking"
+        ]
+      },
+      {
+        "qa_id": "training_2425",
+        "outside": [
+          "watching tv"
+        ]
+      },
+      {
+        "qa_id": "training_2426",
+        "outside": [
+          "listening to the music with headphones"
+        ]
+      },
+      {
+        "qa_id": "training_2427",
+        "outside": [
+          "reading"
+        ]
+      },
+      {
+        "qa_id": "training_2428",
+        "outside": [
+          "sitting down",
+          "turning a page"
+        ]
+      },
+      {
+        "qa_id": "training_2429",
+        "outside": [
+          "turning a page"
+        ]
+      }
+    ],
+    "combination_negative_violation": [
+      {
+        "qa_id": "training_1632",
+        "option": "B",
+        "present": [
+          "walking"
+        ]
+      },
+      {
+        "qa_id": "training_1632",
+        "option": "D",
+        "present": [
+          "walking"
+        ]
+      },
+      {
+        "qa_id": "training_1639",
+        "option": "C",
+        "present": [
+          "lunges",
+          "typing on a keyboard"
+        ]
+      },
+      {
+        "qa_id": "training_1639",
+        "option": "D",
+        "present": [
+          "lunges",
+          "typing on a keyboard"
+        ]
+      },
+      {
+        "qa_id": "training_1640",
+        "option": "B",
+        "present": [
+          "walking"
+        ]
+      },
+      {
+        "qa_id": "training_1640",
+        "option": "C",
+        "present": [
+          "walking"
+        ]
+      },
+      {
+        "qa_id": "training_1646",
+        "option": "A",
+        "present": [
+          "checking the time"
+        ]
+      },
+      {
+        "qa_id": "training_1646",
+        "option": "D",
+        "present": [
+          "checking the time"
+        ]
+      },
+      {
+        "qa_id": "training_1655",
+        "option": "B",
+        "present": [
+          "wiping hands"
+        ]
+      },
+      {
+        "qa_id": "training_1655",
+        "option": "C",
+        "present": [
+          "wiping hands"
+        ]
+      },
+      {
+        "qa_id": "training_1662",
+        "option": "A",
+        "present": [
+          "eating"
+        ]
+      },
+      {
+        "qa_id": "training_1664",
+        "option": "B",
+        "present": [
+          "squats",
+          "stretching"
+        ]
+      }
+    ]
+  },
+  "test_strict_conflicts": [],
+  "test_multi_outside_sequence": [
+    {
+      "qa_id": "test_0116",
+      "outside_sequence": [
+        "drinking",
+        "eating"
+      ]
+    },
+    {
+      "qa_id": "test_0117",
+      "outside_sequence": [
+        "drinking"
+      ]
+    },
+    {
+      "qa_id": "test_0119",
+      "outside_sequence": [
+        "typing on a keyboard"
+      ]
+    },
+    {
+      "qa_id": "test_0124",
+      "outside_sequence": [
+        "reading"
+      ]
+    },
+    {
+      "qa_id": "test_0125",
+      "outside_sequence": [
+        "using a phone"
+      ]
+    },
+    {
+      "qa_id": "test_0134",
+      "outside_sequence": [
+        "stirring"
+      ]
+    },
+    {
+      "qa_id": "test_0146",
+      "outside_sequence": [
+        "sitting down"
+      ]
+    },
+    {
+      "qa_id": "test_0147",
+      "outside_sequence": [
+        "turning a page"
+      ]
+    },
+    {
+      "qa_id": "test_0150",
+      "outside_sequence": [
+        "jumping jacks"
+      ]
+    },
+    {
+      "qa_id": "test_0151",
+      "outside_sequence": [
+        "massaging oneself"
+      ]
+    },
+    {
+      "qa_id": "test_0159",
+      "outside_sequence": [
+        "eating"
+      ]
+    },
+    {
+      "qa_id": "test_0201",
+      "outside_sequence": [
+        "squats"
+      ]
+    },
+    {
+      "qa_id": "test_0202",
+      "outside_sequence": [
+        "squats"
+      ]
+    },
+    {
+      "qa_id": "test_0211",
+      "outside_sequence": [
+        "squats"
+      ]
+    },
+    {
+      "qa_id": "test_0212",
+      "outside_sequence": [
+        "sitting down"
+      ]
+    },
+    {
+      "qa_id": "test_0215",
+      "outside_sequence": [
+        "grabbing utensils"
+      ]
+    },
+    {
+      "qa_id": "test_0216",
+      "outside_sequence": [
+        "grabbing utensils"
+      ]
+    },
+    {
+      "qa_id": "test_0219",
+      "outside_sequence": [
+        "standing up"
+      ]
+    },
+    {
+      "qa_id": "test_0220",
+      "outside_sequence": [
+        "sweeping"
+      ]
+    },
+    {
+      "qa_id": "test_0222",
+      "outside_sequence": [
+        "drinking"
+      ]
+    },
+    {
+      "qa_id": "test_0578",
+      "outside_sequence": [
+        "pouring"
+      ]
+    },
+    {
+      "qa_id": "test_0579",
+      "outside_sequence": [
+        "checking the time"
+      ]
+    },
+    {
+      "qa_id": "test_0582",
+      "outside_sequence": [
+        "turning a page"
+      ]
+    },
+    {
+      "qa_id": "test_0593",
+      "outside_sequence": [
+        "turning a page"
+      ]
+    },
+    {
+      "qa_id": "test_0599",
+      "outside_sequence": [
+        "eating"
+      ]
+    }
+  ],
+  "zero_margin_harn": [
+    {
+      "qa_id": "test_0477",
+      "base": "A",
+      "options": {
+        "A": "doing jumping jacks",
+        "B": "mopping the floor",
+        "C": "turning pages",
+        "D": ""
+      },
+      "vlm": "D",
+      "path": "large_model_track_test/LM_test_0007/Depth/Depth.mp4"
+    },
+    {
+      "qa_id": "test_0488",
+      "base": "A",
+      "options": {
+        "A": "doing jumping jacks",
+        "B": "peeling fruit",
+        "C": "turning pages",
+        "D": ""
+      },
+      "vlm": "C",
+      "path": "large_model_track_test/LM_test_0023/Depth/Depth.mp4"
+    },
+    {
+      "qa_id": "test_0506",
+      "base": "A",
+      "options": {
+        "A": "wiping a bowl",
+        "B": "doing jumping jacks",
+        "C": "doing lunges",
+        "D": ""
+      },
+      "vlm": "D",
+      "path": "large_model_track_test/LM_test_0046/Depth/Depth.mp4"
+    },
+    {
+      "qa_id": "test_0517",
+      "base": "A",
+      "options": {
+        "A": "putting on clothes",
+        "B": "taking a selfie",
+        "C": "taking their body temperature",
+        "D": ""
+      },
+      "vlm": "A",
+      "path": "large_model_track_test/LM_test_0059/Depth/Depth.mp4"
+    },
+    {
+      "qa_id": "test_0519",
+      "base": "A",
+      "options": {
+        "A": "walking",
+        "B": "writing",
+        "C": "drinking water",
+        "D": ""
+      },
+      "vlm": "D",
+      "path": "large_model_track_test/LM_test_0062/Depth/Depth.mp4"
+    }
+  ],
+  "emotion_unseen_answers": {
+    "Comfortably": 12,
+    "Serioiusly": 1
+  }
+}

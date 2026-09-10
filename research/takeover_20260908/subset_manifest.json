@@ -1,0 +1,1244 @@
+{
+  "base_sha256": "e42cde96bafb108b8c16bcd97e5deb2af32c1657a089351ada8a72a95ed805cd",
+  "bit_order_low_to_high": [
+    "test_0488",
+    "test_0477",
+    "test_0506",
+    "test_0519",
+    "test_0501"
+  ],
+  "files": {
+    "primary_subset_00000": {
+      "file": "research/takeover_20260908/primary_subset_00000.csv",
+      "sha256": "eb5f275624fc6db9f7e44dda803c6a25b129fecd83840e84148c9dfe758e1297",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_00001": {
+      "file": "research/takeover_20260908/primary_subset_00001.csv",
+      "sha256": "9f4492c4bda0eb28f029796b8a4d24c4fba3a9a012f84adad3af3da94544abb2",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_00010": {
+      "file": "research/takeover_20260908/primary_subset_00010.csv",
+      "sha256": "47005cfe8413a4343093d458cf4a8e032e5f3999f212c81b8c46d04a4d4d107e",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_00011": {
+      "file": "research/takeover_20260908/primary_subset_00011.csv",
+      "sha256": "c4d75fe6dd9673271611a2c9e96b8602348566bd6af78b2f9cc72f275af72365",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_00100": {
+      "file": "research/takeover_20260908/primary_subset_00100.csv",
+      "sha256": "d50e3769eca898e3f64337b1c108e661bda666283555aa4d2203dce661ffaf97",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_00101": {
+      "file": "research/takeover_20260908/primary_subset_00101.csv",
+      "sha256": "72cbe3be2eae9ba86c50cac82fa58d1818c0e88c09a75e5cced69d2d3e027e81",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_00110": {
+      "file": "research/takeover_20260908/primary_subset_00110.csv",
+      "sha256": "e1d91b98e83eb4b64bf392d345c06c8798ca7d9632e2171e25b571a7ca767c79",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_00111": {
+      "file": "research/takeover_20260908/primary_subset_00111.csv",
+      "sha256": "a6c8c49e8a54c7d1a59f541b65ce191730d584058419ead575e3c21109bb7706",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_01000": {
+      "file": "research/takeover_20260908/primary_subset_01000.csv",
+      "sha256": "ce6c3fb9f3320e4a6f4af77bb29e1c76915969c2a88de2c5dc7010d72f81c675",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_01001": {
+      "file": "research/takeover_20260908/primary_subset_01001.csv",
+      "sha256": "20312e2c461b9044f7c815d01399c19ae298407417075c07c6b80e01fa800ac1",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_01010": {
+      "file": "research/takeover_20260908/primary_subset_01010.csv",
+      "sha256": "3b89a18c9edbed76cb9ffe702808eee34277d5bbe2a92f98f6e0ac0ab1cda223",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_01011": {
+      "file": "research/takeover_20260908/primary_subset_01011.csv",
+      "sha256": "191b0bb99113711eea1d0a4c2424c3b2e4569ad4fed7176b4c75407718f43aaf",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_01100": {
+      "file": "research/takeover_20260908/primary_subset_01100.csv",
+      "sha256": "2f1fb051c65985cff99554074930264b19e74a8c049ae76c1a5a91372feefa5d",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_01101": {
+      "file": "research/takeover_20260908/primary_subset_01101.csv",
+      "sha256": "61ea2ce480bcc9054b49a08b29c41d05bc426165037afe978393832cac8c4a99",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_01110": {
+      "file": "research/takeover_20260908/primary_subset_01110.csv",
+      "sha256": "0b466f3ea34bc06ccad3625419c4446d1d9efea06bb18de5cd51fd5b3de759fe",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_01111": {
+      "file": "research/takeover_20260908/primary_subset_01111.csv",
+      "sha256": "bbe173fa463cc07b4731bb8e304b1159a63519dad816d26e449f64d7737281e9",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_10000": {
+      "file": "research/takeover_20260908/primary_subset_10000.csv",
+      "sha256": "6bf3ff02fcaab159a15bdbcf5c0e47cd629d7fe9986d78b71d3469798144c503",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_10001": {
+      "file": "research/takeover_20260908/primary_subset_10001.csv",
+      "sha256": "b3720ae4eb1693ff572e5c6c4a43f51cde95a990976c90ff3ee2a9e60a90d56d",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_10010": {
+      "file": "research/takeover_20260908/primary_subset_10010.csv",
+      "sha256": "2e391c0214d62b4364dfed5e13bf1e97b18b382334b7b18e068e3ea8175dc241",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_10011": {
+      "file": "research/takeover_20260908/primary_subset_10011.csv",
+      "sha256": "ad5c8db493a4dbafac1c2f23e537773160afcacb228065ead69d2a03c316f267",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_10100": {
+      "file": "research/takeover_20260908/primary_subset_10100.csv",
+      "sha256": "175862b2704ca6f74489416e2ccb852386dc3f42199fbd6f475ea050d12f774c",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_10101": {
+      "file": "research/takeover_20260908/primary_subset_10101.csv",
+      "sha256": "ac4d45a7b0b19bd68207340598c250ed002537731fc0bd0a00656080d5cc17f8",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_10110": {
+      "file": "research/takeover_20260908/primary_subset_10110.csv",
+      "sha256": "fc7170276ec8a27f1544193ff9e0dd38a6de5b1b6add3a5a665f0f057ada6bfe",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_10111": {
+      "file": "research/takeover_20260908/primary_subset_10111.csv",
+      "sha256": "40f59896dedd3622122424aeba3c163dc4894a35b28866a44f494d9bb190ec49",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_11000": {
+      "file": "research/takeover_20260908/primary_subset_11000.csv",
+      "sha256": "9c5cc2cf7da8eb187a9b9de90f69f6b5a129e843006fd74059f8c4fc7f5a0e48",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_11001": {
+      "file": "research/takeover_20260908/primary_subset_11001.csv",
+      "sha256": "ff0b0697dcc2786be3d43cf4eff1765cfee526f0166fd292aa685fee64edb624",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_11010": {
+      "file": "research/takeover_20260908/primary_subset_11010.csv",
+      "sha256": "a8baaeaf9f899f74deeba8f2af2a43be844eaf35759fe22bee45aff371185e0d",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_11011": {
+      "file": "research/takeover_20260908/primary_subset_11011.csv",
+      "sha256": "204b72a7b24f5b07e5acac9948b27253f218caeee3d809090fe6883ce8b18fd6",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_11100": {
+      "file": "research/takeover_20260908/primary_subset_11100.csv",
+      "sha256": "7448535fdf723b7f1904403772fa9ef9d857aa00b9a2b423de29e912e5601223",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_11101": {
+      "file": "research/takeover_20260908/primary_subset_11101.csv",
+      "sha256": "02d63945c94855115c05d668c2308af30be4b702741123857ffde84e42897399",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_11110": {
+      "file": "research/takeover_20260908/primary_subset_11110.csv",
+      "sha256": "5c424b408967b7750661e495b296e1975de4599afa29fa905e6aa0d0a7d47ffd",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    },
+    "primary_subset_11111": {
+      "file": "research/takeover_20260908/primary_subset_11111.csv",
+      "sha256": "25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56",
+      "diffs": [
+        {
+          "qa_id": "test_0206",
+          "from": "D",
+          "to": "CD"
+        },
+        {
+          "qa_id": "test_0426",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0444",
+          "from": "C",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0477",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0488",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0501",
+          "from": "A",
+          "to": "B"
+        },
+        {
+          "qa_id": "test_0506",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "A",
+          "to": "C"
+        },
+        {
+          "qa_id": "test_0647",
+          "from": "DCAB",
+          "to": "DCBA"
+        }
+      ]
+    }
+  }
+}

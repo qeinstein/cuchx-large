@@ -1,0 +1,470 @@
+{
+  "train_conjunction_violations": [
+    {
+      "path": "HAU/user24/3-2-2",
+      "kind": "rejected_combination_fully_present",
+      "qa_id": "training_2383",
+      "option": "B",
+      "actions": [
+        "running",
+        "standing up"
+      ]
+    }
+  ],
+  "test_conjunction_violations": [],
+  "object_option_universe_constraints": [
+    {
+      "qa_id": "test_0480",
+      "base": "C",
+      "candidate": "C",
+      "changed": false,
+      "object_qa": "test_0525",
+      "compatibility_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 10
+      }
+    },
+    {
+      "qa_id": "test_0488",
+      "base": "A",
+      "candidate": "C",
+      "changed": true,
+      "object_qa": "test_0528",
+      "compatibility_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 10
+      }
+    },
+    {
+      "qa_id": "test_0492",
+      "base": "B",
+      "candidate": "B",
+      "changed": false,
+      "object_qa": "test_0531",
+      "compatibility_counts": {
+        "A": 0,
+        "B": 7,
+        "C": 0
+      }
+    },
+    {
+      "qa_id": "test_0494",
+      "base": "C",
+      "candidate": "C",
+      "changed": false,
+      "object_qa": "test_0533",
+      "compatibility_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 10
+      }
+    },
+    {
+      "qa_id": "test_0495",
+      "base": "C",
+      "candidate": "C",
+      "changed": false,
+      "object_qa": "test_0534",
+      "compatibility_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 10
+      }
+    },
+    {
+      "qa_id": "test_0497",
+      "base": "C",
+      "candidate": "C",
+      "changed": false,
+      "object_qa": "test_0535",
+      "compatibility_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 10
+      }
+    },
+    {
+      "qa_id": "test_0514",
+      "base": "A",
+      "candidate": "A",
+      "changed": false,
+      "object_qa": "test_0539",
+      "compatibility_counts": {
+        "A": 10,
+        "B": 0,
+        "C": 0
+      }
+    }
+  ],
+  "object_option_leave_user_out": {
+    "n": 33,
+    "correct": 33,
+    "rows": [
+      {
+        "qa_id": "training_3586",
+        "user": "user16",
+        "prediction": "C",
+        "truth": "C",
+        "correct": true,
+        "support": 9
+      },
+      {
+        "qa_id": "training_3591",
+        "user": "user3",
+        "prediction": "C",
+        "truth": "C",
+        "correct": true,
+        "support": 9
+      },
+      {
+        "qa_id": "training_3593",
+        "user": "user8",
+        "prediction": "C",
+        "truth": "C",
+        "correct": true,
+        "support": 8
+      },
+      {
+        "qa_id": "training_3608",
+        "user": "user2",
+        "prediction": "C",
+        "truth": "C",
+        "correct": true,
+        "support": 9
+      },
+      {
+        "qa_id": "training_3621",
+        "user": "user9",
+        "prediction": "A",
+        "truth": "A",
+        "correct": true,
+        "support": 8
+      },
+      {
+        "qa_id": "training_3635",
+        "user": "user16",
+        "prediction": "A",
+        "truth": "A",
+        "correct": true,
+        "support": 7
+      },
+      {
+        "qa_id": "training_3640",
+        "user": "user3",
+        "prediction": "C",
+        "truth": "C",
+        "correct": true,
+        "support": 6
+      },
+      {
+        "qa_id": "training_3642",
+        "user": "user8",
+        "prediction": "B",
+        "truth": "B",
+        "correct": true,
+        "support": 4
+      },
+      {
+        "qa_id": "training_3672",
+        "user": "user8",
+        "prediction": "B",
+        "truth": "B",
+        "correct": true,
+        "support": 9
+      },
+      {
+        "qa_id": "training_3674",
+        "user": "user16",
+        "prediction": "C",
+        "truth": "C",
+        "correct": true,
+        "support": 8
+      },
+      {
+        "qa_id": "training_3681",
+        "user": "user8",
+        "prediction": "C",
+        "truth": "C",
+        "correct": true,
+        "support": 8
+      },
+      {
+        "qa_id": "training_3687",
+        "user": "user21",
+        "prediction": "C",
+        "truth": "C",
+        "correct": true,
+        "support": 6
+      },
+      {
+        "qa_id": "training_3689",
+        "user": "user24",
+        "prediction": "B",
+        "truth": "B",
+        "correct": true,
+        "support": 6
+      },
+      {
+        "qa_id": "training_3691",
+        "user": "user2",
+        "prediction": "A",
+        "truth": "A",
+        "correct": true,
+        "support": 8
+      },
+      {
+        "qa_id": "training_3695",
+        "user": "user4",
+        "prediction": "A",
+        "truth": "A",
+        "correct": true,
+        "support": 7
+      },
+      {
+        "qa_id": "training_3698",
+        "user": "user6",
+        "prediction": "A",
+        "truth": "A",
+        "correct": true,
+        "support": 9
+      },
+      {
+        "qa_id": "training_3699",
+        "user": "user7",
+        "prediction": "A",
+        "truth": "A",
+        "correct": true,
+        "support": 9
+      },
+      {
+        "qa_id": "training_3700",
+        "user": "user1",
+        "prediction": "A",
+        "truth": "A",
+        "correct": true,
+        "support": 8
+      },
+      {
+        "qa_id": "training_3701",
+        "user": "user1",
+        "prediction": "A",
+        "truth": "A",
+        "correct": true,
+        "support": 8
+      },
+      {
+        "qa_id": "training_3703",
+        "user": "user24",
+        "prediction": "B",
+        "truth": "B",
+        "correct": true,
+        "support": 5
+      },
+      {
+        "qa_id": "training_3704",
+        "user": "user24",
+        "prediction": "C",
+        "truth": "C",
+        "correct": true,
+        "support": 5
+      },
+      {
+        "qa_id": "training_3705",
+        "user": "user24",
+        "prediction": "B",
+        "truth": "B",
+        "correct": true,
+        "support": 5
+      },
+      {
+        "qa_id": "training_3706",
+        "user": "user24",
+        "prediction": "B",
+        "truth": "B",
+        "correct": true,
+        "support": 5
+      },
+      {
+        "qa_id": "training_3707",
+        "user": "user24",
+        "prediction": "C",
+        "truth": "C",
+        "correct": true,
+        "support": 5
+      },
+      {
+        "qa_id": "training_3708",
+        "user": "user7",
+        "prediction": "A",
+        "truth": "A",
+        "correct": true,
+        "support": 7
+      },
+      {
+        "qa_id": "training_3709",
+        "user": "user7",
+        "prediction": "C",
+        "truth": "C",
+        "correct": true,
+        "support": 7
+      },
+      {
+        "qa_id": "training_3714",
+        "user": "user23",
+        "prediction": "C",
+        "truth": "C",
+        "correct": true,
+        "support": 6
+      },
+      {
+        "qa_id": "training_3715",
+        "user": "user24",
+        "prediction": "A",
+        "truth": "A",
+        "correct": true,
+        "support": 4
+      },
+      {
+        "qa_id": "training_3728",
+        "user": "user8",
+        "prediction": "B",
+        "truth": "B",
+        "correct": true,
+        "support": 8
+      },
+      {
+        "qa_id": "training_3898",
+        "user": "user19",
+        "prediction": "B",
+        "truth": "B",
+        "correct": true,
+        "support": 9
+      },
+      {
+        "qa_id": "training_3903",
+        "user": "user20",
+        "prediction": "C",
+        "truth": "C",
+        "correct": true,
+        "support": 8
+      },
+      {
+        "qa_id": "training_3926",
+        "user": "user9",
+        "prediction": "C",
+        "truth": "C",
+        "correct": true,
+        "support": 9
+      },
+      {
+        "qa_id": "training_3933",
+        "user": "user3",
+        "prediction": "B",
+        "truth": "B",
+        "correct": true,
+        "support": 8
+      }
+    ]
+  },
+  "donor_action_unions": [
+    {
+      "qa_id": "test_0146",
+      "donor_path": "HAU/user21/2-2-1",
+      "labelled_action_union": [
+        "checking the time",
+        "reading",
+        "standing up",
+        "turning a page",
+        "walking"
+      ]
+    },
+    {
+      "qa_id": "test_0146",
+      "donor_path": "HAU/user21/2-2-2",
+      "labelled_action_union": [
+        "checking the time",
+        "reading",
+        "standing up",
+        "turning a page",
+        "walking"
+      ]
+    },
+    {
+      "qa_id": "test_0146",
+      "donor_path": "HAU/user21/2-2-3",
+      "labelled_action_union": [
+        "checking the time",
+        "reading",
+        "standing up",
+        "turning a page",
+        "walking"
+      ]
+    },
+    {
+      "qa_id": "test_0150",
+      "donor_path": "HAU/user21/3-2-1",
+      "labelled_action_union": [
+        "checking body temperature",
+        "jumping jacks",
+        "massaging oneself",
+        "squats",
+        "walking"
+      ]
+    },
+    {
+      "qa_id": "test_0150",
+      "donor_path": "HAU/user21/3-2-2",
+      "labelled_action_union": [
+        "jumping jacks",
+        "massaging oneself",
+        "squats",
+        "walking"
+      ]
+    },
+    {
+      "qa_id": "test_0150",
+      "donor_path": "HAU/user21/3-2-3",
+      "labelled_action_union": [
+        "checking body temperature",
+        "jumping jacks",
+        "massaging oneself",
+        "squats",
+        "walking"
+      ]
+    },
+    {
+      "qa_id": "test_0151",
+      "donor_path": "HAU/user21/3-2-1",
+      "labelled_action_union": [
+        "checking body temperature",
+        "jumping jacks",
+        "massaging oneself",
+        "squats",
+        "walking"
+      ]
+    },
+    {
+      "qa_id": "test_0151",
+      "donor_path": "HAU/user21/3-2-2",
+      "labelled_action_union": [
+        "jumping jacks",
+        "massaging oneself",
+        "squats",
+        "walking"
+      ]
+    },
+    {
+      "qa_id": "test_0151",
+      "donor_path": "HAU/user21/3-2-3",
+      "labelled_action_union": [
+        "checking body temperature",
+        "jumping jacks",
+        "massaging oneself",
+        "squats",
+        "walking"
+      ]
+    }
+  ]
+}

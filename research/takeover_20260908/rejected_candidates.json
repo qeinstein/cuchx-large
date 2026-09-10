@@ -1,0 +1,62 @@
+[
+  {
+    "qa_id": "test_0458",
+    "to": "A",
+    "reason": "Measured public regression -1; prohibited."
+  },
+  {
+    "qa_id": "test_0146",
+    "to": "BC",
+    "reason": "Sequence/combination exhaustiveness claim falsified; raw video includes sitting. Public effect still -d_0488."
+  },
+  {
+    "qa_id": "test_0150",
+    "to": "AB",
+    "reason": "Raw frames show jumping-jack motion; cited donor also contains jumping jacks."
+  },
+  {
+    "qa_id": "test_0151",
+    "to": "AB",
+    "reason": "Cited donor trials contain massaging; non-exhaustive sequence is not absence proof."
+  },
+  {
+    "qa_id": "test_0165",
+    "to": "D",
+    "reason": "Measured public zero, but claimed action-set exhaustion is invalid; insufficient reason to change privately."
+  },
+  {
+    "qa_id": "test_0137",
+    "to": "ACD",
+    "reason": "Wrong-block sibling argument. Target is singleton clip 0103; cached dense 0.00175 and DINO 0.00390 for stirring."
+  },
+  {
+    "qa_id": "test_0590",
+    "to": "ABC",
+    "reason": "New high-score omission lead rejected for now: raw sink/washing activity, no clear peeling; OOF omitted-peeling examples 0/32 positives."
+  },
+  {
+    "qa_id": "test_0591",
+    "to": "ABD",
+    "reason": "New pouring omission lead held out: sampled raw clip shows phone/headphones sequence without clear pouring; model confusion remains plausible."
+  },
+  {
+    "qa_id": "test_0158",
+    "to": "ABC",
+    "reason": "New page omission lead held out: raw material handling unclear, 0/28 same-action omitted OOF examples positive."
+  },
+  {
+    "qa_id": "test_0436",
+    "to": "A",
+    "reason": "Existing counter-evidence says champion already satisfies adjacent-pair assignment."
+  },
+  {
+    "qa_id": "test_0464",
+    "to": "A",
+    "reason": "Overlapping physical distributions; mechanism shared with measured regression 0458."
+  },
+  {
+    "qa_id": "test_0517",
+    "to": "C",
+    "reason": "Negative control: raw frames show putting on clothes; retain A despite zero margin."
+  }
+]

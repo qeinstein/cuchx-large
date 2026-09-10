@@ -1,0 +1,107 @@
+{
+  "classes": {
+    "17_Tap_the_keyboard": "typing on the keyboard",
+    "24_Use_a_mobile_phone": "using a smartphone",
+    "26_Play_games": "using a smartphone"
+  },
+  "n": 173,
+  "class_counts": {
+    "typing on the keyboard": 85,
+    "using a smartphone": 88
+  },
+  "oof_correct": 149,
+  "folds": [
+    {
+      "fold": 0,
+      "n": 34,
+      "correct": 31,
+      "users": [
+        "user22",
+        "user5",
+        "user9"
+      ]
+    },
+    {
+      "fold": 1,
+      "n": 34,
+      "correct": 29,
+      "users": [
+        "user17",
+        "user19",
+        "user7"
+      ]
+    },
+    {
+      "fold": 2,
+      "n": 36,
+      "correct": 27,
+      "users": [
+        "user16",
+        "user18",
+        "user24",
+        "user8"
+      ]
+    },
+    {
+      "fold": 3,
+      "n": 35,
+      "correct": 32,
+      "users": [
+        "user1",
+        "user3",
+        "user4",
+        "user6"
+      ]
+    },
+    {
+      "fold": 4,
+      "n": 34,
+      "correct": 30,
+      "users": [
+        "user2",
+        "user20",
+        "user21",
+        "user23"
+      ]
+    }
+  ],
+  "test": [
+    {
+      "clip": "LM_test_0015",
+      "p_typing_binary": 0.8526137542322546,
+      "hip_z_delta": 0.08014696836471558,
+      "nframes": 17
+    },
+    {
+      "clip": "LM_test_0016",
+      "p_typing_binary": 0.4699043954142083,
+      "hip_z_delta": 0.02353954315185547,
+      "nframes": 17
+    },
+    {
+      "clip": "LM_test_0017",
+      "p_typing_binary": 0.43793515979270753,
+      "hip_z_delta": -0.005712270736694336,
+      "nframes": 16
+    },
+    {
+      "clip": "LM_test_0041",
+      "p_typing_binary": 0.9994368621235541,
+      "hip_z_delta": 0.18014293909072876,
+      "nframes": 20
+    },
+    {
+      "clip": "LM_test_0042",
+      "p_typing_binary": 0.9998179159488202,
+      "hip_z_delta": 0.14121034741401672,
+      "nframes": 15
+    },
+    {
+      "clip": "LM_test_0044",
+      "p_typing_binary": 0.9074607004230056,
+      "hip_z_delta": -0.21469655632972717,
+      "nframes": 16
+    }
+  ],
+  "limitations": "Binary probability applies only to using a smartphone versus typing. Other actions are outside its class universe. OOF segment accuracy is not correction precision versus champion."
+}

@@ -1,0 +1,162 @@
+{
+  "reference": {
+    "score": "332/342",
+    "sha256": "25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56"
+  },
+  "constraint": "d0488+d0477+d0506+d0519+d0501=+2; reversion delta e=-d",
+  "slot_order": [
+    "S1_REVERT_0488.csv",
+    "S2_REVERT_0477.csv",
+    "S3_REVERT_0506.csv",
+    "adaptive S4 branch below"
+  ],
+  "s4_logic": {
+    "if_any_early_reversion_delta_is_+1": "submit the matching S4_IF_*_WIN file; at most one can be +1 under the constraint",
+    "else": "compute E_remaining=-2-(E0488+E0477+E0506); use S4_IF_REMAINING_GAIN when E_remaining>=0, otherwise S4_IF_REMAINING_NONPOSITIVE",
+    "x": "test_0526 D->C; x is independent of the five-row sum and is learned from S4"
+  },
+  "files": [
+    {
+      "file": "S1_REVERT_0488.csv",
+      "sha256": "5c424b408967b7750661e495b296e1975de4599afa29fa905e6aa0d0a7d47ffd",
+      "changes": {
+        "test_0488": "A"
+      },
+      "diff_vs_332": [
+        {
+          "qa_id": "test_0488",
+          "from": "C",
+          "to": "A"
+        }
+      ]
+    },
+    {
+      "file": "S2_REVERT_0477.csv",
+      "sha256": "02d63945c94855115c05d668c2308af30be4b702741123857ffde84e42897399",
+      "changes": {
+        "test_0477": "A"
+      },
+      "diff_vs_332": [
+        {
+          "qa_id": "test_0477",
+          "from": "B",
+          "to": "A"
+        }
+      ]
+    },
+    {
+      "file": "S3_REVERT_0506.csv",
+      "sha256": "204b72a7b24f5b07e5acac9948b27253f218caeee3d809090fe6883ce8b18fd6",
+      "changes": {
+        "test_0506": "A"
+      },
+      "diff_vs_332": [
+        {
+          "qa_id": "test_0506",
+          "from": "C",
+          "to": "A"
+        }
+      ]
+    },
+    {
+      "file": "S4_IF_0488_WIN__REVERT_0488_PLUS_0526.csv",
+      "sha256": "a8c2738ab91eccbe14480ee353b1a344c75104b4ad2ff5e4a2eff8faf540c43e",
+      "changes": {
+        "test_0488": "A",
+        "test_0526": "C"
+      },
+      "diff_vs_332": [
+        {
+          "qa_id": "test_0488",
+          "from": "C",
+          "to": "A"
+        },
+        {
+          "qa_id": "test_0526",
+          "from": "D",
+          "to": "C"
+        }
+      ]
+    },
+    {
+      "file": "S4_IF_0477_WIN__REVERT_0477_PLUS_0526.csv",
+      "sha256": "4720e281a901da7715af1261d6d5ca375b98f8263ca77f7a52a4f7a72eb34231",
+      "changes": {
+        "test_0477": "A",
+        "test_0526": "C"
+      },
+      "diff_vs_332": [
+        {
+          "qa_id": "test_0477",
+          "from": "B",
+          "to": "A"
+        },
+        {
+          "qa_id": "test_0526",
+          "from": "D",
+          "to": "C"
+        }
+      ]
+    },
+    {
+      "file": "S4_IF_0506_WIN__REVERT_0506_PLUS_0526.csv",
+      "sha256": "15d7a650d2587d5b0cbe6d268037ccf37736737824bf54d737266eddc3a9dcf2",
+      "changes": {
+        "test_0506": "A",
+        "test_0526": "C"
+      },
+      "diff_vs_332": [
+        {
+          "qa_id": "test_0506",
+          "from": "C",
+          "to": "A"
+        },
+        {
+          "qa_id": "test_0526",
+          "from": "D",
+          "to": "C"
+        }
+      ]
+    },
+    {
+      "file": "S4_IF_REMAINING_GAIN__REVERT_0519_0501_PLUS_0526.csv",
+      "sha256": "cdb79b718d8f776ead7358e209c73f13ee1b02e2811262c96cb64cd60c5cbc66",
+      "changes": {
+        "test_0519": "A",
+        "test_0501": "A",
+        "test_0526": "C"
+      },
+      "diff_vs_332": [
+        {
+          "qa_id": "test_0501",
+          "from": "B",
+          "to": "A"
+        },
+        {
+          "qa_id": "test_0519",
+          "from": "C",
+          "to": "A"
+        },
+        {
+          "qa_id": "test_0526",
+          "from": "D",
+          "to": "C"
+        }
+      ]
+    },
+    {
+      "file": "S4_IF_REMAINING_NONPOSITIVE__0526_ONLY.csv",
+      "sha256": "fc386cb51497729ba65682928acc279bf11b7e968cbfdeaa26b9f576a2b956a7",
+      "changes": {
+        "test_0526": "C"
+      },
+      "diff_vs_332": [
+        {
+          "qa_id": "test_0526",
+          "from": "D",
+          "to": "C"
+        }
+      ]
+    }
+  ]
+}

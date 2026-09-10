@@ -31,11 +31,13 @@ IMU, 3D Skeleton, mmWave). 682 test questions; the public leaderboard scores 342
 | 13 | **`submission_095906_328of342_CHAMPION.csv`** | **0.95906** | **328/342** | **3** | sequence total-order consistency repair (`test_0335`, `test_0647`) + multi Stirring (`test_0206`) |
 | 14 | **`submission_096198_329of342_CHAMPION.csv`** | **0.96198** | **329/342** | **3** | user1 Cohort 3 protocol matching (`test_0452`, `test_0459`, `test_0461`) |
 | 15 | **`submission_096491_330of342_CHAMPION.csv`** | **0.96491** | **330/342** | **3** | Candidate A singleton decomposition (`test_0443: D -> B`, W->R win) |
+| 16 | **`submission_097076_332of342_CHAMPION.csv`** | **0.97076** | **332/342** | **3** | Five-row HARn bundle plus four previously neutral rows; Kaggle submission 56090799 COMPLETE |
 
-**Current champion: `submission_096491_330of342_CHAMPION.csv`** — public **0.96491 = 330/342, rank 3** (Kaggle submission id 56070318).
-All new candidate diffs are taken against this file. Current #1 is 334/342; gap: 4 public answers.
+**Historical baseline: `submission_096491_330of342_CHAMPION.csv`** — public **0.96491 = 330/342** (Kaggle submission id 56070318).
 
-Leaderboard context on 2026-09-07: #1 334/342, #2 333/342, us #3 at 330/342. Gap to #1: 4 public answers.
+**Current champion: `submission_097076_332of342_CHAMPION.csv`** — public **0.97076 = 332/342, observed rank 3** (Kaggle submission id 56090799, COMPLETE). SHA-256 `25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56`; no further submission was made today. New post-332 candidates are in `research/post332_20260908/` and are diffed against this file. Leaders were at 334/342 when checked.
+
+Leaderboard context on 2026-09-08: leaders 334/342, us #3 at 332/342. Gap to #1: 2 public answers.
 
 ---
 

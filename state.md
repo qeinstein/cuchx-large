@@ -498,3 +498,46 @@ Active materially different branch:
   - No submission API calls present in kernel or locally.
 
 
+
+### Submission: VideoMAE Emotion Gate (2026-09-10)
+
+- **Submission ID:** 56138937
+- **File:** `submission_candidate_videomae_emotion.csv`
+- **SHA-256:** `d585a9df6715c3bcf3121b683aa7dd57e4e8668d46e4f88df5371bf2a439f8dd`
+- **Public Score:** 0.95321 = **326/342** (−6 vs champion)
+- **Flips:** 8 gated changes, net −6 → likely 1 correct, 7 wrong
+- **Verdict:** FAILED. OOF precision (62.5%) did not transfer to test.
+  The gate was too permissive at margin ≥ 0.50 on full-data training.
+- **Champion preserved:** 0.97076 = 332/342 (submission 56090799)
+- **4 submissions remaining today**
+
+**Lesson:** Two-fold OOF on 270 sessions was insufficient to calibrate
+a reliable gate. The margin threshold produced high-confidence flips that
+were largely wrong on unseen test data. Future emotion work needs:
+(a) more folds for stable precision estimates, (b) higher margin thresholds,
+or (c) an entirely different validation approach before risking submissions.
+
+### Forensic analysis of emotion gate failure (2026-09-10)
+
+Root causes identified:
+1. **C-bias**: 5/8 flips moved to C (62.5%), vs 23% baseline. Systematic model distortion.
+2. **Duplicate groups**: Sessions 9 (NEUT,NEUT,FAST) and 27 (SLOW,SLOW,FAST) were
+   irresolvable by the 5-class grouping — high margin + wrong.
+3. **Calibration shift**: Full-data retraining (268 sessions vs 135 OOF) inflated margins.
+   19/29 test sessions exceeded the 0.50 gate threshold.
+4. **Inflated OOF precision**: True precision was ~60%, not the reported 62.5%.
+   Both-wrong flips masked losses. 60% precision ≠ reliable signal.
+5. **Structured amplification**: One wrong group → all 3 clips wrong per session.
+
+**Intelligence from prior submissions:**
+- test_0488 (C) and test_0477 (B) confirmed correct (single-change probes, -1 each)
+- test_0506 likely unscored (single-change, +0)
+- Champion has ≤2 emotion errors in scored set (emotion gate confirmed 7/8 correct)
+- Estimated error distribution: sequence ~3-5, emotion ~1-2, object_interaction ~1-2
+
+**Killed permanently:**
+- VideoMAE emotion gate (all variants)
+- Mechanism Y / run18 (same 60% precision problem)
+
+**Next direction chosen:** Skeleton-IMU pairwise temporal ordering for HAU/sequence.
+Gate criterion: >80% OOF flip precision before any submission.

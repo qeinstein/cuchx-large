@@ -1,0 +1,48 @@
+[
+  {
+    "clip": "0002",
+    "frames": 35,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0002/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0010",
+    "frames": 29,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0010/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0013",
+    "frames": 14,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0013/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0018",
+    "frames": 42,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0018/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0028",
+    "frames": 29,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0028/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0031",
+    "frames": 62,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0031/Depth_Color/Depth_Color.mp4"
+  },
+  {
+    "clip": "0038",
+    "missing": true
+  },
+  {
+    "clip": "0042",
+    "frames": 15,
+    "fps": 10.0,
+    "path": "hf_data_manual/large_model_track_test/LM_test_0042/Depth_Color/Depth_Color.mp4"
+  }
+]

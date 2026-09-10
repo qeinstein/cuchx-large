@@ -1,0 +1,244 @@
+{
+  "object_exact_template": {
+    "1": {
+      "n": 25,
+      "wr": 25,
+      "rw": 0,
+      "net": 25,
+      "precision": 1.0,
+      "rows": 113,
+      "fallback_correct": 87,
+      "template_correct": 112
+    },
+    "2": {
+      "n": 14,
+      "wr": 14,
+      "rw": 0,
+      "net": 14,
+      "precision": 1.0,
+      "rows": 89,
+      "fallback_correct": 74,
+      "template_correct": 88
+    },
+    "3": {
+      "n": 7,
+      "wr": 7,
+      "rw": 0,
+      "net": 7,
+      "precision": 1.0,
+      "rows": 73,
+      "fallback_correct": 66,
+      "template_correct": 73
+    },
+    "4": {
+      "n": 7,
+      "wr": 7,
+      "rw": 0,
+      "net": 7,
+      "precision": 1.0,
+      "rows": 69,
+      "fallback_correct": 62,
+      "template_correct": 69
+    },
+    "5": {
+      "n": 7,
+      "wr": 7,
+      "rw": 0,
+      "net": 7,
+      "precision": 1.0,
+      "rows": 52,
+      "fallback_correct": 45,
+      "template_correct": 52
+    }
+  },
+  "harn_template_vs_sensor": {
+    "n": 52,
+    "wr": 52,
+    "rw": 0,
+    "net": 52,
+    "precision": 1.0,
+    "rows": 52
+  },
+  "negative_or_mixed_routes": [
+    {
+      "route": "recovered_pool_sequence",
+      "k": 1,
+      "rows": 1,
+      "wr": 0,
+      "rw": 1,
+      "net": -1,
+      "precision": 0.0
+    },
+    {
+      "route": "recovered_pool_sequence",
+      "k": 3,
+      "rows": 3,
+      "wr": 0,
+      "rw": 3,
+      "net": -3,
+      "precision": 0.0
+    },
+    {
+      "route": "recovered_pool_sequence",
+      "k": 5,
+      "rows": 5,
+      "wr": 2,
+      "rw": 3,
+      "net": -1,
+      "precision": 0.4
+    },
+    {
+      "route": "recovered_pool_sequence",
+      "k": 10,
+      "rows": 10,
+      "wr": 5,
+      "rw": 5,
+      "net": 0,
+      "precision": 0.5
+    },
+    {
+      "route": "recovered_pool_sequence",
+      "k": 20,
+      "rows": 20,
+      "wr": 7,
+      "rw": 9,
+      "net": -2,
+      "precision": 0.4375
+    },
+    {
+      "route": "exact_child_sequence",
+      "k": 1,
+      "rows": 1,
+      "wr": 0,
+      "rw": 1,
+      "net": -1,
+      "precision": 0.0
+    },
+    {
+      "route": "exact_child_sequence",
+      "k": 3,
+      "rows": 3,
+      "wr": 0,
+      "rw": 3,
+      "net": -3,
+      "precision": 0.0
+    },
+    {
+      "route": "exact_child_sequence",
+      "k": 5,
+      "rows": 5,
+      "wr": 0,
+      "rw": 5,
+      "net": -5,
+      "precision": 0.0
+    },
+    {
+      "route": "exact_child_sequence",
+      "k": 10,
+      "rows": 10,
+      "wr": 0,
+      "rw": 10,
+      "net": -10,
+      "precision": 0.0
+    },
+    {
+      "route": "exact_child_sequence",
+      "k": 20,
+      "rows": 20,
+      "wr": 0,
+      "rw": 20,
+      "net": -20,
+      "precision": 0.0
+    },
+    {
+      "route": "frame_forest_sequence",
+      "k": 1,
+      "rows": 1,
+      "wr": 1,
+      "rw": 0,
+      "net": 1,
+      "precision": 1.0
+    },
+    {
+      "route": "frame_forest_sequence",
+      "k": 3,
+      "rows": 3,
+      "wr": 1,
+      "rw": 2,
+      "net": -1,
+      "precision": 0.3333333333333333
+    },
+    {
+      "route": "frame_forest_sequence",
+      "k": 5,
+      "rows": 5,
+      "wr": 1,
+      "rw": 4,
+      "net": -3,
+      "precision": 0.2
+    },
+    {
+      "route": "frame_forest_sequence",
+      "k": 10,
+      "rows": 10,
+      "wr": 2,
+      "rw": 8,
+      "net": -6,
+      "precision": 0.2
+    },
+    {
+      "route": "frame_forest_sequence",
+      "k": 20,
+      "rows": 20,
+      "wr": 3,
+      "rw": 17,
+      "net": -14,
+      "precision": 0.15
+    },
+    {
+      "route": "paired_pool",
+      "k": 1,
+      "rows": 1,
+      "wr": 1,
+      "rw": 0,
+      "net": 1,
+      "precision": 1.0
+    },
+    {
+      "route": "paired_pool",
+      "k": 3,
+      "rows": 3,
+      "wr": 2,
+      "rw": 0,
+      "net": 2,
+      "precision": 1.0
+    },
+    {
+      "route": "paired_pool",
+      "k": 5,
+      "rows": 5,
+      "wr": 2,
+      "rw": 2,
+      "net": 0,
+      "precision": 0.5
+    },
+    {
+      "route": "paired_pool",
+      "k": 10,
+      "rows": 10,
+      "wr": 4,
+      "rw": 5,
+      "net": -1,
+      "precision": 0.4444444444444444
+    },
+    {
+      "route": "paired_pool",
+      "k": 20,
+      "rows": 10,
+      "wr": 4,
+      "rw": 5,
+      "net": -1,
+      "precision": 0.4444444444444444
+    }
+  ]
+}

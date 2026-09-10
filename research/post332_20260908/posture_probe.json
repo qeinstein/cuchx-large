@@ -1,0 +1,105 @@
+{
+  "classes": {
+    "17_Tap_the_keyboard": "typing on the keyboard",
+    "34_Sit_down": "sitting down"
+  },
+  "n": 231,
+  "class_counts": {
+    "typing on the keyboard": 85,
+    "sitting down": 146
+  },
+  "oof_correct": 209,
+  "folds": [
+    {
+      "fold": 0,
+      "n": 49,
+      "correct": 43,
+      "users": [
+        "user23",
+        "user3",
+        "user7",
+        "user8"
+      ]
+    },
+    {
+      "fold": 1,
+      "n": 44,
+      "correct": 44,
+      "users": [
+        "user16",
+        "user19",
+        "user2"
+      ]
+    },
+    {
+      "fold": 2,
+      "n": 44,
+      "correct": 41,
+      "users": [
+        "user4",
+        "user6",
+        "user9"
+      ]
+    },
+    {
+      "fold": 3,
+      "n": 49,
+      "correct": 38,
+      "users": [
+        "user17",
+        "user18",
+        "user22",
+        "user5"
+      ]
+    },
+    {
+      "fold": 4,
+      "n": 45,
+      "correct": 43,
+      "users": [
+        "user1",
+        "user20",
+        "user24"
+      ]
+    }
+  ],
+  "test": [
+    {
+      "clip": "LM_test_0015",
+      "p_typing_binary": 0.9658251443603163,
+      "hip_z_delta": 0.08014696836471558,
+      "nframes": 17
+    },
+    {
+      "clip": "LM_test_0016",
+      "p_typing_binary": 0.5868834719434158,
+      "hip_z_delta": 0.02353954315185547,
+      "nframes": 17
+    },
+    {
+      "clip": "LM_test_0017",
+      "p_typing_binary": 0.43469821349453514,
+      "hip_z_delta": -0.005712270736694336,
+      "nframes": 16
+    },
+    {
+      "clip": "LM_test_0041",
+      "p_typing_binary": 0.15368567544246556,
+      "hip_z_delta": 0.18014293909072876,
+      "nframes": 20
+    },
+    {
+      "clip": "LM_test_0042",
+      "p_typing_binary": 0.028523641265873693,
+      "hip_z_delta": 0.14121034741401672,
+      "nframes": 15
+    },
+    {
+      "clip": "LM_test_0044",
+      "p_typing_binary": 0.002611786697199681,
+      "hip_z_delta": -0.21469655632972717,
+      "nframes": 16
+    }
+  ],
+  "limitations": "Binary probability applies only to sitting-down versus typing. Standing clips are negative controls outside its class universe. OOF segment accuracy is not correction precision versus champion."
+}

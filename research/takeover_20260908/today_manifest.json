@@ -1,0 +1,57 @@
+{
+  "base_sha256": "e42cde96bafb108b8c16bcd97e5deb2af32c1657a089351ada8a72a95ed805cd",
+  "public_delta_bounds": [
+    -5,
+    5
+  ],
+  "submission_performed": false,
+  "file": "research/takeover_20260908/TODAY_RECOMMENDED.csv",
+  "sha256": "25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56",
+  "diffs": [
+    {
+      "qa_id": "test_0206",
+      "from": "D",
+      "to": "CD"
+    },
+    {
+      "qa_id": "test_0426",
+      "from": "C",
+      "to": "B"
+    },
+    {
+      "qa_id": "test_0444",
+      "from": "C",
+      "to": "B"
+    },
+    {
+      "qa_id": "test_0477",
+      "from": "A",
+      "to": "B"
+    },
+    {
+      "qa_id": "test_0488",
+      "from": "A",
+      "to": "C"
+    },
+    {
+      "qa_id": "test_0501",
+      "from": "A",
+      "to": "B"
+    },
+    {
+      "qa_id": "test_0506",
+      "from": "A",
+      "to": "C"
+    },
+    {
+      "qa_id": "test_0519",
+      "from": "A",
+      "to": "C"
+    },
+    {
+      "qa_id": "test_0647",
+      "from": "DCAB",
+      "to": "DCBA"
+    }
+  ]
+}

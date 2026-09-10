@@ -1,0 +1,24 @@
+{
+  "model": "MCG-NJU/videomae-base-finetuned-kinetics",
+  "fold": 0,
+  "hold_users": [
+    "user17",
+    "user22",
+    "user4",
+    "user6"
+  ],
+  "train_items": 2772,
+  "valid_segments": 692,
+  "held_segment_correct": 361,
+  "held_segment_accuracy": 0.5216763005780347,
+  "harn_mc_n": 87,
+  "harn_mc_correct": 83,
+  "harn_mc_accuracy": 0.9540229885057471,
+  "sequence_n": 66,
+  "sequence_correct": 39,
+  "sequence_accuracy": 0.5909090909090909,
+  "frames_per_window": 16,
+  "timeline_windows": 24,
+  "epochs": 3,
+  "unfrozen_blocks": 2
+}

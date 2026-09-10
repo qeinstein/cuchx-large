@@ -1,0 +1,12 @@
+{
+  "id": "toheebogunade/cuchx-takeover-inventory-20260908",
+  "title": "Cuchx Takeover Inventory 20260908",
+  "code_file": "kaggle_inventory.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "competition_sources": ["kaggriculture"]
+}

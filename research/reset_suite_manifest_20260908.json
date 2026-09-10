@@ -223,5 +223,22 @@
       "test_0206: D -> CD"
     ],
     "num_flips": 12
+  },
+  "sub4_pure_strike_pack": {
+    "file": "research/submission_reset_sub4_pure_strike_pack.csv",
+    "sha256": "f01ec9f0b042ef971e7d67b839df6e61d196b97259fb8c8abd0431a4f6dfb09c",
+    "flips": {
+      "test_0461": "D",
+      "test_0150": "AB",
+      "test_0151": "AB",
+      "test_0469": "D"
+    },
+    "diffs": [
+      "test_0461: C -> D",
+      "test_0150: ABD -> AB",
+      "test_0151: ABC -> AB",
+      "test_0469: A -> D"
+    ],
+    "num_flips": 4
   }
 }

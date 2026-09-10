@@ -1,0 +1,98 @@
+{
+  "competition": "cuhk-x-competition-large-model-track",
+  "reference": {
+    "file": "submission_097076_332of342_CHAMPION.csv",
+    "score": "332/342",
+    "public_score": 0.97076,
+    "sha256": "25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56",
+    "submission_id": 56090799,
+    "team_rank": 3
+  },
+  "slot_budget_used": 4,
+  "slot_budget_max": 4,
+  "observations": [
+    {
+      "slot": 1,
+      "probe": "E0488",
+      "artifact": "research/post332_20260908/S1_REVERT_0488.csv",
+      "sha256": "5c424b408967b7750661e495b296e1975de4599afa29fa905e6aa0d0a7d47ffd",
+      "submission_id": 56109784,
+      "status": "COMPLETE",
+      "public_score": 0.96783,
+      "public_correct": 331,
+      "public_denominator": 342,
+      "delta_vs_332": -1,
+      "implied_score_position": 4,
+      "team_best_rank_after_submission": 3,
+      "diff_vs_332": ["test_0488: C -> A"],
+      "inference": "E0488=-1; incumbent C is publicly correct on this row; d0488=+1 under the signed constraint. This does not identify private behavior."
+    },
+    {
+      "slot": 2,
+      "probe": "E0477",
+      "artifact": "research/post332_20260908/S2_REVERT_0477.csv",
+      "sha256": "02d63945c94855115c05d668c2308af30be4b702741123857ffde84e42897399",
+      "submission_id": 56109816,
+      "status": "COMPLETE",
+      "public_score": 0.96783,
+      "public_correct": 331,
+      "public_denominator": 342,
+      "delta_vs_332": -1,
+      "implied_score_position": 4,
+      "team_best_rank_after_submission": 3,
+      "diff_vs_332": ["test_0477: B -> A"],
+      "inference": "E0477=-1; incumbent B is publicly correct on this row; d0477=+1 under the signed constraint. This does not identify private behavior."
+    },
+    {
+      "slot": 3,
+      "probe": "E0506",
+      "artifact": "research/post332_20260908/S3_REVERT_0506.csv",
+      "sha256": "204b72a7b24f5b07e5acac9948b27253f218caeee3d809090fe6883ce8b18fd6",
+      "submission_id": 56109838,
+      "status": "COMPLETE",
+      "public_score": 0.97076,
+      "public_correct": 332,
+      "public_denominator": 342,
+      "delta_vs_332": 0,
+      "implied_score_position": 3,
+      "team_best_rank_after_submission": 3,
+      "diff_vs_332": ["test_0506: C -> A"],
+      "inference": "E0506=0; this row is publicly neutral under the reversion. With E0488=E0477=-1, the signed constraint forces E0519+E0501=0. This does not identify either private sign."
+    },
+    {
+      "slot": 4,
+      "probe": "decoded remaining-net-zero recovery plus 0526",
+      "artifact": "research/post332_20260908/S4_IF_REMAINING_GAIN__REVERT_0519_0501_PLUS_0526.csv",
+      "sha256": "cdb79b718d8f776ead7358e209c73f13ee1b02e2811262c96cb64cd60c5cbc66",
+      "submission_id": 56109887,
+      "status": "COMPLETE",
+      "public_score": 0.97076,
+      "public_correct": 332,
+      "public_denominator": 342,
+      "delta_vs_332": 0,
+      "implied_score_position": 3,
+      "team_best_rank_after_submission": 3,
+      "diff_vs_332": ["test_0501: B -> A", "test_0519: C -> A", "test_0526: D -> C"],
+      "inference": "The selected branch is public-neutral overall. The 0526 residual did not produce a measurable public gain in this bundle; the result does not identify private behavior or individual 0519/0501 signs."
+    }
+  ],
+  "signed_constraint": "d0488+d0477+d0506+d0519+d0501=+2; E_i=-d_i",
+  "decoded_state_after_slot_3": {
+    "E0488": -1,
+    "E0477": -1,
+    "E0506": 0,
+    "E_remaining_0519_plus_0501": 0,
+    "interpretation": "0488 and 0477 are public wins in the incumbent; 0506 is public-neutral; 0519 and 0501 have a forced aggregate reversion delta of zero. Individual signs remain unidentified."
+  },
+  "final_selection": {
+    "branch": "S4_IF_REMAINING_GAIN",
+    "artifact": "research/post332_20260908/S4_IF_REMAINING_GAIN__REVERT_0519_0501_PLUS_0526.csv",
+    "sha256": "cdb79b718d8f776ead7358e209c73f13ee1b02e2811262c96cb64cd60c5cbc66",
+    "diff_vs_332": ["test_0501: B -> A", "test_0519: C -> A", "test_0526: D -> C"],
+    "reason": "The pair reversion is public-net-zero by the exact signed constraint; 0526 is the strongest surviving independent residual. The rejected 0483+0526 pair is correlated low-confidence research-only and not expected to dominate this branch."
+  },
+  "best_public_score": "332/342",
+  "best_artifact": "submission_097076_332of342_CHAMPION.csv",
+  "cycle_complete": true,
+  "unused_kaggle_slots_after_cycle": 1
+}
