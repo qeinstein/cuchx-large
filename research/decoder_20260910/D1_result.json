@@ -1,0 +1,13 @@
+{
+  "slot": "D1",
+  "probe": "test_0519 C->A vs 332",
+  "artifact": "research/decoder_20260910/D1_PROBE_0519_C_to_A.csv",
+  "sha256": "40f59896dedd3622122424aeba3c163dc4894a35b28866a44f494d9bb190ec49",
+  "submission_id": 56140238,
+  "status": "COMPLETE",
+  "public_score": 0.97076,
+  "public_correct": 332,
+  "delta_vs_332": 0,
+  "inference": "E0519=0: 0519 private or public truth=B; hold C. d0501=0, E0461=0 via gamble. Cohort-3 batch forces exactly one public win in {0452,0459}.",
+  "subs_remaining_today": 3
+}

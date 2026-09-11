@@ -1,0 +1,13 @@
+{
+  "slot": "E1",
+  "probe": "test_0526 D->C singleton vs 332",
+  "artifact": "research/decoder_20260910/E1_FLIP_0526_D_to_C.csv",
+  "sha256": "fc386cb51497729ba65682928acc279bf11b7e968cbfdeaa26b9f576a2b956a7",
+  "submission_id": 56140518,
+  "status": "COMPLETE",
+  "public_score": 0.97076,
+  "public_correct": 332,
+  "delta_vs_332": 0,
+  "inference": "e0526=0; via S4 e0501=0. 0501 not public-right (excludes W1); 0501 private or public-truth-C. 0526 private or public-truth-A/B. Both dead as tested directions; third-options are public-freerolls but private-risks.",
+  "subs_remaining_today": 2
+}

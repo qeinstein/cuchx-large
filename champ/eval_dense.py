@@ -29,9 +29,21 @@ def onsets(lp, names, smooth=5):
     return out
 
 
-def run(epochs=40, nfold=5):
+def run(epochs=40, nfold=5, only_fold=None):
     tr, te, meta = load_all()
     items = D.build_dense(meta)
+    try:
+        D._IMU = None
+    except Exception:
+        pass
+    import gc
+    gc.collect()
+    stride = int(os.environ.get('CHAMP_DENSE_STRIDE', 1))
+    if stride > 1:
+        for it in items:
+            it['X'] = it['X'][::stride]
+            it['F'] = it['F'][::stride]
+            it['y'] = it['y'][::stride]
     byuser = {}
     for it in items:
         byuser.setdefault(it['user'], []).append(it)
@@ -47,6 +59,8 @@ def run(epochs=40, nfold=5):
     per = []
     allpred = {}
     for fi, hold in enumerate(folds(users, nfold)):
+        if only_fold is not None and fi != only_fold:
+            continue
         trn = [it for it in items if it['user'] not in hold]
         tst = [it for it in items if it['user'] in hold]
         model = D.train_dense(trn, epochs=epochs, seed=fi, verbose=False)
@@ -75,9 +89,12 @@ def run(epochs=40, nfold=5):
     pp = pres_tp / max(1, pres_tp + pres_fp); rr = pres_tp / max(1, pres_tp + pres_fn)
     print(f'  segment presence  P={pp:.3f} R={rr:.3f} F1={2*pp*rr/max(1e-9,pp+rr):.3f}')
     print(f'  SEQUENCE exact order (onset centroid, no learning) {sq_c}/{sq_n} = {sq_c/max(1,sq_n):.4f}')
-    np.save(os.path.join(ROOT, 'champ', 'dense_oof.npy'), allpred, allow_pickle=True)
+    tag = '' if only_fold is None else f'_f{only_fold}'
+    np.save(os.path.join(ROOT, 'research', 'final_video_20260910',
+                         f'dense_oof{tag}.npy'), allpred, allow_pickle=True)
     return allpred
 
 
 if __name__ == '__main__':
-    run(epochs=int(sys.argv[1]) if len(sys.argv) > 1 else 40)
+    run(epochs=int(sys.argv[1]) if len(sys.argv) > 1 else 40,
+        only_fold=int(sys.argv[2]) if len(sys.argv) > 2 else None)
