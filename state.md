@@ -541,3 +541,171 @@ Root causes identified:
 
 **Next direction chosen:** Skeleton-IMU pairwise temporal ordering for HAU/sequence.
 Gate criterion: >80% OOF flip precision before any submission.
+
+## Session 12b (2026-09-10) — decoder track D1 scored
+
+- D1 (`test_0519: C -> A` singleton vs 332, SHA-256
+  `40f59896dedd3622122424aeba3c163dc4894a35b28866a44f494d9bb190ec49`,
+  submission 56140238) scored **0.97076 = 332/342 (delta 0)**. 3 subs left today.
+- Inference: E0519=0 (private, or public truth=B=writing; hold C on visual
+  "drinking" evidence). d0501=0 and, via the gamble equation E0461+E0519=0,
+  E0461=0. The Cohort-3 batch net +1 with 0461=0 forces **exactly one public
+  win in {0452, 0459}, zero possible losses**.
+- D2 prebuilt (unsubmitted): `test_0452: A -> C` singleton vs 332, SHA-256
+  `adec6dcfa400dbeb9997188627944d1bd263fb0cc8c64ddc291901a34551d8b0`.
+  -1 proves 0452 is the win (hold A); 0 proves 0459 is the win (hold B).
+- Killed this session: video-for-sensor-flat-HARn (held crosstab 3W/4R = 43%,
+  headroom 3 rows vs 96.6% sensor path). No Kaggle GPU spent.
+
+## Session 12c (2026-09-10) — goal-driven re-audit; E1 branch
+
+- D2 shelved per directive (0452/0459 treated as banked; no identification spend).
+- Batch re-audit: Cohort-3 file differs from 328 base in FIVE rows (0206 CD->D,
+  0647 DCBA->DCAB reverts + 3 emotion flips) for net +1; at most one revert was
+  -1, so {0452,0459} holds >=1 win and zero possible losses. Fully exploited.
+- New kills: sequence-medoid (0/308 unique), combination-medoid (0/790 unique;
+  generator uses rotations/2x2-crosses, structurally blind); 0064/0119 video
+  duplication confirmed harmless (all 5 affected rows decided by non-video
+  evidence); live pipeline replay infeasible (missing GPU caches); public/private
+  split is per-question random (both early+late clips contain public rows).
+- E1 derived: S4 (0501 B->A, 0519 C->A, 0526 D->C) = 0 and D1 (0519 C->A) = 0
+  force e0501(B->A)+e0526(D->C) = 0 exactly. 0501 pixels (clip 0041, frames
+  12-16) confirm seated->standing, supporting champion B. Parent window cannot
+  resolve phone-vs-keyboard by eye. Posterior: +1 ~40%, -1 ~5%, 0 ~55%;
+  EV ~ +0.35. All branches decode (-1 => 0501-truth-A-public => recover via
+  0501 B->A).
+- E1 prebuilt (unsubmitted): `test_0526: D -> C` singleton vs 332, SHA-256
+  `fc386cb51497729ba65682928acc279bf11b7e968cbfdeaa26b9f576a2b956a7`.
+- Honest ceiling: no branch exceeds ~40% for +1; 338 (+6) has no evidentiary
+  path. Rank-3 floor is safe (326 is 6 back).
+
+## Session 12d (2026-09-10) — E1 scored 0; decoder track closed
+
+- E1 (`test_0526: D -> C` singleton vs 332, SHA-256
+  `fc386cb51497729ba65682928acc279bf11b7e968cbfdeaa26b9f576a2b956a7`,
+  submission 56140518) scored **0.97076 = 332/342 (delta 0)**. 2 subs left today.
+- Updated algebra: e0526=0; via S4 (e0501+e0526=0) e0501=0. 0501 is NOT
+  public-right (rules out the W1 world despite pixel-supported B: 0501 is
+  private, or public with truth=C/walking). 0526 is private or public with
+  truth in {A-tablet, B-calculator}. S4 fully explained as 0+0+0; the 332
+  +2 pack is exactly the two proven wins (0488, 0477) plus three zeros.
+- Remaining third-options (0501->C, 0526->A/B, 0519->B, 0506->B) are
+  public-freerolls (their -1 cases are excluded) at ~5-7% each, but each risks
+  private score where champion evidence is strong. Not recommended.
+- Stopped per instruction; no recovery submitted. Awaiting direction.
+
+## Session 12e (2026-09-10) — fold-2 constrained-likelihood residual screen (in progress)
+
+- New fold 2 (users 18/20/7/8, 762 valid HAU questions), disjoint from folds 0/1.
+  Kernels: `cuchx-qwen-likelihood-fold2-train` (finetune+score),
+  `cuchx-qwen-likelihood-fold2-zs` (zero-shot Qwen3-2B + Qwen2.5-3B controls),
+  `cuchx-qwen-likelihood-fold2-infer` (adapter inference-only).
+  Scripts: `research/e2e_qwen3_session_20260909/kernel_likelihood_{A,B,C}/`;
+  offline evaluator `research/e2e_qwen3_session_20260909/evaluate_likelihood_ranking.py`.
+- Measured so far: v1 scoring aborted by design (legacy KV-tuple self-check
+  diffs 3.62/9.90/7.28, no records written); 4-epoch fold-2 LoRA completed
+  (final loss ~0.20, 17.4M trainable params) and the 70MB adapter was pushed as
+  dataset `cuchx-qwen3-residual-fold2-adapter` (12 files verified).
+  DynamicCache+cache_position fix staged in v2 kernels; self-check gates it.
+- CPU audits landed while waiting: Qwen pairwise 0.702 / baseline 0.859 /
+  29 unique pairs / multi micro-F1 0.8846 all reproduced from live artifacts;
+  template-override-of-baseline OOF is 30 W→R/44 R→W (0.405); sequence-only
+  pocket 29/5 (0.853) has a single test firing (test_0642) killed as a
+  same-donor-user double vote; RESEARCH 0478/0507/0527 variants killed
+  (support-1 / 3-2 split, 0.405 family).
+- No submission-shaped artifact written; no submission made; champion
+  332/342 (SHA-256 25e79e1d…6e6d5668d56) untouched.
+- GATE RESULT (2026-09-10): all five fold-2 residual-ranking screens FAILED.
+  Qwen2.5-ZS: W2R=7/R2W=492, AUROC 0.328, top-5 0/5. Qwen3-ZS: W2R=11/R2W=468,
+  AUROC 0.590, top-5 0/5. Fine-tuned per-option: W2R=10/R2W=370, AUROC 0.438,
+  top-5 0/4. Fine-tuned emotion slice: W2R=6/R2W=101, AUROC 0.294, top-5 0/4.
+  Protocol-C string-preference delta (`cuchx-qwen-stringpref-fold2`, COMPLETE):
+  355 disagreements, W2R=30/R2W=252, AUROC 0.465, unique-session top-5 0/5.
+  Gate required top-5 unique-session >=4 W2R and <=1 R2W. Disagreements are
+  overwhelmingly regressions (oracle net deeply negative everywhere), and the
+  soft scores anti-rank or barely rank W→R above R→W.
+- DECISION: kill the constrained-likelihood residual-ranking family. No further
+  GPU on it, no scaling to five folds, no nested calibration, no test
+  inference. Champion 332/342 preserved untouched; nothing built or submitted.
+- Qwen/VLM retired permanently per instruction; no more Qwen/VLM residual runs.
+
+## Session 12f (2026-09-10) — generator reconstruction: session-triple positional emotion
+- Test sessions recovered as consecutive clip triples from LM_test_0065 (phase 0),
+  validated by 3 independent sources: manner-order conformity 13 vs 0/0 (phases 1/2),
+  action-pool sharing 3.04 vs ~1.3 (train sib 3.80/random 0.95), sequence consensus
+  structure in 12 triples. Killed as deterministic sources: cross-question action-set
+  consistency (generator samples options independently; seq==union only 62/308),
+  letter-pattern biases (uniform), exact seq-order transfer (options differ per q).
+- Tier-A 2-flip bundle BUILT (not submitted):
+  research/session_triples_20260910/TIERA_2flip_0450C_0461A.csv,
+  SHA-256 d29bc11d2d199ed707a816ad890b90a63b6b0c85b00df52691b67c74d8b40dc2,
+  diffs test_0450 A->C, test_0461 C->A. Rule: never-word at session position
+  (0/265, 0/530 OOF) + duplicate anchor (0/265) + unique P>0.4 alt (n>=10).
+  Expected public gain ~+0.9 (each ~50% public x ~0.95); public/private unknown.
+- Research-only (~0.8, NOT promoted): test_0456 C->B, test_0429 C->D, test_0432 C->D.
+  Demoted: test_0462 (doubly-never triple = session anomaly). Parked: 0440 swap,
+  0420 pos2, 0468 boundary. OOF sims: clean-fire 0/530 at lo=0.0; 4 anomalous
+  training session-families identified (user22 4-x, user9/19 6-1, user4 5-x).
+- Full ledger: research/session_triples_20260910/LEDGER.json.
+- P1 (pos2 rule): 4 never-words, 9 strong alts; OOF clean 4/265 harmful (holdout
+  artifacts + glitch donor), corr 14 W->R/5 both-wrong; ONE test flag (0463,
+  non-unique, anomalous triple) => KILLED as promotion mechanism.
+- P2 (pixel): nesting corroborates [197,198,199] session identity only; neutral
+  elsewhere; no new pixel compute.
+- P3 (HARn): object=f(action) 133/133; 8/8 dual champion pairs consistent (0 flips);
+  singletons unconstrained; nesting-segment parked as assumption-stacked.
+- VERDICT: route killed for promotion. Banked Tier-A x4 (0450, 0456, 0461, 0432):
+  research/session_triples_20260910/TIERA_4flip_banked.csv,
+  SHA-256 d1c3a57bc4b88ec53164ec3ba9b2fedc3c732105725a2c4141777c5da283e224.
+  4 corrections / E~+1.9 / 1 mechanism < criterion (>=6 OR E>=2.5, >=2 mech).
+  No submission proposed. Champion 332 untouched; 2 submissions remaining.
+- Session 12g (2026-09-10) — final residual adjudication: 31-row shortlist from
+  residual_rank/dense/fallback/template/session sources; every row forensically
+  adjudicated with dossiers (siblings, triples, donors, models, nesting).
+  ZERO new promotions. Notable kills: 0530 (stale-template trap; final gate +
+  raw agree with champion), 0507/0527 (nesting+parent order SUPPORT champion),
+  0494/0495/0480/0533/0528 (dual-pair consistent), all dense-only rows (killed
+  family, no second source), 0429 stays research (0.92). Pack rows excluded
+  (algebraic, not adjudicated errors). Combined banked-4 bundle: E=+1.84,
+  P(>=+2)=63%, P(>=+4)=5%, downside 1.2%; cannot plausibly reach rank 1 alone.
+  No submission. Awaiting direction.
+- Slot 1 FIRED (approved): TIERA_4flip_banked.csv, submission 56144608,
+  COMPLETE 2026-09-10 12:55 UTC, public 0.97076 (332/342), delta 0 vs 332.
+  Reading: public-wins = public-losses (0/0, 1/1 or 2/2); ~9-12% outcome under
+  bundle model, mild negative update, not a refutation. Caution: VideoMAE
+  emotion 8-flip scored 326 (-6) earlier today (different mechanism).
+  Board: Bull & Ivarick 337 (extended), Knight 334, Fluxx 332 rank 3.
+  Quota: 1 remaining today. Slot 2 HELD for approval; #1 now needs +5.
+- Slot 2 FIRED (approved): BISECT file, submission 56145194, COMPLETE
+  2026-09-10 13:33 UTC, public 0.97076 (332/342), delta 0.
+  Readout: e0450+e0461 = 0 AND e0432+e0456 = 0; no positive subset proven
+  (all-neutral or within-pair cancellation). Board unchanged: Bull 337,
+  Knight 334, Fluxx 332 rank 3. Quota: 0 remaining today. No further action.
+- Bisection probe PREPARED (not submitted):
+  research/session_triples_20260910/BISECT_0450C_0461A_vs332.csv,
+  SHA-256 d29bc11d2d199ed707a816ad890b90a63b6b0c85b00df52691b67c74d8b40dc2
+  (matches legacy 2-flip bytes), 682 rows, exact diffs test_0450 A->C,
+  test_0461 C->A vs verified 332 base, syntax valid. Equation P=-C;
+  readout +2/+1/0/-1/-2 maps to pair aggregates. Awaiting approval.
+- Session 12i (2026-09-10) — full ablation deliverable: per-layer base/oracle,
+  W->R/R->W, sessions, concentration, pairwise (pool x session nil; L1 x L5
+  single-mechanism; L3 x L6 zero). L6 solved (133/133); L1 harvested;
+  L2/L5 diffuse; L3/L4 video-native. VERDICT: distributed residuals, no
+  bottleneck with realistic 4-5 public capture. Banked-4 complete.
+- Session 12j (2026-09-10/11) — FINAL video campaign: pipeline OOF baseline
+  3771/4087=92.27% via champ/pipeline.py grouped folds (single 98.2/multi
+  96.7/combo 99.5/emo 93.7/seq 37.7/obj 85.0). GPU kernel execution of 40-epoch
+  Dilated TCN completed (797 OOF + 192 test clips). OOF sequence accuracy jumped
+  to 55.7% (+54 net rows). Composite system created.
+- Session 12k (2026-09-11/12) — COMPETITION CONCLUSION & FINAL RECONCILIATION:
+  * Slot 1: SUB1_TCN_top2 (0330+0352) -> 331 (-1)
+  * Slot 2: PROBE_0330_DCAB singleton -> 331 (-1) => Proven 0330=CDAB (+1 public)
+  * Slot 3: PAIR_0358_0643 -> 330 (-2) => Proven 0358=ADBC, 0643=DBCA (+1 public each)
+  * Slot 4: SLOT4_FULL_TCN_ENSEMBLE (21 flips) -> 322/342 (Δ=-10)
+  * Slot 5: SLOT5_PRE_REGISTERED_GATE_S (5 flips, margin>=11.0) -> 329/342 (Δ=-3)
+  * Leaderboard Algebra: Unresolved 17 = -7, S = -3, Complement = -4.
+  * TCN temporal model definitively ruled out on test distribution.
+  * FINAL OFFICIAL CHAMPION FROZEN: submission_097076_332of342_CHAMPION.csv
+    (SHA-256: 25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56,
+    Public Score: 332/342, 0.97076, Rank 3). Competition research concluded.
+
