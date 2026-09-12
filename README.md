@@ -8,7 +8,7 @@ Privacy-preserving Visual Question Answering (VQA) and multimodal activity reaso
 - **Protected Final Champion**: `submission_097076_332of342_CHAMPION.csv`
 - **Public Score**: **`0.97076`** (**332 / 342** correct public questions).
 - **Leaderboard Standing**: Rank 3 worldwide (Leaders: #1 Bull & Ivarick 337/342, #2 Knight of Favonius 334/342, #3 Fluxx 332/342).
-- **Status**: **Frozen & Concluded**.
+- **Status**: **Official champion frozen; private-generalization research continues.**
 
 ---
 
@@ -21,7 +21,7 @@ Privacy-preserving Visual Question Answering (VQA) and multimodal activity reaso
 - **Kaggle Submission Ref**: `56090799` (`SubmissionStatus.COMPLETE`, Score: `0.97076`).
 
 ### Why It Is Frozen
-Across extensive late-stage research campaigns spanning multimodal foundation models, deep video-native neural networks, session-level protocol decoders, and algebraic leaderboard probes, every post-332 intervention either resulted in net-zero public movement or caused confirmed public regressions. The 332 champion represents the maximum mathematically verified, structurally sound hypothesis space for the hidden test set.
+Across extensive late-stage research campaigns spanning multimodal foundation models, deep video-native neural networks, session-level protocol decoders, and algebraic leaderboard probes, every post-332 intervention either resulted in net-zero public movement or caused confirmed public regressions. The 332 artifact remains the best scored official checkpoint; it is protected while new models are held to subject-disjoint OOF and test-stability gates before promotion.
 
 ---
 
@@ -109,6 +109,21 @@ The following extensive research families were rigorously investigated, tested, 
 | **Session-Triple Emotion Decoding** | Emotion triplets across 3-trial sessions could be solved algebraically via position templates. | 4 Tier-A flips tested via bisection (`TIERA_4flip_banked.csv` and `BISECT_0450C_0461A_vs332.csv`). | Scored **0.97076** ($\Delta = 0$). | Proved that the 4 candidate flips were public-neutral; closed the session-triple search space. |
 | **Dilated TCN Temporal Model** | 40-epoch frame-level dilated TCN over skeleton + IMU kinematics would produce superior sequence orderings. | High raw OOF sequence gain (37.7% $\to$ 55.7%, +54 rows). | **Slot 4 scored 0.94152 ($\Delta = -10$)**, **Slot 5 scored 0.96198 ($\Delta = -3$)**, singletons were $-1$. | Centroid temporal estimates from TCN lacked cross-clip contextual constraints and degraded public sequence answers that the champion already solved. |
 
+## Post-Champion Private-Generalization Audit (2026-09-12)
+
+The public leaderboard is not being used as the optimization target. New mechanisms are compared against the grouped, subject-disjoint OOF baseline and require stability across held-out fits before a test candidate can be promoted.
+
+| Branch | Measured evidence | Decision |
+| :--- | :--- | :--- |
+| **Stable pairwise sequence decoder** | Exact sequence OOF: **185/308** versus **116/308** for the current final-video baseline. Five stable test flips were packaged; submission `56192056` remained **332/342 (0.97076)** publicly. | Keep as research artifact; no private improvement is established. |
+| **Positive/unknown action-pool decoder** | Complete OOF action rows: **2,376/2,408**, only **+1** versus the 2,375-row baseline; combination **+2**, multi **-1**, single **0**. The adjacent-pair audit was **-43** rows. No test change reached the required 4/5-fit stability gate (`test_0165` reached 3/5; `test_0206` 2/5). | **Do not submit.** Candidate is preserved for audit only. |
+| **Direct clip/action head** | Using surviving compact dense statistics, every tested multi-threshold arm was strongly below baseline; the best total delta was approximately **-1,121 rows**. | Retired. |
+| **Dense2 segment/MIL/ranking model** | A speed pilot (stride 4, 64 channels) reached about **29.3% frame accuracy after two CPU epochs** and was stopped before a promotion-grade run. | Not falsified; next credible experiment requires a complete GPU run and full grouped OOF evaluation. |
+
+Artifacts and exact measurements are recorded in [`research/FINDINGS_session18_private_generalization_20260912.md`](research/FINDINGS_session18_private_generalization_20260912.md). The unsent gated PU candidate is [`research/final_video_20260910/submission_pool_pu_complete3_gate_v1.csv`](research/final_video_20260910/submission_pool_pu_complete3_gate_v1.csv); it changes only `test_0165` (`CD` to `D`) and remains unsubmitted because its fit stability is insufficient.
+
+The next recommended order is: (1) recover or regenerate the raw dense-logit cache, (2) run Dense2 across all five subject-disjoint folds with a small pre-registered hyperparameter grid, (3) compare its decoded answers against the champion and OOF composite, and (4) promote only a stable, multi-source candidate. No public submission is justified by the current evidence.
+
 ---
 
 ## 5. Proven Submission Algebra Ledger
@@ -156,6 +171,11 @@ Every probed test row and its measured public leaderboard effect are codified be
 | **OOF Baseline Audit** | [`research/final_video_20260910/oof_pipeline_base.csv`](file:///home/fluxx/Workspace/cuchx-large/research/final_video_20260910/oof_pipeline_base.csv) | — | Matched 4,087-row cross-validation baseline (92.27%) |
 | **Slot 4 TCN Candidate** | [`research/final_video_20260910/SLOT4_FULL_TCN_ENSEMBLE.csv`](file:///home/fluxx/Workspace/cuchx-large/research/final_video_20260910/SLOT4_FULL_TCN_ENSEMBLE.csv) | `0494b30c0db40323e240c253c3b04f3893a0974b871fdb00bee96c46fd989f57` | Complete 21-flip TCN candidate (Scored 0.94152, $\Delta = -10$) |
 | **Slot 5 Gated Candidate** | [`research/final_video_20260910/SLOT5_PRE_REGISTERED_GATE_S.csv`](file:///home/fluxx/Workspace/cuchx-large/research/final_video_20260910/SLOT5_PRE_REGISTERED_GATE_S.csv) | `ca322d95c195bc81894cea94e15fe90095cf37c9a94846908c9000b1e07ee833` | 5-flip pre-registered confidence gate (Scored 0.96198, $\Delta = -3$) |
+| **Stable Sequence Candidate** | [`research/final_video_20260910/submission_seqpair_stable_iter500_v1.csv`](file:///home/fluxx/Workspace/cuchx-large/research/final_video_20260910/submission_seqpair_stable_iter500_v1.csv) | — | Five fit-stable sequence flips; submission `56192056`, public score unchanged at 0.97076 |
+| **PU Pool Decoder** | [`champ/pool_pu.py`](file:///home/fluxx/Workspace/cuchx-large/champ/pool_pu.py) | — | Positive/unknown action-pool research decoder; OOF +1 action row, pair audit -43; not promoted |
+| **PU OOF Audit** | [`research/pool_pu_oof_iter350.csv`](file:///home/fluxx/Workspace/cuchx-large/research/pool_pu_oof_iter350.csv) | — | Five-fold comparison of the PU decoder against the final-video baseline |
+| **PU Test Stability Audit** | [`research/pool_pu_test_stability.csv`](file:///home/fluxx/Workspace/cuchx-large/research/pool_pu_test_stability.csv) | — | Five-fit test-side stability audit; no change met the 4/5 gate |
+| **Dense2 Research Runner** | [`champ/run_dense2.py`](file:///home/fluxx/Workspace/cuchx-large/champ/run_dense2.py) | — | Opt-in stride/channel/loss-weight controls for the next GPU experiment |
 
 ---
-*Technical audit and competition reconciliation completed on September 12, 2026.*
+*Official competition reconciliation completed; private-generalization research ledger updated on September 12, 2026.*

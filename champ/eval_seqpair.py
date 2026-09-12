@@ -17,7 +17,19 @@ def main(nfold=5):
     segs = SP.build_segment_data(meta)
     users = sorted(tr.user.dropna().unique())
     seq = tr[(tr.source == 'HAU') & (tr.category == 'sequence')]
-    base = pd.read_csv(os.path.join(ROOT, 'champ', 'oof_final.csv'))
+    # The older champ/oof_final.csv is not part of the current checkout.  Prefer it
+    # when present for historical compatibility, otherwise use the committed OOF
+    # produced by the current final-video base architecture.
+    base_candidates = [
+        os.environ.get('CHAMP_OOF_BASE'),
+        os.path.join(ROOT, 'champ', 'oof_final.csv'),
+        os.path.join(ROOT, 'research', 'final_video_20260910', 'oof_pipeline_base.csv'),
+        os.path.join(ROOT, 'champ', 'oof_e2e_baseline_20260909.csv'),
+    ]
+    base_path = next((p for p in base_candidates if p and os.path.exists(p)), None)
+    if base_path is None:
+        raise FileNotFoundError('No OOF baseline found; set CHAMP_OOF_BASE to a valid CSV')
+    base = pd.read_csv(base_path)
     base = dict(zip(base.qa_id, base.pred))
 
     out = []

@@ -241,7 +241,10 @@ def fit_pair_model(Xd, y):
     Xd = Xd.loc[:, Xd.notna().any()]
     from sklearn.ensemble import HistGradientBoostingClassifier
     clf = HistGradientBoostingClassifier(
-        max_iter=500, learning_rate=0.06, max_depth=6, l2_regularization=1.0,
+        # Keep the original setting for reproducibility, but allow constrained
+        # runners to perform the same audit without exhausting their memory/time.
+        max_iter=int(os.environ.get('CHAMP_SEQPAIR_MAX_ITER', '500')),
+        learning_rate=0.06, max_depth=6, l2_regularization=1.0,
         categorical_features=[Xd.columns.get_loc('cls_i'), Xd.columns.get_loc('cls_j')],
         random_state=0)
     clf.fit(Xd.to_numpy(float), y)

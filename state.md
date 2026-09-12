@@ -12,6 +12,11 @@ Submitted once with explicit user authorization on 2026-09-08. The latest measur
 score is 336/342 (2026-09-09); our best remains 332/342. New post332 artifacts use this scored champion;
 historical takeover subset files still use the 330 base and must not be confused with it.
 
+The official champion remains protected while private-generalization research continues. The
+stable pairwise sequence candidate was submitted as 56192056 and also scored 332/342; no
+private improvement is established. The later PU pool candidate was not submitted because
+its test-side fit stability failed the 4/5 promotion gate.
+
 Post-332 autonomous research: all 197 local test depth videos match official source ZIP
 members by size+CRC. 0483 is demoted after exact parent/child timing inspection and a
 subject-disjoint sitting-vs-typing probe (209/231 OOF; target p(typing)=.435). 0526 remains
@@ -707,5 +712,44 @@ Gate criterion: >80% OOF flip precision before any submission.
   * TCN temporal model definitively ruled out on test distribution.
   * FINAL OFFICIAL CHAMPION FROZEN: submission_097076_332of342_CHAMPION.csv
     (SHA-256: 25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56,
-    Public Score: 332/342, 0.97076, Rank 3). Competition research concluded.
+    Public Score: 332/342, 0.97076, Rank 3). Official competition artifact frozen;
+    private-generalization research continues under the gates recorded below.
 
+## Session 18 (2026-09-12) — private-generalization audit
+
+This pass optimized for hidden/private generalization rather than public leaderboard movement.
+The grouped subject-disjoint final-video baseline is 3,771/4,087 overall, with 2,375/2,408
+action rows; the composite audit reaches 3,834/4,087. All numbers below are OOF or fit-
+stability measurements and are not private-score claims.
+
+- **Stable pairwise sequence decoder:** 1,619/1,830 pairwise precedence accuracy and
+  185/308 exact sequence accuracy versus 116/308 baseline. Five 4/5-stable test flips were
+  packaged and submitted as `56192056`; the public result remained 332/342. Keep as a
+  research artifact, not as evidence of private gain.
+- **Positive/unknown pool decoder:** aligned HARn segments are high-precision but incomplete
+  (exact segment pool = selected QA pool in 172/267 aligned sessions; segment subset in
+  256/267). The full PU OOF is 2,376/2,408 action rows versus 2,375 baseline (`+1`), while
+  adjacent-pair thinning is `-43`. Test stability found only `test_0165` in 3/5 fits and
+  `test_0206` in 2/5; no change met 4/5. The valid candidate
+  `research/final_video_20260910/submission_pool_pu_complete3_gate_v1.csv` remains unsent.
+- **Direct clip/action head:** compact dense-statistics audit was strongly negative at every
+  threshold; best total delta was approximately `-1,121` rows. Retired.
+- **Dense2:** the remaining credible model route combines segment CE, clip-level MIL, and
+  sequence ranking. A stride-4/64-channel CPU speed pilot reached about 29.3% frame accuracy
+  after two epochs and was stopped as underfit/slow, not falsified. The next meaningful run
+  is a complete five-fold GPU OOF audit with a small pre-registered grid.
+
+New code and audit artifacts are listed in
+`research/FINDINGS_session18_private_generalization_20260912.md`. The working tree also
+contains the sequence/PU/Dense2 changes and scripts as uncommitted research work; no
+unrelated user changes were overwritten.
+
+Storage state at this update: the two large thermal arrays and `.cache` from the earlier
+144,524 KiB safe-cleanup estimate are already absent. Remaining measured regenerable items
+include `research/thermal_mnv3_clip_features_20260906.npz` (5,928 KiB), `champ/torch_cache`
+(10,068 KiB), and 1,644 KiB of Python caches. The raw dense-logit caches are absent;
+compact `research/final_video_20260910/dense_oof_f*.npy` statistics remain.
+
+Recommended order: recover/regenerate raw dense logits; run Dense2 across all five subject-
+disjoint folds; decode through existing constraints; compare with the champion and composite;
+promote only a multi-source candidate with positive OOF evidence and 4/5 test stability.
