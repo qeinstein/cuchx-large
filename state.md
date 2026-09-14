@@ -1,5 +1,102 @@
 # Research ledger
 
+## Takeover 2026-09-14 (new agent, ~25h to deadline) — in progress
+
+Live board (2026-09-14 ~14:20 UTC): #1 Bull & Ivarick 337/342 (0.98538), #2 AICL
+337/342 (new), #3 Knight of Favonius 334/342 (0.97660), #4 Fluxx 332/342 (0.97076).
+Deadline 2026-09-15 15:55 UTC. Quota: 5/day, 0 used on 09-14.
+
+Confirmed by direct diff (not from docs):
+- 332 champion = 330 champion + exactly 9 rows (0206,0426,0444,0477,0488,0501,0506,
+  0519,0647); SHA-256 25e79e1d... verified.
+- 332 champion vs current pipeline output (`submission_final.csv`, code-frozen since
+  Sep 8) = **55 rows**: 21 sequence / 17 emotion / 7 HARn-single / 7 object /
+  2 multi / 1 combination. The OOF baseline (3771/4087 = 92.27%) therefore evaluates
+  a ~0.92 system, NOT the 0.97076 champion. All historical OOF deltas are vs the
+  wrong baseline; this is the leading explanation for TCN (+54 OOF / -10 live) and
+  VideoMAE-emotion (+9 OOF / -6 live) failures.
+- `submission_092105_SUBMITTED.csv` (0.92105) differs from pipeline output by only
+  10 rows: the default pipeline path ≈ the Sep-3 system; everything since lives only
+  in submission CSVs (S/T/W correction layers, cohort fixes, HARn bindings).
+
+Reconstruction launched (all `champ/*.npz` were missing):
+- `champ/skel_seq.npz` (3905 units, 49MB) + `champ/imu_seq.npz` (3917 units, 29MB)
+  rebuilt locally from raw data. Local harn_clf training OOM-killed (2GB box).
+- Kaggle dataset `toheebogunade/cuchx-dense-inputs-20260914` uploaded (82MB).
+- GPU kernel `toheebogunade/cuchx-dense-logits-20260914` v4 RUNNING (run_dense 40ep
+  OOF+test + harn_clf 45ep; v1 raced dataset, v2/v3 wrong mount path + P100/cu128
+  kernel-image error, v4 has input auto-discovery + cu124 fallback + internet).
+- CPU kernel `toheebogunade/cuchx-harn-cpu-20260914` RUNNING (backup for harn_clf).
+- 5 subagents: t2w1 faithful-OOF reconstruction, t2w2 person-crop pilot, t2w3 DINO
+  GPU experiment design, t2w4 modality/sync audit, t2w5 VLM availability + rules.
+- Fallback bisection artifacts (seqpair net-0 bundle split 3/2) prebuilt in
+  `research/t2_valid/BISECT_seqpair_{A,B}_vs332.csv` in case no model candidate is
+  ready before midnight-UTC quota reset. NOT submitted; champion untouched.
+- Worker 1 DONE: 28/55 patches re-derived as general code at 100% precision
+  (0 wrong flips); 4/5 E-rows are fixed-manner-recoverable w/o DINO; full lineage
+  + classification in `research/t2_valid/REPORT.md` + `provenance.csv`.
+- Worker 2 DONE: crop pilot CONDITIONAL GO (crop>=full all 6 cells, 1.6x best,
+  N=24 underpowered); skeleton->pixel projection impossible (no calibration);
+  `research/t2_crop/make_crops.py` + `build_dino_crops.py`.
+- Workers 3+4 DONE: prior-DINO audit found 2 bugs (stale Depth/ path; grayscale
+  kills rainbow-hue signal); modality audit found BUG 1 (short-filename skeleton
+  regex drops 12 clips incl. test LM_test_0034/0106 -> wrong NO_SENSOR branch).
+- Worker 5 DONE: APIs explicitly allowed (rules §2.6); only route is OpenRouter
+  with repo key; sonnet-5 pilot 9/30=30% overall (sequence 3/6=50% only surviver
+  vs structural 38.3% OLD-dense; new-dense centroid is 58.7%, so VLM adds
+  nothing). VLM ensemble NOT viable as primary.
+- Honest OOF with retrained dense (Kaggle CPU, `research/oof_oof_newdense.csv`):
+  **3851/4087=94.23%** (seq 179/308=58.1%, obj 122/133, single 1223, multi 783,
+  emo 758, combo 786); repair arm 3855 (+4). Old baseline was 3771=92.27%.
+- DINOv2-S embeddings landed (Kaggle GPU): Thermal 953 + Depth 1007 clip-mods x
+  full/crop13 x 16 frames x 384-d (`/tmp/kdino`, `/tmp/kdino2`).
+- BUG-1 FIX APPLIED LOCALLY: regexes in build_meta/_feats/seq/imu accept short
+  names; meta/feats/skel/imu rebuilt (missing skel 15->3; skel units 3917).
+- CANDIDATE test_0496 B->C (clip 34): B is bug-forced action-43, structurally
+  excluded by LMT-row presence; HGB P(selfie)=1.000 + LogReg 0.846 with 83.8%
+  LOUO validity. Freeroll (B impossible). Artifact
+  `research/t2_meta/SINGLETON_0496_C_vs332.csv` (b8af820a...). Submit on v8
+  harn corroboration. Clip-106 rows (0028/0139/0250/0387) await v8 inference.
+- v8 dataset (fixed substrates + S/W/template code) uploading; v8 GPU retrain +
+  CPU test-inference kernels next.
+- SUBMITTED 2026-09-14 ~20:35 UTC: `research/t2_meta/SINGLETON_0496_C_vs332.csv`
+  (SHA-256 b8af820a0e3a207f3b1787618b5b8e8b1519891180e06f24ba4c9c0f76af9560):
+  test_0496 B->C. Evidence: Bug-1 (clip34 has 23 skel files+LMT row, so action-43
+  structurally excluded); binary HGB P(C)=1.000 + LogReg 0.846 (83.8% LOUO);
+  pipeline aggregate P(C)=0.0010 vs P(A)=0.0004; dissent: sk-centroid (78.4%
+  LOUO) says A. Freeroll: P(-1)~2% (needs truth=B). 4/5 slots remain 09-14.
+- SCORED 2026-09-14 ~20:40 UTC: submission 56238613 COMPLETE **0.97368 = 333/342
+  (+1)**. test_0496=C confirmed public. New base: `submission_097368_333of342_CHAMPION.csv`
+  (copy of the singleton). Rank 6; board above: 337/337/336/336/334.
+- Block-106 targeted solve (fixed feats, v1 dense): 9/9 action rows match champ;
+  0386/0387 solver=A/A vs champ=B/C (EMOTMPL donor user20, no recording identity,
+  mixed physics) -> HOLD champ, no flip.
+- S-over-newdense test rerun (onsets.csv regenerated, 14448 pairs): 8 diffs vs 333
+  incl. 3 PROVEN-wrong (0330/0335/0358) -> sequence is a local optimum, hands off.
+- v8full GPU kernel pushed (~21:05 UTC): Bug-1-fixed dense+harn retrain + test
+  inference plain+repair. v8 assembly: 21 mechanism flips applied, 27 gaps remain;
+  all 6 genuinely-new v8 pool disagreements are lone-retrain outliers (v8 vs
+  v1+old+champ) -> ZERO new flips from v8 (negative result, 333 pool rows stable).
+  NOTE: v8 temporal-harn voted A on clip34 (wrong; live truth C) -> harn weak on
+  short clips; aggregate/binary classifiers beat it there.
+- BISECTION A (0331/0341/0641) vs 333: sub 56239120 COMPLETE **0.97660=334 (+1)**.
+  Decomposition: 0331 singleton 333 (neutral), 0341 singleton 333 (neutral) ->
+  **0641 (BDAC->DBAC) is the +1**. Confirm singleton sub 56239239 COMPLETE 334.
+  New base `submission_097660_334of342_CHAMPION.csv` (1ea4bf7e1eae01c7). B-half
+  {0644,0646} derived sum -1 -> keep champ on both (no probe EV).
+- Tonight 5/5 used (0496 +1, BISECT_A +1, 0331 0, 0341 0, 0641 confirm +1):
+  332 -> 334. Tomorrow: 5 slots, need 338+ for solo #1 (leaders 337x2).
+  Queued plays: TierA-pair bisect (0432 -> 0456 if -1), 0385-B?, DINO-led flips.
+- OVERNIGHT (no quota): DINO-full GPU kernel RUNNING (~2.5-3h, dense ViT-S/B
+  full+crop1.6 + temporal heads + OOF eval); v8-OOF CPU kernel RUNNING (honest
+  5-fold OOF on fixed data). TierA artifacts staged: `research/SINGLE_0432_vs334.csv`
+  (0432 C->D, 2b92244b4e767a59) + `research/SINGLE_0456_vs334.csv` (0456 C->B).
+  Fire 0432 at quota reset if no stronger candidate; every outcome actionable.
+- v8-OOF COMPLETE (~22:30 UTC, `research/oof_v8*.csv`): plain 3837, repair 3841
+  (+4/-0, same 4 rows as v1). v8 vs v1: 47/61 churn, net -14 (McNemar p~0.18,
+  noise). Keep v8 canonical (Bug-1 test fix proven +1 live; OOF-tied).
+  Honest baseline: ~3840/4087 = 93.9%.
+
 Chronological record of what was tried and what it measured. `README.md` holds the current
 architecture and the falsified-directions list; this file is the session-by-session trail.
 

@@ -6,7 +6,7 @@ import numpy as np, pandas as pd
 from concurrent.futures import ProcessPoolExecutor
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FN = re.compile(r'Color_.*_(\d{8})\.json$')
+FN = re.compile(r'Color_(?:.*_)?(\d{8})\.json$')
 
 
 def seq(d):

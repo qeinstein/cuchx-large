@@ -8,7 +8,7 @@ from concurrent.futures import ProcessPoolExecutor
 
 warnings.filterwarnings('ignore')
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FN = re.compile(r'Color_.*_(\d{8})\.json$')
+FN = re.compile(r'Color_(?:.*_)?(\d{8})\.json$')
 
 
 def _stats(x, pre):

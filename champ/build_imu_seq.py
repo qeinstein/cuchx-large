@@ -8,6 +8,7 @@ from concurrent.futures import ProcessPoolExecutor
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FN = re.compile(r'Color_(\d{4})-(\d{2})-(\d{2})_(\d{2})-(\d{2})-(\d{2})\.(\d{3})_(\d{8})\.json$')
+FN_SHORT = re.compile(r'Color_(\d{8})\.json$')
 DEVS = ['WTC', 'WTLA', 'WTRA', 'WTLL', 'WTRL']
 
 
@@ -18,16 +19,19 @@ def frame_times(d):
     fr, ts = [], []
     for f in os.listdir(p):
         m = FN.match(f)
-        if not m:
+        if m:
+            g = m.groups()
+            day = int(g[2]) + 31 * int(g[1])
+            ts.append(day * 86400 + int(g[3]) * 3600 + int(g[4]) * 60 + int(g[5]) + int(g[6]) / 1000)
+            fr.append(int(g[7]))
             continue
-        g = m.groups()
-        day = int(g[2]) + 31 * int(g[1])
-        ts.append(day * 86400 + int(g[3]) * 3600 + int(g[4]) * 60 + int(g[5]) + int(g[6]) / 1000)
-        fr.append(int(g[7]))
+        m = FN_SHORT.match(f)
+        if m:
+            fr.append(int(m.group(1))); ts.append(np.nan)
     if not fr:
         return None, None
     o = np.argsort(fr)
-    return np.array(fr)[o], np.array(ts)[o]
+    return np.array(fr)[o], np.array(ts, float)[o]
 
 
 def one(d):
@@ -37,6 +41,10 @@ def one(d):
     p = os.path.join(d, 'IMU')
     out = np.zeros((len(fr), len(DEVS) * 6), np.float32)
     if not os.path.isdir(p):
+        return d, out
+    if ts is None or not np.isfinite(np.asarray(ts, float)).any():
+        # short-filename units have frame ids but no wall-clock: IMU cannot be
+        # resampled onto the skeleton axis -> honest zeros (documented)
         return d, out
     for f in sorted(os.listdir(p)):
         if not f.endswith('.csv'):

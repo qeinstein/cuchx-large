@@ -11,6 +11,7 @@ LMT = os.path.join(ROOT, 'hf_data_manual', 'LMT_(IMU,Radar,Skeleton)')
 VIS = os.path.join(ROOT, 'hf_data_manual')
 
 FN = re.compile(r'Color_(\d{4})-(\d{2})-(\d{2})_(\d{2})-(\d{2})-(\d{2})\.(\d{3})_(\d{8})\.json$')
+FN_SHORT = re.compile(r'Color_(\d{8})\.json$')
 
 
 def skel_span(unit_dir):
@@ -20,19 +21,28 @@ def skel_span(unit_dir):
     fr, ts = [], []
     for f in os.listdir(p):
         m = FN.match(f)
-        if not m:
+        if m:
+            g = m.groups()
+            day = int(g[2]) + 31 * int(g[1])          # monotone within the release
+            sec = day * 86400 + int(g[3]) * 3600 + int(g[4]) * 60 + int(g[5]) + int(g[6]) / 1000
+            fr.append(int(g[7])); ts.append(sec)
             continue
-        g = m.groups()
-        day = int(g[2]) + 31 * int(g[1])          # monotone within the release
-        sec = day * 86400 + int(g[3]) * 3600 + int(g[4]) * 60 + int(g[5]) + int(g[6]) / 1000
-        fr.append(int(g[7])); ts.append(sec)
+        m = FN_SHORT.match(f)
+        if m:
+            # short-filename units (12 clips incl. 2 live test clips): frame ids are
+            # valid, wall-clock is absent -> f0/f1/nf recovered, t0/t1/fps stay NaN
+            fr.append(int(m.group(1))); ts.append(np.nan)
     if not fr:
         return None
-    fr = np.array(fr); ts = np.array(ts)
+    fr = np.array(fr); ts = np.array(ts, float)
     o = np.argsort(fr)
+    if np.isfinite(ts).sum() >= 2:
+        t0, t1 = float(np.nanmin(ts)), float(np.nanmax(ts))
+        fps = float((len(fr) - 1) / max(1e-6, t1 - t0))
+    else:
+        t0 = t1 = fps = np.nan
     return dict(f0=int(fr[o][0]), f1=int(fr[o][-1]), nf=len(fr),
-                t0=float(ts.min()), t1=float(ts.max()),
-                fps=float((len(fr) - 1) / max(1e-6, ts.max() - ts.min())))
+                t0=t0, t1=t1, fps=fps)
 
 
 def scan():
