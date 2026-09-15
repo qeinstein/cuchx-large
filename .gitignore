@@ -73,3 +73,12 @@ catboost_info/
 # other competitors' public kernels, kept locally as reference only
 kernel_*/
 kaggle_kernels/
+
+# ---- reproduction package artifacts (frozen; required by inference.sh) ----
+!/training_qa.csv
+!/test_qa.csv
+!champ/meta.csv
+!champ/feats.csv
+!champ/skel_seq.npz
+!champ/dense_logits.npz
+!champ/harn_clf.npz

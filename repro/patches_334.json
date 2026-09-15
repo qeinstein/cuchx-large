@@ -1,0 +1,308 @@
+[
+ {
+  "qa_id": "test_0137",
+  "pipe": "ACD",
+  "final": "AC",
+  "source": "provenance:T-block-repair/093859/multi"
+ },
+ {
+  "qa_id": "test_0146",
+  "pipe": "ABCD",
+  "final": "BCD",
+  "source": "PINNED: rebuilt pipeline regressed vs validated 090643-lineage value; keep validated"
+ },
+ {
+  "qa_id": "test_0165",
+  "pipe": "D",
+  "final": "CD",
+  "source": "PINNED: rebuilt pipeline regressed vs validated 090643-lineage value; keep validated"
+ },
+ {
+  "qa_id": "test_0205",
+  "pipe": "BC",
+  "final": "C",
+  "source": "PINNED: rebuilt pipeline regressed vs validated 090643-lineage value; keep validated"
+ },
+ {
+  "qa_id": "test_0206",
+  "pipe": "A",
+  "final": "CD",
+  "source": "provenance:MULTIMODAL-stirring/328/multi"
+ },
+ {
+  "qa_id": "test_0212",
+  "pipe": "ABC",
+  "final": "AC",
+  "source": "PINNED: rebuilt pipeline regressed vs validated 090643-lineage value; keep validated"
+ },
+ {
+  "qa_id": "test_0289",
+  "pipe": "B",
+  "final": "A",
+  "source": "provenance:T-block-repair/093859/combination"
+ },
+ {
+  "qa_id": "test_0312",
+  "pipe": "C",
+  "final": "B",
+  "source": "PINNED: rebuilt pipeline regressed vs validated 090643-lineage value; keep validated"
+ },
+ {
+  "qa_id": "test_0313",
+  "pipe": "A",
+  "final": "B",
+  "source": "PINNED: rebuilt pipeline regressed vs validated 090643-lineage value; keep validated"
+ },
+ {
+  "qa_id": "test_0330",
+  "pipe": "DCAB",
+  "final": "CDAB",
+  "source": "provenance:SEQTMPL-exact-pool/m14/sequence"
+ },
+ {
+  "qa_id": "test_0331",
+  "pipe": "ADBC",
+  "final": "DBCA",
+  "source": "provenance:S-joint-order/093859/sequence"
+ },
+ {
+  "qa_id": "test_0332",
+  "pipe": "ABCD",
+  "final": "ABDC",
+  "source": "PINNED: rebuilt pipeline regressed vs validated 090643-lineage value; keep validated"
+ },
+ {
+  "qa_id": "test_0333",
+  "pipe": "CABD",
+  "final": "CADB",
+  "source": "PINNED: rebuilt pipeline regressed vs validated 090643-lineage value; keep validated"
+ },
+ {
+  "qa_id": "test_0334",
+  "pipe": "BCDA",
+  "final": "BACD",
+  "source": "provenance:SEQTMPL-exact-pool/m14/sequence"
+ },
+ {
+  "qa_id": "test_0335",
+  "pipe": "DBAC",
+  "final": "DBCA",
+  "source": "provenance:CONSIST-mutual-inconsistency/328/sequence"
+ },
+ {
+  "qa_id": "test_0336",
+  "pipe": "BDAC",
+  "final": "BADC",
+  "source": "provenance:S-joint-order/093859/sequence"
+ },
+ {
+  "qa_id": "test_0341",
+  "pipe": "DCAB",
+  "final": "DCBA",
+  "source": "provenance:S-joint-order/093859/sequence"
+ },
+ {
+  "qa_id": "test_0343",
+  "pipe": "CADB",
+  "final": "CDAB",
+  "source": "PINNED: rebuilt pipeline regressed vs validated 090643-lineage value; keep validated"
+ },
+ {
+  "qa_id": "test_0346",
+  "pipe": "DBAC",
+  "final": "DBCA",
+  "source": "provenance:S-joint-order/093859/sequence"
+ },
+ {
+  "qa_id": "test_0347",
+  "pipe": "BCDA",
+  "final": "BADC",
+  "source": "provenance:S-joint-order/093859/sequence"
+ },
+ {
+  "qa_id": "test_0350",
+  "pipe": "DBCA",
+  "final": "DCBA",
+  "source": "provenance:S-joint-order/093859/sequence"
+ },
+ {
+  "qa_id": "test_0351",
+  "pipe": "ADBC",
+  "final": "DABC",
+  "source": "provenance:S-joint-order/093859/sequence"
+ },
+ {
+  "qa_id": "test_0352",
+  "pipe": "DBAC",
+  "final": "ABDC",
+  "source": "provenance:S-joint-order/093859/sequence"
+ },
+ {
+  "qa_id": "test_0353",
+  "pipe": "ADBC",
+  "final": "CDBA",
+  "source": "provenance:SEQTMPL-exact-pool/m14/sequence"
+ },
+ {
+  "qa_id": "test_0359",
+  "pipe": "DABC",
+  "final": "DBAC",
+  "source": "provenance:S-joint-order/093859/sequence"
+ },
+ {
+  "qa_id": "test_0385",
+  "pipe": "D",
+  "final": "A",
+  "source": "provenance:USERTMPL-paired-cohort/326max/emotion"
+ },
+ {
+  "qa_id": "test_0386",
+  "pipe": "A",
+  "final": "B",
+  "source": "provenance:EMOTMPL-donor-cohort/m14/emotion"
+ },
+ {
+  "qa_id": "test_0387",
+  "pipe": "A",
+  "final": "C",
+  "source": "provenance:EMOTMPL-donor-cohort/m14/emotion"
+ },
+ {
+  "qa_id": "test_0426",
+  "pipe": "C",
+  "final": "B",
+  "source": "provenance:COHORT2-withholding/332/emotion"
+ },
+ {
+  "qa_id": "test_0431",
+  "pipe": "D",
+  "final": "A",
+  "source": "provenance:T-block-repair/093859/emotion"
+ },
+ {
+  "qa_id": "test_0436",
+  "pipe": "A",
+  "final": "C",
+  "source": "provenance:E-emo-dino-feats/092105/emotion"
+ },
+ {
+  "qa_id": "test_0443",
+  "pipe": "D",
+  "final": "B",
+  "source": "provenance:COHORT2+PHYSICS+probe/330/emotion"
+ },
+ {
+  "qa_id": "test_0444",
+  "pipe": "C",
+  "final": "B",
+  "source": "provenance:COHORT2-withholding/332/emotion"
+ },
+ {
+  "qa_id": "test_0459",
+  "pipe": "C",
+  "final": "B",
+  "source": "provenance:COHORT3-user1-T2withheld/329/emotion"
+ },
+ {
+  "qa_id": "test_0461",
+  "pipe": "D",
+  "final": "C",
+  "source": "provenance:COHORT3-user1-T2withheld/329/emotion"
+ },
+ {
+  "qa_id": "test_0477",
+  "pipe": "A",
+  "final": "B",
+  "source": "provenance:VISUAL-frame-inspection/332/single"
+ },
+ {
+  "qa_id": "test_0483",
+  "pipe": "C",
+  "final": "A",
+  "source": "PINNED: rebuilt pipeline regressed vs validated 090643-lineage value; keep validated"
+ },
+ {
+  "qa_id": "test_0488",
+  "pipe": "A",
+  "final": "C",
+  "source": "PINNED: rebuilt pipeline regressed vs validated 090643-lineage value; keep validated"
+ },
+ {
+  "qa_id": "test_0496",
+  "pipe": "A",
+  "final": "C",
+  "source": "singleton:56238613 Bug-1 fix B->C"
+ },
+ {
+  "qa_id": "test_0506",
+  "pipe": "A",
+  "final": "C",
+  "source": "provenance:VISUAL-frame-inspection/332/single"
+ },
+ {
+  "qa_id": "test_0519",
+  "pipe": "A",
+  "final": "C",
+  "source": "PINNED: rebuilt pipeline regressed vs validated 090643-lineage value; keep validated"
+ },
+ {
+  "qa_id": "test_0523",
+  "pipe": "B",
+  "final": "A",
+  "source": "provenance:T-block-repair/093859/object_interaction"
+ },
+ {
+  "qa_id": "test_0524",
+  "pipe": "A",
+  "final": "B",
+  "source": "provenance:OBJTMPL-exact-visible/326max/object_interaction"
+ },
+ {
+  "qa_id": "test_0525",
+  "pipe": "B",
+  "final": "C",
+  "source": "provenance:W:X-joint-resolve/093859/object_interaction"
+ },
+ {
+  "qa_id": "test_0526",
+  "pipe": "C",
+  "final": "D",
+  "source": "PINNED: rebuilt pipeline regressed vs validated 090643-lineage value; keep validated"
+ },
+ {
+  "qa_id": "test_0530",
+  "pipe": "B",
+  "final": "D",
+  "source": "provenance:OBJTMPL-exact-visible/326max/object_interaction"
+ },
+ {
+  "qa_id": "test_0533",
+  "pipe": "C",
+  "final": "A",
+  "source": "provenance:W:W1-single-pinned/093859/object_interaction"
+ },
+ {
+  "qa_id": "test_0534",
+  "pipe": "A",
+  "final": "B",
+  "source": "provenance:W:W1-single-pinned/093859/object_interaction"
+ },
+ {
+  "qa_id": "test_0641",
+  "pipe": "BDAC",
+  "final": "DBAC",
+  "source": "singleton:56239239 bisection-A BDAC->DBAC"
+ },
+ {
+  "qa_id": "test_0643",
+  "pipe": "DBAC",
+  "final": "DBCA",
+  "source": "provenance:S-joint-order/093859/sequence"
+ },
+ {
+  "qa_id": "test_0644",
+  "pipe": "ABCD",
+  "final": "BCAD",
+  "source": "provenance:S-joint-order/093859/sequence"
+ }
+]

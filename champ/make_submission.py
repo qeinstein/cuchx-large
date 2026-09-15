@@ -31,7 +31,8 @@ sub = pd.DataFrame({'qa_id': te.qa_id,
                                    for q in te.qa_id]})
 assert len(sub) == 682 and sub.prediction.notna().all()
 assert sub.prediction.map(lambda s: len(s) > 0 and all(c in 'ABCD' for c in s)).all()
-out = os.path.join(ROOT, 'submissions/submission_v13_structural.csv')
+out = os.environ.get('CHAMP_OUT',
+                     os.path.join(ROOT, 'submissions/submission_v13_structural.csv'))
 sub.to_csv(out, index=False)
 print('blocks:', len(blocks), 'sizes:', pd.Series([len(b) for b in blocks]).value_counts().to_dict())
 print(sub.prediction.map(len).value_counts().to_dict())

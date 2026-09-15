@@ -41,7 +41,8 @@ def mgroup(s):
 # ----------------------------------------------------------------------------- data loading
 def load_all():
     tr = pd.read_csv(os.path.join(ROOT, 'training_qa.csv'))
-    te = pd.read_csv(os.path.join(ROOT, 'test_qa.csv'))
+    te = pd.read_csv(os.environ.get('CHAMP_TEST_QA',
+                                    os.path.join(ROOT, 'test_qa.csv')))
     meta = pd.read_csv(os.path.join(ROOT, 'champ', 'meta.csv'))
     fe = pd.read_csv(os.path.join(ROOT, 'champ', 'feats.csv'))
     meta = meta.merge(fe, on='unit_dir', how='left')
