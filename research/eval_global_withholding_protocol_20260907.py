@@ -33,7 +33,7 @@ def main():
 
     tr, te, meta = load_all()
     meta_idx = meta.set_index("qa_path")
-    champ = pd.read_csv(os.path.join(ROOT, "submission_096198_329of342_CHAMPION.csv")).set_index("qa_id")
+    champ = pd.read_csv(os.path.join(ROOT, "submissions/submission_096198_329of342_CHAMPION.csv")).set_index("qa_id")
     skel = np.load(os.path.join(ROOT, "champ", "skel_seq.npz"))
 
     # Part 1: Training Structure Reconstruction

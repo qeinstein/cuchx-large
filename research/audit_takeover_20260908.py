@@ -77,7 +77,7 @@ for r in tr:
         emotion_opts.update(r[L] for L in 'ABCD')
 fallback=[]
 margins=json.loads((ROOT/'champ/test_margins.json').read_text())
-vlm=json.loads((ROOT/'vlm_predictions_cache.json').read_text())
+vlm=json.loads((ROOT/'research/vlm_cache/vlm_predictions_cache.json').read_text())
 for r in te:
     if r['source']=='HARn' and r['category']=='single' and margins.get(r['qa_id'])==0:
         fallback.append({'qa_id':r['qa_id'],'base':base[r['qa_id']],'options':{L:r[L] for L in 'ABCD'},'vlm':vlm.get(r['qa_id']),'path':r['path']})

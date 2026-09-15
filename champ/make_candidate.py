@@ -17,7 +17,7 @@ import pipeline as P
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHAMP = os.path.join(ROOT, os.environ.get(
-    'CHAMP_BASE', 'submission_097076_332of342_CHAMPION.csv'))
+    'CHAMP_BASE', 'submissions/submission_097076_332of342_CHAMPION.csv'))
 
 
 def main(name):

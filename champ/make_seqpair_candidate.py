@@ -37,7 +37,7 @@ def main():
 
     fallback = os.path.join(
         ROOT, os.environ.get('CHAMP_FALLBACK',
-                              'submission_097076_332of342_CHAMPION.csv'))
+                              'submissions/submission_097076_332of342_CHAMPION.csv'))
     out = pd.read_csv(fallback)
     if list(out.qa_id) != list(te.qa_id):
         raise ValueError('fallback row/order mismatch: ' + fallback)

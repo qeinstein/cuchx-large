@@ -24,7 +24,7 @@ from core import load_all
 
 tr, te, meta = load_all()
 A = pd.read_csv('seqlab/test_sequence_audit.csv')
-champ = pd.read_csv('submission_092105_SUBMITTED.csv')
+champ = pd.read_csv('submissions/submission_092105_SUBMITTED.csv')
 assert len(champ) == 682 and champ.prediction.notna().all()
 teq = te.set_index('qa_id')
 

@@ -22,9 +22,9 @@ def read(path):
 def main():
     te = {r["qa_id"]: r for r in read(ROOT / "test_qa.csv")}
     old = {r["qa_id"]: r["prediction"] for r in read(
-        ROOT / "submission_096491_330of342_CHAMPION.csv")}
+        ROOT / "submissions/submission_096491_330of342_CHAMPION.csv")}
     new = {r["qa_id"]: r["prediction"] for r in read(
-        ROOT / "submission_097076_332of342_CHAMPION.csv")}
+        ROOT / "submissions/submission_097076_332of342_CHAMPION.csv")}
     meta = {r["qa_path"]: r for r in read(ROOT / "champ/meta.csv")}
     try:
         logits = np.load(ROOT / "champ/dense_logits_screen1_bucket.npz")

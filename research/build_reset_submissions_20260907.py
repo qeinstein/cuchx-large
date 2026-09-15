@@ -6,7 +6,7 @@ All diffs are strictly taken against submission_096491_330of342_CHAMPION.csv.
 
 import sys, os, hashlib, pandas as pd
 
-CHAMP_PATH = "submission_096491_330of342_CHAMPION.csv"
+CHAMP_PATH = "submissions/submission_096491_330of342_CHAMPION.csv"
 champ = pd.read_csv(CHAMP_PATH)
 assert len(champ) == 682, f"Expected 682 rows, got {len(champ)}"
 assert list(champ.columns) == ['qa_id', 'prediction'], f"Bad columns: {champ.columns}"

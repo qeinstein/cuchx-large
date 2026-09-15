@@ -101,7 +101,7 @@ def run_test():
     pred, blocks, pool_of, diag = P.solve(vis, ctx, 'test')
 
     fallback_name = os.environ.get('CHAMP_FALLBACK',
-                                    'submission_097076_332of342_CHAMPION.csv')
+                                    'submissions/submission_097076_332of342_CHAMPION.csv')
     fallback_path = os.path.join(ROOT, fallback_name)
     if not os.path.exists(fallback_path):
         raise FileNotFoundError('CHAMP_FALLBACK does not exist: ' + fallback_path)
@@ -131,7 +131,7 @@ def run_test():
             bad.append((q, p, c))
     assert len(sub) == 682 and list(sub.qa_id) == list(te.qa_id), 'row/order mismatch'
     assert not bad, bad[:10]
-    outp = os.path.join(ROOT, os.environ.get('CHAMP_OUT','submission_final.csv'))
+    outp = os.path.join(ROOT, os.environ.get('CHAMP_OUT','submissions/submission_final.csv'))
     sub.to_csv(outp, index=False)
 
     print('\n================ REAL TEST INFERENCE ================')
@@ -145,7 +145,7 @@ def run_test():
         vc = g.prediction.value_counts()
         print(f'  {s:5s} {c:19s} n={len(g):3d} distinct={g.prediction.nunique():2d} '
               f'top={dict(list(vc.items())[:3])}')
-    v9 = pd.read_csv(os.path.join(ROOT, 'submission_v9.csv')).set_index('qa_id').prediction
+    v9 = pd.read_csv(os.path.join(ROOT, 'submissions/submission_v9.csv')).set_index('qa_id').prediction
     dif = mm.assign(chg=[p != v9.loc[q] for q, p in zip(mm.qa_id, mm.prediction)])
     print(f'\n--- diff vs submitted v9 (public 0.85087) ---')
     print(dif.groupby(['source', 'category']).chg.agg(['sum', 'count']).to_string())

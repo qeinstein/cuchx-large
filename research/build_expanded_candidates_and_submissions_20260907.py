@@ -9,7 +9,7 @@ import os, hashlib, json
 import pandas as pd
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE_CHAMPION_PATH = os.path.join(ROOT, "submission_096491_330of342_CHAMPION.csv")
+BASE_CHAMPION_PATH = os.path.join(ROOT, "submissions/submission_096491_330of342_CHAMPION.csv")
 BASE_SHA = "e42cde96bafb108b8c16bcd97e5deb2af32c1657a089351ada8a72a95ed805cd"
 
 def get_sha256(filepath):

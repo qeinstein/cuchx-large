@@ -17,8 +17,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = Path(__file__).resolve().parent
-CHAMP = ROOT / "submission_097076_332of342_CHAMPION.csv"
-BASE330 = ROOT / "submission_096491_330of342_CHAMPION.csv"
+CHAMP = ROOT / "submissions/submission_097076_332of342_CHAMPION.csv"
+BASE330 = ROOT / "submissions/submission_096491_330of342_CHAMPION.csv"
 CHAMP_SHA = "25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56"
 
 

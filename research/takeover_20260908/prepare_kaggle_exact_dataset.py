@@ -27,7 +27,7 @@ for name, src in {
     "test_qa.csv": ROOT / "test_qa.csv",
     "meta.csv": ROOT / "champ/meta.csv",
     "vocab.json": ROOT / "champ/vocab.json",
-    "champion.csv": ROOT / "submission_097076_332of342_CHAMPION.csv",
+    "champion.csv": ROOT / "submissions/submission_097076_332of342_CHAMPION.csv",
 }.items():
     link(src, STAGE / name)
 

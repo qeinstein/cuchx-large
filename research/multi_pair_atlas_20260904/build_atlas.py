@@ -61,7 +61,7 @@ ACTCATS = ["single", "multi", "combination", "sequence"]
 REGIME = "ends"
 PAIR_FRAC = 0.38
 SPLIT_NAME = "oof_ends"
-CHAMPION_SUBMISSION = ROOT / "submission_093859_SUBMITTED.csv"
+CHAMPION_SUBMISSION = ROOT / "submissions/submission_093859_SUBMITTED.csv"
 
 V = json.loads((CHAMP_DIR / "vocab.json").read_text())["HARN2HAU"]
 OPT_TO_HARN = {v: k for k, v in V.items()}

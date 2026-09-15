@@ -7,7 +7,7 @@ import pandas as pd
 ROOT = os.path.dirname(os.path.dirname(__file__))
 TR = pd.read_csv(os.path.join(ROOT, 'training_qa.csv'))
 TE = pd.read_csv(os.path.join(ROOT, 'test_qa.csv'))
-SUB = pd.read_csv(os.path.join(ROOT, 'submission_093859_SUBMITTED.csv')).set_index('qa_id')
+SUB = pd.read_csv(os.path.join(ROOT, 'submissions/submission_093859_SUBMITTED.csv')).set_index('qa_id')
 SNAP = pickle.load(open(os.path.join(ROOT, 'research', 'test_pool_snapshot.pkl'), 'rb'))
 TR['user'] = TR.path.str.extract(r'(user\d+)')
 TR['aa'] = TR.path.str.extract(r'/(\d+)-(\d+)-(\d+)')[0]

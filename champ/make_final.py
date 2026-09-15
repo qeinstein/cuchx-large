@@ -4,8 +4,8 @@ import os, sys
 import pandas as pd
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 te = pd.read_csv(os.path.join(ROOT, 'test_qa.csv'))
-new = pd.read_csv(os.path.join(ROOT, 'submission_v12_structural.csv'))
-v8 = pd.read_csv(os.path.join(ROOT, 'submission_v8.csv'))
+new = pd.read_csv(os.path.join(ROOT, 'submissions/submission_v12_structural.csv'))
+v8 = pd.read_csv(os.path.join(ROOT, 'submissions/submission_v8.csv'))
 m = te[['qa_id', 'source', 'category']].merge(new, on='qa_id').merge(
     v8, on='qa_id', suffixes=('_new', '_v8'))
 # per-cell choice from pseudo-test OOF: v12 wins every cell except HARn object
@@ -29,7 +29,7 @@ for _, r in m.iterrows():
     if r.category == 'multi' and not (1 <= len(p) <= 4):
         bad.append((r.qa_id, p, r.category))
 assert not bad, bad[:10]
-out = os.path.join(ROOT, 'submission_v12.csv')
+out = os.path.join(ROOT, 'submissions/submission_v12.csv')
 sub.to_csv(out, index=False)
 print('rows', len(sub), '| format checks passed')
 print('answer-length histogram by category:')

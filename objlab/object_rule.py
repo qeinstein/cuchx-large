@@ -135,7 +135,7 @@ def apply_test(model, te, champ_pred):
 
 if __name__ == '__main__':
     tr, te, meta = load_all()
-    sub = pd.read_csv(os.path.join(ROOT, 'submission_092105_SUBMITTED.csv'))
+    sub = pd.read_csv(os.path.join(ROOT, 'submissions/submission_092105_SUBMITTED.csv'))
     cp = dict(zip(sub.qa_id, sub.prediction))
     D = apply_test(fit(tr), te, cp)
     D.to_csv(os.path.join(ROOT, 'objlab', 'test_object_overrides.csv'), index=False)

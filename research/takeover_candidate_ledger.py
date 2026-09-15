@@ -31,7 +31,7 @@ REJECTED=[
 ]
 def main():
     qa={r['qa_id']:r for r in csv.DictReader((ROOT/'test_qa.csv').open())}
-    base={r['qa_id']:r['prediction'] for r in csv.DictReader((ROOT/'submission_096491_330of342_CHAMPION.csv').open())}
+    base={r['qa_id']:r['prediction'] for r in csv.DictReader((ROOT/'submissions/submission_096491_330of342_CHAMPION.csv').open())}
     ledger=[];manifest={}
     for rank,(q,to,status,route,evidence,failure) in enumerate(ROWS,1):
         row={'rank':rank,'qa_id':q,'from':base[q],'to':to,'category':qa[q]['category'],'status':status,'route':route,'evidence':evidence,'failure_mode':failure}

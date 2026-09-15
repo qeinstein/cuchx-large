@@ -19,7 +19,7 @@ ctx = P.fit_all(tr, meta, hold_users=[], split_train='oof')   # fit on ALL subje
 vis = real_test_view(te)
 pred, blocks, pool_of, diag = P.solve(vis, ctx, 'test')
 fallback_name = os.environ.get('CHAMP_FALLBACK',
-                                'submission_097076_332of342_CHAMPION.csv')
+                                'submissions/submission_097076_332of342_CHAMPION.csv')
 fallback_path = os.path.join(ROOT, fallback_name)
 if not os.path.exists(fallback_path):
     raise FileNotFoundError('CHAMP_FALLBACK does not exist: ' + fallback_path)
@@ -31,7 +31,7 @@ sub = pd.DataFrame({'qa_id': te.qa_id,
                                    for q in te.qa_id]})
 assert len(sub) == 682 and sub.prediction.notna().all()
 assert sub.prediction.map(lambda s: len(s) > 0 and all(c in 'ABCD' for c in s)).all()
-out = os.path.join(ROOT, 'submission_v13_structural.csv')
+out = os.path.join(ROOT, 'submissions/submission_v13_structural.csv')
 sub.to_csv(out, index=False)
 print('blocks:', len(blocks), 'sizes:', pd.Series([len(b) for b in blocks]).value_counts().to_dict())
 print(sub.prediction.map(len).value_counts().to_dict())

@@ -27,7 +27,7 @@ def main():
     X=d[cols].replace([np.inf,-np.inf],np.nan).to_numpy(float)
     y=d.action.astype(str).to_numpy(); groups=d.user.astype(str).to_numpy()
     # map labelled path -> all HARN QA rows and immutable champion answer
-    champ=pd.read_csv(os.path.join(ROOT,'submission_097076_332of342_CHAMPION.csv')).set_index('qa_id').prediction
+    champ=pd.read_csv(os.path.join(ROOT,'submissions/submission_097076_332of342_CHAMPION.csv')).set_index('qa_id').prediction
     trh=tr[tr.source=='HARn'].copy()
     trh['path_short']=trh.path.str.extract(r'(LM_train_[^/]+|HARn/.*)$',expand=False)
     # core.load_all's path is metadata's qa_path for train HARN; use join by suffix

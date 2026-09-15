@@ -1,0 +1,1 @@
+{"code_file": "kernel_dino_specialist.py", "dataset_sources": ["toheebogunade/cuchx-videos-20260914", "toheebogunade/cuchx-dense-inputs-20260914"], "enable_gpu": true, "enable_internet": true, "enable_tpu": false, "id": "toheebogunade/cuchx-dino-specialist", "is_private": true, "kernel_type": "script", "language": "python", "title": "Cuchx Dino Specialist"}

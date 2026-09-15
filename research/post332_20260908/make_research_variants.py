@@ -6,7 +6,7 @@ the evidence gate and must not silently enter tomorrow's five slots.
 import csv,hashlib,json,os
 ROOT=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT=os.path.join(ROOT,'research/post332_20260908')
-BASE=os.path.join(ROOT,'submission_097076_332of342_CHAMPION.csv')
+BASE=os.path.join(ROOT,'submissions/submission_097076_332of342_CHAMPION.csv')
 VAR={'RESEARCH_template_0478_B.csv':{'test_0478':'B'},
      'RESEARCH_template_0507_C.csv':{'test_0507':'C'},
      'RESEARCH_template_0527_A.csv':{'test_0527':'A'}}

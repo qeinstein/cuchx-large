@@ -9,7 +9,7 @@ PROVEN_SEQUENCE = {'test_0330', 'test_0335', 'test_0358', 'test_0643'}
 
 
 def main(min_stability=4):
-    base_path = os.path.join(ROOT, 'submission_097076_332of342_CHAMPION.csv')
+    base_path = os.path.join(ROOT, 'submissions/submission_097076_332of342_CHAMPION.csv')
     stability_path = os.path.join(ROOT, 'research/final_video_20260910',
                                   'seqpair_test_stability.csv')
     out = pd.read_csv(base_path)

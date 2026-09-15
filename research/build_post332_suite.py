@@ -9,9 +9,9 @@ SHA='25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56'
 def read(path):return list(csv.DictReader(path.open()))
 def main():
     p=argparse.ArgumentParser();p.add_argument('--observe',action='append',default=[],help='file_stem=integer_delta_vs_332');a=p.parse_args()
-    base=ROOT/'submission_097076_332of342_CHAMPION.csv'
+    base=ROOT/'submissions/submission_097076_332of342_CHAMPION.csv'
     assert hashlib.sha256(base.read_bytes()).hexdigest()==SHA
-    rows=read(base);old={r['qa_id']:r['prediction'] for r in read(ROOT/'submission_096491_330of342_CHAMPION.csv')}
+    rows=read(base);old={r['qa_id']:r['prediction'] for r in read(ROOT/'submissions/submission_096491_330of342_CHAMPION.csv')}
     current={r['qa_id']:r['prediction'] for r in rows};qa={r['qa_id']:r for r in read(ROOT/'test_qa.csv')}
     assert len(rows)==len(current)==682 and list(current)==list(qa)
     configs={'KEEP_SCORED_332':{}}

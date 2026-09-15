@@ -135,8 +135,8 @@ def main():
     print('PHASE 5  the 15 test flips, classified  (question 6)')
     print('=' * 78)
     te = pd.read_csv(os.path.join(ROOT, 'test_qa.csv'))[['qa_id', 'source', 'category']]
-    a = pd.read_csv(os.path.join(ROOT, 'submission_090643_regen.csv'))
-    b = pd.read_csv(os.path.join(ROOT, 'submission_final_assault.csv'))
+    a = pd.read_csv(os.path.join(ROOT, 'submissions/submission_090643_regen.csv'))
+    b = pd.read_csv(os.path.join(ROOT, 'submissions/submission_final_assault.csv'))
     t = te.merge(a, on='qa_id').merge(b, on='qa_id', suffixes=('_c', '_n'))
     t['flip'] = t.prediction_c != t.prediction_n
     t['mech'] = np.where(t.category == 'emotion', 'E',

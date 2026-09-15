@@ -96,7 +96,7 @@ def main():
     print(f'H1 overrides applied: {n_h1}')
     
     # Load champion submission as base
-    champ = pd.read_csv(os.path.join(ROOT, 'submission_097076_332of342_CHAMPION.csv'))
+    champ = pd.read_csv(os.path.join(ROOT, 'submissions/submission_097076_332of342_CHAMPION.csv'))
     print(f'Champion rows: {len(champ)}')
     
     # Build submission

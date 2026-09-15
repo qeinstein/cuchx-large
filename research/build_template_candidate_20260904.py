@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 ROOT = os.path.dirname(os.path.dirname(__file__))
-base = pd.read_csv(os.path.join(ROOT, 'submission_093859_SUBMITTED.csv'))
+base = pd.read_csv(os.path.join(ROOT, 'submissions/submission_093859_SUBMITTED.csv'))
 audit = pd.read_csv(os.path.join(ROOT, 'research', 'test_template_order_audit.csv'))
 
 # Strict promotion gate from the held-out audit: an exact action-pool source, complete

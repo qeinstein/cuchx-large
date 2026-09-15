@@ -1,0 +1,71 @@
+pool: 24 clips, users=['user1', 'user16', 'user17', 'user19']
+label
+Eating                                    4
+Listening to the music with headphones    4
+Peeling fruit                             4
+Pouring                                   4
+Sitting down                              4
+Walking                                   4
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+backbone: facebook/dinov2-small 22.056576 M params
+resuming: 0/48 clip-modalities done
+  embedded 1/48 HAU/user1/2-2-1|Depth_Color 52s
+  embedded 2/48 HAU/user1/2-2-1|Thermal 61s
+  embedded 3/48 HAU/user16/1-1-3|Depth_Color 56s
+  embedded 4/48 HAU/user16/1-1-3|Thermal 84s
+  embedded 5/48 HAU/user17/3-2-2|Depth_Color 51s
+  embedded 6/48 HAU/user17/3-2-2|Thermal 50s
+  embedded 7/48 HAU/user19/2-2-1|Depth_Color 65s
+  embedded 8/48 HAU/user19/2-2-1|Thermal 37s
+  embedded 9/48 HAU/user1/3-1-1|Depth_Color 75s
+  embedded 10/48 HAU/user1/3-1-1|Thermal 23s
+  embedded 11/48 HAU/user16/1-2-2|Depth_Color 19s
+  embedded 12/48 HAU/user16/1-2-2|Thermal 26s
+  embedded 13/48 HAU/user17/5-3-1|Depth_Color 33s
+  embedded 14/48 HAU/user17/5-3-1|Thermal 12s
+  embedded 15/48 HAU/user19/7-2-1|Depth_Color 11s
+  embedded 16/48 HAU/user19/7-2-1|Thermal 13s
+  embedded 17/48 HAU/user1/7-1-1|Depth_Color 20s
+  embedded 18/48 HAU/user1/7-1-1|Thermal 17s
+  embedded 19/48 HAU/user16/5-1-1|Depth_Color 21s
+  embedded 20/48 HAU/user16/5-1-1|Thermal 14s
+  embedded 21/48 HAU/user17/1-2-3|Depth_Color 41s
+  embedded 22/48 HAU/user17/1-2-3|Thermal 24s
+  embedded 23/48 HAU/user19/4-3-3|Depth_Color 48s
+  embedded 24/48 HAU/user19/4-3-3|Thermal 25s
+  embedded 25/48 HAU/user1/1-2-1|Depth_Color 15s
+  embedded 26/48 HAU/user1/1-2-1|Thermal 25s
+  embedded 27/48 HAU/user16/2-3-1|Depth_Color 17s
+  embedded 28/48 HAU/user16/2-3-1|Thermal 25s
+  embedded 29/48 HAU/user17/7-2-1|Depth_Color 29s
+  embedded 30/48 HAU/user17/7-2-1|Thermal 27s
+  embedded 31/48 HAU/user19/5-2-3|Depth_Color 16s
+  embedded 32/48 HAU/user19/5-2-3|Thermal 16s
+  embedded 33/48 HAU/user1/5-1-2|Depth_Color 16s
+  embedded 34/48 HAU/user1/5-1-2|Thermal 21s
+  embedded 35/48 HAU/user16/5-1-2|Depth_Color 17s
+  embedded 36/48 HAU/user16/5-1-2|Thermal 16s
+  embedded 37/48 HAU/user17/6-2-1|Depth_Color 35s
+  embedded 38/48 HAU/user17/6-2-1|Thermal 51s
+  embedded 39/48 HAU/user19/1-2-2|Depth_Color 16s
+  embedded 40/48 HAU/user19/1-2-2|Thermal 9s
+  embedded 41/48 HAU/user1/4-1-3|Depth_Color 11s
+  embedded 42/48 HAU/user1/4-1-3|Thermal 18s
+  embedded 43/48 HAU/user16/1-2-1|Depth_Color 10s
+  embedded 44/48 HAU/user16/1-2-1|Thermal 16s
+  embedded 45/48 HAU/user17/2-1-1|Depth_Color 11s
+  embedded 46/48 HAU/user17/2-1-1|Thermal 28s
+  embedded 47/48 HAU/user19/2-1-2|Depth_Color 14s
+  embedded 48/48 HAU/user19/2-1-2|Thermal 13s
+
+leave-users-out nearest-centroid, chance=0.167
+  Depth_Color full=0.250 1.0=0.250 1.3=0.250 1.6=0.292
+    full: folds=[0.16666666666666666, 0.3333333333333333, 0.16666666666666666, 0.3333333333333333]
+    1.0: folds=[0.16666666666666666, 0.5, 0.16666666666666666, 0.16666666666666666]
+    1.3: folds=[0.16666666666666666, 0.3333333333333333, 0.16666666666666666, 0.3333333333333333]
+    1.6: folds=[0.16666666666666666, 0.5, 0.3333333333333333, 0.16666666666666666]
+  Thermal full=0.208 1.0=0.250 1.3=0.250 1.6=0.292
+    full: folds=[0.0, 0.3333333333333333, 0.16666666666666666, 0.3333333333333333]
+    1.0: folds=[0.16666666666666666, 0.3333333333333333, 0.0, 0.5]
+    1.3: folds=[0.16666666666666666, 0.3333333333333333, 0.16666666666666666, 0.3333333333333333]
+    1.6: folds=[0.16666666666666666, 0.3333333333333333, 0.16666666666666666, 0.5]

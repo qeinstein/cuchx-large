@@ -17,7 +17,7 @@ from sklearn.preprocessing import LabelEncoder
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "research/post332_20260908"
-BASE = pd.read_csv(ROOT / "submission_097076_332of342_CHAMPION.csv")
+BASE = pd.read_csv(ROOT / "submissions/submission_097076_332of342_CHAMPION.csv")
 TE = pd.read_csv(ROOT / "test_qa.csv").drop(columns=["prediction"], errors="ignore")
 TR = pd.read_csv(ROOT / "training_qa.csv", encoding="utf-8-sig")
 

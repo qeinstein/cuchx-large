@@ -19,7 +19,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 ATLAS = HERE / "action_atlas_oof_ends.csv"
 TEST_ATLAS = HERE / "action_atlas_test.csv"
-CHAMPION = ROOT / "submission_093859_SUBMITTED.csv"
+CHAMPION = ROOT / "submissions/submission_093859_SUBMITTED.csv"
 
 
 def prep(d: pd.DataFrame, oof: bool) -> pd.DataFrame:

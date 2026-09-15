@@ -5,9 +5,9 @@
  "test_0642": "DACB",
  "test_0332": "ABDC",
  "test_0333": "CADB",
- "test_0643": "DBCA",
+ "test_0643": "DCBA",
  "test_0334": "BCDA",
- "test_0335": "DBAC",
+ "test_0335": "DABC",
  "test_0644": "BCAD",
  "test_0336": "BADC",
  "test_0337": "ADCB",
@@ -17,8 +17,8 @@
  "test_0646": "BADC",
  "test_0340": "BADC",
  "test_0341": "DCBA",
- "test_0647": "DCAB",
- "test_0342": "ACBD",
+ "test_0647": "DCBA",
+ "test_0342": "ACDB",
  "test_0343": "CDAB",
  "test_0648": "ABCD",
  "test_0344": "CBDA",
@@ -37,5 +37,5 @@
  "test_0356": "DACB",
  "test_0357": "BACD",
  "test_0358": "ADBC",
- "test_0359": "DBAC"
+ "test_0359": "DABC"
 }

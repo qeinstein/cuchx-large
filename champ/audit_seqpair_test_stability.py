@@ -24,7 +24,7 @@ def main(nfold=5):
     segs = SP.build_segment_data(meta)
     users = sorted(tr.user.dropna().unique())
     q = te[te.category == 'sequence'].copy()
-    champion = pd.read_csv(os.path.join(ROOT, 'submission_097076_332of342_CHAMPION.csv'))
+    champion = pd.read_csv(os.path.join(ROOT, 'submissions/submission_097076_332of342_CHAMPION.csv'))
     champion = dict(zip(champion.qa_id, champion.prediction))
     full_path = os.path.join(
         ROOT, os.environ.get('CHAMP_SEQPAIR_FULL',

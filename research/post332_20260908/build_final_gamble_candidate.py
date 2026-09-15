@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
-BASE = ROOT / "submission_097076_332of342_CHAMPION.csv"
+BASE = ROOT / "submissions/submission_097076_332of342_CHAMPION.csv"
 OUT = Path(__file__).with_name("FINAL_GAMBLE__0461_D__0519_A.csv")
 EXPECTED_BASE_SHA256 = "25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56"
 CHANGES = {"test_0461": "D", "test_0519": "A"}

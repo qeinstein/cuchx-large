@@ -96,8 +96,13 @@ Reconstruction launched (all `champ/*.npz` were missing):
   (+4/-0, same 4 rows as v1). v8 vs v1: 47/61 churn, net -14 (McNemar p~0.18,
   noise). Keep v8 canonical (Bug-1 test fix proven +1 live; OOF-tied).
   Honest baseline: ~3840/4087 = 93.9%.
+- 0432 C->D singleton sub 56240835 COMPLETE 334 (neutral) -> TierA pair 0/0,
+  0456 skipped. 4 slots left.
+- DINO-full v3 ERROR after 2.6h (extraction done): oof_logreg concat bug
+  (row- instead of feature-concat). Fixed (`axis=1`) + v4 re-pushed ~00:55 UTC
+  (ETA ~04:00). Embeddings downloadable from crashed run (slow link, trying).
 
-Chronological record of what was tried and what it measured. `README.md` holds the current
+Chronological record of what was tried and what it measured. `../README.md` holds the current
 architecture and the falsified-directions list; this file is the session-by-session trail.
 
 Same documentation rule: **measured numbers only, labelled by protocol.** No projections.

@@ -32,7 +32,7 @@ def main():
   sv=sorted(vals.values(),reverse=True); pred=max(vals,key=vals.get)
   rows.append(dict(qa_id=q.qa_id,truth=str(q.answer),prediction=pred,correct=int(pred==q.answer),margin=sv[0]-sv[1],action=H.S2A.get(str(q[pred]).strip()),parent=p))
  oof=pd.DataFrame(rows); oof.to_csv(os.path.join(OUT,'dense_segment_oof.csv'),index=False)
- tm=pd.read_csv(os.path.join(ROOT,'test_qa.csv')); tm['lm']=tm.path.str.extract(r'(LM_test_\d+)')[0]; champ=pd.read_csv(os.path.join(ROOT,'submission_097076_332of342_CHAMPION.csv')).set_index('qa_id').prediction; out=[]
+ tm=pd.read_csv(os.path.join(ROOT,'test_qa.csv')); tm['lm']=tm.path.str.extract(r'(LM_test_\d+)')[0]; champ=pd.read_csv(os.path.join(ROOT,'submissions/submission_097076_332of342_CHAMPION.csv')).set_index('qa_id').prediction; out=[]
  # test dense cache is a full-data model; only rows with an exact cached clip are shown
  for lm,g in tm[tm.source=='HARn'].groupby('lm'):
   k='test|'+lm

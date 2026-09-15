@@ -547,7 +547,7 @@ def evaluate(scope: str) -> None:
     all_model.fit(xall, train_df.action)
     all_phrases = phrase_map(q)
     all_obj_by_action, all_obj_global = object_prior(q)
-    te_v8 = pd.read_csv(ROOT / "submission_v8.csv").set_index("qa_id").prediction
+    te_v8 = pd.read_csv(ROOT / "submissions/submission_v8.csv").set_index("qa_id").prediction
     test_feature = {c.qpath: cache[c.key] for c in test_clips}
     test_rows: list[dict[str, Any]] = []
     for _, row in affected.iterrows():

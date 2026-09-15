@@ -18,7 +18,7 @@ from core import load_all, real_test_view, fit_group_model, infer_blocks, mgroup
 
 print("Loading test data, metadata, and features...")
 tr, te, meta = load_all()
-sub = pd.read_csv("submission_096491_330of342_CHAMPION.csv").set_index("qa_id")
+sub = pd.read_csv("submissions/submission_096491_330of342_CHAMPION.csv").set_index("qa_id")
 vis = real_test_view(te)
 meta_idx = meta.set_index("qa_path")
 feats = pd.read_csv("champ/feats.csv").set_index("unit_dir")

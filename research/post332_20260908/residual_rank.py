@@ -9,7 +9,7 @@ import pandas as pd
 ROOT=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT=os.path.join(ROOT,'research/post332_20260908')
 def main():
- te=pd.read_csv(os.path.join(ROOT,'test_qa.csv')); sub=pd.read_csv(os.path.join(ROOT,'submission_097076_332of342_CHAMPION.csv')).set_index('qa_id').prediction
+ te=pd.read_csv(os.path.join(ROOT,'test_qa.csv')); sub=pd.read_csv(os.path.join(ROOT,'submissions/submission_097076_332of342_CHAMPION.csv')).set_index('qa_id').prediction
  tm=json.load(open(os.path.join(ROOT,'champ/test_margins.json'))); te['champion']=te.qa_id.map(sub); te['margin']=te.qa_id.map(tm)
  te['lm']=te.path.str.extract(r'(LM_test_\d+)')[0]
  # Evidence-based screening, intentionally coarse and explicitly labelled heuristic.

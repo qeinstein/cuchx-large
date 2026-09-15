@@ -1,0 +1,26 @@
+--- real-test emotion run (all-users fit) ---
+group model done
+inferred 55 test blocks
+fit_manner done
+emopair done
+solve nopool done
+    qa_id pipeline champion cpu_nopool cpu_structpool  match_nopool  match_struct
+test_0385        D        A          D           None             0             0
+test_0386        A        B          A           None             0             0
+test_0387        A        C          A           None             0             0
+test_0418        D        B          B           None             1             0
+test_0426        A        B          C           None             0             0
+test_0427        D        B          B           None             1             0
+test_0429        A        C          C           None             1             0
+test_0431        D        A          D           None             0             0
+test_0436        A        C          C           None             1             0
+test_0443        D        B          D           None             0             0
+test_0444        C        B          C           None             0             0
+test_0458        A        B          B           None             1             0
+test_0459        C        B          C           None             0             0
+test_0461        D        C          D           None             0             0
+test_0464        A        D          A           None             0             0
+test_0470        D        B          B           None             1             0
+test_0679        A        B          B           None             1             0
+cpu_nopool matches champion: 7/17; cpu_structpool: 0/17
+wrote /home/fluxx/Workspace/cuchx-large/research/t2_valid/test_emotion_cpu.csv

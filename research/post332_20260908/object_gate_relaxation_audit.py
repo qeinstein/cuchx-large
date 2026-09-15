@@ -101,7 +101,7 @@ def main():
     test = [r for r in test if r["category"] == "object_interaction"]
     test_by_id = {r["qa_id"]: r for r in test}
     current = {r["qa_id"]: r["prediction"] for r in read_csv(
-        ROOT / "submission_097076_332of342_CHAMPION.csv")}
+        ROOT / "submissions/submission_097076_332of342_CHAMPION.csv")}
     test_rows = []
     for r in test:
         r["user"] = ""

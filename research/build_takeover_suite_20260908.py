@@ -3,7 +3,7 @@ import csv, hashlib, json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'research/takeover_20260908'
-BASE=ROOT/'submission_096491_330of342_CHAMPION.csv'
+BASE=ROOT/'submissions/submission_096491_330of342_CHAMPION.csv'
 BASE_SHA='e42cde96bafb108b8c16bcd97e5deb2af32c1657a089351ada8a72a95ed805cd'
 ZERO={'test_0444':'B','test_0426':'B','test_0647':'DCBA','test_0206':'CD'}
 PRIMARY={'test_0488':'C','test_0477':'B','test_0506':'C','test_0519':'C','test_0501':'B'}

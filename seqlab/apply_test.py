@@ -149,7 +149,7 @@ A = pd.DataFrame(audit)
 A.to_csv('seqlab/test_sequence_audit.csv', index=False)
 json.dump(out, open('seqlab/test_sequence_pred.json', 'w'), indent=1)
 print('\ndecoded %d test sequence questions' % len(out))
-sub = pd.read_csv('submission_092105_SUBMITTED.csv').set_index('qa_id')
+sub = pd.read_csv('submissions/submission_092105_SUBMITTED.csv').set_index('qa_id')
 ch = {q: sub.loc[q, 'prediction'] for q in out}
 nfl = sum(1 for q in out if out[q] != ch[q])
 print('flips vs the 0.92105 champion: %d of %d' % (nfl, len(out)))
