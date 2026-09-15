@@ -100,7 +100,7 @@ def main():
 
     # ---- train-side validation vs v8 on identical rows
     v8m = v8.set_index('qa_id')
-   Repo = tr.copy()
+    Repo = tr.copy()
     Repo['clip'] = Repo['path']
     val = []
     for cat in ('single', 'multi', 'combination'):
