@@ -92,11 +92,15 @@ def main():
                   for c in hau.qa_path])
     print('train-HAU with embeddings: %d/%d' % (len(hau), ok.size), flush=True)
 
-    # ---- OOF presence (subject-disjoint)
-    P, rep = K.oof_multilabel(Xtr, hau.user.to_numpy(), hau.qa_path.to_numpy(), actions)
-    print('pool OOF macro-mAP %.4f micro-AP %.4f'
-          % (rep['macro_mAP'], rep['micro_AP']), flush=True)
-    pmap = dict(zip(hau.qa_path, P))
+    # ---- OOF presence (subject-disjoint; reuse stage-2 artifact, identical inputs)
+    zp = np.load(os.path.join(ROOT, 'research', 't2_dino', 'local_oof', 'oof_hau_pool.npz'),
+                 allow_pickle=True)
+    zp = {k: zp[k] for k in zp.files}
+    assert list(zp['actions']) == actions, 'action order mismatch'
+    P, ppaths = zp[a.mod + '|P'], [str(x) for x in zp[a.mod + '|paths']]
+    pmap = dict(zip(ppaths, P))
+    assert set(ppaths) == set(hau.qa_path), 'clip set mismatch vs stage-2'
+    print('pool OOF reused: %d clips' % len(pmap), flush=True)
 
     # ---- train-side validation vs v8 on identical rows
     v8m = v8.set_index('qa_id')
