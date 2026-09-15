@@ -4,7 +4,10 @@ import pandas as pd
 from pathlib import Path
 from PIL import Image
 
-API_KEY = "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"
+import os as _os
+API_KEY = _os.environ.get("OPENROUTER_API_KEY", "")
+if not API_KEY:
+    raise SystemExit("Set OPENROUTER_API_KEY env var (never hardcode keys).")
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 def create_contact_sheet(rel_path, num_frames=16, grid_size=(4, 4)):
