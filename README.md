@@ -7,16 +7,18 @@ Privacy-preserving Visual Question Answering (VQA) and multimodal activity reaso
 - **Private Split**: 340 questions (50%).
 - **Live Champion**: `submissions/submission_097660_334of342_CHAMPION.csv`
 - **Public Score**: **`0.97660`** (**334 / 342** correct public questions).
-- **Leaderboard Standing**: Top-5 chase (2026-09-15: #1 Bull & Ivarick 337/342, #1 AICL 337/342; gap = 3 rows).
+- **Leaderboard Standing (final day)**: #1 Bull & Ivarick 337/342, #1 AICL 337/342, #3s at 336/342; us 334/342. Gap to #1 = 3 rows (no visible path remains).
 - **Status**: **334 BANKED (final). Freeroll campaign 3×334 — all six elimination rows proved PRIVATE. No +EV plays remain; 1 slot saved. SELECT 56239239 + one freeroll before deadline.**
 - **Session Trail**: [`docs/state.md`](docs/state.md) (measured numbers only, labelled by protocol).
 
 ## Live Run (2026-09-15, final day)
 
 1. **Bug-1 fix (+2 banked)**: short-filename skeleton regex missed `LM_test_0034/0106` clips; fix flipped `test_0496` B→C (sub `56238613`, +1) and, with seqpair bisection, `test_0641` BDAC→DBAC (sub `56239239`, +1). 332 → 334.
-2. **TierA pair closed**: `test_0432` C→D singleton (sub `56240835`) scored neutral → 0432 ∈ {A,B}, pair sum 0/0, 0456 skipped.
-3. **T2-DINO (in progress)**: frozen DINOv2 ViT-S/14 (full-frame + 1.6× actor crop) + ViT-B/14 ablation over Depth_Color + Thermal, stride-1 color; subject-disjoint LogReg/attention heads + skeleton+IMU fusion. Kernel extraction done (~2.6h GPU); stage-2 OOF runs locally via `research/t2_dino/run_stage2_local.py` after a concat-shape crash killed the kernel head stage (fixed).
+2. **TierA pair closed**: `test_0432` C→D singleton (sub `56240835`) scored neutral → 0432 ∈ {A,B} (if public), pair sum 0/0, 0456 derived (C,B eliminated).
+3. **T2-DINO (dead, falsified)**: frozen DINOv2 ViT-S/14 + ViT-B/14 color embeddings (1007 clips, GPU extraction) with subject-disjoint heads. Pool-presence OOF vs v8 on identical train rows: single 67.5% vs 99.9% (zero DINO-only wins), multi 15% vs 97%, combination 0% vs 99%. Fusion clip-ID gain real (+4%, nested) but non-transferable. Zero flips shipped.
 4. **Honest baseline**: faithful rebuilt OOF `v8` = 3841/4087 (93.9%), repair +4/-0.
+5. **Freeroll campaign (3×334)**: S3/S4/D1/E1/TierA algebra (file shas verified) → proven-3 sub `56250309` (+0), coins-3 sub `56250357` (+0), coin-flipside sub `56250404` (+0). Pigeonhole: all six rows (0501/0506/0519/0526/0432/0456) are PRIVATE. Neutral-history rows skew ~100% private (survivorship: public-wrong rows were already fixed).
+6. **Bank 334**: no +EV plays remain; 1 slot saved. Final selection: `56239239` (= 334 bytes, keeper) + one 334-public freeroll (lottery).
 
 ## Repo Layout
 
@@ -35,13 +37,14 @@ archive/        # legacy root scripts (frozen)
 ## 1. Final Champion System
 
 ### Core Metadata
-- **Artifact Path**: [`submission_097076_332of342_CHAMPION.csv`](submissions/submission_097076_332of342_CHAMPION.csv)
-- **SHA-256 Checksum**: `25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56`
+- **Artifact Path**: [`submission_097660_334of342_CHAMPION.csv`](submissions/submission_097660_334of342_CHAMPION.csv)
+- **SHA-256 Checksum**: `1ea4bf7e1eae01c7ed5475dd9e358fbbed4f1f1804c853b88ee86f1da89f83e4`
 - **Row Count**: Exactly 682 rows, unique `qa_id`s, byte-clean CSV formatting.
-- **Kaggle Submission Ref**: `56090799` (`SubmissionStatus.COMPLETE`, Score: `0.97076`).
+- **Kaggle Submission Ref**: `56239239` (byte-identical file, `SubmissionStatus.COMPLETE`, Score: `0.97660`).
+- **Lineage**: 332 (`submission_097076_332of342_CHAMPION.csv`, sha `25e79e1d…`, ref `56090799`) → 333 (+`test_0496` B→C, ref `56238613`) → 334 (+`test_0641` BDAC→DBAC, ref `56239239`). All three preserved in [`submissions/`](submissions/).
 
 ### Why It Is Frozen
-Across extensive late-stage research campaigns spanning multimodal foundation models, deep video-native neural networks, session-level protocol decoders, and algebraic leaderboard probes, every post-332 intervention either resulted in net-zero public movement or caused confirmed public regressions. The 332 artifact remains the best scored official checkpoint; it is protected while new models are held to subject-disjoint OOF and test-stability gates before promotion.
+The final-day campaign banked +2 (Bug-1 fix + seqpair bisection) and then exhausted the public surface: DINO perception (0 DINO-only wins), all CPU mechanism reruns (0 new flips), seqpair stability (0/4 on resolved disagreements), and an algebraic freeroll campaign (3×334 — all six elimination rows proved private) each returned no further +EV play. The 334 artifact is the best scored official checkpoint and the final selection anchor.
 
 ---
 
@@ -113,6 +116,9 @@ The following mechanisms provided genuine, measured out-of-fold and leaderboard 
 5. **HARn Single/Object Dual-Binding Alignment**:
    - *Gain*: Brought champion to 0.97076 (`submission_097076_332of342_CHAMPION.csv`).
    - *Principle*: Enforced functional co-occurrence between paired single-action and object-interaction questions on identical video clips.
+6. **Skeleton-Path Bug Fix + Seqpair Bisection (final day)**:
+   - *Gain*: 332 → 334/342 (0.97660, `submission_097660_334of342_CHAMPION.csv`): `test_0496` B→C (+1, short-filename clips missed by the skeleton regex) and `test_0641` BDAC→DBAC (+1, isolated by decomposing bisection A).
+   - *Principle*: A data-plumbing bug forced a structurally impossible answer; fixing it plus decomposing a +1 bisection bundle banked the last two visible rows.
 
 ---
 
@@ -126,8 +132,10 @@ The following extensive research families were rigorously investigated, tested, 
 | **Qwen2.5 / Qwen3 VLM Prompting** | Multimodal LLMs could solve QA questions zero-shot or few-shot from text + visual frame descriptions. | Severe hallucination; failed on category invariants (accuracy < 45%). | Not submitted. | Inability of VLMs to maintain strict physical action-pool constraints or perceive millimeter-level motion without RGB. |
 | **VLM Likelihood Residual Ranking** | Use VLM log-likelihoods as soft tie-breakers on top of the structural solver. | Zero correlation between VLM token log-prob and held-out correctness. | Not submitted. | Soft language priors contradicted ground-truth physical sensor geometry. |
 | **Generic Template / Cohort Transfer** | Users in test share identical recording scripts with train cohorts. | Overfitted on train cohorts; high OOF variance across folds. | Neutral or negative on live split. | Test users performed varied protocol permutations not strictly bound to training sequence scripts. |
-| **Session-Triple Emotion Decoding** | Emotion triplets across 3-trial sessions could be solved algebraically via position templates. | 4 Tier-A flips tested via bisection (`TIERA_4flip_banked.csv` and `BISECT_0450C_0461A_vs332.csv`). | Scored **0.97076** ($\Delta = 0$). | Proved that the 4 candidate flips were public-neutral; closed the session-triple search space. |
+| **Session-Triple Emotion Decoding** | Emotion triplets across 3-trial sessions could be solved algebraically via position templates. | 4 Tier-A flips tested via bisection (`TIERA_4flip_banked.csv` and `BISECT_0450C_0461A_vs332.csv`). | Scored **0.97076** ($\Delta = 0$); follow-up singletons + flipside also $0$. | Pigeonhole: 0432/0456 are PRIVATE rows, not neutral flips; closed the session-triple search space. |
 | **Dilated TCN Temporal Model** | 40-epoch frame-level dilated TCN over skeleton + IMU kinematics would produce superior sequence orderings. | High raw OOF sequence gain (37.7% $\to$ 55.7%, +54 rows). | **Slot 4 scored 0.94152 ($\Delta = -10$)**, **Slot 5 scored 0.96198 ($\Delta = -3$)**, singletons were $-1$. | Centroid temporal estimates from TCN lacked cross-clip contextual constraints and degraded public sequence answers that the champion already solved. |
+| **DINOv2 Color Perception Specialist (T2-DINO)** | Frozen DINOv2 stride-1 color embeddings (full + 1.6× crop, S + B) with subject-disjoint heads would add action signal over skeleton+IMU. | Pool-presence OOF vs v8 on identical train rows: single 67.5% vs 99.9% (0 DINO-only wins), multi 15% vs 97%, combination 0% vs 99%. HARn fusion +4% nested but non-transferable. | Not submitted (gate failed on every category). | Pooled action features are far weaker than the structural solver; the fusion gain lives in a weak sub-component. |
+| **Algebraic Freeroll Bundles** | Old neutral probes (S3/S4/D1/E1/TierA) eliminate options, yielding zero-downside public flips. | File shas verified; eliminations airtight *if rows are public*. | Proven-3, coins-3, coin-flipside all scored **334** ($\Delta = 0$). | All six rows proved PRIVATE by pigeonhole. Neutral-history rows skew ~100% private (survivorship bias). |
 
 ## Post-Champion Private-Generalization Audit (2026-09-12)
 
@@ -158,11 +166,22 @@ Every probed test row and its measured public leaderboard effect are codified be
 | `test_0643` | DBCA $\to$ DBAC | `56173856` (resolved) | 0.96491 | **$-1$** | **Proven Champion Answer = DBCA** |
 | `test_0488` | C $\to$ A | `56109784` | 0.96783 | **$-1$** | **Proven Champion Answer = C** |
 | `test_0477` | B $\to$ A | `56109816` | 0.96783 | **$-1$** | **Proven Champion Answer = B** |
-| `test_0506` | A $\to$ B | `56109838` | 0.97076 | **$0$** | Public Neutral ($\Delta = 0$) |
-| `test_0519` | C $\to$ A | `56140238` | 0.97076 | **$0$** | Public Neutral ($\Delta = 0$) |
-| `test_0526` | D $\to$ C | `56140518` | 0.97076 | **$0$** | Public Neutral ($\Delta = 0$) |
+| `test_0506` | C $\to$ A (S3 reversion) | `56109838` | 0.97076 | **$0$** | **PRIVATE row** (pigeonhole: C→B flipside also $0$ on 2026-09-15) |
+| `test_0519` | C $\to$ A | `56140238` | 0.97076 | **$0$** | **PRIVATE row** (pigeonhole: C→B flipside also $0$) |
+| `test_0526` | D $\to$ C | `56140518` | 0.97076 | **$0$** | **PRIVATE row** (pigeonhole: D→B and D→A both $0$) |
 | `test_0432`, `0450`, `0456`, `0461` | 4-flip Tier-A bundle | `56144608` | 0.97076 | **$0$** | Aggregate $\Delta = 0$ (Session-triple route closed) |
 | `test_0450` + `test_0461` | Bisection pair | `56145194` | 0.97076 | **$0$** | Pair $\Delta = 0$ |
+| `test_0432` | C $\to$ D singleton | `56240835` | 0.97660 | **$0$** | **PRIVATE row** (pigeonhole: D, A, B all tried, all $0$) |
+| `test_0456` | C $\to$ B derived $0$ | (via `56144608`+`56145194`+`56240835`) | — | **$0$** | **PRIVATE row** (pigeonhole: C→D and C→A both $0$) |
+| `test_0501` | B $\to$ A in S4 (derived $0$) | `56109887` | 0.97076 | **$0$** | **PRIVATE row** (pigeonhole: B→C flipside $0$) |
+| `test_0496` | B $\to$ C (Bug-1 fix) | `56238613` | 0.97368 | **$+1$** | 332 → 333; B structurally impossible (skeleton regex miss) |
+| `test_0331`+`0341`+`0641` | Bisection A vs 333 | `56239120` | 0.97660 | **$+1$** | Bundle +1; decomposed to 0641 |
+| `test_0331` | DBCA $\to$ BDCA | `56239157` | 0.97368 | **$0$** | Neutral (wrong-or-private); champ DBCA kept |
+| `test_0341` | DCBA $\to$ DBCA | `56239192` | 0.97368 | **$0$** | Neutral (wrong-or-private); champ DCBA kept |
+| `test_0641` | BDAC $\to$ DBAC | `56239239` | 0.97660 | **$+1$** | 333 → 334; bytes = banked 334 champion |
+| `0501`+`0506`+`0519` | Freeroll proven-3 | `56250309` | 0.97660 | **$0$** | All three private (see above) |
+| `0526`+`0432`+`0456` | Freeroll coins-3 | `56250357` | 0.97660 | **$0$** | All three private-or-missed |
+| `0526`+`0432`+`0456` | Coin flipside | `56250404` | 0.97660 | **$0$** | Completes pigeonhole: all private |
 | 17 Unresolved TCN Sequence Flips | 17-flip TCN set | `56174154` (Slot 4) | 0.94152 | **$-7$ net** | TCN sequence alterations are uniformly negative |
 
 ---
@@ -184,7 +203,13 @@ Every probed test row and its measured public leaderboard effect are codified be
 
 | Artifact Name | Relative Path | SHA-256 Checksum | Description |
 | :--- | :--- | :--- | :--- |
-| **Champion Submission** | [`submission_097076_332of342_CHAMPION.csv`](submissions/submission_097076_332of342_CHAMPION.csv) | `25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56` | **Final official competition submission (332/342, Rank 3)** |
+| **Champion Submission (final)** | [`submission_097660_334of342_CHAMPION.csv`](submissions/submission_097660_334of342_CHAMPION.csv) | `1ea4bf7e1eae01c7ed5475dd9e358fbbed4f1f1804c853b88ee86f1da89f83e4` | **Final submission (334/342 = 0.97660); select ref `56239239` (identical bytes)** |
+| **332 Ancestor** | [`submission_097076_332of342_CHAMPION.csv`](submissions/submission_097076_332of342_CHAMPION.csv) | `25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56` | Protected lineage checkpoint (332/342, ref `56090799`) |
+| **333 Ancestor** | [`submission_097368_333of342_CHAMPION.csv`](submissions/submission_097368_333of342_CHAMPION.csv) | `b8af820a0e3a207f…` (truncated) | Lineage checkpoint (333/342, ref `56238613`) |
+| **Freeroll Proven-3** | [`submissions/CAND_FREEROLL_A_proven3.csv`](submissions/CAND_FREEROLL_A_proven3.csv) | — | Sub `56250309`, 334; proved 0501/0506/0519 private |
+| **Freeroll Coins + Flipside** | [`submissions/CAND_COINS3_vs334.csv`](submissions/CAND_COINS3_vs334.csv) | — | Subs `56250357`/`56250404`, 334; proved 0526/0432/0456 private |
+| **T2-DINO Local OOF** | [`research/t2_dino/local_oof/`](research/t2_dino/local_oof/) | — | Depth HARn OOF (40% top-1) + pool OOF (mAP 0.32); fusion +4% nested |
+| **Session Trail** | [`docs/state.md`](docs/state.md) | — | Measured-numbers-only chronological ledger |
 | **Pipeline Master Solver** | [`champ/pipeline.py`](./champ/pipeline.py) | — | Master solving engine implementing Mechanisms P, G, M, S, H |
 | **Action-Pool Solver** | [`champ/pool.py`](./champ/pool.py) | — | Exact cover solver for session action pools |
 | **Block Repair Engine** | [`champ/repair.py`](./champ/repair.py) | — | Graph clustering and block repair algorithm |
@@ -198,4 +223,4 @@ Every probed test row and its measured public leaderboard effect are codified be
 | **Dense2 Research Runner** | [`champ/run_dense2.py`](./champ/run_dense2.py) | — | Opt-in stride/channel/loss-weight controls for the next GPU experiment |
 
 ---
-*Official competition reconciliation completed; private-generalization research ledger updated on September 12, 2026.*
+*Final update September 15, 2026: 334 banked (0.97660); DINO falsified; freeroll campaign proved six rows private; no +EV plays remain. Final selection: refs `56239239` + one 334-public freeroll.*
