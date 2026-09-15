@@ -24,8 +24,8 @@ ROOT = '/home/fluxx/Workspace/cuchx-large'
 def load_kernel_lib():
     """Import kernel stage-2 functions without /kaggle mount resolution."""
     src = open(os.path.join(ROOT, 'research/t2_dino/kernel_dino_specialist.py')).read()
-    src = src.replace("_resolve_vid()", "'/tmp/novid'")
-    src = src.replace("_resolve_root('meta.csv')", "'/tmp/noinp'")
+    src = src.replace("VID = _resolve_vid()", "VID = '/tmp/novid'")
+    src = src.replace("INP = _resolve_root('meta.csv')", "INP = '/tmp/noinp'")
     mod = types.ModuleType('kspec')
     mod.__name__ = 'kspec'
     exec(compile(src, os.path.join(ROOT, 'research/t2_dino/kernel_dino_specialist.py'), 'exec'),
