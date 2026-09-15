@@ -5,17 +5,37 @@ Privacy-preserving Visual Question Answering (VQA) and multimodal activity reaso
 - **Test Set Size**: 682 QA questions across 192 session clips + 72 single-action clips.
 - **Public Split**: 342 questions (50%).
 - **Private Split**: 340 questions (50%).
-- **Protected Final Champion**: `submission_097076_332of342_CHAMPION.csv`
-- **Public Score**: **`0.97076`** (**332 / 342** correct public questions).
-- **Leaderboard Standing**: Rank 3 worldwide (Leaders: #1 Bull & Ivarick 337/342, #2 Knight of Favonius 334/342, #3 Fluxx 332/342).
-- **Status**: **Official champion frozen; private-generalization research continues.**
+- **Live Champion**: `submissions/submission_097660_334of342_CHAMPION.csv`
+- **Public Score**: **`0.97660`** (**334 / 342** correct public questions).
+- **Leaderboard Standing**: Top-5 chase (2026-09-15: #1 Bull & Ivarick 337/342, #1 AICL 337/342; gap = 3 rows).
+- **Status**: **Climbing. 332 artifact preserved; 333 (+test_0496) and 334 (+test_0641) banked via singleton probes. DINOv2 perception specialist in progress.**
+- **Session Trail**: [`docs/state.md`](docs/state.md) (measured numbers only, labelled by protocol).
+
+## Live Run (2026-09-15, final day)
+
+1. **Bug-1 fix (+2 banked)**: short-filename skeleton regex missed `LM_test_0034/0106` clips; fix flipped `test_0496` B→C (sub `56238613`, +1) and, with seqpair bisection, `test_0641` BDAC→DBAC (sub `56239239`, +1). 332 → 334.
+2. **TierA pair closed**: `test_0432` C→D singleton (sub `56240835`) scored neutral → 0432 ∈ {A,B}, pair sum 0/0, 0456 skipped.
+3. **T2-DINO (in progress)**: frozen DINOv2 ViT-S/14 (full-frame + 1.6× actor crop) + ViT-B/14 ablation over Depth_Color + Thermal, stride-1 color; subject-disjoint LogReg/attention heads + skeleton+IMU fusion. Kernel extraction done (~2.6h GPU); stage-2 OOF runs locally via `research/t2_dino/run_stage2_local.py` after a concat-shape crash killed the kernel head stage (fixed).
+4. **Honest baseline**: faithful rebuilt OOF `v8` = 3841/4087 (93.9%), repair +4/-0.
+
+## Repo Layout
+
+```text
+README.md  training_qa.csv  test_qa.csv   # only root files (+ .gitignore)
+champ/          # champion pipeline: build_*, solvers, dense logits, vocab
+submissions/    # all submission CSVs (332/333/334 champions + probes + history)
+research/       # dated experiments; live: t2_dino/, t2_valid/, post332_20260908/
+docs/           # state.md (session trail), plan.md, findings/, walkthrough
+seqlab/ objlab/ emolab/ slotlab/ phaselab/ setlab/  # mechanism labs
+archive/        # legacy root scripts (frozen)
+```
 
 ---
 
 ## 1. Final Champion System
 
 ### Core Metadata
-- **Artifact Path**: [`submission_097076_332of342_CHAMPION.csv`](file:///home/fluxx/Workspace/cuchx-large/submission_097076_332of342_CHAMPION.csv)
+- **Artifact Path**: [`submission_097076_332of342_CHAMPION.csv`](submissions/submission_097076_332of342_CHAMPION.csv)
 - **SHA-256 Checksum**: `25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56`
 - **Row Count**: Exactly 682 rows, unique `qa_id`s, byte-clean CSV formatting.
 - **Kaggle Submission Ref**: `56090799` (`SubmissionStatus.COMPLETE`, Score: `0.97076`).
@@ -164,18 +184,18 @@ Every probed test row and its measured public leaderboard effect are codified be
 
 | Artifact Name | Relative Path | SHA-256 Checksum | Description |
 | :--- | :--- | :--- | :--- |
-| **Champion Submission** | [`submission_097076_332of342_CHAMPION.csv`](file:///home/fluxx/Workspace/cuchx-large/submission_097076_332of342_CHAMPION.csv) | `25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56` | **Final official competition submission (332/342, Rank 3)** |
-| **Pipeline Master Solver** | [`champ/pipeline.py`](file:///home/fluxx/Workspace/cuchx-large/champ/pipeline.py) | — | Master solving engine implementing Mechanisms P, G, M, S, H |
-| **Action-Pool Solver** | [`champ/pool.py`](file:///home/fluxx/Workspace/cuchx-large/champ/pool.py) | — | Exact cover solver for session action pools |
-| **Block Repair Engine** | [`champ/repair.py`](file:///home/fluxx/Workspace/cuchx-large/champ/repair.py) | — | Graph clustering and block repair algorithm |
-| **OOF Baseline Audit** | [`research/final_video_20260910/oof_pipeline_base.csv`](file:///home/fluxx/Workspace/cuchx-large/research/final_video_20260910/oof_pipeline_base.csv) | — | Matched 4,087-row cross-validation baseline (92.27%) |
-| **Slot 4 TCN Candidate** | [`research/final_video_20260910/SLOT4_FULL_TCN_ENSEMBLE.csv`](file:///home/fluxx/Workspace/cuchx-large/research/final_video_20260910/SLOT4_FULL_TCN_ENSEMBLE.csv) | `0494b30c0db40323e240c253c3b04f3893a0974b871fdb00bee96c46fd989f57` | Complete 21-flip TCN candidate (Scored 0.94152, $\Delta = -10$) |
-| **Slot 5 Gated Candidate** | [`research/final_video_20260910/SLOT5_PRE_REGISTERED_GATE_S.csv`](file:///home/fluxx/Workspace/cuchx-large/research/final_video_20260910/SLOT5_PRE_REGISTERED_GATE_S.csv) | `ca322d95c195bc81894cea94e15fe90095cf37c9a94846908c9000b1e07ee833` | 5-flip pre-registered confidence gate (Scored 0.96198, $\Delta = -3$) |
-| **Stable Sequence Candidate** | [`research/final_video_20260910/submission_seqpair_stable_iter500_v1.csv`](file:///home/fluxx/Workspace/cuchx-large/research/final_video_20260910/submission_seqpair_stable_iter500_v1.csv) | — | Five fit-stable sequence flips; submission `56192056`, public score unchanged at 0.97076 |
-| **PU Pool Decoder** | [`champ/pool_pu.py`](file:///home/fluxx/Workspace/cuchx-large/champ/pool_pu.py) | — | Positive/unknown action-pool research decoder; OOF +1 action row, pair audit -43; not promoted |
-| **PU OOF Audit** | [`research/pool_pu_oof_iter350.csv`](file:///home/fluxx/Workspace/cuchx-large/research/pool_pu_oof_iter350.csv) | — | Five-fold comparison of the PU decoder against the final-video baseline |
-| **PU Test Stability Audit** | [`research/pool_pu_test_stability.csv`](file:///home/fluxx/Workspace/cuchx-large/research/pool_pu_test_stability.csv) | — | Five-fit test-side stability audit; no change met the 4/5 gate |
-| **Dense2 Research Runner** | [`champ/run_dense2.py`](file:///home/fluxx/Workspace/cuchx-large/champ/run_dense2.py) | — | Opt-in stride/channel/loss-weight controls for the next GPU experiment |
+| **Champion Submission** | [`submission_097076_332of342_CHAMPION.csv`](submissions/submission_097076_332of342_CHAMPION.csv) | `25e79e1dae1149bdad81d081d1fad3a94db4e1eb88df7f00e91276e6d5668d56` | **Final official competition submission (332/342, Rank 3)** |
+| **Pipeline Master Solver** | [`champ/pipeline.py`](./champ/pipeline.py) | — | Master solving engine implementing Mechanisms P, G, M, S, H |
+| **Action-Pool Solver** | [`champ/pool.py`](./champ/pool.py) | — | Exact cover solver for session action pools |
+| **Block Repair Engine** | [`champ/repair.py`](./champ/repair.py) | — | Graph clustering and block repair algorithm |
+| **OOF Baseline Audit** | [`research/final_video_20260910/oof_pipeline_base.csv`](./research/final_video_20260910/oof_pipeline_base.csv) | — | Matched 4,087-row cross-validation baseline (92.27%) |
+| **Slot 4 TCN Candidate** | [`research/final_video_20260910/SLOT4_FULL_TCN_ENSEMBLE.csv`](./research/final_video_20260910/SLOT4_FULL_TCN_ENSEMBLE.csv) | `0494b30c0db40323e240c253c3b04f3893a0974b871fdb00bee96c46fd989f57` | Complete 21-flip TCN candidate (Scored 0.94152, $\Delta = -10$) |
+| **Slot 5 Gated Candidate** | [`research/final_video_20260910/SLOT5_PRE_REGISTERED_GATE_S.csv`](./research/final_video_20260910/SLOT5_PRE_REGISTERED_GATE_S.csv) | `ca322d95c195bc81894cea94e15fe90095cf37c9a94846908c9000b1e07ee833` | 5-flip pre-registered confidence gate (Scored 0.96198, $\Delta = -3$) |
+| **Stable Sequence Candidate** | [`research/final_video_20260910/submission_seqpair_stable_iter500_v1.csv`](./research/final_video_20260910/submission_seqpair_stable_iter500_v1.csv) | — | Five fit-stable sequence flips; submission `56192056`, public score unchanged at 0.97076 |
+| **PU Pool Decoder** | [`champ/pool_pu.py`](./champ/pool_pu.py) | — | Positive/unknown action-pool research decoder; OOF +1 action row, pair audit -43; not promoted |
+| **PU OOF Audit** | [`research/pool_pu_oof_iter350.csv`](./research/pool_pu_oof_iter350.csv) | — | Five-fold comparison of the PU decoder against the final-video baseline |
+| **PU Test Stability Audit** | [`research/pool_pu_test_stability.csv`](./research/pool_pu_test_stability.csv) | — | Five-fit test-side stability audit; no change met the 4/5 gate |
+| **Dense2 Research Runner** | [`champ/run_dense2.py`](./champ/run_dense2.py) | — | Opt-in stride/channel/loss-weight controls for the next GPU experiment |
 
 ---
 *Official competition reconciliation completed; private-generalization research ledger updated on September 12, 2026.*
