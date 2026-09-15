@@ -102,6 +102,30 @@ Reconstruction launched (all `champ/*.npz` were missing):
   (row- instead of feature-concat). Fixed (`axis=1`) + v4 re-pushed ~00:55 UTC
   (ETA ~04:00). Embeddings downloadable from crashed run (slow link, trying).
 
+## Final day 2026-09-15 (takeover cont.) — bank 334
+- DINO v4 ALSO errored (same concat bug: `axis=1` on per-row lists gives
+  (2,nD), still wrong). True fix: `np.stack` per-clip feature-concats → (n,2D)
+  (committed). Depth embeddings downloaded (S 240MB + B 239MB, 1007 clips,
+  valid); thermal broke mid-download (IncompleteRead). Stage-2 ran LOCALLY.
+- DINO VERDICT (subject-disjoint, vs v8 OOF on identical train rows): pool
+  presence single 67.5% vs v8 99.9% (DINO-only-wins=0), multi 15.3% vs 96.8%,
+  combination 0% vs 99.5%. Fusion HARn clip-ID real (+4%, nested both halves)
+  but non-transferable (weak sub-component). ZERO DINO flips. Dead.
+- CPU reruns vs 334: W 0 overrides, templates 0, seqjoint 1 (0331, already
+  probed neutral), emotion +0, pool −20. Seqpair audit: model 0/4 on resolved
+  disagreements; B-half algebraically dead (bundle 0 − A +1 = −1, no +1).
+  S-over-newdense 0/3 verifiable. 0385: no evidence (emotion head == base OOF).
+- FREEROLL campaign (S3/S4/D1/E1/TIERA algebra, shas verified): slot1 proven-3
+  {0501,0506,0519} → 334 (+0); slot2 coins {0526,0432,0456} → 334 (+0);
+  slot3 coin-flipside → 334 (+0). Pigeonhole: ALL SIX ROWS ARE PRIVATE
+  (every option tried-or-eliminated scores 0). Neutral-history rows skew
+  private ~100% (6/6; survivorship: public-wrong rows got fixed already).
+- BANK 334 (`submissions/submission_097660_334of342_CHAMPION.csv`, bytes ==
+  sub 56239239). 1 slot saved. SELECTION (user must click): 56239239 (keeper)
+  + any 334-public freeroll (lottery). Never select proven-3/coins alone as
+  the only pick (private-harmful flips). Repo: root=4 files, README live,
+  pushed incrementally (all commits on main).
+
 Chronological record of what was tried and what it measured. `../README.md` holds the current
 architecture and the falsified-directions list; this file is the session-by-session trail.
 

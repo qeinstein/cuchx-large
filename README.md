@@ -8,7 +8,7 @@ Privacy-preserving Visual Question Answering (VQA) and multimodal activity reaso
 - **Live Champion**: `submissions/submission_097660_334of342_CHAMPION.csv`
 - **Public Score**: **`0.97660`** (**334 / 342** correct public questions).
 - **Leaderboard Standing**: Top-5 chase (2026-09-15: #1 Bull & Ivarick 337/342, #1 AICL 337/342; gap = 3 rows).
-- **Status**: **Climbing. 332 artifact preserved; 333 (+test_0496) and 334 (+test_0641) banked via singleton probes. DINOv2 perception specialist in progress.**
+- **Status**: **334 BANKED (final). Freeroll campaign 3×334 — all six elimination rows proved PRIVATE. No +EV plays remain; 1 slot saved. SELECT 56239239 + one freeroll before deadline.**
 - **Session Trail**: [`docs/state.md`](docs/state.md) (measured numbers only, labelled by protocol).
 
 ## Live Run (2026-09-15, final day)
